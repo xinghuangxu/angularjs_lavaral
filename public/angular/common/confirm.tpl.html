@@ -1,0 +1,18 @@
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" data-keyboard="false">
+    <div class="modal-dialog modal-xnarrow" ng-class="vm.classes">
+        <div class="modal-content">
+            <div class="modal-header" ng-show="title">
+                <button type="button" class="close" aria-label="Close"
+                    ng-click="$hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" ng-bind="title"></h4>
+            </div>
+            <div class="modal-body" ng-bind="content"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-click="answer(true)">Yes</button>
+                <button type="button" class="btn btn-default" ng-click="answer(false)">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+{
+  "name": "Spark",
+  "description": "Test planning tool",
+  "authors": [
+    "Spark Developers <ng-epg-qa-spark-developers@netapp.com>"
+  ],
+  "license": "proprietary",
+  "homepage": "http://spark.eng.netapp.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "jstree": "~3.2.1",
+    "font-awesome": "~4.5.0",
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8",
+    "angular-animate": "~1.4.8",
+    "angular-sanitize": "~1.4.8",
+    "angular-resource": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-motion": "~0.4.3",
+    "angular-loader": "~1.4.8",
+    "angular-bootstrap-colorpicker": "~3.0.22",
+    "angular-wysiwyg": "~1.2.4",
+    "angular-strap": "~2.3.6",
+    "angular-ui-sortable": "~0.13.4",
+    "angular-spinkit": "~0.3.3",
+    "angular-ui-grid": "~3.0.7",
+    "angular-ui-event": "~1.0.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.8"
+  }
+}

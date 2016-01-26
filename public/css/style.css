@@ -1,0 +1,89 @@
+/**
+ * Core styles for Spark
+ *
+ * @author Randall Crock
+ * @copyright 2016 NetApp, Inc.
+ * @date 2016-01-04
+ */
+ 
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 10px;
+    text-align: center;
+}
+
+#main-view .alert,
+.modal-body .alert {
+    position: absolute;
+    left: 1em;
+    right: 1em;
+    top: 1em;
+}
+
+.scroll {
+    overflow-y: scroll;
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th {
+    vertical-align: middle;
+}
+
+.table.small {
+    font-size: 0.75em;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.panel-heading .wave-spinner {
+    margin: 0 auto;
+    height: 18px;
+}
+
+label.required-label::after {
+    content: '*';
+    color: red;
+}
+
+.flash {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    
+    background-color: #fff;
+    
+    transition: box-shadow 0.75s, -webkit-box-shadow 0.75s, -moz-box-shadow 0.75s, background-color 0.75s;
+}
+
+.flash.in {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168;
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168;
+    
+    background-color: #dff0d8;
+}
+
+.modal-dialog.modal-narrow {
+    width: 50vw !important;
+}
+
+.modal-dialog.modal-xnarrow {
+    width: 25vw !important;
+}
+
+.scroll {
+    overflow: auto;
+}
+
+.md-frame {
+    max-height: 600px;
+}
+
+.error-page-template {
+    padding: 40px 15px;
+    text-align: center;
+}

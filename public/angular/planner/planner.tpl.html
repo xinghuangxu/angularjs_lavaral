@@ -1,0 +1,57 @@
+<!-- Dropdown Navigation -->
+<div class="clearfix">
+    <div id="release-nav" class="form-inline" ng-controller="Releases as vm">
+        <div class="pull-left input-group">
+            <span class="input-group-addon input-sm">Release</span>
+            <select class="form-control input-sm" ng-model="vm.data.release_id" ng-options="item.name as item.name for item in vm.releases"></select>
+        </div>
+        <i ng-show="vm.data.release_id" class="pull-left glyphicon glyphicon-chevron-right"></i>
+        <div class="pull-left input-group" ng-show="vm.data.release_id">
+            <span class="input-group-addon input-sm">Test Stack Layer</span>
+            <select class="form-control input-sm" ng-model="vm.data.testplan_stack_id" ng-change="vm.data.stack_name = vm.stackLayers[vm.data.testplan_stack_id]" ng-options="key as val for (key, val) in vm.stackLayers"></select>
+        </div>
+        <i ng-show="vm.data.testplan_stack_id" class="pull-left glyphicon glyphicon-chevron-right"></i>
+        <div class="pull-left input-group" ng-show="vm.data.testplan_stack_id">
+            <span class="input-group-addon input-sm">Test Stack Sublayer</span>
+            <select class="form-control input-sm" ng-model="vm.data.testplan_substack_id" ng-change="vm.data.substack_name = vm.subLayers[vm.data.testplan_substack_id]" ng-options="key as val for (key, val) in vm.subLayers"></select>
+        </div>
+    </div>
+    <div id="other-nav" class="form-inline">
+        <ul>
+            <li><a href="" bs-tooltip data-title="XREF" data-trigger="hover" placement="bottom"><i class="glyphicon glyphicon-random"></i></a></li>
+            <li><a href="" bs-tooltip data-title="Metrics" data-trigger="hover" placement="bottom"><i class="glyphicon glyphicon-stats"></i></a></li>
+            <li><a href="" bs-tooltip data-title="Report" data-trigger="hover" placement="bottom"><i class="glyphicon glyphicon-list-alt"></i></a></li>
+            <li class="no-focus" tabindex="1" bs-popover
+                data-container="body" data-template-url="angular/planner/settings/popover.tpl.html"
+                data-html="true" data-trigger="click" data-placement="bottom-right">
+                <a href="" bs-tooltip data-title="Settings" data-trigger="hover" placement="bottom"><i class="glyphicon glyphicon-cog"></i></a>
+            </li>
+
+        </ul>
+        <input class="form-control input-sm" placeholder="Filter" ng-model="main.filter.text"></input>
+    </div>
+</div>
+<!-- Content Pane Control -->
+<div class="pane-view" ng-controller="Panes as vm">
+    <div class="text-center">
+        <div id="pane-selection" class="btn-toolbar">
+            <div class="btn-group center-block" ng-repeat="group in vm.paneGroups | orderBy:order">
+                <span class="btn btn-sm">
+                    {{group.label}}
+                </span>
+                <label ng-repeat="pane in vm.panes | filter:{group:group.name} | orderBy:order" class="btn btn-default btn-sm" ng-class="{'btn-primary active': pane.active}"><input type="checkbox" ng-model="pane.active" >{{pane.label}}</label>
+            </div>
+        </div>
+    </div>
+    <!-- Container for panes -->
+    <div class="height-wrapper">
+        <div class="pane-container" ui-sortable="vm.sortableOptions" ng-model="vm.panes">
+            <div class="pane panel panel-default" spark-resizable ng-repeat="pane in vm.panes" ng-show="pane.active">
+                <div class="panel-heading text-center move-icon sort-handle">
+                    <h3 class="panel-title">{{pane.label}}</h3>
+                </div>
+                <div class="panel-body" ng-include="pane.template"></div>
+            </div>
+        </div>
+    </div>
+</div>
