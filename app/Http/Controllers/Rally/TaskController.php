@@ -26,7 +26,9 @@ class TaskController extends Controller {
     }
 
     /**
+     * Returns list of task names and their states for a particular user story
      *
+     * @return [array] that contains list of task names and their states 
      */
     public function index() {
         $Result = Task::ListTasks(\Request::input('userstory'));
@@ -34,7 +36,9 @@ class TaskController extends Controller {
     }
 
     /**
+     * This function validates the parameters passed to Creates the task 
      *
+     * @return [array] that contains data of newly created task
      */
     public function create() {
         $validation = \Validator::make(\Request::all(), [
@@ -54,8 +58,11 @@ class TaskController extends Controller {
     }
 
     /**
+     * Returns Object details of a task
      *
-     * @param unknown $id
+     * @param [string] $id
+     *   The $TaskID is unique objectID of a task
+     * @return [array] that contains object details of a task
      */
     public function show($id) {
         $Result = Task::TaskDetails($id);
@@ -63,8 +70,10 @@ class TaskController extends Controller {
     }
 
     /**
-     *
-     * @param unknown $id
+     * This function validates the parameters passed to edit the task 
+     * @param [string] $id
+     *   The $TaskID is unique objectID of a task that has to be edited
+     * @return [array] that contains data of edited task
      */
     public function edit($id) {
         $validation = \Validator::make(\Request::all(), [
@@ -84,9 +93,11 @@ class TaskController extends Controller {
     }
 
     /**
+     * This function Delete the task 
      *
-     * @param unknown $id
-     * @return unknown
+     * @param [string] $id
+     *   The $id is unique objectID of a task that has to be deleted
+     * @return void
      */
     public function destroy($id) {
         $Result = Task::DeleteTask($id);
@@ -94,9 +105,14 @@ class TaskController extends Controller {
     }
 
     /**
-     *
-     * @param unknown $Result
-     * @param string $Message
+     * Returns the data along with the status code( -1,1)
+     * if status code is 1 that means there is a set of a results included 
+     * if status code is -1 that means either there is no results or 
+     * there is an error 
+     * @param array $Result
+     *   The Result contains data
+     * @param string $Message as the error message 
+     * @return [array] that contains data along with the status code( -1,1) 
      */
     private function _ToJson($Result, $Message = '') {
         if (isset($Message) && $Message != "") {

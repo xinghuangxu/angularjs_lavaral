@@ -24,7 +24,16 @@ class Iteration extends GenericModel {
     public function __construct($arData = null) {
         parent::__construct($arData);
     }
-
+    
+    /**
+     * Returns list of Iteration for a particular project
+     *
+     * @param string $Project
+     *   The ProjectName in Rally
+     * @param string $Fetch
+     *   The Fetch is a string value which determines the attributes present on the objects returned
+     * @return array that contains list of all Iterations 
+     */
     public static function ListIterations($Project, $Fetch= ""){
         $Result = array();
         $Iterations = Spark::getInstance()->find('Iteration', "(Project.Name = \"{$Project}\")", '', $Fetch);
@@ -38,7 +47,16 @@ class Iteration extends GenericModel {
         array_multisort($Result);
         return $Result;
     }
-
+    
+    /**
+     * Returns list of Iteration with complete objects for a particular project
+     *
+     * @param string $Project
+     *   The ProjectName in Rally
+     * @param string $Fetch
+     *   The Fetch is a string value which determines the attributes present on the objects returned
+     * @return [array] that contains list of all Iterations along with its objects
+     */
     public static function ListIterationWithDetails($Project, $Fetch = ""){
         $Result = array();
         $Iterations = Spark::getInstance()->find('Iteration', "(Project.Name = \"{$Project}\")", '', $Fetch);
@@ -48,7 +66,16 @@ class Iteration extends GenericModel {
         }
         return $Result;
     }
-
+    
+    /**
+     * Returns  Iteration with objects when name of iteration is given 
+     *
+     * @param string $Project
+     *   The ProjectName in Rally
+     * @param string $IterationName
+     *   The IterationName is the name of the iteration
+     * @return [array] that contains the  Iteration along with its objects
+     */
     public static function FindIterationName($Project,$IterationName){
         $IterationsArray = Spark::getInstance()->find('Iteration', "(Project.Name = \"{$Project}\")", '','');
         foreach ($IterationsArray as $Iteration){
@@ -58,7 +85,12 @@ class Iteration extends GenericModel {
         }
         return $Result;
     }
-
+    
+    /**
+     * Returns  Current Iteration Name based on current date 
+     * 
+     * @return [String] that contains the current Iteration along with its objects
+     */
     public static function GetCurrentIteration(){
         $IterationsArray = Spark::getInstance()->find('Iteration', '', '','EndDate,_refObjectName');
         $CurrentIterationDate = 0;

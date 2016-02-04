@@ -22,15 +22,32 @@ class Task extends GenericModel {
     public function __construct($arData = null) {
         parent::__construct($arData);
     }
-
+    
+    /**
+     * Returns the ObjectName.
+     *
+     * @return [string] which has object name
+     */
     public function getName() {
         return $this->data['_refObjectName'];
     }
-
+    
+    /**
+     * Returns the ObjectID.
+     *
+     * @return [string] which has object ID
+     */
     public function getId() {
         return $this->data['_refObjectUUID'];
     }
-
+    
+    /**
+     * Returns list of all tasks that are created by a particular owner
+     *
+     * @param string $name
+     *   The name is name of the owner in Rally
+     * @return [array] that contains list of all tasks 
+     */
     public static function findWithOwnerName($name) {
         $result = array();
         $tasks = Spark::getInstance()->find("task", "(Owner.Name = $name)", '', "true");
@@ -39,7 +56,14 @@ class Task extends GenericModel {
         }
         return $result;
     }
-
+    
+    /**
+     * This function Creates the task 
+     *
+     * @param [array]  $Info
+     *   The $Info has all the data to create a task
+     * @return void
+     */
     public static function CreateTask($Info){
         $CreateInfo = array();
         $CreateInfo['WorkProduct'] = Spark::getInstance()->get('HierarchicalRequirement',$Info['StoryID']);
@@ -57,7 +81,14 @@ class Task extends GenericModel {
         }
         Spark::getInstance()->create('Task', $CreateInfo);
     }
-
+    
+    /**
+     * This function Updates the task 
+     *
+     * @param [array] $Info
+     *   The $Info has all the data to udpate a task
+     * @return void
+     */
     public static function UpdateTask($Info){
         $UpdateInfo = array();
         if ($Info['title'] != ""){
@@ -74,16 +105,37 @@ class Task extends GenericModel {
         }
         Spark::getInstance()->update('task', $Info['TaskID'], $UpdateInfo);
     }
-
+    
+    /**
+     * This function Delete the task 
+     *
+     * @param [string] $TaskID
+     *   The $TaskID is unique objectID of a task
+     * @return void
+     */
     public static function DeleteTask($TaskID){
         Spark::getInstance()->delete('task', $TaskID);
     }
-
+    
+    /**
+     * Returns Object details of a task
+     *
+     * @param [string] $TaskID
+     *   The $TaskID is unique objectID of a task
+     * @return [array] that contains object details of a task
+     */
     public static function TaskDetails($TaskID){
         $Result = Spark::getInstance()->get('task', $TaskID);
         return $Result;
     }
-
+    
+    /**
+     * Returns list of task names and their states for a particular user story
+     *
+     * @param [string] $UserStory
+     *   The $UserStory is unique objectID of a userstory
+     * @return [array] that contains list of task names and their states 
+     */
     public static function ListTasks($UserStory){
         $TasksArray = Spark::getInstance()->get('HierarchicalRequirement', $UserStory, 3); // 3 mean to choose the execution for tasks
         $Tasks = array();
