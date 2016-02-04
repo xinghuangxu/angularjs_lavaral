@@ -25,8 +25,11 @@ class IterationController extends Controller {
     }
 
     /**
+     * Returns list of Iteration for a particular project
      *
-     * @param unknown $id
+     * @param string $id
+     *   The ProjectName in Rally
+     * @return [array] that contains list of all Iterations 
      */
     public function index($id) {
         $IterationList = Iteration::ListIterations($id);
@@ -34,9 +37,13 @@ class IterationController extends Controller {
     }
 
     /**
-     *
-     * @param unknown $Result
-     * @param string $Message
+     * Returns the data along with the status code( -1,1)
+     * if status code is 1 that means there is a set of a results included 
+     * if status code is -1 that means either there is no results or 
+     * there is an error from Rally server 
+     * @param array $Result
+     *   The Result contains data
+     * @return [array] that contains data along with the status code( -1,0,1) 
      */
     private function _ToJson($Result, $Message = '') {
         if (isset($Message) && $Message != "") {

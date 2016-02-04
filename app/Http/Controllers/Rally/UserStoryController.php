@@ -26,21 +26,35 @@ class UserStoryController extends Controller {
     }
 
     /**
+     * This function gives all the children of an userstory if has children parameter passed
+     * This function gives a list of root user stories if requested for all
+     * This function gives details about a speciic user story if queried for it (mainly used for EQI Service)
      *
+     * @return [array] which has all the children of an user story
      */
     public function index() {
-        if (\Request::has('children')) {
+        if (\Request::has('children')){
             $Result = UserStory::ListChildrenOfUserStory(\Request::input('children'));
-        } elseif (\Request::has('query')) {
+        }
+        elseif (\Request::has('query')){
             $Result = UserStory::find(\Request::all());
-        } else {
+        }
+        elseif(\Request::has('NotPlanned')){
+            $Result = UserStory::GetNotPlanned(\Request::input('NotPlanned'));
+        }
+        elseif(\Request::has('NotEstimated')){
+            $Result = UserStory::GetNotEstimated(\Request::input('NotEstimated'));
+        }
+        else{
             $Result = UserStory::ListAllUserStories(\Request::all());
         }
         return $this->_ToJson($Result);
     }
 
     /**
+     * This function creates a user story, all data will be vaildated 
      *
+     * @return [array] that contains data of newly created user story
      */
     public function create() {
         $validation = \Validator::make(\Request::all(), [
@@ -63,7 +77,7 @@ class UserStoryController extends Controller {
     }
 
     /**
-     *
+     * this function will return the results for EQI service 
      * @param unknown $id
      */
     public function show($id) {
@@ -72,8 +86,10 @@ class UserStoryController extends Controller {
     }
 
     /**
-     *
-     * @param unknown $id
+     * This function validates the parameters passed to edit the user story 
+     * @param [string] $id
+     *   The $id is unique objectID of an user story  that has to be edited
+     * @return [array] that contains data of edited task
      */
     public function edit($id) {
         if (\Request::has('drag')) {
@@ -102,8 +118,11 @@ class UserStoryController extends Controller {
     }
 
     /**
+     * This function Delete the user story 
      *
-     * @param unknown $id
+     * @param [string] #id
+     *   The $id is unique objectID of an user story that has to be deleted
+     * @return void
      */
     public function destroy($id) {
         $Result = UserStory::DeleteUserStory($id);
@@ -112,9 +131,14 @@ class UserStoryController extends Controller {
     }
 
     /**
-     *
-     * @param unknown $Result
-     * @param string $Message
+     * Returns the data along with the status code( -1,1)
+     * if status code is 1 that means there is a set of a results included 
+     * if status code is -1 that means either there is no results or 
+     * there is an error 
+     * @param array $Result
+     *   The Result contains data
+     * @param string $Message as the error message 
+     * @return [array] that contains data along with the status code( -1,1) 
      */
     private function _ToJson($Result, $Message = '') {
         if (isset($Message) && $Message != "") {
