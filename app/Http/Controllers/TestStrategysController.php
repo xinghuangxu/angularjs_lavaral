@@ -28,7 +28,14 @@ class TestStrategysController extends Controller {
      * @return Response
      */
     public function index(Request $request) {
-
+        
+        /**
+         * The Following two lines is for integrations work only 
+         */
+        
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.strategies.json");
+        return $data;
+        
         // Return subset of fields or all details
         $fieldsParam = $request->input('fields');
         $getFilter = "*";
