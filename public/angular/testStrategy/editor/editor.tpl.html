@@ -88,21 +88,20 @@
                         <span style="z-index:10px" class="col-md-{{attributeContentWidth}}">
                             <spark-tree-select current="editor.service.current" selectReadOnly="{{TreeSelectReadOnly}}" tagType = "impact"></spark-tree-select>
                         </span>
-<!--                        <div class="tags" ng-model="editor.service.current.tags_impact_area" name="impact" spark-array-validator="{multi: true}">
-                            <a ng-repeat="item in editor.service.current.tags_impact_area"
-                               class="btn btn-sm btn-default"
-                               ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
-                                {{item.CategoryName}} <i class="glyphicon glyphicon-remove link" ng-click="editor.deleteTag(item)"></i>
-                            </a>
-                            <button class="btn btn-sm btn-default"
-                                    type="button"
-                                    ng-click="editor.addTag()"
-                                    ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
-                                <i class="glyphicon glyphicon-plus"></i>
-                            </button>
-                        </div>-->
                     </div>
                 </div>
+                
+                 <div class="form-group">
+                    <div class="col-md-2">
+                        <label class="control-label required-label">Test Variables</label>
+                    </div>
+
+                    <div class="col-md-10">
+                        <span style="z-index:10px" class="col-md-{{attributeContentWidth}}">
+                            <spark-tree-select current="editor.service.current" selectReadOnly="{{TreeSelectReadOnly}}" tagType = "impact"></spark-tree-select>
+                        </span>
+                    </div>
+                 </div>
 
                 <div class="form-group">
                     <div class="col-md-2">

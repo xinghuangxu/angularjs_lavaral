@@ -70,7 +70,7 @@
                 }
                 
                 scope.$watch('current',function(newValue, oldValue){
-                   alert("Helo");
+//                   alert("Helo");  //add code to syn
                 });
 
                 //traverse the elements in the tree to update the input box tags
