@@ -196,7 +196,7 @@
             {
                 label: "Rally",
                 //template: "planner/rally/rally.tpl.html",
-                template: "angular/planner/empty.tpl.html",
+                template: "angular/rally/rallyModal.tpl.html",
                 order: 3,
                 active: false,
                 group: 'when'
