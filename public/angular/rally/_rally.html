@@ -1,0 +1,25 @@
+<!-- Data Field -->	
+<div class="navbar-form navbar-left rally">
+
+    <div ng-controller="rallyTree">
+        <form>
+            <label class=" control-label input-sm">Iteration:</label>
+            <div class="form-group">
+                <select class="form-control input-sm" style="border:1px solid silver;" ng-model="rallyTree.data.iteration" data-html="1" ng-options = "iteration for iteration in IterationList" ng-change="RallyIterationChange()" ng-disabled="!IterationList">
+                    <option value="" >Choose Iteration</option>
+                </select>
+            </div>
+
+            <label for="Search" class=" control-label input-sm">Filter:</label>
+
+            <div class="form-group">
+                <input type="text"  ng-model="treeSearch"  class="form-control input-sm" placeholder="Filter">
+            </div>
+            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+        </form>
+        <div jstree ng-model="tree" delete-node="storeNode.deleteNode()" move-flag="rallyDataSet.editRelease" delete-flag="rallyDataSet.deleteSuccess" add-flag="rallyDataSet.addNode.nodeID" edit-flag="rallyDataSet.editInfo.nodeID"  undo="rallyTree.data.undoData" move-node="rallyTree.moveNode(nodeInfo)" store-node="rallyTree.storeNode(selectInfo)"></div>
+
+    </div>
+
+    <div ng-include="'angular/rally/_popover.html'"></div>
+</div>

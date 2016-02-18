@@ -1,0 +1,13 @@
+
+<div ng-controller="SettingsRally as rally">
+    <div class="form-group">
+        <select class="btn" style="border:1px solid silver;" ng-model="rally.data.project" ng-change="rally.rallyProjectChange()" data-html="1" ng-options="project for project in rally.data.RallyProjectList"  ng-disabled="!rally.data.RallyProjectList">
+            <option value="" disabled>Choose Project</option>
+        </select> 
+    </div>
+    <div class="form-group">
+        <select class="btn" style="border:1px solid silver;" ng-model="rally.data.release" ng-change="rally.rallyReleaseChange()" data-html="1" ng-options="release for release in rally.data.RallyReleaseList"  ng-disabled="!rally.data.RallyReleaseList">
+            <option value="" disabled>Choose Release</option>
+        </select>
+    </div>
+</div>
