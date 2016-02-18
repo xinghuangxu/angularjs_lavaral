@@ -7,17 +7,18 @@
  *
  */
 
-(function() {
+(function () {
     'use strict';
 
     angular
-        .module('spark.planner.settings')
-        .controller('SettingsPopover', SettingsPopover)
-        .controller('SettingsModal', SettingsModal)
-        .controller('SettingsALM', SettingsALM);
+            .module('spark.planner.settings')
+            .controller('SettingsPopover', SettingsPopover)
+            .controller('SettingsModal', SettingsModal)
+            .controller('SettingsALM', SettingsALM)
+            .controller('SettingsRally', SettingsRally);
 
 
-    SettingsPopover.$inject = [ '$scope', 'testplanSettingsService', 'testplanSettingsModalService' ];
+    SettingsPopover.$inject = ['$scope', 'testplanSettingsService', 'testplanSettingsModalService'];
 
     /**
      * Controller for quick-view popover of the current settings for the test planner
@@ -26,7 +27,7 @@
      * @param {object} settings Service reference for fetching data about the current settings
      * @param {object} modal    Service reference for the modal dialog to edit the settings
      */
-    function SettingsPopover ($scope, settings, modal) {
+    function SettingsPopover($scope, settings, modal) {
         var vm = this;
 
         vm.data = settings.data;
@@ -36,14 +37,15 @@
         /**
          * Open the edit modal to make changes
          */
-        function edit () {
+        function edit() {
             vm.modal.show();
 
             $scope.$hide();
-        };
+        }
+        ;
     }
 
-    SettingsModal.$inject = [ '$scope', 'testplanSettingsService', 'testplanSettingsModalService' ];
+    SettingsModal.$inject = ['$scope', 'testplanSettingsService', 'testplanSettingsModalService'];
 
     /**
      * Controller for the modal dialog to edit the settings for the current test plan
@@ -52,7 +54,7 @@
      * @param {object} settings Service reference for fetching data about the current settings
      * @param {object} modal    Service reference for the modal dialog to edit the settings
      */
-    function SettingsModal ($scope, settings, modal) {
+    function SettingsModal($scope, settings, modal) {
         var vm = this;
         vm.modal = modal.modal;
 
@@ -60,26 +62,91 @@
         vm.data = settings.data;
 
         vm.tabs = [
-             {
-                 title: 'Basic Info',
-                 template: "angular/planner/settings/modal-basic.tpl.html"
-             },
-             {
-                 title: 'ALM',
-                 template: "angular/planner/settings/modal-alm.tpl.html"
-             },
-             /* Rally connection not working yet
-             {
-                 title: 'Rally',
-                 template: "planner/settings/modal-rally.html"
-             }
-             */
+            {
+                title: 'Basic Info',
+                template: "angular/planner/settings/modal-basic.tpl.html"
+            },
+            {
+                title: 'ALM',
+                template: "angular/planner/settings/modal-alm.tpl.html"
+            },
+            {
+                title: 'Rally',
+                template: "angular/planner/settings/modal-rally.html"
+            },
         ];
 
         vm.tabs.activeTab = 0;
     }
 
-    SettingsALM.$inject = [ '$scope', '$alert', 'testplanSettingsService', 'almFolderService' ];
+    SettingsRally.$inject = ['$scope', '$alert', 'testplanSettingsService', 'rallyDataService', '$rootScope'];
+
+    /**
+     * Controller for the modal dialog to edit the settings for the current test plan
+     *
+     * @param {object} $scope   Controller's scope
+     * @param {object} settings Service reference for fetching data about the current settings
+     * @param {object} modal    Service reference for the modal dialog to edit the settings
+     */
+    function SettingsRally($scope, $alert, settings, rallyDataService, $rootScope) {
+        var vm = this;
+        vm.data = settings.data;
+        
+        rallyDataService.projects.projectList().$promise
+                    .then(function (val, response) {
+                        vm.data.projects = val.data;
+                        vm.data.RallyProjectList = val.data;
+                    })
+                    .catch(function (response) {
+                        $alert({
+                            title: "Error fetching Rally domains",
+                            content: "There was an error fetching the list of Projects from the server.",
+                            placement: 'top',
+                            container: '.modal-dialog'
+                        });
+                    }
+                    );
+
+        vm.rallyProjectChange = function () {
+            rallyDataService.releases.releaseList({input: vm.data.project}).$promise
+                    .then(function (val, response) {
+                        vm.data.RallyReleaseList = val.data;
+                    })
+                    .catch(function (response) {
+                        $alert({
+                            title: "Error fetching Rally domains",
+                            content: "There was an error fetching the list of releases from the server.",
+                            placement: 'top',
+                            container: '.modal-dialog'
+                        });
+                    }
+                    );
+        };
+        
+        vm.getRallyProjectList = function(){
+            rallyDataService.projects.projectList().$promise
+                    .then(function (val, response) {
+                        vm.data.RallyProjectList = val.data;
+                    })
+                    .catch(function (response) {
+                        $alert({
+                            title: "Error fetching Rally domains",
+                            content: "There was an error fetching the list of Projects from the server.",
+                            placement: 'top',
+                            container: '.modal-dialog'
+                        });
+                    }
+                    );
+        };
+        
+        vm.rallyReleaseChange = function () {
+//            console.log("Release", vm.data);
+            $rootScope.$broadcast("RallySettingChanged", vm.data);
+        };
+        
+    }
+
+    SettingsALM.$inject = ['$scope', '$alert', 'testplanSettingsService', 'almFolderService'];
 
     /**
      * Specific handler for ALM settings within the {@link Modal} dialog
@@ -89,51 +156,51 @@
      * @param {object} settings         Service reference for fetching data about the current settings
      * @param {object} almFolderData    Service reference for the modal dialog to edit the settings
      */
-    function SettingsALM ($scope, $alert, settings, almFolderData) {
+    function SettingsALM($scope, $alert, settings, almFolderData) {
         var vm = this;
 
         vm.data = settings.data;
         vm.loadNode = loadNode;
 
         // Load the correct tree whenever a new database is selected
-        $scope.$watch(function() {
-                return vm.data.alm_db_name;
-            },
-            function(domain, oldVal) {
-                // Domain is not set, so exit without trying to fetch
-                if(!domain)
-                    return;
+        $scope.$watch(function () {
+            return vm.data.alm_db_name;
+        },
+                function (domain, oldVal) {
+                    // Domain is not set, so exit without trying to fetch
+                    if (!domain)
+                        return;
 
-                // Reset the folder value if the domain has changed
-                if(domain !== oldVal) {
-                    vm.data.alm_folder = "";
-                    vm.data.alm_folder_node_id = null;
+                    // Reset the folder value if the domain has changed
+                    if (domain !== oldVal) {
+                        vm.data.alm_folder = "";
+                        vm.data.alm_folder_node_id = null;
 
-                    $.each(vm.almDomains, function(key, value) {
-                        if(value.name === domain)
-                            vm.data.alm_db_description = value.description;
-                    })
+                        $.each(vm.almDomains, function (key, value) {
+                            if (value.name === domain)
+                                vm.data.alm_db_description = value.description;
+                        })
+                    }
+
+                    vm.loading = true;
+
+                    // Get new domain root
+                    almFolderData.folders({database: domain}).$promise
+                            .then(function (val, response) {
+                                vm.treeData = val;
+                                vm.loading = false;
+                            })
+                            .catch(function (response) {
+                                // Warn the user
+                                $alert({
+                                    title: "Error fetching ALM folders",
+                                    content: "There was an error fetching the list of folders from the " + domain + " domain.",
+                                    placement: 'top',
+                                    container: '.modal-dialog'
+                                });
+                                vm.loading = false;
+                            });
                 }
-
-                vm.loading = true;
-
-                // Get new domain root
-                almFolderData.folders({ database: domain }).$promise
-                    .then(function(val, response) {
-                        vm.treeData = val;
-                        vm.loading = false;
-                    })
-                    .catch(function(response) {
-                        // Warn the user
-                        $alert({
-                            title: "Error fetching ALM folders",
-                            content: "There was an error fetching the list of folders from the " + domain + " domain.",
-                            placement: 'top',
-                            container: '.modal-dialog'
-                        });
-                        vm.loading = false;
-                    });
-            }
         );
 
         activate();
@@ -147,9 +214,9 @@
          *
          * @return {object}           Final node that the children have been appended to
          */
-        function appendChildren (start, targetId, children) {
-            for(var child in start) {
-                if(start[child].id === targetId) {
+        function appendChildren(start, targetId, children) {
+            for (var child in start) {
+                if (start[child].id === targetId) {
                     start[child].children = children;
                     break;
                 } else {
@@ -165,29 +232,29 @@
          *
          * @param  {object} data Event data containing the ID of the node to load data for
          */
-        function loadNode (data) {
+        function loadNode(data) {
             // Must have the event data
             // A quirk in jstree fires the event twice; once with, once without
-            if(!data.event)
+            if (!data.event)
                 return;
 
             // Update the selected path
             var parents = data.instance.get_path(data.node.id);
-            vm.data.alm_folder =  "\\" + parents.join("\\");
+            vm.data.alm_folder = "\\" + parents.join("\\");
             vm.data.alm_folder_node_id = data.node.id;
-            
-            if(data.node.original.hasChildren && (!data.node.children || data.node.children.length < 1)) {
+
+            if (data.node.original.hasChildren && (!data.node.children || data.node.children.length < 1)) {
                 // Load the new data from the almFolderData service if there are children to load 
                 vm.loading = true;
                 almFolderData.folders({
-                        database: vm.data.alm_db_name,
-                        folderId: data.node.id
-                    }).$promise
-                        .then(function(val, response) {
+                    database: vm.data.alm_db_name,
+                    folderId: data.node.id
+                }).$promise
+                        .then(function (val, response) {
                             vm.treeData = appendChildren(vm.treeData, data.node.id, val);
                             vm.loading = false;
                         })
-                        .catch(function(response) {
+                        .catch(function (response) {
                             $alert({
                                 title: "Error fetching ALM folders",
                                 content: "There was an error fetching the list of subfolders for " + data.node.text + ".",
@@ -200,25 +267,26 @@
                 // Force the scope to update since one isn't being triggered to update UI fields.
                 $scope.$apply();
             }
-        };
+        }
+        ;
 
         /**
          * Initialize the controller by fetching data
          */
-        function activate () {
+        function activate() {
             almFolderData.query().$promise
-                .then(function(val, response) {
-                    vm.almDomains = val;
-                })
-                .catch(function(response) {
-                    $alert({
-                        title: "Error fetching ALM domains",
-                        content: "There was an error fetching the list of ALM domains from the server.",
-                        placement: 'top',
-                        container: '.modal-dialog'
-                    });
-                }
-            );
+                    .then(function (val, response) {
+                        vm.almDomains = val;
+                    })
+                    .catch(function (response) {
+                        $alert({
+                            title: "Error fetching ALM domains",
+                            content: "There was an error fetching the list of ALM domains from the server.",
+                            placement: 'top',
+                            container: '.modal-dialog'
+                        });
+                    }
+                    );
         }
     }
 })();

@@ -25,17 +25,17 @@ class UserStory extends GenericModel {
     private static $map = array();
 
     Private static $_BlockedIcons = array(
-        "In-Progress" => "assets/img/icon_In-Progress_Blocked.png",
-        "Defined"     => "assets/img/icon_Defined_Blocked.png",
-        "Completed"   => "assets/img/icon_Completed_Blocked.png",
-        "Accepted"    => "assets/img/icon_Accepted_Blocked.png"
+        "In-Progress" => "images/icon_In-Progress_Blocked.png",
+        "Defined"     => "images/icon_Defined_Blocked.png",
+        "Completed"   => "images/icon_Completed_Blocked.png",
+        "Accepted"    => "images/icon_Accepted_Blocked.png"
     );
 
     private static $_Icons = array(
-        "In-Progress" => "assets/img/icon_In-Progress.png",
-        "Defined"     => "assets/img/icon_Defined.png",
-        "Completed"   => "assets/img/icon_Completed.png",
-        "Accepted"    => "assets/img/icon_Accepted.png"
+        "In-Progress" => "images/icon_In-Progress.png",
+        "Defined"     => "images/icon_Defined.png",
+        "Completed"   => "images/icon_Completed.png",
+        "Accepted"    => "images/icon_Accepted.png"
     );
 
 

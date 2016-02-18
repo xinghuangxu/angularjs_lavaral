@@ -15,6 +15,7 @@
             'ngResource',
             'mgcrea.ngStrap',
             'angular-spinkit',
-            'spark.alm'
+            'spark.alm',
+            'spark.rally'
         ]);
 })();
