@@ -42,8 +42,9 @@
             });
         });
         
-        $scope.RallyIterationChange = function (){
-            $scope.$broadcast("RallyLoadTree", vm.data);
+        $scope.RallyIterationChange = function (data){
+            $scope.SelectedIteration = data;
+            $scope.$broadcast("RallyLoadTree", data);
         };
         
         vm.getIteration = function (project){
@@ -74,13 +75,17 @@
         vm.undoArray = []; 
         
         $scope.$on("RallyLoadTree", function (event, data){
-            vm.getTreeData(vm.data);
+            vm.getTreeData(data);
         });
         
         //Function to request tree data
         vm.getTreeData = function (data) {
             $scope.$emit("RallyLoad");
-            rallyDataService.RallyData.treeData({project: $scope.SelectedProject, release: $scope.SelectedRelease}).$promise
+            rallyDataService.RallyData.treeData({
+                project: $scope.SelectedProject, 
+                release: $scope.SelectedRelease, 
+                iteration: $scope.SelectedIteration
+            }).$promise
                 .then(function (val, response) {
 //                    console.log("TreeData: ", val.data);
                     $scope.tree = val.data; 
