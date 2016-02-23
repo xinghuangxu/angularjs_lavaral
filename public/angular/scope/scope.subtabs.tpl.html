@@ -1,0 +1,14 @@
+<div class="nav-tabs-custom">
+    <ul class="nav nav-tabs">
+        <li ng-class="{active:tab.active}" ng-repeat="tab in scopeCtrl.tabs_content.sub_tabs"><a ng-href="{{tab.url}}">{{tab.name}}</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+
+
+        <ng-include src="'angular/scope/scope.subtabs.content.tpl.html'"></ng-include>
+
+
+    </div>
+
+</div>

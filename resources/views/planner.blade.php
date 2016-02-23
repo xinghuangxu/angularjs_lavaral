@@ -15,6 +15,7 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/planning.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/testStrategy.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/progress-wizard.min.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/sparkTreeSelect.css') }}" />
 
         <title>Spark &gt; Test Planning</title>
@@ -88,6 +89,9 @@
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.services.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/scope/scope.module.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/scope/scope.tpl.service.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/scope/scope.js') }}"></script>
 
         <!-- Misc Scripts -->
     </body>

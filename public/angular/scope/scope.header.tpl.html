@@ -1,0 +1,114 @@
+<div class="scope-box less-margin box-default collapsed-box " ng-model="scopeCtrl.panelActiveByDefault" bs-collapse>
+    <div class="box-header with-border clickable ">
+
+        <div ng-click="collapse = !collapse;" data-toggle="collapse" bs-collapse-toggle>
+            <h5 class="box-title">User Directed enablement for UNMAP on existing pre-Lancaster thin
+                volumes
+                <br/>
+                <small>PR LS1093893048
+                </small>
+            </h5>
+
+
+            <!--<span class="label label-default similar-item-link">-->
+            <!--<strong><span class="	glyphicon glyphicon-warning-sign"></span></strong>-->
+            <!--5 similar records have been detected!-->
+
+            <!--</span>-->
+
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool medium-fonts">
+                    <i class="fa" ng-class="{true:'fa-minus', false:'fa-plus'}[collapse==true]"></i>
+                </button>
+            </div>
+
+
+        </div>
+
+        <span class="label label-default similar-item-link" ng-click="collapse = !collapse;">        <span
+                class="fa-stack fa-lg">
+   <i class="fa fa-exclamation  fa-stack-1x  black"></i>
+  <i class="fa fa-exclamation-triangle fa-stack-1x  warning-yellow"></i>
+
+
+</span><a>5 similar records have been detected!</a></span>
+
+
+    </div>
+
+    <div bs-collapse-target class="panel-collapse am-collapse collapse box-body" role="tabpanel">
+        <div class="row ">
+            <div class="col-md-2">
+                <label class="control-label">Target release:
+
+                </label> <span>Lehigh</span>
+
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">Capacity Reserved:
+
+                </label> <span>Yes</span>
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">Plan of record:
+
+                </label> <span>No</span>
+            </div>
+        </div>
+        <div class="row ">
+            <label class="col-md-1 control-label">CQ State:
+
+            </label>
+
+
+            <div class="col-md-6">
+                <ul class="progress-indicator">
+                    <li ng-class="{active_state:state.active}" ng-repeat="state in scopeCtrl.progress_bar_states">
+                        <a href="" title="{{state.name}}">
+                        <span class="bubble">
+
+                     </span>
+
+                        </a>
+                        <span ng-if="state.active">{{state.name}}
+                        </span>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <h6 class="col-md-2 control-label">Impact Areas </h6>
+
+
+            <label class="col-md-1 control-label">
+                Features:
+            </label>
+
+            <div class="col-md-2">
+                <spark-tree-select></spark-tree-select>
+            </div>
+
+            <label class="col-md-1 control-label">
+                Hardware components:
+            </label>
+
+            <div class="col-md-2">
+                <spark-tree-select></spark-tree-select>
+            </div>
+            <label class="col-md-1 control-label">
+                Core components:
+            </label>
+
+            <div class="col-md-2">
+                <spark-tree-select></spark-tree-select>
+            </div>
+        </div>
+
+
+    </div>
+</div>

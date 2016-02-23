@@ -16,6 +16,7 @@
             'spark.planner',
             'spark.testStrategy',
             'spark.nav',
+            'spark.scope'
         ])
         .config(Router)
         .config(Alerts)
