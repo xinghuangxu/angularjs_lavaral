@@ -27,7 +27,7 @@
         {name:"Approved",active:false}];
 
 
-   $scope.gridOptions = typeof   sub_tabs_content == 'string'?false:{
+   scopeCtrl.scopeDetailsGrid = typeof   sub_tabs_content == 'string'?false:{
     showTreeExpandNoChildren: true,
     enableSorting: false,
     enableFiltering:false,
@@ -48,6 +48,23 @@
       data:  sub_tabs_content
   };
 
+    scopeCtrl.advisedPrGrid = {
+    selectionRowHeaderWidth: 50,
+    columnDefs: [
+      { name: 'Scope W/Risk',width:'10%' },
+      { name: 'Scope',width:'10%' },
+      { name: 'Scope Details'}
+    ],
+      onRegisterApi: function (gridApi) {
+      $scope.gridApi = gridApi;
+
+      // call resize every 200 ms for 2 s after modal finishes opening - usually only necessary on a bootstrap modal
+      $interval( function() {
+        $scope.gridApi.core.handleWindowResize();
+      }, 10, 500);
+      },
+      data:  null
+    };
 
 
 

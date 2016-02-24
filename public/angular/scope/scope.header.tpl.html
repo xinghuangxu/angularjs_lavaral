@@ -26,13 +26,17 @@
 
         </div>
 
-        <span class="label label-default similar-item-link" ng-click="collapse = !collapse;">        <span
-                class="fa-stack fa-lg">
+        <span class="label label-default similar-item-link"
+              data-template-url="angular/scope/scope.similarItemsLink.popover.tpl.html"
+              data-content="{{scopeCtrl.advisedPrGrid}}"
+              data-placement="bottom"
+              data-animation="am-flip-x"  bs-popover>
+            <span class="fa-stack fa-lg">
    <i class="fa fa-exclamation  fa-stack-1x  black"></i>
   <i class="fa fa-exclamation-triangle fa-stack-1x  warning-yellow"></i>
 
 
-</span><a>5 similar records have been detected!</a></span>
+</span><a >5 similar records have been detected!</a></span>
 
 
     </div>

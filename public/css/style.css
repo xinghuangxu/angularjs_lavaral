@@ -216,13 +216,21 @@ color:black;
   height: 250px;
 }
 .box-header>.similar-item-link{
-    margin-left: 545px;
-    margin-top: -29px;
+
+    margin-left: 229px;
+    margin-top: -14px;
     position: absolute;
-    padding: 0.1em 13px;
+    padding: 0em 27px;
 }
 span.label.label-default.similar-item-link>a {
     color: white;
     font-size:10px;
     display: inline-block;
+    vertical-align: middle;
+}
+
+.scope-box>.box-header>.popover{
+    outline: none;
+    width:600px;
+    max-width:100%;
 }

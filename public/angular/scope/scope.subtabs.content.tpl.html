@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-md-12">
 
-        <div ng-if="gridOptions" ui-grid="gridOptions" class="grid" ui-grid-tree-view></div>
-        <div ng-if="!gridOptions">
+        <div ng-if="scopeCtrl.scopeDetailsGrid" ui-grid="scopeCtrl.scopeDetailsGrid" class="grid" ui-grid-tree-view></div>
+        <div ng-if="!scopeCtrl.scopeDetailsGrid">
             {{scopeCtrl.sub_tabs_content}}
         </div>
     </div>
