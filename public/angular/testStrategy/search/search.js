@@ -63,30 +63,30 @@
                 class: "testStrategySearchTree",
                 popoverButtons: btns,
                 classifiers: [
-                    {"value": 'QualificationArea', "text": "Qualification Tag"},
-                    {"value": 'ImpactArea', "text": "Impact Area Tag"},
-                    {"value": 'Approach', "text": "Approach Tag"},
-                    {"value": 'CreatedDate', "text": "Creation Date"},
-                    {"value": 'CreatedBy', "text": "Created By"},
+//                    {"value": 'QualificationArea', "text": "Qualification Tag"},
+//                    {"value": 'ImpactArea', "text": "Impact Area Tag"},
+//                    {"value": 'Approach', "text": "Approach Tag"},
+//                    {"value": 'CreatedDate', "text": "Creation Date"},
+//                    {"value": 'CreatedBy', "text": "Created By"},
+                    {"value": '', "text": "None"},
                     {"value": 'ModifiedDate', "text": "Last Modification Date"},
-                    {"value": 'ModifiedBy', "text": "Last Modified By"},
+//                    {"value": 'ModifiedBy', "text": "Last Modified By"},
                     {"value": 'Owner', "text": "Owner"},
-                    {"value": 'State', "text": "State"},
-                    {"value": '', "text": "None"}
+                    {"value": 'State', "text": "State"}
                 ],
                 attributes: {
                     StrategyHeadline: "Strategy Title",
-                    QualificationArea: "Qualification Area Tag",
-                    ImpactArea: "Impact Area Tag",
-                    Approach: "Approach",
-                    CreatedDate: "Creation Date",
-                    CreatedBy: "Created By",
+//                    QualificationArea: "Qualification Area Tag",
+//                    ImpactArea: "Impact Area Tag",
+//                    Approach: "Approach",
+//                    CreatedDate: "Creation Date",
+//                    CreatedBy: "Created By",
                     ModifiedDate: "Last Modification Date",
-                    ModifiedBy: "Last Modified By",
+//                    ModifiedBy: "Last Modified By",
                     Owner: "Owner",
                     State: "State",
                     Type: "Strategy Type",
-                    TopicID: "TPID"
+//                    TopicID: "TPID"
                 }
             };
 

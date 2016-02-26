@@ -27,26 +27,26 @@
             TEST_CASE: 3
         };
         var nameMap = {
-            "TopicID": "TopicID",
+            "StrategyID": "StrategyID",
             "State": "State",
-            "CreatedBy": "CreatedBy",
-            "CreatedDate": "CreatedDate",
-            "ModifiedBy": "ModifiedBy",
+//            "CreatedBy": "CreatedBy",
+//            "CreatedDate": "CreatedDate",
+//            "ModifiedBy": "ModifiedBy",
             "ModifiedDate": "ModifiedDate",
             "StrategyHeadline": "StrategyHeadline",
             "Owner": "Owner",
-            "Approach": "Approach",
-            "Type": "Type",
-            "QualificationArea": "categories",
-            "ImpactArea": "categories",
-            "Requirements": "requirements"
+//            "Approach": "Approach",
+//            "Type": "Type",
+//            "QualificationArea": "categories",
+//            "ImpactArea": "categories",
+//            "Requirements": "requirements"
         };
 
-        var iconPath = "assets/img/strategy";
+        var iconPath = "/images/";
         function Node(data, type) {
             this.children = {};
             if (type === NodeType.TEST_STRATEGY) { //test strategy node
-                this.id = data['TopicID'];
+                this.id = data['StrategyID'];
                 this.text = data['StrategyHeadline'];
                 this.attrs = {
                 };
@@ -140,10 +140,10 @@
             };
             //set icon based on type
             if (this.type === NodeType.TEST_STRATEGY) {
-                treeHash[this.id].icon = iconPath + this.attrs['State'] + ".png";
+                treeHash[this.id].icon = iconPath + 'strategy'+this.attrs['State'] + ".png";
                 treeHash[this.id].popover = true;
             } else if (this.type === NodeType.ATTRIBUTE) {
-                treeHash[this.id].icon = iconPath + "Attribute.png";
+                treeHash[this.id].icon = iconPath + "strategyAttribute.png";
             }
 
             for (var prop in this.children) {
