@@ -59,6 +59,12 @@ class TestplansController extends Controller {
      * @return Response
      */
     public function index(Request $request) {
+        /**
+         * The Following two lines is for integrations work only 
+         */
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.testplans.json");
+        return $data;
+        
         $release = $request->input('release');
         $stack = $request->input('stack');
         $substack = $request->input('substack');

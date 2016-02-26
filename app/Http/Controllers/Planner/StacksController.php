@@ -21,6 +21,13 @@ class StacksController extends Controller {
      * @return Response
      */
     public function index(Request $request) {
+        
+        /**
+         * The Following two lines is for integrations work only 
+         */
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.stacks.json");
+        return $data;
+        
         $fields = $request->input('fields');
         $release = $request->input('release');
 
