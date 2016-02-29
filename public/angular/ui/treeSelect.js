@@ -22,9 +22,7 @@
     {
         return {
             restrict: 'EA',
-            scope: {
-                current: '=current'
-            },
+            scope: {},
             templateUrl: 'angular/ui/partial/_treeSelect.html?v=0',
             link: function (scope, element, attrs) {
                 //see if read only has been configured
@@ -68,10 +66,6 @@
                         }
                     }
                 }
-                
-                scope.$watch('current',function(newValue, oldValue){
-                   alert("Helo");
-                });
 
                 //traverse the elements in the tree to update the input box tags
                 var allEle = {};
@@ -110,7 +104,7 @@
             }
         };
     };
-
+    
     /**
      * Un-flatten tag array into a tree
      * 
@@ -120,26 +114,16 @@
      */
     function buildTree(tagsArray, slice) {
         var result = [];
-        var keyList = {};
         for (var i = 0; i < tagsArray.length; i++) {
-            if (tagsArray[i]['IsActive'] === "1") {
-                keyList[tagsArray[i]['CategoryID']] = true;
-            }
-        }
-        for (var i = 0; i < tagsArray.length; i++) {
-            if (tagsArray[i]['IsActive'] === "1") {
-                var single = {};
-                single.id = tagsArray[i]['CategoryID'];
-                single.text = tagsArray[i]['CategoryName'];
-                if (keyList[tagsArray[i]['CategoryFatherID']]) {
-                    single.parent = tagsArray[i]['CategoryFatherID'];
-                } else {
-                    single.parent = "#";
-                }
-                single.icon = "";
-//                single.state = {selected: true};
-                result.push(single);
-            }
+            var single = {};
+            single.id = tagsArray[i]['CategoryID'];
+            var path = tagsArray[i]['CategoryPath'];
+            var lastIndex = path.lastIndexOf('\\');
+            single.text = path.substring(lastIndex+1);
+            single.parent = tagsArray[i]['CategoryFatherID'];
+            if(single.parent == "")single.parent="#";
+            single.icon = "";
+            result.push(single);
         }
         return result;
     }

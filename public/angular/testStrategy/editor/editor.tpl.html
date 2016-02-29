@@ -86,9 +86,9 @@
 
                     <div class="col-md-10">
                         <span style="z-index:10px" class="col-md-{{attributeContentWidth}}">
-                            <spark-tree-select current="editor.service.current" selectReadOnly="{{TreeSelectReadOnly}}" tagType = "impact"></spark-tree-select>
+                            <spark-tree-select selectReadOnly="{{TreeSelectReadOnly}}"></spark-tree-select>
                         </span>
-<!--                        <div class="tags" ng-model="editor.service.current.tags_impact_area" name="impact" spark-array-validator="{multi: true}">
+                        <div class="tags" ng-model="editor.service.current.tags_impact_area" name="impact" spark-array-validator="{multi: true}">
                             <a ng-repeat="item in editor.service.current.tags_impact_area"
                                class="btn btn-sm btn-default"
                                ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
@@ -100,7 +100,7 @@
                                     ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
                                 <i class="glyphicon glyphicon-plus"></i>
                             </button>
-                        </div>-->
+                        </div>
                     </div>
                 </div>
 
