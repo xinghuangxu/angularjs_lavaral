@@ -68,7 +68,7 @@
                 });
             }
 
-//            $modal(options); //disable login option
+            $modal(options);
         }
 
         /**
