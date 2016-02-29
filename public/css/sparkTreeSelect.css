@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 9, 2016, 3:03:43 PM
+    Author     : Leonx
+*/
+
+
+/*css for spark tree select*/
+spark-tree-select{
+    width: 100%;
+    line-height: 19.5px;
+    display: block;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+spark-tree-select .btn{
+    border: none;
+    border-right: 1px solid #ccc;
+    /*border-radius: 0;*/
+    margin-left:2px;
+}
+
+spark-tree-select .spark-tree-select-info .select-item{
+    border: 1px solid #ccc;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 3px;
+    display: inline-block;
+}
+
+spark-tree-select .spark-tree-select-info .btn{
+    padding: 0;
+    border: none;
+}
+
+spark-tree-select .spark-tree-select-info{
+
+}
+
+spark-tree-select #collapseTreeSelect{
+    position:absolute;
+    z-index:2;
+    /*display:block;*/
+    margin-top: 2px;
+    margin-left: -4px;
+    width: 100%;
+}
+
+spark-tree-select .well{
+    overflow: auto;
+    height: 250px;
+    width: 100%;
+}
+
+spark-tree-select .close{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+
+spark-tree-select .expand-btn{
+    padding: 4px;
+    border-radius: 0;
+    margin: 2px;
+}

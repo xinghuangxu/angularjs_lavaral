@@ -1,0 +1,19 @@
+<button type="button" class="expand-btn btn btn-default btn-xs" ng-click="toggleCollapse($event)" data-toggle="collapse" data-target="#collapseTreeSelect" aria-expanded="false" aria-controls="collapseTreeSelect">
+    <span class="glyphicon glyphicon-plus"></span>
+</button>
+<span class="spark-tree-select-info">
+</span>
+
+
+<div  id="collapseTreeSelect" aria-expanded="false" class="collapse">
+
+    <button type="button" class="close"  ng-click="toggleCollapse($event)" aria-label="Close"><span aria-hidden="true">×</span></button>
+    <div class="well">
+        <div class="row">
+            <input type="text" ng-model="treeSearch" class="form-control input-default" style="display:inline; width:60%;" placeholder="Filter">
+            <!--<input type="text" ng-model="treeSearch"  class=" col-md-6 form-control input-sm ng-pristine ng-valid" placeholder="Filter" style="">-->
+            <button title="info" type="button" class=" btn btn-xs btn-primary">Request a New Tag</button>
+        </div>
+        <div select-jstree ng-model="tree"></div>
+    </div>
+</div>

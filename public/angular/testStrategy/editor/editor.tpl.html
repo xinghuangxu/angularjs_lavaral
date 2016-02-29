@@ -28,35 +28,35 @@
             <div class="pull-left col-xs-5">
                 <button type="button" class="btn btn-sm btn-primary" ng-click="editor.clear()">New <i class="glyphicon glyphicon-file"></i></button>
                 <button ng-show="editor.planTree.data && editor.service.current.StrategyID && editor.service.current.State != 'Obsolete'"
-                    class="btn btn-sm btn-primary"
-                    ng-click="editor.addToPlan(editor.service.current)">
-                        Add to plan
+                        class="btn btn-sm btn-primary"
+                        ng-click="editor.addToPlan(editor.service.current)">
+                    Add to plan
                 </button>
             </div>
             <wave-spinner ng-show="editor.service.loading"></wave-spinner>
             <div class="pull-right col-xs-5 text-right" ng-show="editor.service.current">
                 <button type="button"
-                    ng-show="editor.service.current.State != 'Obsolete' && editor.service.current.State != 'Approved'"
-                    class="btn btn-sm btn-primary"
-                    ng-click="editor.save()">
-                        Save <i class="glyphicon glyphicon-floppy-disk"></i>
+                        ng-show="editor.service.current.State != 'Obsolete' && editor.service.current.State != 'Approved'"
+                        class="btn btn-sm btn-primary"
+                        ng-click="editor.save()">
+                    Save <i class="glyphicon glyphicon-floppy-disk"></i>
                 </button>
                 <button type="button" ng-show="editor.service.current.StrategyID"
-                    class="btn btn-sm btn-primary"
-                    data-html="true"
-                    data-placement="bottom-right"
-                    bs-dropdown
-                    aria-haspopup="true"
-                    aria-expanded="false">
-                        Action <span class="caret"></span>
+                        class="btn btn-sm btn-primary"
+                        data-html="true"
+                        data-placement="bottom-right"
+                        bs-dropdown
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                    Action <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a ng-click="editor.createRevision()"><i class="glyphicon glyphicon-retweet"></i>&nbsp;Create new revision</a></li>
-                  <li><a ng-click="editor.createVariation()"><i class="glyphicon glyphicon-duplicate"></i>&nbsp;Create new variation</a></li>
-                  <li><a ng-click="editor.approve()"><i class="glyphicon glyphicon-ok"></i>&nbsp;Mark as Approved</a></li>
-                  <li><a ng-click="editor.promote()"><i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;Promote to Core</a></li>
-                  <li><a ng-click="editor.demote()"><i class="glyphicon glyphicon-thumbs-down"></i>&nbsp;Demote from Core</a></li>
-                  <li><a ng-click="editor.obsolete()"><i class="glyphicon glyphicon-remove-circle"></i>&nbsp;Mark as obsolete</li>
+                    <li><a ng-click="editor.createRevision()"><i class="glyphicon glyphicon-retweet"></i>&nbsp;Create new revision</a></li>
+                    <li><a ng-click="editor.createVariation()"><i class="glyphicon glyphicon-duplicate"></i>&nbsp;Create new variation</a></li>
+                    <li><a ng-click="editor.approve()"><i class="glyphicon glyphicon-ok"></i>&nbsp;Mark as Approved</a></li>
+                    <li><a ng-click="editor.promote()"><i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;Promote to Core</a></li>
+                    <li><a ng-click="editor.demote()"><i class="glyphicon glyphicon-thumbs-down"></i>&nbsp;Demote from Core</a></li>
+                    <li><a ng-click="editor.obsolete()"><i class="glyphicon glyphicon-remove-circle"></i>&nbsp;Mark as obsolete</li>
                 </ul>
             </div>
         </div>
@@ -70,12 +70,12 @@
                     </div>
                     <div class="col-md-10">
                         <input type="text"
-                            name="headline"
-                            class="form-control input-sm flash"
-                            ng-model="editor.service.current.StrategyHeadline"
-                            ui-event="{blur: 'editor.save(true, $event)', keypress: 'editor.save(true, $event)'}"
-                            ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'"
-                            required/>
+                               name="headline"
+                               class="form-control input-sm flash"
+                               ng-model="editor.service.current.StrategyHeadline"
+                               ui-event="{blur: 'editor.save(true, $event)', keypress: 'editor.save(true, $event)'}"
+                               ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'"
+                               required/>
                     </div>
                 </div>
 
@@ -83,20 +83,11 @@
                     <div class="col-md-2">
                         <label class="control-label required-label">Impact Area</label>
                     </div>
+
                     <div class="col-md-10">
-                        <div class="tags" ng-model="editor.service.current.tags_impact_area" name="impact" spark-array-validator="{multi: true}">
-                            <a ng-repeat="item in editor.service.current.tags_impact_area"
-                                class="btn btn-sm btn-default"
-                                ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
-                                {{item.CategoryName}} <i class="glyphicon glyphicon-remove link" ng-click="editor.deleteTag(item)"></i>
-                            </a>
-                            <button class="btn btn-sm btn-default"
-                                type="button"
-                                ng-click="editor.addTag()"
-                                ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
-                                    <i class="glyphicon glyphicon-plus"></i>
-                            </button>
-                        </div>
+                        <span style="z-index:10px" class="col-md-{{attributeContentWidth}}">
+                            <spark-tree-select current="editor.service.current" selectReadOnly="{{TreeSelectReadOnly}}" tagType = "impact"></spark-tree-select>
+                        </span>
                     </div>
                 </div>
 
@@ -107,18 +98,18 @@
                     <div class="col-md-4">
                         <div ng-model="editor.service.current.tags_qual_area" name="qual" spark-array-validator>
                             <button type="button"
-                                ng-click="editor.changeQual()"
-                                ng-repeat="item in editor.service.current.tags_qual_area"
-                                class="btn btn-sm btn-default"
-                                ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
-                                    {{item.CategoryName}} <i class="glyphicon glyphicon-pencil"></i>
+                                    ng-click="editor.changeQual()"
+                                    ng-repeat="item in editor.service.current.tags_qual_area"
+                                    class="btn btn-sm btn-default"
+                                    ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
+                                {{item.CategoryName}} <i class="glyphicon glyphicon-pencil"></i>
                             </button>
                             <button type="button"
-                                ng-click="editor.changeQual()"
-                                ng-show="!editor.service.current.tags_qual_area || editor.service.current.tags_qual_area.length < 1"
-                                class="btn btn-sm btn-default"
-                                ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
-                                    <i class="glyphicon glyphicon-plus"></i>
+                                    ng-click="editor.changeQual()"
+                                    ng-show="!editor.service.current.tags_qual_area || editor.service.current.tags_qual_area.length < 1"
+                                    class="btn btn-sm btn-default"
+                                    ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
+                                <i class="glyphicon glyphicon-plus"></i>
                             </button>
                         </div>
                     </div>
@@ -128,11 +119,11 @@
                     </div>
                     <div class="col-md-4">
                         <select class="form-control input-sm flash"
-                            ng-model="editor.service.current.approach"
-                            ng-options="item.CategoryID as item.CategoryName for item in editor.service.approach"
-                            ui-event="{change: 'editor.save(true, $event)'}"
-                            required
-                            ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
+                                ng-model="editor.service.current.approach"
+                                ng-options="item.CategoryID as item.CategoryName for item in editor.service.approach"
+                                ui-event="{change: 'editor.save(true, $event)'}"
+                                required
+                                ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
                         </select>
                     </div>
                 </div>
@@ -142,9 +133,9 @@
                     </div>
                     <div class="col-md-10">
                         <input type="text"
-                            class="form-control input-sm flash"
-                            ng-model="editor.service.current.Goal"
-                            ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'"/>
+                               class="form-control input-sm flash"
+                               ng-model="editor.service.current.Goal"
+                               ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'"/>
                     </div>
                 </div>
             </div>
@@ -152,14 +143,14 @@
             <div bs-tabs class="tab-container">
                 <div class="fullscreen tab-pane fade active in"  title="Description" name="description" bs-pane>
                     <wysiwyg id="wysiwyg-test-strategy-editor"
-                        textarea-id="test-strategy-description"
-                        textarea-class="form-control flash"
-                        textarea-name="content"
-                        ng-model="editor.service.current.TestStrategy"
-                        enable-bootstrap-title="false"
-                        textarea-menu="editor.wysiwyg.menu"
-                        disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'"
-                        ui-event="{blur:'editor.save(true, $event)', keypress: 'editor.save(true, $event, true)'}" >
+                             textarea-id="test-strategy-description"
+                             textarea-class="form-control flash"
+                             textarea-name="content"
+                             ng-model="editor.service.current.TestStrategy"
+                             enable-bootstrap-title="false"
+                             textarea-menu="editor.wysiwyg.menu"
+                             disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'"
+                             ui-event="{blur:'editor.save(true, $event)', keypress: 'editor.save(true, $event, true)'}" >
                     </wysiwyg>
                     <button title="Shrink" ng-show="editor.expanded" type="button" class="btn btn-sm btn-default fullscreen shrink" ng-click="editor.shrink()">
                         <i class="glyphicon glyphicon-resize-small"></i>
@@ -177,7 +168,7 @@
                         <div ng-repeat="(typeName, reqType) in editor.service.current.strategyRequirements" ng-show="reqType.length > 0">
                             <h5>{{typeName}}</h5>
                             <table
-                            class="table table-striped table-hover small">
+                                class="table table-striped table-hover small">
                                 <tr>
                                     <th></th>
                                     <th ng-if="key !== 'ID' && key !== 'id' && key !== 'added' && key !== 'pivot'" ng-repeat="(key, val) in reqType[0]">

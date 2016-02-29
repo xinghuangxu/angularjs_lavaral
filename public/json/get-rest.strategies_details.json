@@ -1,0 +1,114 @@
+{
+    "StrategyID": "139",
+    "TopicID": "T-2013-07-30T10:47:44-VBVK1BAAAA",
+    "TopicRev": "0",
+    "TopicRevComments": "Initial Test Strategry",
+    "State": "Approved",
+    "CreatedBy": "abcuser",
+    "CreatedDate": "2013-07-30 10:48:05.000",
+    "ModifiedBy": "abcuser",
+    "ModifiedDate": "2013-12-02 04:27:55.000",
+    "StrategyHeadline": "Placeholder:Operational behavior",
+    "TestStrategy": " ",
+    "Owner": "abcuser",
+    "Approach": "Functional",
+    "Goal": " ",
+    "IsActive": "1",
+    "VariationPoint": "Original",
+    "VariationOf": "T-2013-07-30T10:47:44-VBVK1BAAAA",
+    "RevisionOf": null,
+    "Type": "P",
+    "strategyRequirements": {
+        "adhocs": [],
+        "archdocs": [],
+        "defects": [],
+        "enhreqs": [],
+        "implrequests": [],
+        "prs": [],
+        "rccas": []
+    },
+    "suggestedTestCases": {
+        "testCasesMarkTest": []
+    },
+    "associations": [
+        {
+            "StrategyID": "139",
+            "ScopeStrategyMappingID": "459",
+            "RequirementID": "308",
+            "prscope": {
+                "ScopePRID": "308",
+                "PRID": "XYIP200602540",
+                "cq_pr": {
+                    "id": "XYIP200602540",
+                    "Headline": "Bracket for XYZ"
+                }
+            }
+        },
+        {
+            "StrategyID": "139",
+            "ScopeStrategyMappingID": "641",
+            "RequirementID": "80",
+            "prscope": {
+                "ScopePRID": "80",
+                "PRID": "XYIP200402024",
+                "cq_pr": {
+                    "id": "XYIP200402024",
+                    "Headline": "Nemo enim ipsam voluptatem"
+                }
+            }
+        },
+        {
+            "StrategyID": "139",
+            "ScopeStrategyMappingID": "646",
+            "RequirementID": "72",
+            "prscope": {
+                "ScopePRID": "72",
+                "PRID": "XYIP200405678",
+                "cq_pr": {
+                    "id": "XYIP200405678",
+                    "Headline": "Nemo enim ipsam voluptatem"
+                }
+            }
+        },
+        {
+            "StrategyID": "139",
+            "ScopeStrategyMappingID": "659",
+            "RequirementID": "87",
+            "prscope": {
+                "ScopePRID": "87",
+                "PRID": "XYIP200403685",
+                "cq_pr": {
+                    "id": "XYIP200403685",
+                    "Headline": "Nemo enim ipsam voluptatem"
+                }
+            }
+        }
+    ],
+    "tags_qual_area": [
+        {
+            "CategoryID": "6",
+            "CategoryName": "Operational behavior",
+            "CategoryPath": "Root\\Default\\Qualification Areas",
+            "CategoryFatherID": "5",
+            "IsActive": "1",
+            "pivot": {
+                "StrategyID": "139",
+                "CategoryID": "6"
+            }
+        }
+    ],
+    "tags_impact_area": [
+        {
+            "CategoryID": "226",
+            "CategoryName": "Global",
+            "CategoryPath": "Root\\Feature",
+            "CategoryFatherID": "17",
+            "IsActive": "1",
+            "pivot": {
+                "StrategyID": "139",
+                "CategoryID": "226"
+            }
+        }
+    ],
+    "tags_test_approach": []
+}

@@ -1,0 +1,30 @@
+
+<div class='dual-tree-exporter'>
+    <div class="modal-header">
+        <h3 style="display: inline-block;">Export {{sourceData.type}} from {{sourceData.text}} to <select ng-model="selectedExportLocation" class ="form-control" ng-options="item.text for item in ExportData|filter:isDestination">
+            </select> as {{destinationData.type}} </h3>
+    </div>
+    <wave-spinner ng-hide="!load"></wave-spinner>
+    <div ng-hide="load"  class="modal-body">
+        <div class="row">
+            <div  class="col-md-6">
+                <div  class="form-group">
+                    <h4>1. Select {{sourceData.type}}</h4>
+                    <input type="text" ng-model="sourceTreeSearchKey" class="form-control input-sm ng-pristine ng-valid" placeholder="Search" style="">
+                </div>
+                <div id="sourceTree"></div>
+            </div>
+            <div  class="col-md-6">
+                <div class="form-group">
+                    <h4>2. Select {{destinationData.type}}</h4>
+                    <input type="text" ng-model="destinationTreeSearchKey" class="form-control input-sm ng-pristine ng-valid" placeholder="Search" style="">
+                </div>
+                <div id="destinationTree"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="export()">Export</button>
+        <button type="button" class="btn btn-default" ng-click="$hide()">Cancel</button>
+    </div>
+</div>
