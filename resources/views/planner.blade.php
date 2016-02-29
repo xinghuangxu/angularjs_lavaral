@@ -15,7 +15,6 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/planning.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/testStrategy.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/sparkTreeSelect.css') }}" />
 
         <title>Spark &gt; Test Planning</title>
     </head>
@@ -31,7 +30,6 @@
         <script type="text/javascript" src="{{ asset('angular/spark.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/ui.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/resizable.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/ui/treeSelect.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/jstree.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/node.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/flash.js') }}"></script>
