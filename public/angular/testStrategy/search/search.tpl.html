@@ -24,45 +24,27 @@
             <div class="panel-collapse" role="tabpanel" bs-collapse-target>
                 <div class="panel-body">
                     <div class="scroll" ng-show="!search.loading.core && search.core">
-<!--                        <div class="clearfix">
-                            <div class="navbar-form navbar-left">
-                                <label class="control-label input-sm">Arrange By:</label>
-                                <div class="form-group">
-                                    <div>
-                                        <select class="form-control input-sm" ng-model="testplan.config.activeGroup" ng-options="item.text for item in testplan.config.groupBy">
-                                        </select>
-                                    </div>
-                                </div>
-                                <label for="Search" class=" control-label input-sm">Filter:</label>
-                                <div class="form-group">
-                                    <input type="text" ng-model="testplan.filter.text" class="form-control input-sm" placeholder="Filter">
-                                </div>
-                                <button class="btn btn-default input-sm" ng-click="testplan.strategies.open()"><i class="glyphicon glyphicon-plus"></i></button>
-                            </div>
-                        </div>-->
-                        <wave-spinner ng-show="search.loading.core"></wave-spinner>
-                        <spark-jstree ng-model="search.core"></spark-jstree>
-                        <!--                        <table class="table table-striped table-hover small">
-                                                    <tr>
-                                                        <th>Headline</th>
-                                                        <th>Tags</th>
-                                                        <th>State</th>
-                                                        <th>Owner</th>
-                                                        <th>Modified</th>
-                                                        <th></th>
-                                                    </tr>
-                                                    <tr ng-repeat="strat in search.core">
-                                                        <td>{{strat.StrategyHeadline}}</td>
-                                                        <td><span ng-repeat="tag in strat.tags">{{tag.CategoryName}}<span ng-hide="$last">, </span></span></td>
-                                                        <td>{{strat.State}}</td>
-                                                        <td>{{strat.Owner}}</td>
-                                                        <td>{{strat.ModifiedDate|sqlDateTime|date:'shortDate'}}</td>
-                                                        <td>
-                                                            <a class="link" ng-click="search.view(strat)"><i class="glyphicon glyphicon-eye-open"></i></a><br>
-                                                            <a class="link" ng-click="search.edit(strat)"><i class="glyphicon glyphicon-pencil"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                </table>-->
+                        <table class="table table-striped table-hover small">
+                            <tr>
+                                <th>Headline</th>
+                                <th>Tags</th>
+                                <th>State</th>
+                                <th>Owner</th>
+                                <th>Modified</th>
+                                <th></th>
+                            </tr>
+                            <tr ng-repeat="strat in search.core">
+                                <td>{{strat.StrategyHeadline}}</td>
+                                <td><span ng-repeat="tag in strat.tags">{{tag.CategoryName}}<span ng-hide="$last">, </span></span></td>
+                                <td>{{strat.State}}</td>
+                                <td>{{strat.Owner}}</td>
+                                <td>{{strat.ModifiedDate|sqlDateTime|date:'shortDate'}}</td>
+                                <td>
+                                    <a class="link" ng-click="search.view(strat)"><i class="glyphicon glyphicon-eye-open"></i></a><br>
+                                    <a class="link" ng-click="search.edit(strat)"><i class="glyphicon glyphicon-pencil"></i></a>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -122,8 +104,7 @@
                         </span>
                     </div>
                     <div class="scroll" ng-show="!search.loading.search && search.results">
-                            <div multi-arrange-tree controller="search" config="searchTreeConfig"></div>
-<!--                        <table class="table table-striped table-hover small">
+                        <table class="table table-striped table-hover small">
                             <tr>
                                 <th>Headline</th>
                                 <th>Tags</th>
@@ -143,7 +124,7 @@
                                     <a class="link" ng-click="search.edit(strat)"><i class="glyphicon glyphicon-pencil"></i></a>
                                 </td>
                             </tr>
-                        </table>-->
+                        </table>
                     </div>
                 </div>
             </div>

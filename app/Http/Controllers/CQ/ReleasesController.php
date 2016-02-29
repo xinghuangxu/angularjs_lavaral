@@ -22,14 +22,6 @@ class ReleasesController extends Controller {
      * @return Response
      */
     public function index(Request $request) {
-        
-                /**
-         * The Following two lines is for integrations work only 
-         */
-        
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.cq.releases.json");
-        return $data;
-        
         if ($request->input('optionsList'))
             return Release::lists('name', 'name');
 
