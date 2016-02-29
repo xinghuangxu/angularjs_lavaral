@@ -25,11 +25,8 @@ class ReleaseController extends Controller {
     }
 
     /**
-     * Returns list of all Releases for a particular project
      *
-     * @param string $id
-     *   The ProjectName in Rally
-     * @return [array] that contains list of all Releases 
+     * @param unknown $id
      */
     public function index($id) {
         $Releases = Release::ListReleases($id);
@@ -37,14 +34,9 @@ class ReleaseController extends Controller {
     }
 
     /**
-     * Returns the data along with the status code( -1,1)
-     * if status code is 1 that means there is a set of a results included 
-     * if status code is -1 that means either there is no results or 
-     * there is an error 
-     * @param array $Result
-     *   The Result contains data
-     * @param string $Message as the error message 
-     * @return [array] that contains data along with the status code( -1,1) 
+     *
+     * @param unknown $Result
+     * @param string $Message
      */
     private function _ToJson($Result, $Message = '') {
         if (isset($Message) && $Message != "") {

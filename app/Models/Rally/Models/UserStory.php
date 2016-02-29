@@ -48,39 +48,19 @@ class UserStory extends GenericModel {
     public function __construct($arData = null) {
         parent::__construct($arData);
     }
-    
-    /**
-     * Returns the ObjectName.
-     *
-     * @return [string] which has object name
-     */
+
     public function getName() {
         return $this->data['_refObjectName'];
     }
-    
-    /**
-     * Returns the ObjectID.
-     *
-     * @return [string] which has object ID
-     */
+
     public function getId() {
         return $this->data['_refObjectUUID'];
     }
-    
-    /**
-     * Returns the childrens for an userstory.
-     *
-     * @return [array] which has children 
-     */
+
     public function getChildren() {
         return $this->children;
     }
-    
-    /**
-     * Returns the parent for an userstory.
-     *
-     * @return [array] which has parent for an userstory 
-     */
+
     public function getParent() {
         if ($this->data['HasParent'] == 1) {
             if (!$this->parent) {
@@ -90,18 +70,7 @@ class UserStory extends GenericModel {
         }
         return null;
     }
-    
-    /**
-     * Returns the userstory
-     *
-     * @param string $query
-     *   The query is used to get the required data
-     * @param string $order
-     *   The order is a sort string which determines the order of the data returned
-     * @param string $fetch
-     *   The Fetch is a string value which determines the attributes present on the objects returned.
-     * @return array that contains all the userstories and their queried fields
-     */
+
     public static function findWithParams($query, $order, $fetch) {
         $result = array();
         $stories = Spark::getInstance()->find('userstory', $query, $order, $fetch);
@@ -111,14 +80,7 @@ class UserStory extends GenericModel {
         }
         return $result;
     }
-    
-    /**
-     * Returns all the userstories that belongs to a particular release
-     *
-     * @param string $releaseName
-     *   The $releaseName  is used to find user stories for that release
-     * @return array that contains all the userstories for a particular release
-     */
+
     public static function findWithReleaseName($releaseName) {
         $result = array();
         $stories = Spark::getInstance()->find('userstory', "(Release.Name contains {$releaseName})", '', 'ScheduleState,Iteration,HasParent,Parent,Release,c_ArchitecturalTopicID');
@@ -127,13 +89,6 @@ class UserStory extends GenericModel {
         }
         return $result;
     }
-    
-    /**
-     * Returns a UserStory By UserStory ID
-     *
-     * @param string $id
-     * @return array that contains a userstory details
-     */
 
     public static function findWithId($id) {
         if (array_key_exists($id, self::$map)) {
@@ -144,14 +99,7 @@ class UserStory extends GenericModel {
         //self::$map[$id] = new UserStory($story[UserStory::API_NAME]);
         return self::$map[$id];
     }
-    
-    /**
-     * It add the user story Child to another user story [parent]
-     *
-     * @param array $child
-     *   The $child contaims all the data to add userstory to another Userstory
-     * @return void
-     */
+
     public function addChild(UserStory $child) {
         $parentId = $child->getParent()->getId();
         while ($parentId !== $this->getId()) {
@@ -286,14 +234,6 @@ class UserStory extends GenericModel {
             $this->_ValidFrom = $this->LastUpdateDate;
         }
     }
-    
-    /**
-     * Returns sum of accepted points of all child user stories of an epic user story 
-     *
-     * @param string $userStory
-     *   The $userStory contaims user story ID of an epic
-     * @return [string] which has accepted points 
-     */
 
     public static function getAcceptedPointEst($userStory, $time) {
         $child = array();
@@ -371,14 +311,7 @@ class UserStory extends GenericModel {
     public function toArray() {
         return $this->data;
     }
-    
-    /**
-     * This function Delete the userstory 
-     *
-     * @param [string] $id
-     *   The $id is unique objectID of a userstory
-     * @return void
-     */
+
     public static function DeleteUserStory($id){
         // Is It Better to use self::FindWithID
         //$UserStoryInformation = Spark::getInstance()->get('userstory', $id);
@@ -391,14 +324,7 @@ class UserStory extends GenericModel {
             return "Not Allowed";
         }
     }
-    
-    /**
-     * This function Updates the userstory 
-     *
-     * @param [array] $Info
-     *   The $Info has all the data to udpate an userstory
-     * @return void
-     */
+
     public static function UpdateUserStory($Info){
         $Update = array();
         $UserStoryDetails = self::findWithId($Info['newNodeID']);
@@ -429,14 +355,7 @@ class UserStory extends GenericModel {
         );
         return $Result;
     }
-    
-    /**
-     * This function Creates an userstory 
-     *
-     * @param [array]  $Info
-     *   The $Info has all the data to create an userstory
-     * @return void
-     */
+
     public static function AddUserStory($Info){
         if ($Info['title'] != ''){
            $UserStoryInfo['Name'] = $Info['title'];
@@ -491,14 +410,7 @@ class UserStory extends GenericModel {
         ));
         return $Result;
     }
-    
-    /**
-     * This function drag and drops an userstory 
-     *
-     * @param [array]  $Info
-     *   The $Info has all the data to drag and drop  an userstory
-     * @return [array] which has info about new parent
-     */
+
     public static function DragAndDrop($Info){
         if ($Info->parent == "#"){
             $NewParent = "null";
@@ -511,14 +423,7 @@ class UserStory extends GenericModel {
         $Result = "User Story ID: ".$Info->node." New Parent ID: ".$Info->parent." Parent ?: ".$NewParent;
         return $Result;
     }
-    
-    /**
-     * This function gives all the userstories based on input 
-     *
-     * @param [array]  $Info
-     *   The $Info has project,release and iteration details
-     * @return [array] which has info all the user stories
-     */
+
     public static function ListAllUserStories($Info){
         $IterationList = array();
         $ProjectName = isset($Info['project'])? $Info['project']: "";
@@ -580,14 +485,7 @@ class UserStory extends GenericModel {
         }
         return self::_FormatIterationUserStories($IterationList);
     }
-    
-    /**
-     * This function gives all the userstories based on iteration 
-     *
-     * @param [array]  $Info
-     *   The $Info has iteration and release details
-     * @return [array] which has info all the user stories
-     */
+
     public static function ListUserStoriesByIteration($Info){
         $Map = array();
         $IterationName = $Info['iteration'];
@@ -628,41 +526,20 @@ class UserStory extends GenericModel {
         }
         return self::_FormatIterationUserStories($IterationList);
     }
-    
-    /**
-     * This function gives all the epic  userstories of a project
-     *
-     * @param [array]  $Info
-     *   The $Info has project name
-     * @return [array] which has info all the epic user stories
-     */
+
     public static function ListRootUserStories($Info){
         $ProjectName = $Info['project'];
         $Info['ProjectName'] = $Info['project'];
         $Info['AllUserStories'] = Spark::getInstance()->find('userstory', "((Project.Name = \"{$ProjectName}\") and (parent = \"null\"))", '', 'ScheduleState,c_ArchitecturalTopicID');
         return self::_FormatRootUserStories($Info['AllUserStories']);
     }
-    
-    /**
-     * This function gives all the children of an userstory
-     *
-     * @param [string]  $UserStoryID
-     *   The $UserStoryID  is an unique object ID of an user story
-     * @return [array] which has all the children of an user story
-     */
+
     public static function ListChildrenOfUserStory($UserStoryID){
         $Info['ChildrenUserStories'] = Spark::getInstance()->getChildren('HierarchicalRequirement', "$UserStoryID");
         $Info['CurrentUserStory'] = self::findWithId($UserStoryID);
         return self::_FormatChildrenUserStories($Info);
     }
-    
-    /**
-     * This function gives formatted info of userstories of a particular iteration 
-     *
-     * @param [array]  $Info
-     *   The $Info  is an array that have user stories
-     * @return [array] which has  formatted info of userstories of a particular iteration
-     */
+
     private static function _FormatIterationUserStories($Info){
         $FinalArray = array();
         $AllUserStories = $Info;
@@ -687,14 +564,7 @@ class UserStory extends GenericModel {
         }
         return $FinalArray;
     }
-    
-    /**
-     * This function gives formatted info of child userstories of a particular Userstory 
-     *
-     * @param [array]  $Info
-     *   The $Info  is an array that have child user stories
-     * @return [array] which has formatted info of child userstories of a particular Userstory 
-     */
+
     private static function _FormatChildrenUserStories($Info){
         $FinalArray = array();
         $AllUserStories = $Info['ChildrenUserStories'];
@@ -716,14 +586,7 @@ class UserStory extends GenericModel {
         }
         return $FinalArray;
     }
-    
-    /**
-     * This function gives formatted info of all epic/root user stories 
-     *
-     * @param [array]  $Info
-     *   The $Info  is an array that have all epic/root user stories 
-     * @return [array] which has formatted info of all epic/root user stories 
-     */
+
     private static function _FormatRootUserStories($Info){
         $FinalArray = array();
         $AllUserStories = $Info;
@@ -746,14 +609,7 @@ class UserStory extends GenericModel {
         }
         return $FinalArray;
     }
-    
-    /**
-     * This function gives formatted info of all user stories of a project
-     *
-     * @param [array]  $Info
-     *   The $Info  is an array that have all the user stories 
-     * @return [array] which has formatted info of all the user stories of a project 
-     */
+
     private static function _SortByAll($Info){
         $AllUserStories = $Info['AllUserStories'];
         for ($i = 0; $i < count($AllUserStories); $i++) {
@@ -777,14 +633,7 @@ class UserStory extends GenericModel {
         }
         return $FinalArrayWithObject;
     }
-    
-    /**
-     * This function gives formatted info of all user stories based on release and iteration
-     *
-     * @param [array]  $Info
-     *   The $Info  has release and iteration names
-     * @return [array] which has formatted info of all the user stories based on release and iteration
-     */
+
     private static function _SortByBoth($Info){
         $ReleaseName = $Info['ReleaseName'];
         $Iteration = $Info['IterationName'];
@@ -819,14 +668,7 @@ class UserStory extends GenericModel {
         }
         return self::_GenerateArrayWithObj($ShortAllStories, $ReleasesArray, $Map);
     }
-    
-    /**
-     * This function gives formatted info of all user stories based on release and iteration
-     *
-     * @param [array]  $Info
-     *   The $Info  has release and iteration names
-     * @return [array] which has formatted info of all the user stories based on release and iteration
-     */
+
     private static function _SortByRelease($Info){
         $ReleaseName = $Info['ReleaseName'];
         $AllUserStories = $Info['AllUserStories'];
@@ -859,14 +701,7 @@ class UserStory extends GenericModel {
         }
         return self::_GenerateArrayWithObj($ShortAllStories, $ReleasesArray, $Map);
     }
-    
-    /**
-     * This function gives formatted info of all user stories based  iteration value
-     *
-     * @param [array]  $Info
-     *   The $Info  has  iteration name
-     * @return [array] which has formatted info of all the user stories based iteration
-     */
+
     private static function _SortByIteration($Info){
         $Iteration = $Info['IterationName'];
         $AllUserStories = $Info['AllUserStories'];
@@ -899,18 +734,7 @@ class UserStory extends GenericModel {
         }
         return self::_GenerateArrayWithObj($ShortAllStories, $ReleasesArray, $Map);
     }
-    
-    /**
-     * This function generates objects for user stories
-     *
-     * @param [array]  $ShortAllStories
-     *   The $ShortAllStories  has  user stories that doesnt belong to particular iteration
-     * @param [array]  $ReleasesArray
-     *   The $ReleasesArray  has  all user stories that belong to an iteration
-     * @param [array]  $Map
-     *   The $Map  has  all the user ID of user stories
-     * @return [array] which has all user stories with objects
-     */
+
     private static function _GenerateArrayWithObj($ShortAllStories,$ReleasesArray, $Map){
         $FinalArray = $ReleasesArray;
         $FinalArrayWithObject = array();
@@ -968,14 +792,6 @@ class UserStory extends GenericModel {
         }
         return $FinalArrayWithObject;
     }
-    
-    /**
-     * This function gives sorted info of all user stories based  iteration and release value
-     *
-     * @param [array]  $Info
-     *   The $Info  has  Project,iteration and Release name
-     * @return [array] which has formatted info of all the user stories based iteration and release
-     */
 
     private static function _SortUserStories($Info){
         $ProjectName = $Info['ProjectName'];
@@ -1001,103 +817,6 @@ class UserStory extends GenericModel {
         elseif (($Iteration != null && $ReleaseName == null) || ($Iteration != null && $ReleaseName == "All")){
             $Result = self::_SortByIteration($Info);
             return $Result;
-        }
-    }
-    
-    /**
-     * This function is for Not planned service
-     *
-     * @param [array]  $UserStory
-     * @return [array] 
-     */
-    public static function GetNotPlanned($UserStory){
-        $UserStories = Spark::getInstance()->find('userstory', "(Name contains   \"$UserStory\")", '', 'ScheduleState,Iteration,Children,DirectChildrenCount,Release,PlanEstimate');
-        if($UserStories[0]['DirectChildrenCount'] != 0){
-            $ID = $UserStories[0]['_refObjectUUID'];
-            $Results = Spark::getInstance()->getChildren('HierarchicalRequirement', "$ID"); //get the childre and store in $Glob_owner
-            $Counter = count($Results);
-            $Index = 0;
-            $EstimatePoints = 0;
-            $TotalCount = 0;
-            $Children = array();
-            for ($i=0; $i< $Counter; $i++){
-                $Children[$Index] = $Results[$i];
-                $Index++;
-            }
-            for ($i=0; $i < $Counter; $i++){
-                if ($Children[$i]['DirectChildrenCount'] != 0){
-                    $ID = $Children[$i]['_refObjectUUID'];
-                    $Results = Spark::getInstance()->getChildren('HierarchicalRequirement', "$ID");
-                    for ($l=0 ; $l< count($Results); $l++){
-                        $Children[] = $Results[$l];
-                    }
-                }
-                $Counter = 0;
-                $Counter = count($Children);
-            }
-            for ($i = 0; $i < count($Children); $i++){
-                if ($Children[$i]['DirectChildrenCount'] == 0 && is_null($Children[$i]['PlanEstimate'])){
-                    $EstimatePoints +=1;
-                }
-                if ($Children[$i]['DirectChildrenCount'] == 0 && is_null($Children[$i]['Iteration'])){
-                    $TotalCount = $TotalCount + $Children[$i]['PlanEstimate'];
-                }
-            }
-            $Result['Iterationnull_Est'] = $TotalCount;
-            $Result['Leaf_est_null'] = $EstimatePoints;
-            return $Result;
-        }
-        else{
-            return "No Results";
-        }
-    }
-    
-    /**
-     * This function is for Not Estimated service
-     *
-     * @param [array]  $UserStory
-     * @return [array] 
-     */
-    
-    public static function GetNotEstimated($UserStory){
-        $UserStories = Spark::getInstance()->find('userstory', "(Name contains   \"$UserStory\")", '', 'ScheduleState,Iteration,Children,DirectChildrenCount,Release,PlanEstimate');
-        if($UserStories[0]['DirectChildrenCount'] != 0){
-            $ID = $UserStories[0]['_refObjectUUID'];
-            $Results = Spark::getInstance()->getChildren('HierarchicalRequirement', "$ID"); //get the childre and store in $Glob_owner
-            $Counter = count($Results);
-            $Index = 0;
-            $EstimatePoints = 0;
-            $LeafStories = 0;
-            $Children = array();
-            for ($i=0; $i< $Counter; $i++){
-                $Children[$Index] = $Results[$i];
-                $Index++;
-            }
-            for ($i=0; $i < $Counter; $i++){
-                if ($Children[$i]['DirectChildrenCount'] != 0){
-                    $ID = $Children[$i]['_refObjectUUID'];
-                    $Results = Spark::getInstance()->getChildren('HierarchicalRequirement', "$ID");
-                    for ($l=0 ; $l< count($Results); $l++){
-                        $Children[] = $Results[$l];
-                    }
-                }
-                $Counter = 0;
-                $Counter = count($Children);
-            }
-            for ($i = 0; $i < count($Children); $i++){
-                if ($Children[$i]['DirectChildrenCount'] == 0 && is_null($Children[$i]['PlanEstimate'])){
-                    $EstimatePoints +=1;
-                }
-                if ($Children[$i]['DirectChildrenCount'] == 0){
-                    $LeafStories +=1;
-                }
-            }
-            $Result['Total_leaf'] = $LeafStories;
-            $Result['Leaf_Est_null'] = $EstimatePoints;
-            return $Result;
-        }
-        else{
-            return "No Results";
         }
     }
 

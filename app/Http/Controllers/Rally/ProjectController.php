@@ -26,10 +26,6 @@ class ProjectController extends Controller {
 
     /**
      *
-     * @return [array] that list of projects/lists of iteratons and its details 
-     * when project name is passed
-     * or 
-     * @return [array] that has a list of all projects in specific workspace
      */
     public function index() {
         if (\Request::has('planned')) {
@@ -41,14 +37,9 @@ class ProjectController extends Controller {
     }
 
     /**
-     * Returns the data along with the status code( -1,1)
-     * if status code is 1 that means there is a set of a results included 
-     * if status code is -1 that means either there is no results or 
-     * there is an error 
-     * @param array $Result
-     *   The Result contains data
-     * @param string $Message as the error message 
-     * @return [array] that contains data along with the status code( -1,1) 
+     *
+     * @param unknown $Result
+     * @param string $Message
      */
     private function _ToJson($Result, $Message = '') {
         if (isset($Message) && $Message != "") {

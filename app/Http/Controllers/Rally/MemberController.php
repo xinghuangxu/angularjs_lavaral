@@ -25,11 +25,8 @@ class MemberController extends Controller {
     }
 
     /**
-     * Returns all Owners names only for a particular project
      *
-     * @param string $id
-     *   The ProjectName in Rally
-     * @return array that contains list of all Owners Names in alphabetical order
+     * @param unknown $id
      */
     public function index($id) {
         $Owners = Member::ListOwnersByDisplayName($id);
@@ -37,27 +34,19 @@ class MemberController extends Controller {
     }
 
     /**
-     * Returns only single Owner along with its object  by taking owner name as input
      *
-     * @param string $ProjectID
-     *   The ProjectName in Rally
-     * @param string $OwnerName
-     *   The OwnerName is Name of the owner
-     * @return array that contains Owner along with its objects
-     */ 
+     * @param unknown $ProjectID
+     * @param unknown $OwnerName
+     */
     public function show($ProjectID, $OwnerName) {
         $Owner = Member::FindOwnerByName($ProjectID, $OwnerName);
         return $this->_ToJson($Owner);
     }
 
     /**
-     * Returns the data along with the status code( -1,1)
-     * if status code is 1 that means there is a set of a results included 
-     * if status code is -1 that means either there is no results or 
-     * there is an error 
-     * @param array $Result
-     *   The Result contains data
-     * @return [array] that contains data along with the status code( -1,0,1) 
+     *
+     * @param unknown $Result
+     * @param string $Message
      */
     private function _ToJson($Result, $Message = '') {
         if (isset($Message) && $Message != "") {

@@ -38,20 +38,11 @@ class Project extends GenericModel {
     public function __construct($arData = null) {
         parent::__construct($arData);
     }
-    
-    /**
-     * Set Project Property
-     * 
-     */
+
     private static function _SetProject($Project){
         self::$_Project = $Project;
     }
-    
-    /**
-     * Returns list of all projects in Rally
-     * 
-     * @return [array] that contains list of all projects in alphabetical order 
-     */
+
     public static function ListProjects(){
         $Result = array();
         $ProjectList = Spark::getInstance()->find('Project', '', '', 'ScheduleState,HasParent,Parent');
@@ -63,14 +54,7 @@ class Project extends GenericModel {
         array_multisort($Result);
         return $Result;
     }
-    
-    /**
-     * Returns list of Iteration with  object details  for a particular project
-     *
-     * @param string $Project
-     *   The ProjectName in Rally
-     * @return [array] that contains list of all Iterations along with its objects
-     */
+
     private static function _ListProjectIteration(){
         //$IterationResult = $this->_Rally->find("Iteration", "(Project.Name = \"{$this->_Project}\")", "", );
         $IterationResult = Iteration::ListIterationWithDetails(self::$_Project, 'PlannedVelocity,StartDate,EndDate');
@@ -80,10 +64,8 @@ class Project extends GenericModel {
             $EndDate = new \DateTime($IterationResult[$i]['EndDate']);
             self::$_IterationList[$Index] = $IterationResult[$i]['_refObjectName'];
             self::$_IterationDetails[$Index]['Name'] = $IterationResult[$i]['_refObjectName'];
-            self::$_IterationDetails[$Index]['StartDate'] = $StartDate->format("m/d/Y h:m:s");
-            self::$_IterationDetails[$Index]['EndDate'] = $EndDate->format("m/d/Y h:m:s");
-//            self::$_IterationDetails[$Index]['StartDate'] = $StartDate->format("m/d/Y");
-//            self::$_IterationDetails[$Index]['EndDate'] = $EndDate->format("m/d/Y");
+            self::$_IterationDetails[$Index]['StartDate'] = $StartDate->format("m/d/Y");
+            self::$_IterationDetails[$Index]['EndDate'] = $EndDate->format("m/d/Y");
             self::$_IterationDetails[$Index]['PlanVelocity'] = $IterationResult[$i]['PlannedVelocity'];
             self::$_IterationDetails[$Index]['PlanEstimate'] = 0;
             self::$_IterationDetails[$Index]['TaskEstimateTotal'] = 0;
@@ -94,14 +76,7 @@ class Project extends GenericModel {
             unset($EndDate);
         }
     }
-    
-    /**
-     * Returns list of user stories that belong to particular iteration  for a particular project
-     *
-     * @param string $Project
-     *   The ProjectName in Rally
-     * @return [array] that contains list of user stories that belong to particular iteration  for a particular project
-     */
+
     private static function _ListProjectUserStories(){
         // = $this->_Rally->find('userstory', ,'', );
         $Project = self::$_Project;
@@ -116,12 +91,7 @@ class Project extends GenericModel {
             }
         }
     }
-    
-    /**
-     * Returns details such as PlanEstimate,TaskEstimateTotal,TaskRemainingTotal and Actuals for iterations of a particular project
-     * 
-     * @return [array] that contains details such as PlanEstimate,TaskEstimateTotal,TaskRemainingTotal and Actuals for iterations of a particular project
-     */
+
     private static function _GetIterationTotals(){
         self::_ListProjectIteration();
         self::_ListProjectUserStories();
@@ -136,14 +106,7 @@ class Project extends GenericModel {
             }
         }
     }
-    
-    /**
-     * Returns list of Iteration with  object details  for a particular project
-     *
-     * @param string $Project
-     *   The ProjectName in Rally
-     * @return [array] that contains list of all Iterations along with its objects
-     */
+
     public static function GetIterationTable($Project){
         self::_SetProject($Project);
         self::_GetIterationTotals();
