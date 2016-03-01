@@ -26,6 +26,9 @@
             releases: $resource('/rest/rally/projects/:input/releases', {input: 'projectChosen'}, {
                 releaseList: {method: 'GET', timeout: '60000'}
             }),
+            owners: $resource('/rest/rally/projects/:input/owners', {input: 'projectChosen'}, {
+               ownersList: {method: 'GET', timeout: '60000'}
+            }),
             iterations: $resource('/rest/rally/projects/:input/iterations', {input: 'project'}, {
                 IterationList: {method: 'GET', timeout: '60000'}
             }),
@@ -42,10 +45,10 @@
                 metadata: {method: 'GET', timeout: '60000'},
                 EQI: {method: 'GET', params: {accepted: 'EQI', fetch: 'true'}, timeout: '60000'}
             }),
-            RallyDataUpdate: $resource('/rest/rally/userstories/', {}, {
+            RallyDataUpdate: $resource('/rest/rally/userstories/:input/update', {}, {
                 updateNode: {method: 'GET', timeout: '60000'},
             }),
-            RallyDataDragDrop: $resource('/rest/rally/userstories/', {}, {
+            RallyDataDragDrop: $resource('/rest/rally/userstories/:input/destroy', {}, {
                 dragdrop: {method: 'GET', params: {drag: true}, timeout: '60000'},
             })
         };

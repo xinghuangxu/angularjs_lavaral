@@ -167,29 +167,47 @@
 
 
 
-                    //Loads the popover template
-                    var popoverContent = $templateCache.get($scope.PopoverId);
-                    //Gives the popover a controller
-                    var finalContent = $compile("<div>" + popoverContent + "</div>")($scope);
-                    //Options of popover
-                    var options = {
-                        html: true,
-                        content: finalContent,
-                        title: false,
-                        placement: 'top',
-                        trigger: 'focus'
-                    };
+//                    //Loads the popover template
+//                    var popoverContent = $templateCache.get($scope.PopoverId);
+//                    //Gives the popover a controller
+//                    var finalContent = $compile("<div>hello</div>")($scope);
+//                    //Options of popover
+//                    var options = {
+//                        html: true,
+//                        content:'content',
+//                        title: false,
+//                        placement: 'top',
+//                        trigger: 'focus'
+//                    };
+
+
+
+
                     
                     element.bind("select_node.jstree", function (element, data) {
-                        var target = $($(element.currentTarget).find('.jstree-clicked')[0]);
-                        console.log(data);
-                        //                        options['container']='.jstree-clicked';
-                        target.popover(options);
-                        target.popover("show");
-                        $scope.selectInfo = {nodeID: data.node.id, children: data.node.children.length, name: data.node.text};
-                        $scope.$apply(attrs.storeNode);
-                        //Disabled: This is a testing console log message
-                        console.log("Node ID: ", data.node.id);
+//                        var target = $($(element.currentTarget).find('.jstree-clicked')[0]);
+//                        console.log(data);
+//                        //                        options['container']='.jstree-clicked';
+//                        target.popover(options);
+//                        target.popover("show");
+//                        $scope.selectInfo = {nodeID: data.node.id, children: data.node.children.length, name: data.node.text};
+//                        $scope.$apply(attrs.storeNode);
+//                        //Disabled: This is a testing console log message
+//                        console.log("Node ID: ", data.node.id);
+                             var asAServiceOptions = {
+
+
+    content:{project:$scope.data.SelectedProject,release:$scope.data.SelectedRelease,node:data.node},
+    animation:'am-flip-x',
+    placement:'top',
+    trigger: 'manual',
+    templateUrl:"angular/rally/_popover.html",
+    autoClose:true
+  }
+
+                            var myPopover = $popover(angular.element($('#'+data.node.id)), asAServiceOptions);
+                               myPopover.$promise.then(myPopover.toggle);
+
                     });
                     if($scope.Rally){
                         $scope.Rally.treeData=$scope[attrs.ngModel];

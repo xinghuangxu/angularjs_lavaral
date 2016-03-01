@@ -32,8 +32,6 @@
         <script type="text/javascript" src="{{ asset('angular/spark.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/ui.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/resizable.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/ui/treeSelect.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/ui/multiArrangeTree.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/jstree.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/node.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/flash.js') }}"></script>
@@ -96,7 +94,12 @@
         <!-- Start of Loading Rally modules -->
         <script type="text/javascript" src="{{ asset('angular/rally/rally.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/rally/rally.services.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/rally/rally.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/rally.controller.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/rally.tree.controller.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/rally.add.form.modal.controller.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/rally.tree.popover.controller.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/rally.delete.modal.controller.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/rally.edit.form.modal.controller.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/rally/directive.js') }}"></script>
         
         

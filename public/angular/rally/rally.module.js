@@ -7,7 +7,8 @@
             'ngSanitize', 
             'mgcrea.ngStrap', 
             'ngResource', 
-            'colorpicker.module', 
+            'colorpicker.module',
+            'spark.planner.settings',
             'wysiwyg.module', 
             'ngRoute'
         ]);

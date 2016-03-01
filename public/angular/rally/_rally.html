@@ -1,11 +1,12 @@
 <!-- Data Field -->	
-<div class="navbar-form navbar-left rally">
+<div class="navbar-form navbar-left rally" ng-controller="rallyController">
 
-    <div ng-controller="rallyTree">
+    <div ng-controller="rallyTreeCtrl">
+
         <form>
             <label class=" control-label input-sm">Iteration:</label>
             <div class="form-group">
-                <select class="form-control input-sm" style="border:1px solid silver;" ng-model="rallyTree.data.iteration" data-html="1" ng-options = "iteration for iteration in IterationList" ng-change="RallyIterationChange()" ng-disabled="!IterationList">
+                <select class="form-control input-sm" style="border:1px solid silver;" ng-model="rallyTreeCtrl.data.iteration" data-html="1" ng-options = "iteration for iteration in IterationList" ng-change="RallyIterationChange()" ng-disabled="!IterationList">
                     <option value="" >Choose Iteration</option>
                 </select>
             </div>
@@ -21,5 +22,5 @@
 
     </div>
 
-    <div ng-include="'angular/rally/_popover.html'"></div>
+    <!--<div ng-include="'angular/rally/_popover.html'"></div>-->
 </div>

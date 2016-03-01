@@ -87,6 +87,10 @@ label.required-label::after {
     padding: 40px 15px;
     text-align: center;
 }
+
+label.control-label.error {
+text-align:left;
+}
 .box {
     position: relative;
     border-radius: 3px;
