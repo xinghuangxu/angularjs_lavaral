@@ -171,7 +171,7 @@
         // Each template must contain a reference to the correct controller for that pane
         vm.panes =  [
             {
-                label: "High Level Scoping",
+                label: "High Level scope",
                 template: "angular/planner/boxcar/boxcar.tpl.html",
                 order: 0,
                 active: true,
@@ -188,7 +188,8 @@
             {
                 label: "Architecture Docs",
                 //template: "planner/sow/archDocs.tpl.html",
-                template: "angular/planner/empty.tpl.html",
+                //template: "angular/planner/empty.tpl.html",
+                template: "angular/sow/archDocs.tpl.html",
                 order: 2,
                 active: false,
                 group: 'what'
@@ -196,7 +197,7 @@
             {
                 label: "Rally",
                 //template: "planner/rally/rally.tpl.html",
-                template: "angular/planner/empty.tpl.html",
+                template: "angular/rally/rallyModal.tpl.html",
                 order: 3,
                 active: false,
                 group: 'when'
@@ -217,9 +218,10 @@
                 group: 'where'
             },
             {
-                label: "ALM",
+                label: "Test Cases",
                 //template: "planner/alm/alm.tpl.html",
-                template: "angular/planner/empty.tpl.html",
+                //template: "angular/testcase/testcaseModal.tpl.html",
+                template: "angular/testcase/testcaseHardModal.tpl.html",
                 order: 6,
                 active: false,
                 group: 'what'
@@ -231,6 +233,22 @@
                 order: 7,
                 active: false,
                 group: 'where'
+            },
+            {
+                label: "Test Instances",
+                //template: "planner/weblab/weblab.tpl.html",
+                template: "angular/planner/empty.tpl.html",
+                order: 8,
+                active: false,
+                group: 'what'
+            }, 
+            {
+                label: "RCCA",
+                //template: "planner/weblab/weblab.tpl.html",
+                template: "angular/planner/empty.tpl.html",
+                order: 9,
+                active: false,
+                group: 'what'
             }
         ];
     }

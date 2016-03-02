@@ -12,7 +12,10 @@
             <div class="form-group">
                 <input type="text" ng-model="testplan.filter.text" class="form-control input-sm" placeholder="Filter">
             </div>
-            <button class="btn btn-default input-sm" ng-click="testplan.strategies.open()"><i class="glyphicon glyphicon-plus"></i></button>
+            <button class="btn btn-default input-sm" ng-click="testplan.strategies.open()" bs-tooltip data-title="Add Strategies" data-trigger="hover" placement="bottom"><i class="glyphicon glyphicon-plus"></i></button>
+            <button class="btn btn-default input-sm" ng-click="testplan.strategies.open()" bs-tooltip data-title="Attachments" data-trigger="hover" placement="bottom"><i class="glyphicon glyphicon-paperclip"></i></button>
+            <button class="btn btn-default input-sm" ng-click="testplan.strategies.open()" bs-tooltip data-title="Grid View" data-trigger="hover" placement="bottom"><i class="glyphicon glyphicon-th"></i></button>
+            <button class="btn btn-default input-sm" ng-click="testplan.strategies.open()" bs-tooltip data-title="Configuration diagrams" data-trigger="hover" placement="bottom"><i class="glyphicon glyphicon-tasks"></i></button>
         </div>
     </div>
     <wave-spinner ng-show="testplan.tree.loading"></wave-spinner>

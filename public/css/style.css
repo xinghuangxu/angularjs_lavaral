@@ -234,3 +234,10 @@ span.label.label-default.similar-item-link>a {
     width:600px;
     max-width:100%;
 }
+
+.icon-architect { 
+  background-image: url("../images/icon_architect.png");
+  background-position: center center; 
+  height: 16px; 
+  width: 16px;
+}

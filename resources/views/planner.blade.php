@@ -92,6 +92,15 @@
         <script type="text/javascript" src="{{ asset('angular/scope/scope.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/scope/scope.tpl.service.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/scope/scope.js') }}"></script>
+        
+        <!-- Start of Loading Rally modules -->
+        <script type="text/javascript" src="{{ asset('angular/rally/rally.module.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/rally.services.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/rally.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/directive.js') }}"></script>
+        
+        
+        <!-- End of Loading Rally modules -->
 
         <!-- Misc Scripts -->
     </body>
