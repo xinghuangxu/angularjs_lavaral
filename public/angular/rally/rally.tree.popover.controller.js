@@ -67,44 +67,24 @@
 
         //Function when the info button is used
         $scope.infoButton = function (){
-            $scope.data.nodeID = rallyDataSet.selectedNode.nodeID;
-            $scope.load = true;
-            $scope.noPoints = false;
 
-            rallyDataService.RallyDataDetails.metadata({input: $scope.data.nodeID}).$promise
-                .then(function (val, response) {
-                    $scope.data.modalData = val.data;
-                    $scope.data.modalData.description = $sce.trustAsHtml(val.data.description);
-                    var myModal = $modal({
-                        contentTemplate: 'angular/rally_modal.html',
-                        scope: $scope.data,
-                        show: true
-                    });
-                })
-                .catch(function (response) {
-                    $alert({
-                        title: "Error fetching Rally domains",
-                        content: "There was an error fetching the list of Projects from the server.",
-                        placement: 'top',
-                        container: '.modal-dialog'
-                    });
-                });
 
-            rallyDataService.RallyDataDetails.EQI({input: $scope.data.nodeID}).$promise
-                .then(function (val, response) {
-                    $scope.noPoints = false;
-                    $scope.data.eqiData = val.data;
-                    $scope.data.percentage = 100 * $scope.data.eqiData.Accepted / $scope.data.eqiData.Planned;
-                    $scope.load = false;
-                })
-                .catch(function (response) {
-                    $alert({
-                        title: "Error fetching Rally domains",
-                        content: "There was an error fetching the list of Projects from the server.",
-                        placement: 'top',
-                        container: '.modal-dialog'
-                    });
-                });
+        var infoModal = $modal({
+                templateUrl: 'angular/rally/_infoModal.html',
+                animation:'am-flip-x',
+                title:'User Story Information',
+                controller:'rallyInfoModalCtrl',
+                resolve:{
+
+
+                infoModalData:function(){
+                        return rallyDataService.RallyDataDetails.metadata({input: $scope.content.node.id}).$promise;
+                }
+
+
+                },
+                show: true
+            });
         };
 
         //Function when the edit button is used

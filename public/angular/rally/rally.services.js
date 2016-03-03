@@ -36,7 +36,7 @@
                 treeData: {method: 'GET', timeout: '60000', params: {project: 'project', release: 'release'}}
             }),
             RallyDataDelete: $resource('/rest/rally/userstories/:input', {}, {
-                deleteNode: {method: 'DELETE', timeout: '60000'}
+                deleteNode: {method: 'DELETE', params: {drag: true}, timeout: '60000'}
             }),
             RallyDataCreate: $resource('/rest/rally/userstories/create', {}, {
                 AddNode: {method: 'GET', timeout: '60000'}
@@ -45,7 +45,7 @@
                 metadata: {method: 'GET', timeout: '60000'},
                 EQI: {method: 'GET', params: {accepted: 'EQI', fetch: 'true'}, timeout: '60000'}
             }),
-            RallyDataUpdate: $resource('/rest/rally/userstories/:input/update', {}, {
+            RallyDataUpdate: $resource('/rest/rally/userstories/:input/edit', {}, {
                 updateNode: {method: 'GET', timeout: '60000'},
             }),
             RallyDataDragDrop: $resource('/rest/rally/userstories/:input/destroy', {}, {

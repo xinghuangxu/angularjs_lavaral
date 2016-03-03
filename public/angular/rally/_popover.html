@@ -1,23 +1,18 @@
 <div class="popover" tabindex="-1">
   <div class="arrow"></div>
  	<div class="popover-content"  ng-controller="rallyPopoverCtrl as rallyPopoverCtrl">
-		<button tab-index="-1" type="button" class="btn-p btn-mini btn-p-default" ng-click="addButton()" bs-tooltip data-title="Add User Story" data-trigger="hover" data-type="info" data-delay="300">
-		<i class="fa fa-plus"></i>
-	</button>
-	<button tab-index="-1" type="button" class="btn-p btn-mini btn-p-default" ng-click="infoButton()" data-title="User Story Info" data-trigger="hover" data-type="info" data-delay="300">
-		<i class="fa fa-info fa-fw"></i>
-	</button>
-	<button tab-index="-1" type="button" class="btn-p btn-mini btn-p-default" ng-click="editButton()" data-title="Edit User Story" data-trigger="hover" data-type="info" data-delay="300">
-		<i class="fa fa-pencil fa-fw"></i>
-	</button>
-	<button tab-index="-1" type="button" class="btn-p btn-mini btn-p-default">
-		<i class="fa fa-link"></i>
-	</button>
-	<button tab-index="-1" type="button" class="btn-p btn-mini btn-p-default" ng-click="deleteButton()" data-title="Delete" data-trigger="hover" data-type="info" data-delay="300">
-		<i class="fa fa-trash-o fa-fw"></i>
-	</button>
 
 
+		<div class="box-tools">
+                <button type="button" title="add" class="btn" ng-click="addButton()"><i class="fa fa-plus"></i>
+                </button>
+				<button type="button" title="info" class="btn" ng-click="infoButton()"><i class="fa fa-info fa-fw"></i>
+                </button>
+				<button type="button" title="edit" class="btn " ng-click="editButton()"><i class="fa fa-pencil fa-fw"></i>
+                </button>
+				<button type="button" title="delete" class="btn " ng-click="deleteButton()"><i class="fa fa-trash-o fa-fw"></i>
+                </button>
+        </div>
 
 	</div>
 </div>

@@ -34,16 +34,16 @@
 
 
                 var arg = {
-                    project: addModalData.project,
-                    title: $scope.newNodeForm.nodeTitle,
-                    owner: $scope.newNodeForm.selectedOwner,
-                    state: $scope.newNodeForm.selectedState,
-                    release:$scope.newNodeForm.selectedRelease,
-                    points: $scope.newNodeForm.selectedPoint,
-                    iteration: $scope.newNodeForm.selectedIteration,
-                    description: $scope.newNodeForm.description,
-                    newNodeID: addModalData.nodeId,
-                    arch: $scope.newNodeForm.architecturalTopicId
+                    project: addModalData.project||'',
+                    title: $scope.newNodeForm.nodeTitle||'',
+                    owner: $scope.newNodeForm.selectedOwner||'',
+                    state: $scope.newNodeForm.selectedState||'',
+                    release:$scope.newNodeForm.selectedRelease||'',
+                    points: $scope.newNodeForm.selectedPoint||'',
+                    iteration: $scope.newNodeForm.selectedIteration||'',
+                    description: $scope.newNodeForm.description||'',
+                    newNodeID: addModalData.nodeId||'',
+                    arch: $scope.newNodeForm.architecturalTopicId||''
                 }
                 rallyDataService.RallyDataCreate.AddNode(arg).$promise
                 .then(function (val, response) {
