@@ -8,7 +8,7 @@
       </div>
       <div class="modal-body" ng-bind="content"></div>
       <div class="modal-footer">
-		  <button type="button" class="btn btn-primary" ng-click="deleteConfirm()" data-dismiss="modal">Yes</button>
+		  <button type="button" class="btn btn-primary" ng-click="deleteConfirm();$hide();" data-dismiss="modal">Yes</button>
 			<button type="button" class="btn btn-default" ng-click="$hide()">Cancel</button>
 
       </div>

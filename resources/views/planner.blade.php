@@ -100,9 +100,10 @@
         <script type="text/javascript" src="{{ asset('angular/rally/rally.tree.popover.controller.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/rally/rally.delete.modal.controller.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/rally/rally.edit.form.modal.controller.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/rally.info.modal.controller.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/rally/directive.js') }}"></script>
-        
-        
+
+
         <!-- End of Loading Rally modules -->
 
         <!-- Misc Scripts -->

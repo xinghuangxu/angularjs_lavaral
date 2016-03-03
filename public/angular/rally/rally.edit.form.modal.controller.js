@@ -43,18 +43,19 @@
 
 
                 var arg = {
+                    input: editModalData.node.id,
                     project: editModalData.project,
                     title: $scope.editNodeFormData.nodeTitle,
-                    owner: $scope.editNodeFormData.selectedOwner,
-                    state: $scope.editNodeFormData.selectedState,
-                    release:$scope.editNodeFormData.selectedRelease,
-                    points: $scope.editNodeFormData.selectedPoint,
-                    iteration: $scope.editNodeFormData.selectedIteration,
-                    description: $scope.editNodeFormData.description,
-                    newNodeID: editModalData.nodeId,
-                    arch: $scope.editNodeFormData.architecturalTopicId
+                    owner: $scope.editNodeFormData.selectedOwner||'',
+                    state: $scope.editNodeFormData.selectedState||'',
+                    release:$scope.editNodeFormData.selectedRelease||'',
+                    points: $scope.editNodeFormData.selectedPoint||'',
+                    iteration: $scope.editNodeFormData.selectedIteration||'',
+                    description: $scope.editNodeFormData.description||'',
+                    newNodeID: editModalData.node.id,
+                    arch: $scope.editNodeFormData.architecturalTopicId||''
                 }
-                rallyDataService.RallyDataUpdate.updateNode(arg,{}).$promise
+                rallyDataService.RallyDataUpdate.updateNode(arg).$promise
                 .then(function (val, response) {
                    $scope.editNodeFormData={
                     nodeTitle:null,

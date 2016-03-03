@@ -5,8 +5,8 @@
         .module('spark.rally')
         .controller('rallyDeleteModalCtrl', rallyDeleteModalCtrl);
 
-     rallyDeleteModalCtrl.$inject = ['$scope','$alert','rallyDataService','node'];
-     function rallyDeleteModalCtrl($scope,$alert,rallyDataService,node){
+     rallyDeleteModalCtrl.$inject = ['$scope','$alert','rallyDataService','node','rallyDataSet'];
+     function rallyDeleteModalCtrl($scope,$alert,rallyDataService,node,rallyDataSet){
 
 
             $scope.deleteConfirm = function(){
