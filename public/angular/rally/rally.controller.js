@@ -22,17 +22,16 @@
         $scope.data = {};
         $scope.SelectedProject='';
         $scope.SelectedRelease='';
+        $scope.SelectedIteration='';
 
         $scope.PopoverId = "popover.html";
 
         $scope.$on("RallySettingChanged", function (event, data){
-            $scope.data.SelectedProject = data.project;
-            $scope.data.SelectedRelease = data.release;
-//            console.log("Selected Project", $scope.SelectedProject);
-//            console.log("Selected Release", $scope.SelectedRelease);
-//            console.log("RallyChanged", data.project);
-            $scope.getIteration(data.project);
-            $scope.$broadcast("RallyLoadTree", $scope.data);
+            $scope.SelectedProject = data.project;
+            $scope.SelectedRelease = data.release;
+            $scope.SelectedIteration = data.iteration;
+            $scope.getIteration($scope.SelectedProject);
+            $scope.$broadcast("RallyLoadTree", data);
         });
 
         $scope.$on("RallyResponseHandle", function (event, data){
@@ -42,8 +41,12 @@
             });
         });
 
-        $scope.RallyIterationChange = function (){
-            $scope.$broadcast("RallyLoadTree", $scope.data);
+        $scope.RallyIterationChange = function (iteration){
+            var data = {project: $scope.SelectedProject,
+                        release:$scope.SelectedRelease,
+                        iteration:iteration}
+            $scope.SelectedIteration = iteration;
+            $scope.$broadcast("RallyLoadTree", data);
         };
 
         $scope.getIteration = function (project){

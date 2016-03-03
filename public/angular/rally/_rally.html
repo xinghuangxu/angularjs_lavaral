@@ -6,7 +6,7 @@
         <form>
             <label class=" control-label input-sm">Iteration:</label>
             <div class="form-group">
-                <select class="form-control input-sm" style="border:1px solid silver;" ng-model="rallyTreeCtrl.data.iteration" data-html="1" ng-options = "iteration for iteration in IterationList" ng-change="RallyIterationChange()" ng-disabled="!IterationList">
+                <select class="form-control input-sm" style="border:1px solid silver;" ng-model="SelectedIteration" data-html="1" ng-options = "iteration for iteration in IterationList" ng-change="RallyIterationChange(SelectedIteration)" ng-disabled="!IterationList">
                     <option value="" >Choose Iteration</option>
                 </select>
             </div>
