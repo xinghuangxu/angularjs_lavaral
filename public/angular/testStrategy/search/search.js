@@ -19,11 +19,11 @@
      */
     function strategySearch() {
 
-        Search.$inject = ['$scope','testStrategyService', 'errorService', 'strategyEditService', 'strategyViewService', '$q'];
+        Search.$inject = ['$scope', 'testStrategyService', 'errorService', 'strategyEditService', 'strategyViewService', '$q'];
         /**
          * Controller for test strategy search
          */
-        function Search( $scope, searchService, errorService, editService, viewService, $q) {
+        function Search($scope, searchService, errorService, editService, viewService, $q) {
             var vm = this;
 
             // Set the default panel to be open to the search panel
@@ -50,14 +50,86 @@
             var btns = [
                 {
                     title: "show detailed info",
-                    action: function () {
-                        //scope.$emit("LoadTestStrategyInfo", scope.searchTreeConfig.selectedInfo);
+                    action: function (treeConfig) {
+                        view(treeConfig.selectedInfo.id);
                     },
                     icon: "fa fa-info fa-fw"
+                },
+                {
+                    title: "edit",
+                    action: function (treeConfig) {
+                        edit(treeConfig.selectedInfo.id);
+                    },
+                    icon: "glyphicon glyphicon-pencil"
                 }
             ];
-
-            vm.searchTreeConfig = {
+            $scope.placeholderTreeConfig = {
+                watch: "placeholderTreeData",
+                id: 2,
+                parser: "testStrategyDataParserService",
+                class: "testStrategySearchTree",
+                popoverButtons: btns,
+                classifiers: [
+//                    {"value": 'QualificationArea', "text": "Qualification Tag"},
+//                    {"value": 'ImpactArea', "text": "Impact Area Tag"},
+//                    {"value": 'Approach', "text": "Approach Tag"},
+//                    {"value": 'CreatedDate', "text": "Creation Date"},
+//                    {"value": 'CreatedBy', "text": "Created By"},
+                    {"value": '', "text": "None"},
+                    {"value": 'ModifiedDate', "text": "Last Modification Date"},
+//                    {"value": 'ModifiedBy', "text": "Last Modified By"},
+                    {"value": 'Owner', "text": "Owner"},
+                    {"value": 'State', "text": "State"}
+                ],
+                attributes: {
+                    StrategyHeadline: "Strategy Title",
+//                    QualificationArea: "Qualification Area Tag",
+//                    ImpactArea: "Impact Area Tag",
+//                    Approach: "Approach",
+//                    CreatedDate: "Creation Date",
+//                    CreatedBy: "Created By",
+                    ModifiedDate: "Last Modification Date",
+//                    ModifiedBy: "Last Modified By",
+                    Owner: "Owner",
+                    State: "State",
+                    Type: "Strategy Type"
+//                    TopicID: "TPID"
+                }
+            };
+            $scope.coreTreeConfig = {
+                id: 3,
+                parser: "testStrategyDataParserService",
+                class: "testStrategySearchTree",
+                popoverButtons: btns,
+                classifiers: [
+//                    {"value": 'QualificationArea', "text": "Qualification Tag"},
+//                    {"value": 'ImpactArea', "text": "Impact Area Tag"},
+//                    {"value": 'Approach', "text": "Approach Tag"},
+//                    {"value": 'CreatedDate', "text": "Creation Date"},
+//                    {"value": 'CreatedBy', "text": "Created By"},
+                    {"value": '', "text": "None"},
+                    {"value": 'ModifiedDate', "text": "Last Modification Date"},
+//                    {"value": 'ModifiedBy', "text": "Last Modified By"},
+                    {"value": 'Owner', "text": "Owner"},
+                    {"value": 'State', "text": "State"}
+                ],
+                attributes: {
+                    StrategyHeadline: "Strategy Title",
+//                    QualificationArea: "Qualification Area Tag",
+//                    ImpactArea: "Impact Area Tag",
+//                    Approach: "Approach",
+//                    CreatedDate: "Creation Date",
+//                    CreatedBy: "Created By",
+                    ModifiedDate: "Last Modification Date",
+//                    ModifiedBy: "Last Modified By",
+                    Owner: "Owner",
+                    State: "State",
+                    Type: "Strategy Type"
+//                    TopicID: "TPID"
+                }
+            };
+            $scope.searchTreeConfig = {
+                watch: "searchTreeData",
                 id: 1,
                 parser: "testStrategyDataParserService",
                 class: "testStrategySearchTree",
@@ -85,7 +157,7 @@
 //                    ModifiedBy: "Last Modified By",
                     Owner: "Owner",
                     State: "State",
-                    Type: "Strategy Type",
+                    Type: "Strategy Type"
 //                    TopicID: "TPID"
                 }
             };
@@ -101,8 +173,19 @@
                     placeholder: searchService.query({type: 'p,s'}).$promise,
                     core: searchService.query({type: 'c'}).$promise
                 }).then(function (data) {
-                    vm.placeholder = data.placeholder;
-                    vm.core = data.core;
+                    setTimeout(function () {
+                        vm.placeholder = data.placeholder;
+//                    $scope[$scope.placeholderTreeConfig.watch] = data.placeholder;
+                        $scope.$broadcast('LoadTreeData' + 2, {
+                            source: data.placeholder
+                        });
+                        vm.core = data.core;
+//                    $scope[$scope.searchTreeConfig.watch] = data.core;
+                        $scope.$broadcast('LoadTreeData' + 3, {
+                            source: data.core
+                        });
+                    }, 1000);
+
                 }).finally(function () {
                     vm.loading.core = vm.loading.placeholder = false;
                 });
@@ -121,9 +204,8 @@
                     searchService.query({search: vm.searchTerm}).$promise
                             .then(function (data) {
                                 vm.results = data;
-                                $scope.$broadcast('LoadTreeData', {
-                                    source: data,
-                                    id: 1
+                                $scope.$broadcast('LoadTreeData' + 1, {
+                                    source: data
                                 });
                             })
                             .catch(function (error) {
@@ -141,9 +223,9 @@
              * 
              * @param {object} strat Strategy to edit
              */
-            function edit(strat) {
+            function edit(strategyID) {
                 editService.loading = true;
-                searchService.get({StrategyID: strat.StrategyID}).$promise
+                searchService.get({StrategyID: strategyID}).$promise
                         .then(function (data) {
                             vm.editService.current = data;
                         })
@@ -162,9 +244,9 @@
              * 
              * @param {object} strat Strategy to edit
              */
-            function view(strat) {
+            function view(strategyID) {
                 viewService.loading = true;
-                searchService.get({StrategyID: strat.StrategyID}).$promise
+                searchService.get({StrategyID: strategyID}).$promise
                         .then(function (data) {
                             vm.viewService.current = data;
                         })

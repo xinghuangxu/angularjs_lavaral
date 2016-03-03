@@ -16,6 +16,7 @@
     {
         return {
             restrict: 'EA',
+            scope: true,
             link: function (scope, element, attrs) {
                 scope.load = true;
                 //When this flag is true, the move_node event is skipped
@@ -42,7 +43,12 @@
                                 var btnElm = $('<button type="button" class="btn-p btn-xs btn-p-default"></button>');
                                 btnElm.append(icon);
                                 btnElm.prop("title", btnConfig.title);
-                                btnElm.click(btnConfig.action);
+                                (function () {
+                                    var action = btnConfig.action;
+                                    btnElm.click(function () {
+                                        action(scope.treeConfig);
+                                    });
+                                })();
                                 optionElm.append(btnElm);
                             }
                             var target = $($(event.currentTarget).find('.jstree-clicked')[0]);
@@ -165,10 +171,11 @@
          */
         return {
             restrict: 'EA',
+            scope: true,
             link: function (scope, element, attrs) {
                 //Important!!!
                 //Config inforamtion is pass in as an object form the parent. The field name is specified in the directive attributes
-                var treeConfig = scope[attrs.controller][attrs.config]; //config object
+                var treeConfig = scope[attrs.config]; //config object
                 if (treeConfig.class) {
                     element.addClass(treeConfig.class);
                 }
@@ -184,11 +191,10 @@
                         scope.$broadcast("ShowTree", scope.tree);
                     }
                 }
-                scope.$on('LoadTreeData', function (event, data) {
-                    if (data.id === scope.id) {
-                        dataParser.setSource(data.source, treeConfig.attributes);
-                        updateTree(scope.selectedClassifier.value);
-                    }
+                scope.$on('LoadTreeData' + treeConfig.id, function (event, data) {
+                    treeConfig.source = data.source;
+                    dataParser.setSource(treeConfig.source, treeConfig.attributes);
+                    updateTree(scope.selectedClassifier.value);
                 });
                 scope.$watch('treeSearchKey', function (newValue, oldValue) {
                     scope.$broadcast('treeSearchEvent', newValue);
@@ -197,7 +203,10 @@
                 scope.classifiers = treeConfig.classifiers;
                 scope.selectedClassifier = scope.classifiers[0];
                 scope.$watch('selectedClassifier', function (newValue, oldValue) {
-                    updateTree(newValue.value);
+                    if (treeConfig.source) {
+                        dataParser.setSource(treeConfig.source, treeConfig.attributes);
+                        updateTree(newValue.value);
+                    }
                 });
 
                 //initialize the header buttons
