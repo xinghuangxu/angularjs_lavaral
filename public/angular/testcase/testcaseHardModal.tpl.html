@@ -1,25 +1,12 @@
+
 <div class="test-strategy-search" ng-controller="TestCaseCTRL as testcase">
     <div class="panel-group" bs-collapse data-animation="am-collapse" ng-model="search.activePanel">
         <!--suggested strategy pools-->
         <div class="panel panel-default">
             <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
                 <h3 class="pull-left panel-title">Suggested Test Cases</h3>
-                <span class="pull-right badge">2 {{search.suggested.length}}</span>
-                <wave-spinner ng-show="search.loading.suggested"></wave-spinner>
-            </div>
-            <div class="panel-collapse" role="tabpanel" bs-collapse-target>
-                <div class="panel-body">
-                    > Test case 1 <br />
-                    > Test Case 2 <br />
-                </div>
-            </div>
-        </div>
-        
-        <div class="panel panel-default">
-            <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
-                <h3 class="pull-left panel-title">Browse Test Cases</h3>
-                <span class="pull-right badge">7 {{search.suggested.length}}</span>
-                <wave-spinner ng-show="search.loading.suggested"></wave-spinner>
+                <!--<span class="pull-right badge">1 {{search.suggested.length}}</span>-->
+                <!--<wave-spinner ng-show="search.loading.suggested"></wave-spinner>-->
             </div>
             <div class="panel-collapse" role="tabpanel" bs-collapse-target>
                 <div class="panel-body">
@@ -28,24 +15,46 @@
                             <label class="control-label input-sm">Arrange By:</label>
                             <div class="form-group">
                                 <div>
-                                    <select class="form-control input-sm" ng-model="boxcar.config.activeGroup" ng-options="item.text for item in boxcar.config.groupBy">
+                                    <select class="form-control input-sm" ng-model="testcase.config.activeGroup" ng-options="item.text for item in testcase.config.groupBy">
                                     </select>
                                 </div>
                             </div>
                             <label for="Search" class=" control-label input-sm">Filter:</label>
                             <div class="form-group">
-                                <input type="text" ng-model="boxcar.filter.text" class="form-control input-sm" placeholder="Filter">
+                                <input type="text" ng-model="testcase.filter.text" class="form-control input-sm" placeholder="Filter">
                             </div>
                         </div>
                     </div>
-                    
-                    + Folder 1 <br />
-                    + Folder 2 <br />
-                    + Subfolder 1 <br />
-                    -Test case1 <br />
-                    -Test case 2 <br />
-                    + Subfolder 2 <br />
-                    + Folder 3 <br />
+                    Suggested Requirements
+                    <spark-jstree ng-model="testplan.tree.data" data-filter="testplan.filter.text" data-on-select="testplan.onSelect(data)"></spark-jstree>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
+                <h3 class="pull-left panel-title">Browse Test Cases</h3>
+<!--                <span class="pull-right badge">1 {{search.suggested.length}}</span>
+                <wave-spinner ng-show="search.loading.suggested"></wave-spinner>-->
+            </div>
+            <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+                <div class="panel-body">
+                    <div class="clearfix">
+                        <div class="navbar-form navbar-left">
+                            <label class="control-label input-sm">Arrange By:</label>
+                            <div class="form-group">
+                                <div>
+                                    <select class="form-control input-sm" ng-model="testcase.config.activeGroup" ng-options="item.text for item in testcase.config.groupBy">
+                                    </select>
+                                </div>
+                            </div>
+                            <label for="Search" class=" control-label input-sm">Filter:</label>
+                            <div class="form-group">
+                                <input type="text" ng-model="testcase.filter.text" class="form-control input-sm" placeholder="Filter">
+                            </div>
+                        </div>
+                    </div>
+                    Browse Requirements
                 </div>
             </div>
         </div>
@@ -53,21 +62,15 @@
         <div class="panel panel-default">
             <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
                 <h3 class="pull-left panel-title">Search</h3>
-                <wave-spinner ng-show="search.loading.suggested"></wave-spinner>
+<!--                <wave-spinner ng-show="search.loading.suggested"></wave-spinner>-->
             </div>
             <div class="panel-collapse" role="tabpanel" bs-collapse-target>
                 <div class="panel-body">
-                    
-                    + Folder 1 <br />
-                    + Folder 2 <br />
-                    + Subfolder 1 <br />
-                    -Test case1 <br />
-                    -Test case 2 <br />
-                    + Subfolder 2 <br />
-                    + Folder 3 <br />
+                    External Documents (Ers)
                 </div>
             </div>
         </div>
 
     </div>
 </div>
+

@@ -108,7 +108,6 @@
             archdocsService.service.query().$promise
                     .then(function(data){
                         service.data = data;
-                        console.log(service.data);
                         service.parse(data);
                         service.buildTree();
                     })
