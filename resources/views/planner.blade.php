@@ -35,6 +35,8 @@
         <script type="text/javascript" src="{{ asset('angular/ui/jstree.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/node.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/flash.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/ui/treeSelect.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/ui/multiArrangeTree.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/alm/alm.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/alm/alm.services.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/cq/cq.module.js') }}"></script>
