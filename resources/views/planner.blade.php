@@ -96,11 +96,11 @@
         <script type="text/javascript" src="{{ asset('angular/rally/rally.services.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/rally/rally.controller.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/rally/rally.tree.controller.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/rally/rally.add.form.modal.controller.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/rally/rally.tree.popover.controller.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/rally/rally.delete.modal.controller.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/rally/rally.edit.form.modal.controller.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/rally/rally.info.modal.controller.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/modals/rally.add.form.modal.controller.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/popover/rally.tree.popover.controller.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/modals/rally.delete.modal.controller.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/modals/rally.edit.form.modal.controller.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/rally/modals/rally.info.modal.controller.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/rally/directive.js') }}"></script>
 
 

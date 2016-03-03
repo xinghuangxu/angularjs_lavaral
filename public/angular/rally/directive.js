@@ -167,19 +167,6 @@
 
 
 
-//                    //Loads the popover template
-//                    var popoverContent = $templateCache.get($scope.PopoverId);
-//                    //Gives the popover a controller
-//                    var finalContent = $compile("<div>hello</div>")($scope);
-//                    //Options of popover
-//                    var options = {
-//                        html: true,
-//                        content:'content',
-//                        title: false,
-//                        placement: 'top',
-//                        trigger: 'focus'
-//                    };
-
 
 
 
@@ -197,11 +184,11 @@
                              var asAServiceOptions = {
 
 
-    content:{project:$scope.data.SelectedProject,release:$scope.data.SelectedRelease,node:data.node},
+    content:{project:$scope.SelectedProject,release:$scope.SelectedRelease,node:data.node},
     animation:'am-flip-x',
     placement:'top',
     trigger: 'manual',
-    templateUrl:"angular/rally/_popover.html",
+    templateUrl:"angular/rally/popover/_popover.html",
     autoClose:true
   }
 
