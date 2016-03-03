@@ -11,7 +11,8 @@
     // Parent module, used in dependency injection and resolution
     angular
         .module('spark.testcase')
-        .controller('AddTestCase', AddTestCase);
+        .controller('AddTestCase', AddTestCase)
+        .controller('TestCaseCTRL', TestCaseCTRL);
 
     AddTestCase.inject = ['$scope', 'testcaseService', 'almFolderService', 'errorService'];
     /**
@@ -46,5 +47,58 @@
                 });
         }
         
+    }
+    
+    TestCaseCTRL.inject = [ '$scope', '$popover', 'TestCaseTreeService', 'globalFilterService' ];
+    
+    function TestCaseCTRL ($scope, $popover, TestCaseTree, filter) {
+        var vm = this;
+        TestCaseTree.get();
+        vm.config = TestCaseTree.config;
+        vm.tree = TestCaseTree.data;
+        console.log("Data", TestCaseTree);
+        vm.filter = filter;
+        vm.selectNode = selectNode;
+
+        /**
+         * Update the tree view when the sort selection changes
+         */
+        
+        $scope.$watch(function() {
+            return vm.config.activeGroup;
+        }, function(newVal) {
+            if(!newVal)
+                return;
+
+            vm.tree = TestCaseTree.buildTree(newVal);
+        });
+
+        /**
+         * Fetch scoping data from the TestCase service
+         *
+         * @param {string} TestCase  Boxcar to fetch data for
+         */
+        function getTreeData (TestCase) {
+            vm.loading = true;
+            var data = TestCaseScopes.get({TestCase: TestCase});
+            data.$promise
+                .then(function(data) {
+                    TestCaseTree.parse(data);
+
+                    vm.tree = TestCaseTree.buildTree(vm.config.activeGroup);
+                })
+                .finally(function() {
+                    vm.loading = false;
+                });
+        }
+        
+        /**
+         * Event which triggers whenever a node in the tree is selected
+         * 
+         * @param {object} data Node and event data from jstree
+         */
+        function selectNode (data) {
+            // TODO: Add popover handling for HL scope
+        }
     }
 })();

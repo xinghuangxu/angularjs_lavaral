@@ -11,9 +11,11 @@
     'use strict';
 
     angular
-        .module('spark.testcase')
+        .module('spark')
         .factory('testcaseService', testcaseService)
-        .service('$testcases', testcaseModalService);
+        .service('$testcases', testcaseModalService)
+        .factory('archdocsService', archdocsService)
+        .factory('archdocsTreeService', archdocsTreeService);
 
     testcaseService.$inject = [ '$resource' ];
 

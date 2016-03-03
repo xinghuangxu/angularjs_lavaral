@@ -15,6 +15,7 @@
             'ngResource',
             'angular-spinkit',
             'spark.error',
-            'spark.ui'
+            'spark.ui',
+            'mgcrea.ngStrap'
         ]);
 })();

@@ -39,7 +39,7 @@
                 <span class="btn btn-sm">
                     {{group.label}}
                 </span>
-                <label ng-repeat="pane in vm.panes | filter:{group:group.name} | orderBy:order" class="btn btn-default btn-sm" ng-class="{'btn-primary active': pane.active}"><input type="checkbox" ng-model="pane.active" >{{pane.label}}</label>
+                <label ng-repeat="pane in vm.panes | filter:{group:group.name} | orderBy:order" class="btn btn-default btn-sm" ng-class="{'btn-primary active': pane.active}"><input type="checkbox" ng-model="pane.active" >{{pane.navTitle}}</label>
             </div>
         </div>
     </div>

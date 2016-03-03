@@ -1,0 +1,74 @@
+<div class="test-strategy-search" ng-controller="ImplReq as implreq">
+    <div class="panel-group" bs-collapse data-animation="am-collapse" ng-model="search.activePanel">
+        <!--suggested strategy pools-->
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
+                <h3 class="pull-left panel-title">In-build Implementation Requests</h3>
+                <!--<span class="pull-right badge">1 {{search.suggested.length}}</span>-->
+                <!--<wave-spinner ng-show="search.loading.suggested"></wave-spinner>-->
+            </div>
+            <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+                <div class="panel-body">
+                    <div class="clearfix">
+                        <div class="navbar-form navbar-left">
+                            <label class="control-label input-sm">Arrange By:</label>
+                            <div class="form-group">
+                                <div>
+                                    <select class="form-control input-sm" ng-model="implreq.config.activeGroup" ng-options="item.text for item in implreq.config.groupBy">
+                                    </select>
+                                </div>
+                            </div>
+                            <label for="Search" class=" control-label input-sm">Filter:</label>
+                            <div class="form-group">
+                                <input type="text" ng-model="implreq.filter.text" class="form-control input-sm" placeholder="Filter">
+                            </div>
+                        </div>
+                    </div>
+                    Suggested Requirements
+                    <spark-jstree ng-model="testplan.tree.data" data-filter="testplan.filter.text" data-on-select="testplan.onSelect(data)"></spark-jstree>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
+                <h3 class="pull-left panel-title">Related Implementation Requests</h3>
+<!--                <span class="pull-right badge">1 {{search.suggested.length}}</span>
+                <wave-spinner ng-show="search.loading.suggested"></wave-spinner>-->
+            </div>
+            <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+                <div class="panel-body">
+                    <div class="clearfix">
+                        <div class="navbar-form navbar-left">
+                            <label class="control-label input-sm">Arrange By:</label>
+                            <div class="form-group">
+                                <div>
+                                    <select class="form-control input-sm" ng-model="implreq.config.activeGroup" ng-options="item.text for item in implreq.config.groupBy">
+                                    </select>
+                                </div>
+                            </div>
+                            <label for="Search" class=" control-label input-sm">Filter:</label>
+                            <div class="form-group">
+                                <input type="text" ng-model="implreq.filter.text" class="form-control input-sm" placeholder="Filter">
+                            </div>
+                        </div>
+                    </div>
+                    Browse Requirements
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
+                <h3 class="pull-left panel-title">Search</h3>
+<!--                <wave-spinner ng-show="search.loading.suggested"></wave-spinner>-->
+            </div>
+            <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+                <div class="panel-body">
+                    External Documents (Ers)
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

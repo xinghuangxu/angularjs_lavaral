@@ -94,9 +94,19 @@
         <script type="text/javascript" src="{{ asset('angular/rally/rally.services.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/rally/rally.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/rally/directive.js') }}"></script>
-        
-        
         <!-- End of Loading Rally modules -->
+        
+        <!-- Start of Loading ArchDocs modules -->
+        <script type="text/javascript" src="{{ asset('angular/archdocs/archdocs.module.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/archdocs/archdocs.services.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/archdocs/archdocs.js') }}"></script>
+        <!-- End of Loading ArchDocs modules -->
+        
+        <!-- Start of Loading Implementation requirements modules -->
+        <script type="text/javascript" src="{{ asset('angular/implementreq/implreq.module.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/implementreq/implreq.services.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/implementreq/implreq.js') }}"></script>
+        <!-- End of Loading Implementation requirements modules -->
 
         <!-- Misc Scripts -->
     </body>
