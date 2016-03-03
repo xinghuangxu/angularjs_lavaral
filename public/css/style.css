@@ -245,3 +245,8 @@ span.label.label-default.similar-item-link>a {
   height: 16px; 
   width: 16px;
 }
+
+.panel-heading-height{
+    height: 45px;
+    padding-top: 1px;
+}

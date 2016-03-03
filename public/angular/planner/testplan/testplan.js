@@ -14,11 +14,11 @@
         .module('spark.planner.testplan')
         .controller('TestPlan', TestPlan);
 
-    TestPlan.$inject = [ '$scope', 'testplanTreeService', 'testplanStrategyService', 'testplanSettingsService', 'globalFilterService', '$popover' ];
+    TestPlan.$inject = [ '$scope', 'testplanTreeService', 'testplanStrategyService', 'testplanSettingsService', 'globalFilterService', '$popover', '$modal' ];
     /**
      * Controller for handling test plan pane in the test planner view
      */
-    function TestPlan ($scope, testplanTree, testplanStrategies, planSettings, filter, $popover) {
+    function TestPlan ($scope, testplanTree, testplanStrategies, planSettings, filter, $popover, $modal) {
         var vm = this;
         vm.config = testplanTree.config;
         vm.tree = testplanTree;
@@ -50,6 +50,15 @@
 
             testplanTree.get();
         });
+        
+        vm.comingSoonModal = function (){
+            return $modal({
+                title: "Coming Soon", 
+                content: "This feature will be Implemented soon!",
+                animation: "am-fade-and-slide-top",
+                contentTemplate: "angular/planner/testplan/comingSoonModal.tpl.html",
+            });
+        };
         
         /**
          * Event handler for selecting nodes in the tree
