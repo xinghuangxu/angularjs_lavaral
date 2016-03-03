@@ -20,10 +20,8 @@
      */
     function ImplReq ($scope, $popover, implreqTree, filter) {
         var vm = this;
-        implreqTree.get();
         vm.config = implreqTree.config;
         vm.tree = implreqTree.data;
-        console.log("Data", implreqTree);
         vm.filter = filter;
         vm.selectNode = selectNode;
 

@@ -20,10 +20,8 @@
      */
     function ArchDocs ($scope, $popover, archdocsTree, filter) {
         var vm = this;
-        archdocsTree.get();
         vm.config = archdocsTree.config;
         vm.tree = archdocsTree.data;
-        console.log("Data", archdocsTree);
         vm.filter = filter;
         vm.selectNode = selectNode;
 

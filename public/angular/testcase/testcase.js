@@ -49,15 +49,13 @@
         
     }
     
-    TestCaseCTRL.inject = [ '$scope', '$popover', 'TestCaseTreeService', 'globalFilterService' ];
+    TestCaseCTRL.inject = [ '$scope', '$popover', 'TestCaseTreeServiceService', 'globalFilterService' ];
     
-    function TestCaseCTRL ($scope, $popover, TestCaseTree, filter) {
+    function TestCaseCTRL ($scope, $popover, TestCaseTreeService, globalFilterService) {
         var vm = this;
-        TestCaseTree.get();
-        vm.config = TestCaseTree.config;
-        vm.tree = TestCaseTree.data;
-        console.log("Data", TestCaseTree);
-        vm.filter = filter;
+        vm.config = TestCaseTreeService.config;
+        vm.tree = TestCaseTreeService.data;
+        vm.filter = globalFilterService;
         vm.selectNode = selectNode;
 
         /**
@@ -70,7 +68,7 @@
             if(!newVal)
                 return;
 
-            vm.tree = TestCaseTree.buildTree(newVal);
+            vm.tree = TestCaseTreeService.buildTree(newVal);
         });
 
         /**
@@ -83,9 +81,9 @@
             var data = TestCaseScopes.get({TestCase: TestCase});
             data.$promise
                 .then(function(data) {
-                    TestCaseTree.parse(data);
+                    TestCaseTreeService.parse(data);
 
-                    vm.tree = TestCaseTree.buildTree(vm.config.activeGroup);
+                    vm.tree = TestCaseTreeService.buildTree(vm.config.activeGroup);
                 })
                 .finally(function() {
                     vm.loading = false;
