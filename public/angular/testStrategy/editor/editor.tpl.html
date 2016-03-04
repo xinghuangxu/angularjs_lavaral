@@ -95,7 +95,14 @@
                     <div class="col-md-2">
                         <label class="control-label required-label">Qual. Area</label>
                     </div>
-                    <div class="col-md-4">
+                                        <div class="col-md-4">
+                        <select class="form-control input-sm flash"
+                                ng-model="editor.service.current.tags_qual_area"
+                                required
+                                ng-disabled="editor.service.current.State == 'Obsolete' || editor.service.current.State == 'Approved'">
+                        </select>
+                    </div>
+<!--                    <div class="col-md-4">
                         <div ng-model="editor.service.current.tags_qual_area" name="qual" spark-array-validator>
                             <button type="button"
                                     ng-click="editor.changeQual()"
@@ -112,7 +119,7 @@
                                 <i class="glyphicon glyphicon-plus"></i>
                             </button>
                         </div>
-                    </div>
+                    </div>-->
 
                     <div class="col-md-2">
                         <label class="control-label required-label">Approach</label>

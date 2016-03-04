@@ -356,13 +356,11 @@
             }
 
             var modal = $modal({
-                title: 'Test Strategy Editor',
                 contentTemplate: 'angular/testStrategy/testStrategy.tpl.html',
                 controller: 'Strategy',
                 controllerAs: 'strategy',
                 scope: modalScope
             });
-
             return modal;
         }
     }

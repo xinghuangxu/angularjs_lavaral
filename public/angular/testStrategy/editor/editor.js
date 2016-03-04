@@ -59,7 +59,7 @@
             vm.approve = approve;
             vm.promote = promote;
             vm.demote = demote;
-            vm.obsolete = obsolete;
+//            vm.obsolete = obsolete;
 
             vm.changeQual = changeQual;
             vm.deleteTag = deleteTag;
