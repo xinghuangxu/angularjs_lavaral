@@ -71,8 +71,6 @@
             treeJson.push(rootNode);
            }
 
-           console.log(treeJson);
-
            return treeJson;
 
 

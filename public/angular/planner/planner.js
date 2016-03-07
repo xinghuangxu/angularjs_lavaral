@@ -230,7 +230,7 @@
                 //template: "angular/testcase/testcaseModal.tpl.html",
                 template: "angular/testcase/testcaseHardModal.tpl.html",
                 order: 6,
-                active: true,
+                active: false,
                 group: 'what'
             },
             {
@@ -246,9 +246,9 @@
                 label: "Test Instances",
                 navTitle: "Test Instances",
                 //template: "planner/weblab/weblab.tpl.html",
-                template: "angular/planner/comingSoon.tpl.html",
+                template: "angular/testcaseinstance/testcaseinstance.tpl.html",
                 order: 8,
-                active: false,
+                active: true,
                 group: 'what'
             }, 
             {

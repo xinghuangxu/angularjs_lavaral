@@ -116,6 +116,11 @@
         <script type="text/javascript" src="{{ asset('angular/implementreq/implreq.services.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/implementreq/implreq.js') }}"></script>
         <!-- End of Loading Implementation requirements modules -->
+        
+        <!-- Start of Loading ArchDocs modules -->
+        <script type="text/javascript" src="{{ asset('angular/testcaseinstance/testcaseinstance.service.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/testcaseinstance/testcaseinstance.controller.js') }}"></script>
+        <!-- End of Loading ArchDocs modules -->
 
         <!-- Misc Scripts -->
     </body>
