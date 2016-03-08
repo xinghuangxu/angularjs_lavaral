@@ -59,7 +59,9 @@
             vm.approve = approve;
             vm.promote = promote;
             vm.demote = demote;
-//            vm.obsolete = obsolete;
+            //TODO: Some functionality of obsolete is not working properly.
+            //Unexpected obsolete function call every time the test strategy manager editor is being clicked.
+            //vm.obsolete = obsolete;
 
             vm.changeQual = changeQual;
             vm.deleteTag = deleteTag;
