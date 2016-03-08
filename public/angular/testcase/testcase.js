@@ -24,10 +24,10 @@
     function AddTestCase($scope, testcaseService, errorService) {
         var vm = this;
         vm.search = search;
-        
+
         /**
          * Search the database for testcases
-         * 
+         *
          * @param {object} $event Optional event data for handling keypress events
          */
         function search($event) {
@@ -35,7 +35,7 @@
                 // Skip empty searches and non-enter keypress events
                 return;
             }
-            
+
             vm.loading = true;
             testcaseService.get({search: vm.searchTerm}).$promise
                 .then(function(data) {
@@ -46,11 +46,11 @@
                     vm.loading = false;
                 });
         }
-        
+
     }
-    
+
     TestCaseCTRL.inject = [ '$scope', '$popover', 'TestCaseTreeServiceService', 'globalFilterService' ];
-    
+
     function TestCaseCTRL ($scope, $popover, TestCaseTreeService, globalFilterService) {
         var vm = this;
         vm.config = TestCaseTreeService.config;
@@ -61,7 +61,7 @@
         /**
          * Update the tree view when the sort selection changes
          */
-        
+
         $scope.$watch(function() {
             return vm.config.activeGroup;
         }, function(newVal) {
@@ -89,10 +89,10 @@
                     vm.loading = false;
                 });
         }
-        
+
         /**
          * Event which triggers whenever a node in the tree is selected
-         * 
+         *
          * @param {object} data Node and event data from jstree
          */
         function selectNode (data) {

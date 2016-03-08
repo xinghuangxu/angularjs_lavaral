@@ -19,17 +19,17 @@
      * Controller for handling TestCaseInstance pane in the test planner view
      */
     function ImplReq ($scope, $popover, ImplementationRequestsService) {
-        
+
         var vm = this;
-        
+
         vm.config = {
-                groupBy: ImplementationRequestsService.views, 
-                activeGroup: ImplementationRequestsService.views.NONE, 
+                groupBy: ImplementationRequestsService.views,
+                activeGroup: ImplementationRequestsService.views.NONE,
                 popoverButtons: ImplementationRequestsService.btns
-            }; 
+            };
 
         ImplementationRequestsService.getImplementationRequestsData().then(function(response){
-            
+
             vm.tree=ImplementationRequestsService.getTreeJson(response);
 
         });

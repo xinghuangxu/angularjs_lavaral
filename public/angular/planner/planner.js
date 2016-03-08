@@ -250,7 +250,7 @@
                 order: 8,
                 active: false,
                 group: 'what'
-            }, 
+            },
             {
                 label: "RCCA",
                 navTitle: "RCCA",

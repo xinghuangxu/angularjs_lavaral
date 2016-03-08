@@ -25,7 +25,7 @@
     function testcaseService ($resource){
         return $resource('/rest/alm/testCases');
     }
-    
+
     testcaseModalService.$inject = ['$rootScope', '$modal', '$timeout', '$q'];
     /**
      * Service provider for modal dialogs to select testcases
@@ -45,15 +45,15 @@
             });
             var deferred = $q.defer();
             modal.$promise = deferred.promise;
-            
+
             var parentHide = modal.hide;
             modal.hide = hide;
-            
+
             return modal;
-            
+
             /**
              * Return the testcase to the parent controller
-             * 
+             *
              * @param {object} testcase Testcase to send back
              * @param {array} dest Array to append data to
              */
@@ -62,7 +62,7 @@
                     // No target given
                     return;
                 }
-                
+
                 if(!modalScope.dest.hasOwnProperty(db)) {
                     modalScope.dest[db] = [testcase];
                     testcase.added = true;
@@ -71,7 +71,7 @@
                     testcase.added = true;
                 }
             }
-            
+
             /**
              * Hide the modal
              */
@@ -81,7 +81,7 @@
             }
         }
     }
-    
+
     TestCaseAService.$inject = [ '$resource'];
 
     /**
@@ -149,9 +149,9 @@
             parse: rawParser,
             buildTree: buildTree,
         };
-        
+
         return service;
-        
+
         /**
          * Fetch the tree data for the current plan loaded in the plan settings service
          */
@@ -170,7 +170,7 @@
                         service.loading = false;
                     });
         }
-        
+
 
         /**
          * A simple parser for turning an arry of testplan scoping data into

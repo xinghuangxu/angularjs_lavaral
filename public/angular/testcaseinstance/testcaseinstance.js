@@ -28,7 +28,7 @@
         /**
          * Update the tree view when the sort selection changes
          */
-        
+
         $scope.$watch(function() {
             return vm.config.activeGroup;
         }, function(newVal) {
@@ -56,10 +56,10 @@
                     vm.loading = false;
                 });
         }
-        
+
         /**
          * Event which triggers whenever a node in the tree is selected
-         * 
+         *
          * @param {object} data Node and event data from jstree
          */
         function selectNode (data) {

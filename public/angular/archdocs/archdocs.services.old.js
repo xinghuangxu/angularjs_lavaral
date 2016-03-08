@@ -97,9 +97,9 @@
             parse: rawParser,
             buildTree: buildTree,
         };
-        
+
         return service;
-        
+
         /**
          * Fetch the tree data for the current plan loaded in the plan settings service
          */
@@ -118,7 +118,7 @@
                         service.loading = false;
                     });
         }
-        
+
 
         /**
          * A simple parser for turning an arry of testplan scoping data into

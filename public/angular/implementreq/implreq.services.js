@@ -11,7 +11,7 @@
      * Service wrapper around test strategies for the test planner
      */
     function ImplementationRequestsService ($q,$http) {
-        
+
         var vm = this;
         vm.btns = [
             {
@@ -29,7 +29,7 @@
                 icon: "fa fa-sign-out"
             }
         ];
-         
+
         vm.views = {
              PRODUCTNAME: {
 //                 value: 'tags_qual_area',
@@ -58,7 +58,7 @@
                  text: 'None'
              }
         }
-        
+
         vm.getImplementationRequestsData = function(){
 
 
