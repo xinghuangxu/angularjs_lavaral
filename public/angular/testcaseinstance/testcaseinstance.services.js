@@ -51,27 +51,23 @@
         ];
 
         var views = {
-             DOCUMENTTYPE: {
+             TESTER: {
 //                 value: 'tags_qual_area',
 //                 type: 'object',
 //                 index: 'CategoryID',
 //                 label: 'CategoryName',
                  text: 'Document type'
              },
-             MODIFICATIONDATE: {
+             EXECUTIONDATE: {
 //                 value: 'tags_impact_area',
 //                 type: 'object',
 //                 index: 'CategoryID',
 //                 label: 'CategoryName',
-                 text: 'Modification Date'
+                 text: 'Execution date'
              },
-             KEYWORD: {
+             RUNSTATUS: {
                  value: null,
-                 text: 'Keyword'
-             },
-             AUTHOR: {
-                 value: null,
-                 text: 'Author'
+                 text: 'Run Status'
              },
              NONE: {
                  value: null,

@@ -20,8 +20,6 @@
      */
     function ArchDocs ($scope, $popover, archdocsService) {
 
-        $scope.msg="hello";
-
         archdocsService.getDocsAndTopicsData().then(function(response){
 
              $scope.tree=archdocsService.getTreeJson(response);

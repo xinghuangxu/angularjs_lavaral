@@ -24,8 +24,7 @@
                             </div>
                         </div>
                     </div>
-                    Suggested Requirements
-                    <spark-jstree ng-model="testplan.tree.data" data-filter="testplan.filter.text" data-on-select="testplan.onSelect(data)"></spark-jstree>
+                    <spark-jstree ng-model="implreq.tree"></spark-jstree>
                 </div>
             </div>
         </div>
@@ -53,7 +52,7 @@
                             </div>
                         </div>
                     </div>
-                    Browse Requirements
+                    <spark-jstree ng-model="implreq.tree"></spark-jstree>
                 </div>
             </div>
         </div>
@@ -65,7 +64,16 @@
             </div>
             <div class="panel-collapse" role="tabpanel" bs-collapse-target>
                 <div class="panel-body">
-                    External Documents (Ers)
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control input-sm ng-pristine ng-valid ng-touched" placeholder="Search">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-sm btn-primary" ng-click="searchTree=tree;">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </span>
+                    </div>
+
+                    <spark-jstree ng-model="searchTree"></spark-jstree>
                 </div>
             </div>
         </div>

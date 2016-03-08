@@ -248,7 +248,7 @@
                 //template: "planner/weblab/weblab.tpl.html",
                 template: "angular/testcaseinstance/testcaseinstance.tpl.html",
                 order: 8,
-                active: true,
+                active: false,
                 group: 'what'
             }, 
             {
@@ -266,7 +266,7 @@
                 //template: "planner/weblab/weblab.tpl.html",
                 template: "angular/implementreq/implementReq.tpl.html",
                 order: 10,
-                active: false,
+                active: true,
                 group: 'what'
             }
         ];
