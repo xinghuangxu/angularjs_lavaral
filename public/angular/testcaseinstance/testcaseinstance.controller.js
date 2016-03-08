@@ -20,9 +20,17 @@
      */
     function TestCaseInstance ($scope, $popover, TestCaseInstanceService) {
 
-        TestCaseInstanceService.getDocsAndTopicsData().then(function(response){
+        var vm = this;
 
-             $scope.tree=TestCaseInstanceService.getTreeJson(response);
+        vm.config = {
+                groupBy: TestCaseInstanceService.views,
+                activeGroup: TestCaseInstanceService.views.NONE,
+                popoverButtons: TestCaseInstanceService.btns
+            };
+
+        TestCaseInstanceService.getFoldersAndServiceData().then(function(response){
+
+             vm.tree=TestCaseInstanceService.getTreeJson(response);
 
         });
 

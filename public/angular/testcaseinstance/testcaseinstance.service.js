@@ -12,20 +12,65 @@
      */
     function TestCaseInstanceService ($q,$http) {
 
+        this.btns = [
+            {
+                title: "show detailed info",
+                action: function () {
+                    //TODO
+                },
+                icon: "fa fa-info fa-fw"
+            },
+            {
+                title: "export",
+                action: function () {
+                    //TODO
+                },
+                icon: "fa fa-sign-out"
+            }
+        ];
+
+        this.views = {
+             TESTER: {
+//                 value: 'tags_qual_area',
+//                 type: 'object',
+//                 index: 'CategoryID',
+//                 label: 'CategoryName',
+                 text: 'Document type'
+             },
+             EXECUTIONDATE: {
+//                 value: 'tags_impact_area',
+//                 type: 'object',
+//                 index: 'CategoryID',
+//                 label: 'CategoryName',
+                 text: 'Execution date'
+             },
+             RUNSTATUS: {
+                 value: null,
+                 text: 'Run Status'
+             },
+             NONE: {
+                 value: null,
+                 text: 'None'
+             }
+        }
 
 
-
-        this.getDocsAndTopicsData = function(){
-
+        this.getFoldersAndServiceData = function(){
+            // in production you should comment the lines that has "json"
+            // and use only the ones the has rest and uncomment params line too if any
 
                   return  $q.all({
                    folders:$http({
                     method: 'GET',
+//                    url: '/rest/alm/databases/apg_qa_producttest_db/testcasefolders/:id'
+//                    params: { id: '@id'},
                     url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
                     }),
                    Service:$http({
                     method: 'GET',
                     url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json'
+//                    url: '/rest/alm/databases/apg_qa_producttest_db/testcasesbyfolder/:id'
+//                    params: { id: '@id'},
                     })
                     });
 

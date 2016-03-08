@@ -1,4 +1,4 @@
-<div class="test-strategy-search" ng-controller="ArchDocs">
+<div class="test-strategy-search" ng-controller="ArchDocs as archdocs">
     <div class="panel-group" bs-collapse data-animation="am-collapse" ng-model="search.activePanel">
         <!--suggested strategy pools-->
         <div class="panel panel-default">
@@ -28,7 +28,7 @@
                             </div>
                         </div>
                     </div>
-                    <spark-jstree ng-model="tree"></spark-jstree>
+                    <spark-jstree ng-model="archdocs.tree"></spark-jstree>
                 </div>
             </div>
         </div>

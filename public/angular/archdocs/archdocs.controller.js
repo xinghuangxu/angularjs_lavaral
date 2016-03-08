@@ -19,10 +19,17 @@
      * Controller for handling archdocs pane in the test planner view
      */
     function ArchDocs ($scope, $popover, archdocsService) {
+        var vm = this;
+
+        vm.config = {
+                groupBy: archdocsService.views,
+                activeGroup: archdocsService.views.NONE,
+                popoverButtons: archdocsService.btns
+            };
 
         archdocsService.getDocsAndTopicsData().then(function(response){
 
-             $scope.tree=archdocsService.getTreeJson(response);
+             vm.tree=archdocsService.getTreeJson(response);
 
         });
 

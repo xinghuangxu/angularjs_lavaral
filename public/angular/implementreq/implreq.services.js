@@ -60,12 +60,14 @@
         }
 
         vm.getImplementationRequestsData = function(){
-
+            // in production you should comment the lines that has "json"
+            // and use only the ones the has rest and uncomment params line too if any
 
                   return  $q.all({
                    implrequests:$http({
                     method: 'GET',
-                    url: '/rest/cq/implrequests/'
+//                    url: '/rest/cq/implrequests/'
+                    url: '/json/rest.cq.implrequests.json'
                     })
                     });
 
