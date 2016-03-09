@@ -119,7 +119,7 @@
             {
              var secondLevelChildNode = new nodeJson(TestSetData[j].id,TestSetData[j].title,"glyphicon glyphicon-list-alt");
              for (var tsi=0; tsi < TestCaseInstanceData.length; tsi++){
-                 var ThirdLevelChildren = new nodeJson(TestCaseInstanceData[tsi].id,TestCaseInstanceData[tsi].test_case_name,"glyphicon glyphicon-list-alt");
+                 var ThirdLevelChildren = new nodeJson(TestCaseInstanceData[tsi].id,TestCaseInstanceData[tsi].test_case_name,"glyphicon glyphicon-file");
                  secondLevelChildNode.children.push(ThirdLevelChildren);
              }
                rootNode.children.push(secondLevelChildNode);
