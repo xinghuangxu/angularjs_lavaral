@@ -89,7 +89,7 @@
      */
     function TestCaseAService ($resource) {
         var archdocs = {
-            service: $resource('http://localhost:8000/json/get-rest.requirements.archdocs.json')
+            service: $resource('json/get-rest.requirements.archdocs.json')
         };
 
         return archdocs;

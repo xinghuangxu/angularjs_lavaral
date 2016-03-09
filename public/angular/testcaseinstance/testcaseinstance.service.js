@@ -31,6 +31,7 @@
 
         this.views = {
              TESTER: {
+                 // the following lines have been commented because we are going to use them later
 //                 value: 'tags_qual_area',
 //                 type: 'object',
 //                 index: 'CategoryID',
@@ -38,6 +39,7 @@
                  text: 'Document type'
              },
              EXECUTIONDATE: {
+                 // the following lines have been commented because we are going to use them later
 //                 value: 'tags_impact_area',
 //                 type: 'object',
 //                 index: 'CategoryID',

@@ -32,6 +32,7 @@
 
         vm.views = {
              PRODUCTNAME: {
+                 // the following lines have been commented because we are going to use them later
 //                 value: 'tags_qual_area',
 //                 type: 'object',
 //                 index: 'CategoryID',
@@ -39,6 +40,7 @@
                  text: 'Product Name'
              },
              PLATFORM: {
+                 // the following lines have been commented because we are going to use them later
 //                 value: 'tags_impact_area',
 //                 type: 'object',
 //                 index: 'CategoryID',
