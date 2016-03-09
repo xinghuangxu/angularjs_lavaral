@@ -68,8 +68,8 @@
                   return  $q.all({
                    implrequests:$http({
                     method: 'GET',
-//                    url: '/rest/cq/implrequests/'
-                    url: '/json/rest.cq.implrequests.json'
+                    url: '/rest/cq/implrequests/'
+//                    url: '/json/rest.cq.implrequests.json'
                     })
                     });
 
@@ -97,7 +97,7 @@
 
            for (var i=0; i<implrequestsData.length;i++)
            {
-               var rootNode = new nodeJson(implrequestsData[i].id,implrequestsData[i].Headline,"glyphicon glyphicon-folder-open");
+               var rootNode = new nodeJson(implrequestsData[i].id,implrequestsData[i].Headline,implrequestsData[i].icon);
                treeJson.push(rootNode);
            }
 

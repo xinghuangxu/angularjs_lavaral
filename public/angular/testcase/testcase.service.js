@@ -64,15 +64,15 @@
                   return  $q.all({
                    folders:$http({
                     method: 'GET',
-//                    url: '/rest/alm/databases/apg_qa_producttest_db/testcasefolders/:id'
-//                    params: { id: '@id'},
-                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
+                    url: '/rest/alm/databases/apg_qa_producttest_db/testcasefolders/:id',
+                    params: { id: '@id'},
+//                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
                     }),
                    Service:$http({
                     method: 'GET',
-                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json'
-//                    url: '/rest/alm/databases/apg_qa_producttest_db/testcasesbyfolder/:id'
-//                    params: { id: '@id'},
+//                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json'
+                    url: '/rest/alm/databases/apg_qa_producttest_db/testcasesbyfolder/:id',
+                    params: { id: '@id'},
                     })
                     });
 
@@ -108,11 +108,11 @@
 
            for (var i=0; i<foldersData.length;i++)
            {
-               var rootNode = new nodeJson(foldersData[i].id,foldersData[i].text,"glyphicon glyphicon-folder-open");
+               var rootNode = new nodeJson(foldersData[i].id,foldersData[i].text,foldersData[i].icon);
 
             for(var j =0; j<ServiceData.length; j++)
             {
-             var secondLevelChildNode = new nodeJson(ServiceData[j].id,ServiceData[j].test_case_name,"glyphicon glyphicon-list-alt");
+             var secondLevelChildNode = new nodeJson(ServiceData[j].id,ServiceData[j].test_case_name,ServiceData[j].icon);
 
                rootNode.children.push(secondLevelChildNode);
             }

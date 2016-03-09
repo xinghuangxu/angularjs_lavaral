@@ -67,14 +67,14 @@
                   return  $q.all({
                    documents:$http({
                     method: 'GET',
-//                    url: '/rest/requirements/archdocs/?&perpage=all&search=test'
-                    url: 'json/get-rest.requirements.archdocs.json'
+                    url: '/rest/requirements/archdocs/?&perpage=all&search=test'
+//                    url: 'json/get-rest.requirements.archdocs.json'
                     }),
                    topics:$http({
                     method: 'GET',
-//                    url: '/rest/requirement/archdocsnew/:id/topics/'
-//                    params: { id: '@id'},
-                    url: 'json/get-rest.requirements.archdocsnew.1.topics.json'
+                    url: '/rest/requirement/archdocsnew/:id/topics/',
+                    params: { id: '@id'},
+//                    url: 'json/get-rest.requirements.archdocsnew.1.topics.json'
                     })
                     });
 
@@ -106,13 +106,13 @@
 
            for (var i=0; i<documentsData.length;i++)
            {
-               var rootNode = new nodeJson(documentsData[i].ID,documentsData[i].DocDescription,"glyphicon glyphicon-folder-open");
-               var firstLevelChild = new nodeJson(documentsData[i].DocumentID,documentsData[i].DocTitle,"glyphicon glyphicon-book");
+               var rootNode = new nodeJson(documentsData[i].ID,documentsData[i].DocDescription,documentsData[i].icon);
+               var firstLevelChild = new nodeJson(documentsData[i].DocumentID,documentsData[i].DocTitle,documentsData[i].icon);
                rootNode.children.push(firstLevelChild);
 
             for(var j =0; j<topicsData.length; j++)
             {
-             var secondLevelChildNode = new nodeJson(topicsData[j].topic_id,topicsData[j].topic_name,"glyphicon glyphicon-list-alt");
+             var secondLevelChildNode = new nodeJson(topicsData[j].topic_id,topicsData[j].topic_name,topicsData[j].icon);
 
                rootNode.children[0].children.push(secondLevelChildNode);
             }

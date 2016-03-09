@@ -64,21 +64,21 @@
                   return  $q.all({
                    folders:$http({
                     method: 'GET',
-//                    url: '/rest/alm/databases/apg_qa_producttest_db/folder/:id'
-//                    params: { id: '@id'},
-                    url: 'json/rest.alm.databases.apg_qa_producttest_db.folder.510.json'
+                    url: '/rest/alm/databases/apg_qa_producttest_db/folder/:id',
+                    params: { id: '@id'},
+//                    url: 'json/rest.alm.databases.apg_qa_producttest_db.folder.510.json'
                     }),
                    TestSet:$http({
                     method: 'GET',
-                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testsets.532.json'
-//                    url: '/rest/alm/databases/apg_qa_producttest_db/testsets/:id'
-//                    params: { id: '@id'},
+//                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testsets.532.json'
+                    url: '/rest/alm/databases/apg_qa_producttest_db/testsets/:id',
+                    params: { id: '@id'},
                     }),
                     TestCaseInstance:$http({
                     method: 'GET',
-                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcaseinstances.51097.json'
-//                    url: '/rest/alm/databases/apg_qa_producttest_db/testcaseinstances/:id'
-//                    params: { id: '@id'},
+//                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcaseinstances.51097.json'
+                    url: '/rest/alm/databases/apg_qa_producttest_db/testcaseinstances/:id',
+                    params: { id: '@id'},
                     })
                     });
 
@@ -113,13 +113,13 @@
 
            for (var i=0; i<foldersData.length;i++)
            {
-               var rootNode = new nodeJson(foldersData[i].id,foldersData[i].text,"glyphicon glyphicon-folder-open");
+               var rootNode = new nodeJson(foldersData[i].id,foldersData[i].text,foldersData[i].icon);
 
             for(var j =0; j<TestSetData.length; j++)
             {
-             var secondLevelChildNode = new nodeJson(TestSetData[j].id,TestSetData[j].title,"glyphicon glyphicon-list-alt");
+             var secondLevelChildNode = new nodeJson(TestSetData[j].id,TestSetData[j].title,TestSetData[j].icon);
              for (var tsi=0; tsi < TestCaseInstanceData.length; tsi++){
-                 var ThirdLevelChildren = new nodeJson(TestCaseInstanceData[tsi].id,TestCaseInstanceData[tsi].test_case_name,"glyphicon glyphicon-file");
+                 var ThirdLevelChildren = new nodeJson(TestCaseInstanceData[tsi].id,TestCaseInstanceData[tsi].test_case_name,TestCaseInstanceData[tsi].icon);
                  secondLevelChildNode.children.push(ThirdLevelChildren);
              }
                rootNode.children.push(secondLevelChildNode);
