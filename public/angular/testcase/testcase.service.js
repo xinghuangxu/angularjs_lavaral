@@ -3,14 +3,14 @@
 
     angular
         .module('spark')
-        .service('TestCaseInstanceService', TestCaseInstanceService);
+        .service('TestCaseService', TestCaseService);
 
-    TestCaseInstanceService.$inject = [ '$q','$http'];
+    TestCaseService.$inject = [ '$q','$http'];
 
     /**
      * Service wrapper around test strategies for the test planner
      */
-    function TestCaseInstanceService ($q,$http) {
+    function TestCaseService ($q,$http) {
 
         this.btns = [
             {
@@ -57,27 +57,21 @@
         }
 
 
-        this.getServiceData = function(){
+        this.getFoldersAndServiceData = function(){
             // in production you should comment the lines that has "json"
             // and use only the ones the has rest and uncomment params line too if any
 
                   return  $q.all({
                    folders:$http({
                     method: 'GET',
-//                    url: '/rest/alm/databases/apg_qa_producttest_db/folder/:id'
+//                    url: '/rest/alm/databases/apg_qa_producttest_db/testcasefolders/:id'
 //                    params: { id: '@id'},
-                    url: 'json/rest.alm.databases.apg_qa_producttest_db.folder.510.json'
+                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
                     }),
-                   TestSet:$http({
+                   Service:$http({
                     method: 'GET',
-                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testsets.532.json'
-//                    url: '/rest/alm/databases/apg_qa_producttest_db/testsets/:id'
-//                    params: { id: '@id'},
-                    }),
-                    TestCaseInstance:$http({
-                    method: 'GET',
-                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcaseinstances.51097.json'
-//                    url: '/rest/alm/databases/apg_qa_producttest_db/testcaseinstances/:id'
+                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json'
+//                    url: '/rest/alm/databases/apg_qa_producttest_db/testcasesbyfolder/:id'
 //                    params: { id: '@id'},
                     })
                     });
@@ -90,6 +84,8 @@
         };
 
         this.getTreeJson = function(arg){
+
+
 
            var treeJson =[]
            var nodeJson =function(id,text,icon){
@@ -107,21 +103,17 @@
             }
 
            var foldersData = arg.folders.data;
-           var TestSetData = arg.TestSet.data;
-           var TestCaseInstanceData = arg.TestCaseInstance.data;
+           var ServiceData = arg.Service.data;
 
 
            for (var i=0; i<foldersData.length;i++)
            {
                var rootNode = new nodeJson(foldersData[i].id,foldersData[i].text,"glyphicon glyphicon-folder-open");
 
-            for(var j =0; j<TestSetData.length; j++)
+            for(var j =0; j<ServiceData.length; j++)
             {
-             var secondLevelChildNode = new nodeJson(TestSetData[j].id,TestSetData[j].title,"glyphicon glyphicon-list-alt");
-             for (var tsi=0; tsi < TestCaseInstanceData.length; tsi++){
-                 var ThirdLevelChildren = new nodeJson(TestCaseInstanceData[tsi].id,TestCaseInstanceData[tsi].test_case_name,"glyphicon glyphicon-list-alt");
-                 secondLevelChildNode.children.push(ThirdLevelChildren);
-             }
+             var secondLevelChildNode = new nodeJson(ServiceData[j].id,ServiceData[j].test_case_name,"glyphicon glyphicon-list-alt");
+
                rootNode.children.push(secondLevelChildNode);
             }
 

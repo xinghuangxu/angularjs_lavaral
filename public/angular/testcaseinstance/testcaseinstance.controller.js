@@ -28,7 +28,7 @@
                 popoverButtons: TestCaseInstanceService.btns
             };
 
-        TestCaseInstanceService.getFoldersAndServiceData().then(function(response){
+        TestCaseInstanceService.getServiceData().then(function(response){
 
              vm.tree=TestCaseInstanceService.getTreeJson(response);
 

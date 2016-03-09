@@ -194,7 +194,7 @@
                 //template: "angular/planner/empty.tpl.html",
                 template: "angular/archdocs/archDocs.tpl.html",
                 order: 2,
-                active: true,
+                active: false,
                 group: 'what'
             },
             {
@@ -228,9 +228,9 @@
                 navTitle: "Test Cases",
                 //template: "planner/alm/alm.tpl.html",
                 //template: "angular/testcase/testcaseModal.tpl.html",
-                template: "angular/testcase/testcaseHardModal.tpl.html",
+                template: "angular/testcase/testcase.tpl.html",
                 order: 6,
-                active: false,
+                active: true,
                 group: 'what'
             },
             {
@@ -248,7 +248,7 @@
                 //template: "planner/weblab/weblab.tpl.html",
                 template: "angular/testcaseinstance/testcaseinstance.tpl.html",
                 order: 8,
-                active: false,
+                active: true,
                 group: 'what'
             },
             {
@@ -266,7 +266,7 @@
                 //template: "planner/weblab/weblab.tpl.html",
                 template: "angular/implementreq/implementReq.tpl.html",
                 order: 10,
-                active: true,
+                active: false,
                 group: 'what'
             }
         ];

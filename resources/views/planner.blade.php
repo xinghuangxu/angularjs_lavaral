@@ -86,9 +86,6 @@
         <script type="text/javascript" src="{{ asset('angular/requirements/requirements.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/requirements/requirements.services.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/requirements/requirements.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/testcase/testcase.module.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/testcase/testcase.services.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/testcase/testcase.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/scope/scope.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/scope/scope.tpl.service.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/scope/scope.js') }}"></script>
@@ -119,6 +116,12 @@
         <!-- Start of Loading ArchDocs modules -->
         <script type="text/javascript" src="{{ asset('angular/testcaseinstance/testcaseinstance.service.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/testcaseinstance/testcaseinstance.controller.js') }}"></script>
+        <!-- End of Loading ArchDocs modules -->
+        
+        <!-- Start of Loading ArchDocs modules -->
+        <script type="text/javascript" src="{{ asset('angular/testcase/testcase.module.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/testcase/testcase.service.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/testcase/testcase.controller.js') }}"></script>
         <!-- End of Loading ArchDocs modules -->
 
         <!-- Misc Scripts -->
