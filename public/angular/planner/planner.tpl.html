@@ -38,15 +38,11 @@
 
     </div>
     <div class="text-center">
-        <div id="pane-selection" class="btn-toolbar">
-            <div class="btn-group center-block" ng-repeat="group in vm.paneGroups | orderBy:order">
-                <span class="btn btn-sm">
-                    {{group.label}}
-                </span>
-                <label ng-repeat="pane in vm.panes | filter:{group:group.name} | orderBy:order" class="btn btn-default btn-sm" ng-class="{'btn-primary active': pane.active}"><input type="checkbox" ng-model="pane.active" >{{pane.label}}</label>
-            </div>
-        </div>
+        <button type="button" class="btn btn-default" ng-model="vm.selectedPanes" data-html="1" data-multiple="1" data-animation="am-flip-x" bs-options="icon.label as icon.label for icon in vm.panes" bs-select>
+            Action <span class="caret"></span>
+        </button>
     </div>
+
     <!-- Container for panes -->
     <div class="height-wrapper">
         <div class="pane-container" ui-sortable="vm.sortableOptions" ng-model="vm.panes">
