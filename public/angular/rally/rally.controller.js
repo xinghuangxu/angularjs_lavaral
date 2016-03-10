@@ -23,14 +23,6 @@
         $scope.SelectedProject='';
         $scope.SelectedRelease='';
         $scope.SelectedIteration='';
-//        $scope.settings = testplanSettingsService.data;
-//
-//
-////        $scope.$watch(function() {
-////            return $scope.settings.data.id;
-////        }, function(newVal) {
-////            console.log('hello');
-////        });
 
  $scope.$on('planSettingChanged', function(event,settings) {
     console.log('rally catch');
