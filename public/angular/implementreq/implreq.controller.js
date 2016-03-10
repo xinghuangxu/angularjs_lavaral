@@ -34,5 +34,20 @@
 
         });
 
+         $scope.$on('planSettingChanged', function(event,settings) {
+    console.log('implreq catch');
+    var testplan_boxcar_id = settings.data.testplan_boxcar_id;
+
+    if(testplan_boxcar_id)
+    {
+       ImplementationRequestsService.getImplementationRequestsData().then(function(response){
+
+            vm.tree=ImplementationRequestsService.getTreeJson(response);
+
+        });
+    }
+
+  });
+
     }
 })();

@@ -33,5 +33,20 @@
 
         });
 
+   $scope.$on('planSettingChanged', function(event,settings) {
+    console.log('archDocs catch');
+    var testplan_boxcar_id = settings.data.testplan_boxcar_id;
+
+    if(testplan_boxcar_id)
+    {
+         archdocsService.getDocsAndTopicsData().then(function(response){
+
+             vm.tree=archdocsService.getTreeJson(response);
+
+        });
+    }
+
+  });
+
     }
 })();
