@@ -193,30 +193,34 @@
         vm.panes = [
             {
                 label: "High Level scope",
+                navTitle: "High Level scope",
                 template: "angular/planner/boxcar/boxcar.tpl.html",
                 order: 0,
-                active: true,
+                active: false,
                 group: 'what'
             },
             {
                 label: "SOW",
+                navTitle: "SOW",
                 //template: "planner/sow/sow.tpl.html",
-                template: "angular/planner/empty.tpl.html",
+                template: "angular/planner/comingSoon.tpl.html",
                 order: 1,
                 active: false,
                 group: 'what'
             },
             {
-                label: "Architecture Docs",
+                label: "Architecture Documents",
+                navTitle: "Arch. Docs.",
                 //template: "planner/sow/archDocs.tpl.html",
                 //template: "angular/planner/empty.tpl.html",
-                template: "angular/sow/archDocs.tpl.html",
+                template: "angular/archdocs/archDocs.tpl.html",
                 order: 2,
                 active: false,
                 group: 'what'
             },
             {
                 label: "Rally",
+                navTitle: "Rally",
                 //template: "planner/rally/rally.tpl.html",
                 template: "angular/rally/rallyModal.tpl.html",
                 order: 3,
@@ -225,49 +229,64 @@
             },
             {
                 label: "Test Plan",
+                navTitle: "Test Plan",
                 template: "angular/planner/testplan/testplan.tpl.html",
                 order: 4,
-                active: true,
+                active: false,
                 group: 'what'
             },
             {
                 label: "Configuration Plan",
+                navTitle: "Config Plan",
                 //template: "planner/configPlan/configPlan.tpl.html",
-                template: "angular/planner/empty.tpl.html",
+                template: "angular/planner/comingSoon.tpl.html",
                 order: 5,
                 active: false,
                 group: 'where'
             },
             {
                 label: "Test Cases",
+                navTitle: "Test Cases",
                 //template: "planner/alm/alm.tpl.html",
                 //template: "angular/testcase/testcaseModal.tpl.html",
-                template: "angular/testcase/testcaseHardModal.tpl.html",
+                template: "angular/testcase/testcase.tpl.html",
                 order: 6,
-                active: false,
+                active: true,
                 group: 'what'
             },
             {
                 label: "WebLab",
+                navTitle: "WebLab",
                 //template: "planner/weblab/weblab.tpl.html",
-                template: "angular/planner/empty.tpl.html",
+                template: "angular/planner/comingSoon.tpl.html",
                 order: 7,
                 active: false,
                 group: 'where'
             },
             {
                 label: "Test Instances",
+                navTitle: "Test Instances",
                 //template: "planner/weblab/weblab.tpl.html",
-                template: "angular/planner/empty.tpl.html",
+                template: "angular/testcaseinstance/testcaseinstance.tpl.html",
                 order: 8,
-                active: false,
+                active: true,
                 group: 'what'
             },
             {
                 label: "RCCA",
+                navTitle: "RCCA",
                 //template: "planner/weblab/weblab.tpl.html",
-                template: "angular/planner/empty.tpl.html",
+                template: "angular/planner/comingSoon.tpl.html",
                 order: 9,
+                active: false,
+                group: 'what'
+            },
+            {
+                label: "Implementation Requests",
+                navTitle: "Impl. Req.",
+                //template: "planner/weblab/weblab.tpl.html",
+                template: "angular/implementreq/implementReq.tpl.html",
+                order: 10,
                 active: false,
                 group: 'what'
             }
