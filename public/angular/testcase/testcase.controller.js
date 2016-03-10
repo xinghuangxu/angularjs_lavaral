@@ -34,5 +34,20 @@
 
         });
 
+$scope.$on('planSettingChanged', function(event,settings) {
+    console.log('testcase catch');
+    var alm_db_name = settings.data.alm_db_name;
+
+    if(alm_db_name)
+    {
+         TestCaseService.getFoldersAndServiceData().then(function(response){
+
+             vm.tree=TestCaseService.getTreeJson(response);
+
+        });
+    }
+
+  });
+
     }
 })();

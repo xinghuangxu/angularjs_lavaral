@@ -13,16 +13,32 @@
         .module('spark.rally')
         .controller('rallyController', rallyController);
 
-    rallyController.$inject = ['$scope', 'rallyDataService', 'errorService'];
+    rallyController.$inject = ['$scope', 'rallyDataService', 'errorService','testplanSettingsService'];
     /**
      * Controller for the modal to search and add requirements
      */
-    function rallyController($scope, rallyDataService) {
+    function rallyController($scope, rallyDataService,testplanSettingsService) {
         var vm = this;
         $scope.data = {};
         $scope.SelectedProject='';
         $scope.SelectedRelease='';
         $scope.SelectedIteration='';
+
+ $scope.$on('planSettingChanged', function(event,settings) {
+    console.log('rally catch');
+    console.log(settings.data);
+    var rally_project_id = settings.data.rally_project_id;
+    var rally_release_id = settings.data.rally_release_id;
+
+    if(rally_release_id && rally_release_id)
+    {
+        $scope.$broadcast("RallyLoadTree", {project: $scope.SelectedProject,
+                        release:$scope.SelectedRelease,
+                        iteration:$scope.SelectedIteration });
+    }
+
+  });
+
 
         $scope.PopoverId = "popover.html";
 

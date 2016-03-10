@@ -25,7 +25,7 @@
         vm.filter = filter;
     }
 
-    Releases.$inject = ['$scope', 'testplanSettingsService', 'releasesService', 'testStackService'];
+    Releases.$inject =  [ '$scope', 'testplanSettingsService',  'releasesService', 'testStackService','$rootScope' ];
 
     /**
      * Controller for handling the release selection for settings
@@ -35,7 +35,7 @@
      * @param {object} releases Service reference for fetching release data
      * @param {object} stacks   Service reference for fetching stack layer data
      */
-    function Releases($scope, planSettings, releases, stacks) {
+    function Releases ($scope, planSettings, releases, stacks,$rootScope ) {
         var vm = this;
 
         vm.releases = releases.query();
@@ -71,28 +71,28 @@
         );
 
         // Watch for changes to the test stack layer and update the list of sub-layers
-        $scope.$watch(function () {
-            return vm.data.testplan_stack_id;
-        },
-                function () {
-                    if (vm.data.testplan_stack_id) {
-                        planSettings.service.query({
-                            release: vm.data.release_id,
-                            stack: vm.data.testplan_stack_id,
-                            substack: ''
-                        },
-                                function (data) {
-                                    if (data.length > 0) {
-                                        planSettings.data = data[0];
-                                        if (planSettings.data.boxcar) {
-                                            planSettings.data.testplan_stack_id = planSettings.data.boxcar.id;
-                                            planSettings.data.stack_name = planSettings.data.boxcar.Name;
-                                        } else {
-                                            planSettings.data.stack_name = planSettings.data.stack.name;
-                                        }
-                                    }
-                                });
-                    }
+        $scope.$watch(function() {
+                return vm.data.testplan_stack_id;
+            },
+            function() {
+                if(vm.data.testplan_stack_id) {
+                    planSettings.service.query({
+                        release: vm.data.release_id,
+                        stack: vm.data.testplan_stack_id,
+                        substack: ''
+                    },
+                    function(data) {
+                        if(data.length > 0) {
+                            planSettings.data = data[0];
+                            if(planSettings.data.boxcar) {
+                                planSettings.data.testplan_stack_id = planSettings.data.boxcar.id;
+                                planSettings.data.stack_name = planSettings.data.boxcar.Name;
+                            } else {
+                                planSettings.data.stack_name = planSettings.data.stack?planSettings.data.stack.name:'';
+                            }
+                        }
+                    });
+                }
 
                     // TODO: Call relevant data service when value changes
                     vm.data.testplan_substack_id = null;
@@ -117,18 +117,20 @@
                                     if (data.length > 0) {
                                         planSettings.data = data[0];
 
-                                        if (planSettings.data.boxcar) {
-                                            planSettings.data.testplan_stack_id = planSettings.data.boxcar.id;
-                                            planSettings.data.stack_name = planSettings.data.boxcar.Name;
-                                        } else {
-                                            planSettings.data.stack_name = planSettings.data.stack.name;
-                                        }
-
-                                        planSettings.data.substack_name = planSettings.data.substack.name;
-                                    }
+                                if(planSettings.data.boxcar) {
+                                    planSettings.data.testplan_stack_id = planSettings.data.boxcar.id;
+                                    planSettings.data.stack_name = planSettings.data.boxcar.Name;
+                                } else {
+                                    planSettings.data.stack_name = planSettings.data.stack?planSettings.data.stack.name:'';
                                 }
-                        );
-                    }
+
+
+                                planSettings.data.substack_name = planSettings.data.substack?planSettings.data.substack.name:'';
+                                $rootScope.$broadcast('planSettingChanged',planSettings)
+                            }
+                        }
+                    );
+                }
                 }
         );
     }
@@ -190,7 +192,7 @@
         );
         // Setup the defaults and configuration for each pane
         // Each template must contain a reference to the correct controller for that pane
-        vm.panes = [
+        vm.panes =  [
             {
                 label: "High Level scope",
                 navTitle: "High Level scope",
