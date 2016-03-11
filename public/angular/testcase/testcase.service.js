@@ -57,22 +57,20 @@
         }
 
 
-        this.getFoldersAndServiceData = function(){
+        this.getFoldersAndServiceData = function(id){
             // in production you should comment the lines that has "json"
             // and use only the ones the has rest and uncomment params line too if any
 
                   return  $q.all({
                    folders:$http({
                     method: 'GET',
-                    url: '/rest/alm/databases/apg_qa_producttest_db/testcasefolders/:id',
-                    params: { id: '@id'},
+                    url: '/rest/alm/databases/apg_qa_producttest_db/testcasefolders/' + id,
 //                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
                     }),
                    Service:$http({
                     method: 'GET',
 //                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json'
-                    url: '/rest/alm/databases/apg_qa_producttest_db/testcasesbyfolder/:id',
-                    params: { id: '@id'},
+                    url: '/rest/alm/databases/apg_qa_producttest_db/testcasesbyfolder/' + id,
                     })
                     });
 

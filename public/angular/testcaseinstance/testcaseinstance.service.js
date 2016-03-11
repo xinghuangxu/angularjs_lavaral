@@ -57,27 +57,26 @@
         }
 
 
-        this.getServiceData = function(){
+        this.getServiceData = function(id){
             // in production you should comment the lines that has "json"
             // and use only the ones the has rest and uncomment params line too if any
 
                   return  $q.all({
                    folders:$http({
                     method: 'GET',
-                    url: '/rest/alm/databases/apg_qa_producttest_db/folder/:id',
-                    params: { id: '@id'},
+                    url: '/rest/alm/databases/apg_qa_producttest_db/folder/'+ id,
 //                    url: 'json/rest.alm.databases.apg_qa_producttest_db.folder.510.json'
                     }),
                    TestSet:$http({
                     method: 'GET',
 //                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testsets.532.json'
-                    url: '/rest/alm/databases/apg_qa_producttest_db/testsets/:id',
+                    url: '/rest/alm/databases/apg_qa_producttest_db/testsets/' + id,
                     params: { id: '@id'},
                     }),
                     TestCaseInstance:$http({
                     method: 'GET',
 //                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcaseinstances.51097.json'
-                    url: '/rest/alm/databases/apg_qa_producttest_db/testcaseinstances/:id',
+                    url: '/rest/alm/databases/apg_qa_producttest_db/testcaseinstances/' + id,
                     params: { id: '@id'},
                     })
                     });
