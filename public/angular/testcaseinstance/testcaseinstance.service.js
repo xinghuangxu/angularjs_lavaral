@@ -5,12 +5,12 @@
         .module('spark')
         .service('TestCaseInstanceService', TestCaseInstanceService);
 
-    TestCaseInstanceService.$inject = [ '$q','$http'];
+    TestCaseInstanceService.$inject = [ '$q','$http', 'testplanSettingsService'];
 
     /**
      * Service wrapper around test strategies for the test planner
      */
-    function TestCaseInstanceService ($q,$http) {
+    function TestCaseInstanceService ($q,$http, planSettings) {
 
         this.btns = [
             {
@@ -64,20 +64,18 @@
                   return  $q.all({
                    folders:$http({
                     method: 'GET',
-                    url: '/rest/alm/databases/apg_qa_producttest_db/folder/'+ id,
+                    url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/folder/'+ id
 //                    url: 'json/rest.alm.databases.apg_qa_producttest_db.folder.510.json'
                     }),
                    TestSet:$http({
                     method: 'GET',
 //                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testsets.532.json'
-                    url: '/rest/alm/databases/apg_qa_producttest_db/testsets/' + id,
-                    params: { id: '@id'},
+                    url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testsets/' + id
                     }),
                     TestCaseInstance:$http({
                     method: 'GET',
 //                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcaseinstances.51097.json'
-                    url: '/rest/alm/databases/apg_qa_producttest_db/testcaseinstances/' + id,
-                    params: { id: '@id'},
+                    url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcaseinstances/' + id
                     })
                     });
 

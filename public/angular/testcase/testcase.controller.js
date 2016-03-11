@@ -26,28 +26,20 @@
                 groupBy: TestCaseService.views,
                 activeGroup: TestCaseService.views.NONE,
                 popoverButtons: TestCaseService.btns
-            };        
+            };
+        
+        $scope.$on('planSettingChanged', function(event,settings) {
             
-        $scope.$watch(function () {
-            return planSettings.data.testplan_stack_id;
-        },
-                function () {
-                    if (planSettings.data.testplan_stack_id) {
-                        TestCaseService.getFoldersAndServiceData(planSettings.data.testplan_stack_id,
-                                function (data) {
-                                    if (data.length > 0)
-                                        vm.tree=TestCaseService.getTreeJson(data)
-//                                        planSettings.data = data[0];
-                                });
-                    }
-                }
-        );
+            TestCaseService.getFoldersAndServiceData().then(function(response){
 
-//        TestCaseService.getFoldersAndServiceData().then(function(response){
-//
-//             vm.tree=TestCaseService.getTreeJson(response);
-//
-//        });
+                vm.tree=TestCaseService.getTreeJson(response);
+
+           });
+
+          });
+        
+
+        
 
     }
 })();
