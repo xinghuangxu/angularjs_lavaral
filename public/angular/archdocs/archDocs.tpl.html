@@ -16,7 +16,7 @@
                             <div class="form-group">
                                 <div>
                                     <select class="form-control input-sm" ng-model="archdocs.config.activeGroup"
-                                            ng-options="item.text for item in archdocs.config.groupBy">
+                                            ng-options="item.text for item in archdocs.config.groupBy" disabled="">
                                     </select>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                             <div class="form-group">
                                 <div>
                                     <select class="form-control input-sm" ng-model="archdocs.config.activeGroup"
-                                            ng-options="item.text for item in archdocs.config.groupBy">
+                                            ng-options="item.text for item in archdocs.config.groupBy" disabled>
                                     </select>
                                 </div>
                             </div>
@@ -74,9 +74,9 @@
             <div class="panel-collapse" role="tabpanel" bs-collapse-target>
                 <div class="panel-body">
                     <div class="input-group input-group-sm">
-                        <input type="text" class="form-control input-sm ng-pristine ng-valid ng-touched" placeholder="Search">
+                        <input type="text" class="form-control input-sm ng-pristine ng-valid ng-touched" placeholder="Search" disabled>
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-sm btn-primary" ng-click="searchTree=tree;">
+                            <button type="button" class="btn btn-sm btn-primary" ng-click="searchTree=tree;" disabled>
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </span>

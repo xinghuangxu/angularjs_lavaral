@@ -14,11 +14,11 @@
         .module('spark')
         .controller('TestCase', TestCase);
 
-    TestCase.$inject = [ '$scope', '$popover', 'TestCaseService' ];
+    TestCase.$inject = [ '$scope', '$popover', 'TestCaseService', 'testplanSettingsService', 'releasesService', 'testStackService'];
     /**
      * Controller for handling TestCase pane in the test planner view
      */
-    function TestCase ($scope, $popover, TestCaseService) {
+    function TestCase ($scope, $popover, TestCaseService, planSettings) {
 
         var vm = this;
 
@@ -28,11 +28,18 @@
                 popoverButtons: TestCaseService.btns
             };
 
-        TestCaseService.getFoldersAndServiceData().then(function(response){
+        $scope.$on('planSettingChanged', function(event,settings) {
 
-             vm.tree=TestCaseService.getTreeJson(response);
+            TestCaseService.getFoldersAndServiceData().then(function(response){
 
-        });
+                vm.tree=TestCaseService.getTreeJson(response);
+
+           });
+
+          });
+
+
+
 
 $scope.$on('planSettingChanged', function(event,settings) {
     console.log('testcase catch');

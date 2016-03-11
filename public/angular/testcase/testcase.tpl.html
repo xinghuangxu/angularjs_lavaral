@@ -3,7 +3,7 @@
         <!--suggested strategy pools-->
         <div class="panel panel-default">
             <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
-                <h3 class="pull-left panel-title">Suggested test cases</h3>
+                <h3 class="pull-left panel-title">Suggested Test Cases</h3>
                 <!--<span class="pull-right badge">1 {{search.suggested.length}}</span>-->
                 <!--<wave-spinner ng-show="search.loading.suggested"></wave-spinner>-->
             </div>
@@ -29,14 +29,14 @@
                             </div>
                         </div>
                     </div>-->
-                    <spark-jstree ng-model="ts.tree"></spark-jstree>
+                    left blank intentionally
                 </div>
             </div>
         </div>
 
         <div class="panel panel-default">
             <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
-                <h3 class="pull-left panel-title">Browse test cases</h3>
+                <h3 class="pull-left panel-title">Browse Test Cases</h3>
                 <!--                <span class="pull-right badge">1 {{search.suggested.length}}</span>
                                 <wave-spinner ng-show="search.loading.suggested"></wave-spinner>-->
             </div>
@@ -76,15 +76,15 @@
             <div class="panel-collapse" role="tabpanel" bs-collapse-target>
                 <div class="panel-body">
                     <div class="input-group input-group-sm">
-                        <input type="text" class="form-control input-sm ng-pristine ng-valid ng-touched" placeholder="Search">
+                        <input type="text" class="form-control input-sm ng-pristine ng-valid ng-touched" placeholder="Search" disabled>
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-sm btn-primary" ng-click="searchTree=tree;">
+                            <button type="button" class="btn btn-sm btn-primary" ng-click="searchTree=tree;" disabled>
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </span>
                     </div>
 
-                    <spark-jstree ng-model="searchTree"></spark-jstree>
+<!--                    <spark-jstree ng-model="searchTree"></spark-jstree>-->
                 </div>
             </div>
         </div>

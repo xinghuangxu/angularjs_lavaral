@@ -60,20 +60,19 @@
              }
         }
 
-        this.getDocsAndTopicsData = function(){
+        this.getDocsAndTopicsData = function(id){
             // in production you should comment the lines that has "json"
             // and use only the ones the has rest and uncomment params line too if any
-
+                  id = id || ""  ;
                   return  $q.all({
                    documents:$http({
                     method: 'GET',
-                    url: '/rest/requirements/archdocs/?&perpage=all&search=test'
+                    url: '/rest/v2/requirements/archdocs/?&perpage=all'
 //                    url: 'json/get-rest.requirements.archdocs.json'
                     }),
                    topics:$http({
                     method: 'GET',
-                    url: '/rest/requirement/archdocsnew/:id/topics/',
-                    params: { id: '@id'},
+                    url: '/rest/v2/requirements/archdocs/'+ id + '/topics',
 //                    url: 'json/get-rest.requirements.archdocsnew.1.topics.json'
                     })
                     });
