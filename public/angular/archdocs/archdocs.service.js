@@ -63,7 +63,7 @@
         this.getDocsAndTopicsData = function(id){
             // in production you should comment the lines that has "json"
             // and use only the ones the has rest and uncomment params line too if any
-                  id = id || ""  ;
+                  id = id || "";
                   return  $q.all({
                    documents:$http({
                     method: 'GET',

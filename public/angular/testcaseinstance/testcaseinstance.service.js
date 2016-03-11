@@ -60,11 +60,11 @@
         this.getServiceData = function(id){
             // in production you should comment the lines that has "json"
             // and use only the ones the has rest and uncomment params line too if any
-
+                id = id || "";
                   return  $q.all({
                    folders:$http({
                     method: 'GET',
-                    url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/folder/'+ id
+                    url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/folder/'+ planSettings.data.alm_folder_node_id
 //                    url: 'json/rest.alm.databases.apg_qa_producttest_db.folder.510.json'
                     }),
                    TestSet:$http({
@@ -104,23 +104,23 @@
             }
 
            var foldersData = arg.folders.data;
-           var TestSetData = arg.TestSet.data;
-           var TestCaseInstanceData = arg.TestCaseInstance.data;
+//           var TestSetData = arg.TestSet.data;
+//           var TestCaseInstanceData = arg.TestCaseInstance.data;
 
 
            for (var i=0; i<foldersData.length;i++)
            {
                var rootNode = new nodeJson(foldersData[i].id,foldersData[i].text,foldersData[i].icon);
 
-            for(var j =0; j<TestSetData.length; j++)
-            {
-             var secondLevelChildNode = new nodeJson(TestSetData[j].id,TestSetData[j].title,TestSetData[j].icon);
-             for (var tsi=0; tsi < TestCaseInstanceData.length; tsi++){
-                 var ThirdLevelChildren = new nodeJson(TestCaseInstanceData[tsi].id,TestCaseInstanceData[tsi].test_case_name,TestCaseInstanceData[tsi].icon);
-                 secondLevelChildNode.children.push(ThirdLevelChildren);
-             }
-               rootNode.children.push(secondLevelChildNode);
-            }
+//            for(var j =0; j<TestSetData.length; j++)
+//            {
+//             var secondLevelChildNode = new nodeJson(TestSetData[j].id,TestSetData[j].title,TestSetData[j].icon);
+//             for (var tsi=0; tsi < TestCaseInstanceData.length; tsi++){
+//                 var ThirdLevelChildren = new nodeJson(TestCaseInstanceData[tsi].id,TestCaseInstanceData[tsi].test_case_name,TestCaseInstanceData[tsi].icon);
+//                 secondLevelChildNode.children.push(ThirdLevelChildren);
+//             }
+//               rootNode.children.push(secondLevelChildNode);
+//            }
 
             treeJson.push(rootNode);
            }

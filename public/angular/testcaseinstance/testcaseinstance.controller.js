@@ -14,7 +14,7 @@
         .module('spark')
         .controller('TestCaseInstance', TestCaseInstance);
 
-    TestCaseInstance.$inject = [ '$scope', '$popover', 'TestCaseInstanceService' ];
+    TestCaseInstance.$inject = [ '$scope', '$popover', 'TestCaseInstanceService'];
     /**
      * Controller for handling TestCaseInstance pane in the test planner view
      */
@@ -28,27 +28,15 @@
                 popoverButtons: TestCaseInstanceService.btns
             };
 
-        TestCaseInstanceService.getServiceData().then(function(response){
-
-             vm.tree=TestCaseInstanceService.getTreeJson(response);
-
-        });
-
     $scope.$on('planSettingChanged', function(event,settings) {
-    console.log('testInstance catch');
-    var alm_db_name = settings.data.alm_db_name;
-    var alm_folder_node_id = settings.data.alm_folder_node_id;
+        if(settings.data.alm_folder_node_id && settings.data.alm_db_name)
+        {
+            TestCaseInstanceService.getServiceData().then(function(response){
 
-    if(alm_db_name && alm_folder_node_id)
-    {
-        TestCaseInstanceService.getServiceData().then(function(response){
-
-             vm.tree=TestCaseInstanceService.getTreeJson(response);
-
-        });
-    }
-
-  });
+                 vm.tree=TestCaseInstanceService.getTreeJson(response);
+            });
+        }
+      });
 
     }
 })();
