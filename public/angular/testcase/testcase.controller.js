@@ -19,17 +19,17 @@
      * Controller for handling TestCase pane in the test planner view
      */
     function TestCase ($scope, $popover, TestCaseService, planSettings) {
-        
+
         var vm = this;
-        
+
         vm.config = {
                 groupBy: TestCaseService.views,
                 activeGroup: TestCaseService.views.NONE,
                 popoverButtons: TestCaseService.btns
             };
-        
+
         $scope.$on('planSettingChanged', function(event,settings) {
-            
+
             TestCaseService.getFoldersAndServiceData().then(function(response){
 
                 vm.tree=TestCaseService.getTreeJson(response);
@@ -37,9 +37,9 @@
            });
 
           });
-        
 
-        
+
+
 
     }
 })();

@@ -11,7 +11,7 @@
      * Service wrapper around test strategies for the test planner
      */
     function TestCaseService ($q,$http, planSettings) {
-        
+
         this.btns = [
             {
                 title: "show detailed info",
@@ -109,8 +109,8 @@
            {
                var rootNode = new nodeJson(foldersData[i].id,foldersData[i].text,foldersData[i].icon);
                treeJson.push(rootNode);
-               
-               // lazy load should be implemented here 
+
+               // lazy load should be implemented here
 
 //            for(var j =0; j<ServiceData.length; j++)
 //            {

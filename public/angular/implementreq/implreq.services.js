@@ -67,7 +67,7 @@
                   return  $q.all({
                    implrequests:$http({
                     method: 'GET',
-                    // Disbale the end point for now and use json file instead 
+                    // Disbale the end point for now and use json file instead
 //                    url: '/rest/cq/boxcars/' + id + '/implrequests/'
                     url: '/json/rest.cq.implrequests.json'
                     })
