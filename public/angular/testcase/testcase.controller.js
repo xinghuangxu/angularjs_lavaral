@@ -14,11 +14,11 @@
         .module('spark')
         .controller('TestCase', TestCase);
 
-    TestCase.$inject = [ '$scope', '$popover', 'TestCaseService', 'testplanSettingsService', 'releasesService', 'testStackService'];
+    TestCase.$inject = [ '$scope', '$popover', 'TestCaseService'];
     /**
      * Controller for handling TestCase pane in the test planner view
      */
-    function TestCase ($scope, $popover, TestCaseService, planSettings) {
+    function TestCase ($scope, $popover, TestCaseService) {
 
         var vm = this;
 
@@ -29,32 +29,11 @@
             };
 
         $scope.$on('planSettingChanged', function(event,settings) {
-
-            TestCaseService.getFoldersAndServiceData().then(function(response){
-
-                vm.tree=TestCaseService.getTreeJson(response);
-
-           });
-
+            if (settings.data.alm_db_name){
+                TestCaseService.getFoldersAndServiceData().then(function(response){
+                    vm.tree=TestCaseService.getTreeJson(response);
+               });
+            }
           });
-
-
-
-
-$scope.$on('planSettingChanged', function(event,settings) {
-    console.log('testcase catch');
-    var alm_db_name = settings.data.alm_db_name;
-
-    if(alm_db_name)
-    {
-         TestCaseService.getFoldersAndServiceData().then(function(response){
-
-             vm.tree=TestCaseService.getTreeJson(response);
-
-        });
-    }
-
-  });
-
     }
 })();

@@ -266,7 +266,7 @@
                 group: 'where'
             },
             {
-                label: "Test Instances",
+                label: "Test Case Instances",
                 navTitle: "Test Instances",
                 //template: "planner/weblab/weblab.tpl.html",
                 template: "angular/testcaseinstance/testcaseinstance.tpl.html",
