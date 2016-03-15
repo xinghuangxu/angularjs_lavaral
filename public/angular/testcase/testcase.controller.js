@@ -27,7 +27,7 @@
                 activeGroup: TestCaseService.views.NONE,
                 popoverButtons: TestCaseService.btns
             };
-            
+
         vm.tree = getTreeData;
 
         $scope.$on('planSettingChanged', function(event,settings) {
@@ -35,7 +35,7 @@
                 vm.tree = getTreeData;
             }
           });
-          
+
         function getTreeData(obj,cb){
             var node_id = obj.id;
             if (node_id == '#'){
@@ -44,7 +44,7 @@
                 });
                 return;
             }
-            
+
             TestCaseService.getTestCases(node_id).then(function(response){
                 cb.call(this, TestCaseService.getTestCaseTreeJson(response));
             });
