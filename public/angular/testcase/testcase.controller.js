@@ -27,13 +27,28 @@
                 activeGroup: TestCaseService.views.NONE,
                 popoverButtons: TestCaseService.btns
             };
+            
+        vm.tree = getTreeData;
 
         $scope.$on('planSettingChanged', function(event,settings) {
-            if (settings.data.alm_db_name){
-                TestCaseService.getFoldersAndServiceData().then(function(response){
-                    vm.tree=TestCaseService.getTreeJson(response);
-               });
+            if (settings.data.alm_db_name && settings.data.stack_name.match(/^LSIP2/)){
+                vm.tree = getTreeData;
             }
           });
+          
+        function getTreeData(obj,cb){
+            var node_id = obj.id;
+            if (node_id == '#'){
+                TestCaseService.getFolders().then(function(response){
+                    cb.call(this, TestCaseService.getTreeJson(response));
+                });
+                return;
+            }
+            
+            TestCaseService.getTestCases(node_id).then(function(response){
+                cb.call(this, TestCaseService.getTestCaseTreeJson(response));
+            });
+            return;
+        };
     }
 })();
