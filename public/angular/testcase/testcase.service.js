@@ -77,7 +77,7 @@
 
 
         };
-        
+
         this.getFolders = function(){
             // in production you should comment the lines that has "json"
             // and use only the ones the has rest and uncomment params line too if any
@@ -87,7 +87,7 @@
 //                url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
             });
         };
-        
+
         this.getTestCases = function(id){
             // in production you should comment the lines that has "json"
             // and use only the ones the has rest and uncomment params line too if any
@@ -99,7 +99,7 @@
         };
 
         this.getTreeJson = function(data){
-            
+
             var nodeJson = function(id, text, icon){
                 this.id= id,
                 this.text=text,
@@ -113,16 +113,16 @@
                 this.liAttributes= null,
                 this.aAttributes= null
             };
-            
-            var treeJson = []; 
-            var treeData = data.data; 
+
+            var treeJson = [];
+            var treeData = data.data;
             for (var i=0; i < treeData.length; i++){
                 var node = new nodeJson(treeData[i].id,treeData[i].text,treeData[i].icon);
                 treeJson.push(node);
             }
             return treeJson;
         };
-        
+
         this.getTestCaseTreeJson = function(data){
             var nodeJson = function(id, text, icon, children){
                 this.id= id,
@@ -137,9 +137,9 @@
                 this.liAttributes= null,
                 this.aAttributes= null
             };
-            
-            var treeJson = []; 
-            var treeData = data.data; 
+
+            var treeJson = [];
+            var treeData = data.data;
             for (var i=0; i < treeData.length; i++){
                 if (treeData[i].hasChildren){
                     var node = new nodeJson(treeData[i].id,treeData[i].test_case_name,treeData[i].icon, true);
