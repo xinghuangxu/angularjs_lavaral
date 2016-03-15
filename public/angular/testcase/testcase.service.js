@@ -78,16 +78,29 @@
 
         };
 
-        this.getTreeJson = function(){
-
+        this.getFolders = function(){
+            // in production you should comment the lines that has "json"
+            // and use only the ones the has rest and uncomment params line too if any
+            return $http({
+                method: 'GET',
+                url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcasefolders/0',
+//                url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
+            });
         };
 
-        this.getTreeJson = function(arg){
+        this.getTestCases = function(id){
+            // in production you should comment the lines that has "json"
+            // and use only the ones the has rest and uncomment params line too if any
+            return $http({
+                method: 'GET',
+                url: '/rest/alm/databases/'+ planSettings.data.alm_db_name + '/testcasesbyfolder/' + id
+//                url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json'
+            });
+        };
 
+        this.getTreeJson = function(data){
 
-
-           var treeJson =[]
-           var nodeJson =function(id,text,icon){
+            var nodeJson = function(id, text, icon){
                 this.id= id,
                 this.text=text,
                 this.icon= icon||null,
@@ -96,36 +109,48 @@
                     "disabled": false,
                     "selected": false
                 },
-                this.children= [],
+                this.children= true,
                 this.liAttributes= null,
                 this.aAttributes= null
+            };
+
+            var treeJson = [];
+            var treeData = data.data;
+            for (var i=0; i < treeData.length; i++){
+                var node = new nodeJson(treeData[i].id,treeData[i].text,treeData[i].icon);
+                treeJson.push(node);
             }
+            return treeJson;
+        };
 
-           var foldersData = arg.folders.data;
-//           var ServiceData = arg.Service.data;
+        this.getTestCaseTreeJson = function(data){
+            var nodeJson = function(id, text, icon, children){
+                this.id= id,
+                this.text=text,
+                this.icon= icon||null,
+                this.state= {
+                    "opened": false,
+                    "disabled": false,
+                    "selected": false
+                },
+                this.children= children,
+                this.liAttributes= null,
+                this.aAttributes= null
+            };
 
-
-           for (var i=0; i<foldersData.length;i++)
-           {
-               var rootNode = new nodeJson(foldersData[i].id,foldersData[i].text,foldersData[i].icon);
-               treeJson.push(rootNode);
-
-               // lazy load should be implemented here
-
-//            for(var j =0; j<ServiceData.length; j++)
-//            {
-//             var secondLevelChildNode = new nodeJson(ServiceData[j].id,ServiceData[j].test_case_name,ServiceData[j].icon);
-//
-//               rootNode.children.push(secondLevelChildNode);
-//            }
-//
-//            treeJson.push(rootNode);
-           }
-
-           return treeJson;
-
-
-        }
+            var treeJson = [];
+            var treeData = data.data;
+            for (var i=0; i < treeData.length; i++){
+                if (treeData[i].hasChildren){
+                    var node = new nodeJson(treeData[i].id,treeData[i].test_case_name,treeData[i].icon, true);
+                }
+                else{
+                    var node = new nodeJson(treeData[i].id,treeData[i].test_case_name,treeData[i].icon);
+                }
+                treeJson.push(node);
+            }
+            return treeJson;
+        };
 
 
     }
