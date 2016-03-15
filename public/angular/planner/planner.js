@@ -90,6 +90,7 @@
                             } else {
                                 planSettings.data.stack_name = planSettings.data.stack?planSettings.data.stack.name:'';
                             }
+                             $rootScope.$broadcast('planSettingChanged',planSettings);
                         }
                     });
                 }
@@ -126,7 +127,7 @@
 
 
                                 planSettings.data.substack_name = planSettings.data.substack?planSettings.data.substack.name:'';
-                                $rootScope.$broadcast('planSettingChanged',planSettings)
+                                $rootScope.$broadcast('planSettingChanged',planSettings);
                             }
                         }
                     );
@@ -253,7 +254,7 @@
                 //template: "angular/testcase/testcaseModal.tpl.html",
                 template: "angular/testcase/testcase.tpl.html",
                 order: 6,
-                active: true,
+                active: false,
                 group: 'what'
             },
             {

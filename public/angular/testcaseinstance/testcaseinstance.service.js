@@ -55,41 +55,97 @@
                  text: 'None'
              }
         }
-
-
-        this.getServiceData = function(id){
+        
+        this.getFolders = function(id){
             // in production you should comment the lines that has "json"
             // and use only the ones the has rest and uncomment params line too if any
-                id = id || "";
-                  return  $q.all({
-                   folders:$http({
-                    method: 'GET',
-                    url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/folder/'+ planSettings.data.alm_folder_node_id
-//                    url: 'json/rest.alm.databases.apg_qa_producttest_db.folder.510.json'
-                    }),
-                   TestSet:$http({
-                    method: 'GET',
-//                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testsets.532.json'
-                    url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testsets/' + id
-                    }),
-                    TestCaseInstance:$http({
-                    method: 'GET',
-//                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcaseinstances.51097.json'
-                    url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcaseinstances/' + id
-                    })
-                    });
-
-
+            return $http({
+                method: 'GET',
+                url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/folder/'+ id
+//                url: 'json/rest.alm.databases.apg_qa_producttest_db.folder.510.json'
+            });
+        };
+        
+        this.getTestSet = function(id){
+            // in production you should comment the lines that has "json"
+            // and use only the ones the has rest and uncomment params line too if any
+            return $http({
+                method: 'GET',
+                url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testsets/' + id
+//                url: 'json/rest.alm.databases.apg_qa_producttest_db.testsets.532.json'
+            });
+        };
+        
+        this.getTestCaseInstance = function(id){
+            // in production you should comment the lines that has "json"
+            // and use only the ones the has rest and uncomment params line too if any
+            return $http({
+                method: 'GET',
+                url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcaseinstances/' + id
+//                url: 'json/rest.alm.databases.apg_qa_producttest_db.testcaseinstances.51097.json'
+            });
         };
 
-        this.getTreeJson = function(){
-
+        this.getTreeJson = function(data){
+            
+            var nodeJson = function(id, text, icon, children){
+                this.id= id,
+                this.text=text,
+                this.icon= icon||null,
+                this.state= {
+                    "opened": false,
+                    "disabled": false,
+                    "selected": false
+                },
+                this.children= children,
+                this.liAttributes= null,
+                this.aAttributes= null
+            };
+            
+            var treeJson = []; 
+            var treeData = data.data; 
+            for (var i=0; i < treeData.length; i++){
+                if (treeData[i].hasChildren){
+                    var node = new nodeJson(treeData[i].id,treeData[i].text,treeData[i].icon, true);
+                }
+                else{
+                    var node = new nodeJson(treeData[i].id,treeData[i].text,treeData[i].icon);
+                }
+                treeJson.push(node);
+            }
+            console.log(treeJson)
+            return treeJson;
         };
-
-        this.getTreeJson = function(arg){
-
-           var treeJson =[]
-           var nodeJson =function(id,text,icon){
+        
+        this.getTestSetTreeJson = function(data){
+            
+            var nodeJson = function(id, text, icon){
+                this.id= id,
+                this.text=text,
+                this.icon= icon||null,
+                this.state= {
+                    "opened": false,
+                    "disabled": false,
+                    "selected": false
+                },
+                this.children= true,
+                this.liAttributes= null,
+                this.aAttributes= null
+            };
+            
+            var treeJson = []; 
+            var treeData = data.data; 
+            for (var i=0; i < treeData.length; i++){
+                var node = new nodeJson(treeData[i].id,treeData[i].title,treeData[i].icon);
+                treeJson.push(node);
+            }
+            console.log(treeJson)
+            return treeJson;
+        };
+        
+        this.getTestCasesInstanceTreeJson = function(data){
+            
+            var nodeJson = function(id, text, icon, children){
                 this.id= id,
                 this.text=text,
                 this.icon= icon||null,
@@ -101,35 +157,17 @@
                 this.children= [],
                 this.liAttributes= null,
                 this.aAttributes= null
+            };
+            
+            var treeJson = []; 
+            var treeData = data.data; 
+            for (var i=0; i < treeData.length; i++){
+                var node = new nodeJson(treeData[i].id,treeData[i].test_case_name,treeData[i].icon);
+                treeJson.push(node);
             }
-
-           var foldersData = arg.folders.data;
-//           var TestSetData = arg.TestSet.data;
-//           var TestCaseInstanceData = arg.TestCaseInstance.data;
-
-
-           for (var i=0; i<foldersData.length;i++)
-           {
-               var rootNode = new nodeJson(foldersData[i].id,foldersData[i].text,foldersData[i].icon);
-
-//            for(var j =0; j<TestSetData.length; j++)
-//            {
-//             var secondLevelChildNode = new nodeJson(TestSetData[j].id,TestSetData[j].title,TestSetData[j].icon);
-//             for (var tsi=0; tsi < TestCaseInstanceData.length; tsi++){
-//                 var ThirdLevelChildren = new nodeJson(TestCaseInstanceData[tsi].id,TestCaseInstanceData[tsi].test_case_name,TestCaseInstanceData[tsi].icon);
-//                 secondLevelChildNode.children.push(ThirdLevelChildren);
-//             }
-//               rootNode.children.push(secondLevelChildNode);
-//            }
-
-            treeJson.push(rootNode);
-           }
-
-           return treeJson;
-
-
-        }
-
+            console.log(treeJson)
+            return treeJson;
+        };
 
     }
 
