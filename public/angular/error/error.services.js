@@ -88,7 +88,7 @@
                 return modals.last();
             }
             
-            return '#main-view'
+            return '#main-view';
         }
     }
 })();

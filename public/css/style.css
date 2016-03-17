@@ -16,10 +16,13 @@
 
 #main-view .alert,
 .modal-body .alert {
-    position: absolute;
+    position: fixed;
     left: 1em;
     right: 1em;
     top: 1em;
+    z-index:10000;
+    width: 800px;
+    margin: auto;
 }
 
 .scroll {

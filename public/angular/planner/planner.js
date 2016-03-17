@@ -133,12 +133,12 @@
         );
     }
 
-    Panes.$inject = ['$scope'];
+    Panes.$inject = ['$scope','errorService'];
 
     /**
      * Controller for handling the panels which show the actual content in the planner
      */
-    function Panes($scope) {
+    function Panes($scope,errorService) {
         var vm = this;
 
         vm.order = 'order';
@@ -173,18 +173,23 @@
 
         //multi select configuration and watch events
         vm.selectedPanes = ["High Level scope", "Test Plan"];
+        vm.panelLimits = 3;
         $scope.$watch(
                 function () {
                     return vm.selectedPanes;
                 },
                 function () {
-                    for (var i = 0; i < vm.panes.length; i++) {
-                        var isSelected = (vm.selectedPanes.indexOf(vm.panes[i].label) > -1);
-                        if (isSelected) {
-                            vm.panes[i].active = true;
-                        } else {
-                            vm.panes[i].active = false;
+                    if (vm.selectedPanes.length <= vm.panelLimits) {
+                        for (var i = 0; i < vm.panes.length; i++) {
+                            var isSelected = (vm.selectedPanes.indexOf(vm.panes[i].label) > -1);
+                            if (isSelected) {
+                                vm.panes[i].active = true;
+                            } else {
+                                vm.panes[i].active = false;
+                            }
                         }
+                    }else{
+                        errorService.warning("Please restrict the selection to less than "+vm.panelLimits+" items.");
                     }
                 }
         );
