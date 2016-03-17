@@ -87,7 +87,6 @@
             if(modals.length > 0) {
                 return modals.last();
             }
-            
             return '#main-view';
         }
     }

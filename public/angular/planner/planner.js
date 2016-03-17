@@ -189,7 +189,7 @@
                             }
                         }
                     }else{
-                        errorService.warning("Please restrict the selection to less than "+vm.panelLimits+" items.");
+                        errorService.warning("You can only select max " + vm.panelLimits + " panels at a time. Please remove a panel to add a new one.");
                     }
                 }
         );
