@@ -33,6 +33,7 @@
         <script type="text/javascript" src="{{ asset('angular/ui/ui.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/resizable.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/jstree.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/ui/bsSelect.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/node.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/flash.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/ui/treeSelect.js') }}"></script>
