@@ -171,28 +171,7 @@
             }
         ];
 
-        //multi select configuration and watch events
-        vm.selectedPanes = ["High Level scope", "Test Plan"];
-        vm.panelLimits = 3;
-        $scope.$watch(
-                function () {
-                    return vm.selectedPanes;
-                },
-                function () {
-                    if (vm.selectedPanes.length <= vm.panelLimits) {
-                        for (var i = 0; i < vm.panes.length; i++) {
-                            var isSelected = (vm.selectedPanes.indexOf(vm.panes[i].label) > -1);
-                            if (isSelected) {
-                                vm.panes[i].active = true;
-                            } else {
-                                vm.panes[i].active = false;
-                            }
-                        }
-                    }else{
-                        errorService.warning("You can only select max " + vm.panelLimits + " panels at a time. Please remove a panel to add a new one.");
-                    }
-                }
-        );
+
         // Setup the defaults and configuration for each pane
         // Each template must contain a reference to the correct controller for that pane
         vm.panes = [
@@ -296,5 +275,33 @@
                 group: 'what'
             }
         ];
+        
+        //multi select configuration and watch events
+        vm.selectedPanes = [];
+        for (var i = 0; i < vm.panes.length; i++) {
+            if(vm.panes[i].active){
+                vm.selectedPanes.push(vm.panes[i].label);
+            }
+        }
+        vm.panelLimits = 3;
+        $scope.$watch(
+                function () {
+                    return vm.selectedPanes;
+                },
+                function () {
+                    if (vm.selectedPanes.length <= vm.panelLimits) {
+                        for (var i = 0; i < vm.panes.length; i++) {
+                            var isSelected = (vm.selectedPanes.indexOf(vm.panes[i].label) > -1);
+                            if (isSelected) {
+                                vm.panes[i].active = true;
+                            } else {
+                                vm.panes[i].active = false;
+                            }
+                        }
+                    }else{
+                        errorService.warning("You can only select max " + vm.panelLimits + " panels at a time. Please remove a panel to add a new one.");
+                    }
+                }
+        );
     }
 })();
