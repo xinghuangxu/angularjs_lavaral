@@ -1,27 +1,78 @@
-## Laravel PHP Framework
+# Development Guideline
+## FrontEnd
+### AngularJS Style Guide
+https://github.com/johnpapa/angular-styleguide/tree/master/a1
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+### One Drive File Sharing
+https://netapp-my.sharepoint.com/personal/mohamman_netapp_com/
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+# Code Contribution Guideline
+## Remote repository location
+[username]@10.251.164.10:/git/[project-name].git
+ex. lxu@10.251.164.10:/git/Spark-planner-poc-wsu.git
 
-## Official Documentation
+## Git Workflow
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+### Quick Guide for the commends:
+- Create new branch:
+1. git checkout develop
+1. git pull
+1. git checkout -b xyz-feature-branch
+ 
+- Check-in code:
+1. git status (Check status of files being tracked/untracked/modified)
+1. git add <files> (filename or use git add *)
+1. git commit -a
+1. git checkout develop
+1. git pull
+1. git merge --no-ff xyz-feature-branch
+1. git push
+ 
+- In case you need to share your branch with someone else:
+1. git push -f origin xyz-feature-branch (This will push your local branch to the remote repository)
+ 
+- Delete your branch after use:
+1. git branch -d origin xyz-feature-branch
+ 
+- Create diff file to post to Review Board:
+1. git diff develop > diff-file-name
+ 
+- Rebase from develop (incase extra files other than your changes show up in your diff file, which means there are changes from other developers)
+1. git rebase develop
+ 
+- Check-in to master and tag it:
+1. git checkout master
+1. git pull
+1. git merge --no-ff xyz-branch
+1. git push
+1. git tag (Check the tags to find out the latest version)
+1. git tag -a vX.Y.Z (eg. git tag -a v1.2.4)
+1. git push --tags
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+### Reviewboard
+http://reviewboard.ict-wsu-git.hq.netapp.com
 
-## Security Vulnerabilities
+1. How to publish a reivew? 
+* Option 1: Use git diff and upload the output diff file to reviewboard
+* Option 2: Use RBTools. Configure your own .reviewboardrc file. Then use **rbt post** command.
+```
+REVIEWBOARD_URL = "http://reviewboard.ict-wsu-git.hq.netapp.com"
+REPOSITORY = "Spark-planner-poc-wsu"
+BRANCH = "develop"
+TRACKING_BRANCH = "origin/develop"
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
-### License
+>When submitting a review request, the reviewboard email notification is not currently working.
+After publishing your review you will need to send out an email to the designated reviewers and include ng-epg-qa-spark-developers@netapp.com in your cc list.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+## NetApp Contact List
+1. Mohammad.Nadji-Tehrani@netapp.com 
+1. Maneesh.Abraham@netapp.com 
+2. Randall.Crock@netapp.com 
+
+### WSU Student VPN
+1. VPN Link: https://sa-hio.netapp.com/dana/home/index.cgi
+1. Download MobilePASS app on your phone
