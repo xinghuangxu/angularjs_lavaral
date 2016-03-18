@@ -126,7 +126,7 @@
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.service.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.controller.js') }}"></script>
         <!-- End of Loading ArchDocs modules -->
-        
+
         <!-- Start of Loading Implementation requirements modules -->
         <script type="text/javascript" src="{{ asset('angular/continuousintegration/ci.services.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/continuousintegration/ci.controller.js') }}"></script>

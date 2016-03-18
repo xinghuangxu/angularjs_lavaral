@@ -265,7 +265,7 @@
                 order: 10,
                 active: false,
                 group: 'what'
-            }, 
+            },
             {
                 label: "Continuous integration",
                 //template: "planner/weblab/weblab.tpl.html",
@@ -275,7 +275,7 @@
                 group: 'what'
             }
         ];
-        
+
         //multi select configuration and watch events
         vm.selectedPanes = [];
         for (var i = 0; i < vm.panes.length; i++) {

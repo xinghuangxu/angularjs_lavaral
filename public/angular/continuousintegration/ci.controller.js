@@ -25,7 +25,7 @@
         vm.config = {
                 groupBy: ContinuousIntegrationService.views,
             };
-        
+
         ContinuousIntegrationService.getContinuousIntegrationData().then(function(response){
                 vm.Ownertree=ContinuousIntegrationService.getTreeJson(response);
                 vm.SearchResultree=ContinuousIntegrationService.getTreeJson(response);
@@ -34,13 +34,13 @@
                 vm.FeatureRegressionTestTree=ContinuousIntegrationService.getTreeJson(response);
                 vm.ExecuteTestTree=ContinuousIntegrationService.getTreeJson(response);
             });
-            
+
 //        $scope.$on('planSettingChanged', function(event,settings) {
 //            var testplan_boxcar_id = settings.data.testplan_boxcar_id;
 //            ImplementationRequestsService.getImplementationRequestsData().then(function(response){
 //                vm.tree=ImplementationRequestsService.getTreeJson(response);
 //            });
-            // The following lines have been commented out because we are going to use them once we change to the new service 
+            // The following lines have been commented out because we are going to use them once we change to the new service
 //            if(settings.data.testplan_boxcar_id)
 //            {
 //               ImplementationRequestsService.getImplementationRequestsData().then(function(response){
