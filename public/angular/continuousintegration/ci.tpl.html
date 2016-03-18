@@ -30,13 +30,13 @@
                             <label>Tasks by owner:</label>
                         </div>
                     </div>
-                    <spark-jstree ng-model="ci.Ownertree"></spark-jstree>
+                    <spark-jstree ng-model="ci.Ownertree" data-config="ci.treeConfig"></spark-jstree>
                     <div class="clearfix">
                         <div class="navbar-form navbar-left">
                             <label>Search results:</label>
                         </div>
                     </div>
-                    <spark-jstree ng-model="ci.SearchResultree"></spark-jstree>
+                    <spark-jstree ng-model="ci.SearchResultree" data-config="ci.treeConfig"></spark-jstree>
 
                 </div>
             </div>
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                     <div class="clearfix">
-                        <spark-jstree ng-model="ci.Productstree"></spark-jstree>
+                        <spark-jstree ng-model="ci.Productstree" data-config="ci.treeConfig"></spark-jstree>
                     </div>
                 </div>
             </div>
@@ -86,13 +86,13 @@
                             <label>Run-check Test</label>
                         </div>
                     </div>
-                    <spark-jstree ng-model="ci.RuncheckTestTree"></spark-jstree>
+                    <spark-jstree ng-model="ci.RuncheckTestTree" data-config="ci.treeConfig"></spark-jstree>
                     <div class="clearfix">
                         <div class="navbar-form navbar-left">
                             <label>Feature Regression Test</label>
                         </div>
                     </div>
-                    <spark-tree-select ng-model="ci.FeatureRegressionTestTree"></spark-tree-select>
+                    <spark-jstree ng-model="ci.FeatureRegressionTestTree" data-config="ci.treeConfig"></spark-jstree>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@
             <div class="panel-collapse" role="tabpanel" bs-collapse-target>
                 <div class="panel-body">
                     <div class="clearfix">
-                        <spark-jstree ng-model="ci.ExecuteTestTree"></spark-jstree>
+                        <spark-jstree ng-model="ci.ExecuteTestTree" data-config="ci.treeConfig"></spark-jstree>
                     </div>
                 </div>
             </div>
