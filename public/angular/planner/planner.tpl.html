@@ -38,7 +38,7 @@
 
     </div>
     <div class="text-center">
-        <button limit="{{vm.panelLimits}}" type="button" class="btn btn-default" ng-model="vm.selectedPanes" data-html="1" data-multiple="1" data-animation="am-flip-x" bs-options="icon.label as icon.label for icon in vm.panes" spark-bs-select>
+        <button limit="{{vm.panelLimits}}" type="button" class="btn btn-default" ng-model="vm.selectedPanes" data-html="1" data-multiple="1" data-animation="am-flip-x" bs-options="icon.label as icon.label for icon in vm.panes | orderBy:'label'" spark-bs-select>
             Action <span class="caret"></span>
         </button>
     </div>
