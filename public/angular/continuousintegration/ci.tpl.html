@@ -1,0 +1,116 @@
+<div class="test-strategy-search" ng-controller="continuousIntegration as ci">
+    <div class="panel-group" bs-collapse data-animation="am-collapse" ng-model="search.activePanel">
+        <!--suggested strategy pools-->
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
+                <h3 class="pull-left panel-title">Tasks</h3>
+                <!--<span class="pull-right badge">1 {{search.suggested.length}}</span>-->
+                <!--<wave-spinner ng-show="search.loading.suggested"></wave-spinner>-->
+            </div>
+            <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+                <div class="panel-body">
+                    <div class="clearfix">
+                        <div class="navbar-form navbar-left">
+                            <label for="Search" class=" control-label input-sm">Filter:</label>
+                            <div class="form-group">
+                                <input type="text" ng-model="ci.filter.text" class="form-control input-sm" placeholder="Filter">
+                            </div>
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control input-sm ng-pristine ng-valid ng-touched" placeholder="Search" disabled>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-sm btn-primary" ng-click="searchTree=tree;" disabled>
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="navbar-form navbar-left">
+                            <label>Tasks by owner:</label>
+                        </div>
+                    </div>
+                    <spark-jstree ng-model="ci.Ownertree"></spark-jstree>
+                    <div class="clearfix">
+                        <div class="navbar-form navbar-left">
+                            <label>Search results:</label>
+                        </div>
+                    </div>
+                    <spark-jstree ng-model="ci.SearchResultree"></spark-jstree>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
+                <h3 class="pull-left panel-title">Products</h3>
+<!--                <span class="pull-right badge">1 {{search.suggested.length}}</span>
+                <wave-spinner ng-show="search.loading.suggested"></wave-spinner>-->
+            </div>
+            <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+                <div class="panel-body">
+                    <div class="clearfix">
+                        <div class="navbar-form navbar-left">
+                            <label for="Search" class=" control-label input-sm">Filter:</label>
+                            <div class="form-group">
+                                <input type="text" ng-model="ci.filter.text" class="form-control input-sm" placeholder="Filter">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <spark-jstree ng-model="ci.Productstree"></spark-jstree>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
+                <h3 class="pull-left panel-title">Tests</h3>
+<!--                <span class="pull-right badge">1 {{search.suggested.length}}</span>
+                <wave-spinner ng-show="search.loading.suggested"></wave-spinner>-->
+            </div>
+            <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+                <div class="panel-body">
+                    <div class="clearfix">
+                        <div class="navbar-form navbar-left">
+                            <label for="Search" class=" control-label input-sm">Filter:</label>
+                            <div class="form-group">
+                                <input type="text" ng-model="ci.filter.text" class="form-control input-sm" placeholder="Filter">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="navbar-form navbar-left">
+                            <label>Run-check Test</label>
+                        </div>
+                    </div>
+                    <spark-jstree ng-model="ci.RuncheckTestTree"></spark-jstree>
+                    <div class="clearfix">
+                        <div class="navbar-form navbar-left">
+                            <label>Feature Regression Test</label>
+                        </div>
+                    </div>
+                    <spark-tree-select ng-model="ci.FeatureRegressionTestTree"></spark-tree-select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix panel-heading-height" role="tab" bs-collapse-toggle>
+                <h3 class="pull-left panel-title">Execute</h3>
+<!--                <span class="pull-right badge">1 {{search.suggested.length}}</span>
+                <wave-spinner ng-show="search.loading.suggested"></wave-spinner>-->
+            </div>
+            <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+                <div class="panel-body">
+                    <div class="clearfix">
+                        <spark-jstree ng-model="ci.ExecuteTestTree"></spark-jstree>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
