@@ -28,22 +28,43 @@
                 popoverButtons: ImplementationRequestsService.btns
             };
 
-        $scope.$on('planSettingChanged', function(event,settings) {
-            var testplan_boxcar_id = settings.data.testplan_boxcar_id;
-            ImplementationRequestsService.getImplementationRequestsData().then(function(response){
-                vm.tree=ImplementationRequestsService.getTreeJson(response);
-            });
-            // The following lines have been commented out because we are going to use them once we change to the new service 
-//            if(settings.data.testplan_boxcar_id)
-//            {
-//               ImplementationRequestsService.getImplementationRequestsData().then(function(response){
-//
-//                    vm.tree=ImplementationRequestsService.getTreeJson(response);
-//
-//                });
-//            }
+        vm.stack_name = null;
 
-          });
+        // in production enviroment you should disable the following line
+
+        vm.tree = getTreeData;
+
+        // in production environment you should uncomment the following lines
+
+//        $scope.$on('planSettingChanged', function(event,settings) {
+//            if (settings.data.testplan_stack_id.match(/^LSIP2/)){
+//                vm.stack_name = settings.data.testplan_stack_id;
+//                vm.tree = getTreeData;
+//            }
+//        });
+
+        function getTreeData(obj,cb){
+            var node_id = obj.id;
+            if (node_id == '#'){
+                ImplementationRequestsService.getDevRequests(vm.stack_name).then(function(response){
+                    cb.call(this, ImplementationRequestsService.getDevRequestTree(response));
+                });
+                return;
+            }
+
+            if (obj.data === "DevRequest"){
+                ImplementationRequestsService.getImplRequests(vm.stack_name).then(function(response){
+                    cb.call(this, ImplementationRequestsService.getImplRequestTree(response));
+                });
+                return;
+            }
+            else{
+                ImplementationRequestsService.getTasks().then(function(response){
+                    cb.call(this, ImplementationRequestsService.getTaskTree(response));
+                });
+                return;
+            }
+        };
 
     }
 })();

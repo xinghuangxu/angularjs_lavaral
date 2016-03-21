@@ -61,25 +61,88 @@
              }
         }
 
-        vm.getImplementationRequestsData = function(id){
-            // in production you should comment the lines that has "json"
-            // and use only the ones the has rest and uncomment params line too if any
-                  return  $q.all({
-                   implrequests:$http({
-                    method: 'GET',
-                    // Disbale the end point for now and use json file instead
-//                    url: '/rest/cq/boxcars/' + id + '/implrequests/'
-                    url: '/json/rest.cq.implrequests.json'
-                    })
-                    });
-
-
+        vm.getDevRequests = function(id){
+            return $http({
+                method: 'GET',
+                url: '/rest/cq/boxcars/'+ id +'/devrequests/'
+//                url: '/json/get-rest.cq.boxcars.LSIP200XXXXXX.devrequests.json'
+            });
         };
 
-        vm.getTreeJson = function(arg){
+        vm.getImplRequests = function(id){
+            return $http({
+                method: 'GET',
+                url: '/rest/cq/boxcars/'+ id +'/devrequests/'
+//                url: '/json/get-rest.cq.implrequests.json'
+            });
+        };
 
-           var treeJson =[]
-           var nodeJson =function(id,text,icon){
+        vm.getTasks = function(){
+            return $http({
+                method: 'GET',
+                url: '/rest/cq/tasks'
+//                url: '/json/get-rest.cq.tasks.json'
+            });
+        };
+
+        vm.getDevRequestTree = function(arg){
+            var nodeJson =function(id,text,icon){
+                this.id= id,
+                this.text=text,
+                this.icon= icon||null,
+                this.state= {
+                    "opened": false,
+                    "disabled": false,
+                    "selected": false
+                },
+                this.children= true,
+                this.liAttributes= null,
+                this.aAttributes= null,
+                this.data = 'DevRequest'
+            }
+            var treeJson =[]
+
+            var devrequestsData = arg.data.data;
+
+            for (var i=0; i<devrequestsData.length;i++)
+            {
+                var rootNode = new nodeJson(devrequestsData[i].id,devrequestsData[i].Headline,devrequestsData[i].icon);
+                treeJson.push(rootNode);
+            }
+
+            return treeJson;
+        };
+
+        vm.getImplRequestTree = function(arg){
+            var nodeJson =function(id,text,icon){
+                this.id= id,
+                this.text=text,
+                this.icon= icon||null,
+                this.state= {
+                    "opened": false,
+                    "disabled": false,
+                    "selected": false
+                },
+                this.children= true,
+                this.liAttributes= null,
+                this.aAttributes= null,
+                this.data = 'ImplementationRequest'
+            }
+            var treeJson =[]
+
+            var implrequestsData = arg.data.data;
+
+            for (var i=0; i<implrequestsData.length;i++)
+            {
+                var rootNode = new nodeJson(implrequestsData[i].id,implrequestsData[i].Headline,implrequestsData[i].icon);
+                treeJson.push(rootNode);
+            }
+
+            return treeJson;
+        };
+
+        vm.getTaskTree = function(arg){
+            var nodeJson =function(id,text,icon){
                 this.id= id,
                 this.text=text,
                 this.icon= icon||null,
@@ -92,18 +155,18 @@
                 this.liAttributes= null,
                 this.aAttributes= null
             }
+            var treeJson =[]
 
-           var implrequestsData = arg.implrequests.data.data;
+            var tasksData = arg.data.data;
 
-           for (var i=0; i<implrequestsData.length;i++)
-           {
-               var rootNode = new nodeJson(implrequestsData[i].id,implrequestsData[i].Headline,implrequestsData[i].icon);
-               treeJson.push(rootNode);
-           }
+            for (var i=0; i<tasksData.length;i++)
+            {
+                var rootNode = new nodeJson(tasksData[i].id,tasksData[i].Headline,tasksData[i].icon);
+                treeJson.push(rootNode);
+            }
 
-           return treeJson;
-
-        }
+            return treeJson;
+        };
 
     }
 
