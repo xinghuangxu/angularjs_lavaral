@@ -263,7 +263,7 @@
                 //template: "planner/weblab/weblab.tpl.html",
                 template: "angular/implementreq/implementReq.tpl.html",
                 order: 10,
-                active: false,
+                active: true,
                 group: 'what'
             },
             {
@@ -271,7 +271,7 @@
                 //template: "planner/weblab/weblab.tpl.html",
                 template: "angular/continuousintegration/ci.tpl.html",
                 order: 11,
-                active: true,
+                active: false,
                 group: 'what'
             }
         ];
