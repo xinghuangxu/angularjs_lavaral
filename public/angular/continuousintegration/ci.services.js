@@ -65,12 +65,12 @@
             // in production you should comment the lines that has "json"
             // and use only the ones the has rest and uncomment params line too if any
                   return  $q.all({
-                   implrequests:$http({
-                    method: 'GET',
-                    // Disbale the end point for now and use json file instead
-//                    url: '/rest/cq/boxcars/' + id + '/implrequests/'
-                    url: '/json/rest.cq.implrequests.json'
-                    })
+                   products:$http({
+	                    method: 'GET',
+		                    // Disable the end point for now and use json file instead
+		                    //url: '/rest/ci/products'
+		                    url: '/json/get-rest.ci.products.json'
+	                    })
                     });
 
 
@@ -92,12 +92,12 @@
                 this.liAttributes= null,
                 this.aAttributes= null
             }
-//            console.log(arg);
-           var implrequestsData = arg.implrequests.data.data;
 
-           for (var i=0; i<implrequestsData.length;i++)
+           var productsData = arg.products.data.data;
+
+           for (var i=0; i < productsData.length; i++)
            {
-               var rootNode = new nodeJson(implrequestsData[i].id,implrequestsData[i].Headline,implrequestsData[i].icon);
+               var rootNode = new nodeJson(productsData[i].id, productsData[i].Headline, productsData[i].icon);
                treeJson.push(rootNode);
            }
 

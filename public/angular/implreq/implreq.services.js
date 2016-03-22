@@ -104,9 +104,9 @@
 
             var devrequestsData = arg.data.data;
 
-            for (var i=0; i<devrequestsData.length;i++)
+            for (var i=0; i < devrequestsData.length; i++)
             {
-                var rootNode = new nodeJson(devrequestsData[i].id,devrequestsData[i].Headline,devrequestsData[i].icon);
+                var rootNode = new nodeJson(devrequestsData[i].id, devrequestsData[i].Headline, devrequestsData[i].icon);
                 treeJson.push(rootNode);
             }
 
@@ -128,13 +128,13 @@
                 this.aAttributes= null,
                 this.data = 'ImplementationRequest'
             }
-            var treeJson =[]
+            var treeJson =[];
 
             var implrequestsData = arg.data.data;
 
-            for (var i=0; i<implrequestsData.length;i++)
+            for (var i=0; i < implrequestsData.length; i++)
             {
-                var rootNode = new nodeJson(implrequestsData[i].id,implrequestsData[i].Headline,implrequestsData[i].icon);
+                var rootNode = new nodeJson(implrequestsData[i].id, implrequestsData[i].Headline, implrequestsData[i].icon);
                 treeJson.push(rootNode);
             }
 
@@ -155,13 +155,13 @@
                 this.liAttributes= null,
                 this.aAttributes= null
             }
-            var treeJson =[]
+            var treeJson =[];
 
             var tasksData = arg.data.data;
 
-            for (var i=0; i<tasksData.length;i++)
+            for (var i=0; i < tasksData.length; i++)
             {
-                var rootNode = new nodeJson(tasksData[i].id,tasksData[i].Headline,tasksData[i].icon);
+                var rootNode = new nodeJson(tasksData[i].id, tasksData[i].Headline, tasksData[i].icon);
                 treeJson.push(rootNode);
             }
 

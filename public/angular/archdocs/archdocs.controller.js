@@ -32,7 +32,7 @@
         
                 archdocsService.getDocsAndTopicsData().then(function(response){
 
-                    vm.tree=archdocsService.getTreeJson(response);
+                    vm.tree = archdocsService.getTreeJson(response);
 
                });
         //    }
