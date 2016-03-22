@@ -222,7 +222,7 @@
             },
             {
                 label: "Test Cases",
-                template: "angular/testcase/testcase.tpl.html",
+                template: "angular/testcasep/testcase.tpl.html",
                 order: 6,
                 active: false,
                 group: 'what'

@@ -2,11 +2,15 @@
     {
         "id": "511",
         "text": "Scrum1",
-        "hasChildren": true
+        "hasChildren": true,
+		"icon": "glyphicon glyphicon-folder-open",
+        "type": "folder"
     },
     {
         "id": "512",
         "text": "Scrum2",
-        "hasChildren": true
+        "hasChildren": true,
+		"icon": "glyphicon glyphicon-folder-open",
+        "type": "folder"
     }
 ]

@@ -123,8 +123,9 @@
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.services.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/testcase/testcase.service.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/testcase/testcase.controller.js') }}"></script>
+        
+        <script type="text/javascript" src="{{ asset('angular/testcasep/testcase.service.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/testcasep/testcase.controller.js') }}"></script>
         <!-- End of Loading TestCase modules -->
 
         <!-- Start of Loading Continuous Integration modules -->

@@ -1,14 +1,23 @@
 [
     {
         "id": "3191",
-        "test_case_name": "HBLT-xxxx-xxxx-xxxx-1001 Another new test"
+        "test_case_name": "HBLT-xxxx-xxxx-xxxx-1001 Another new test",
+		"test_case_type": "TAS-TEST",
+        "icon": "glyphicon glyphicon-cog",
+        "type": "testcasebyfolder"
     },
     {
         "id": "3",
-        "test_case_name": "TEST-xxxx-xxxx-xxxx-1000 A new test"
+        "test_case_name": "TEST-xxxx-xxxx-xxxx-1000 A new test",
+		"test_case_type": "MANUAL",
+        "icon": "glyphicon glyphicon-wrench",
+        "type": "testcasebyfolder"
     },
     {
         "id": "3639",
-        "test_case_name": "test-DCDx-AUTO-xxxx-0001{7.89.1} lorem ipsum"
+        "test_case_name": "test-DCDx-AUTO-xxxx-0001{7.89.1} lorem ipsum",
+		"test_case_type": "TAS-TEST",
+        "icon": "glyphicon glyphicon-cog",
+        "type": "testcasebyfolder"
     }
 ]

@@ -63,16 +63,16 @@
                 id = id || "";
                   return  $q.all({
                    folders:$http({
-                    method: 'GET',
-                    // 0 is hard coded because to fetch the root folders
-                    url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcasefolders/0',
-//                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
-                    }),
+	                    method: 'GET',
+		                    // 0 is hard coded because to fetch the root folders
+		                    //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcasefolders/0',
+		                    url: 'json/get-rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
+	                    }),
                    Service:$http({
-                    method: 'GET',
-//                    url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json'
-                    url: '/rest/alm/databases/'+ planSettings.data.alm_db_name + '/testcasesbyfolder/' + id,
-                    })
+	                    method: 'GET',
+	                    	//url: '/rest/alm/databases/'+ planSettings.data.alm_db_name + '/testcasesbyfolder/' + id,
+	                    	url: 'json/get-rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json'                    
+	                    })
                     });
 
 
@@ -83,8 +83,8 @@
             // and use only the ones the has rest and uncomment params line too if any
             return $http({
                 method: 'GET',
-                url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcasefolders/0',
-//                url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
+                //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcasefolders/0',
+                url: 'json/get-rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
             });
         };
 
@@ -93,8 +93,8 @@
             // and use only the ones the has rest and uncomment params line too if any
             return $http({
                 method: 'GET',
-                url: '/rest/alm/databases/'+ planSettings.data.alm_db_name + '/testcasesbyfolder/' + id
-//                url: 'json/rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json'
+                //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name + '/testcasesbyfolder/' + id
+                url: 'json/get-rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json'
             });
         };
 
