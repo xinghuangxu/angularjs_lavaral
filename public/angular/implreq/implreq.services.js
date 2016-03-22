@@ -64,24 +64,24 @@
         vm.getDevRequests = function(id){
             return $http({
                 method: 'GET',
-                url: '/rest/cq/boxcars/'+ id +'/devrequests/'
-//                url: '/json/get-rest.cq.boxcars.LSIP200XXXXXX.devrequests.json'
+                //url: '/rest/cq/boxcars/'+ id +'/devrequests/'
+                url: '/json/get-rest.cq.boxcars.LSIP200XXXXXX.devrequests.json'
             });
         };
 
         vm.getImplRequests = function(id){
             return $http({
                 method: 'GET',
-                url: '/rest/cq/boxcars/'+ id +'/devrequests/'
-//                url: '/json/get-rest.cq.implrequests.json'
+                //url: '/rest/cq/boxcars/'+ id +'/devrequests/'
+                url: '/json/get-rest.cq.devrequests.LSIP200XXXXXX.implrequests.json'
             });
         };
 
         vm.getTasks = function(){
             return $http({
                 method: 'GET',
-                url: '/rest/cq/tasks'
-//                url: '/json/get-rest.cq.tasks.json'
+                //url: '/rest/cq/tasks'
+                url: '/json/get-rest.cq.tasks.json'
             });
         };
 

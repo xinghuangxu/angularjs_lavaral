@@ -110,27 +110,27 @@
         <!-- End of Loading ArchDocs modules -->
 
         <!-- Start of Loading Implementation requirements modules -->
-        <script type="text/javascript" src="{{ asset('angular/implementreq/implreq.services.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('angular/implementreq/implreq.controller.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/implreq/implreq.services.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/implreq/implreq.controller.js') }}"></script>
         <!-- End of Loading Implementation requirements modules -->
 
-        <!-- Start of Loading ArchDocs modules -->
+        <!-- Start of Loading TestCaseInstance modules -->
         <script type="text/javascript" src="{{ asset('angular/testcaseinstance/testcaseinstance.service.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/testcaseinstance/testcaseinstance.controller.js') }}"></script>
-        <!-- End of Loading ArchDocs modules -->
+        <!-- End of Loading TestCaseInstance modules -->
 
-        <!-- Start of Loading ArchDocs modules -->
+        <!-- Start of Loading TestCase modules -->
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.module.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.services.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.service.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/testcase/testcase.controller.js') }}"></script>
-        <!-- End of Loading ArchDocs modules -->
+        <!-- End of Loading TestCase modules -->
 
-        <!-- Start of Loading Implementation requirements modules -->
+        <!-- Start of Loading Continuous Integration modules -->
         <script type="text/javascript" src="{{ asset('angular/continuousintegration/ci.services.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/continuousintegration/ci.controller.js') }}"></script>
-        <!-- End of Loading Implementation requirements modules -->
+        <!-- End of Loading Continuous Integration modules -->
 
         <!-- Misc Scripts -->
     </body>
