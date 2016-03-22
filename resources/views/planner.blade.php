@@ -115,7 +115,7 @@
         <!-- End of Loading Implementation requirements modules -->
 
         <!-- Start of Loading TestCaseInstance modules -->
-        <script type="text/javascript" src="{{ asset('angular/testcaseinstance/testcaseinstance.service.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/testcaseinstance/testcaseinstance.services.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/testcaseinstance/testcaseinstance.controller.js') }}"></script>
         <!-- End of Loading TestCaseInstance modules -->
 
