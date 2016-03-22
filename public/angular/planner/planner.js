@@ -194,7 +194,7 @@
             },
             {
                 label: "Architecture Documents",
-                template: "angular/archdocs/archDocs.tpl.html",
+                template: "angular/archdocs/archdocs.tpl.html",
                 order: 2,
                 active: false,
                 group: 'what'

@@ -27,17 +27,17 @@
                 popoverButtons: archdocsService.btns
             };
 
-        $scope.$on('planSettingChanged', function(event,settings) {
-            if(settings.data.testplan_boxcar_id)
-            {
+        //$scope.$on('planSettingChanged', function(event,settings) {
+        //    if(settings.data.testplan_boxcar_id){
+        
                 archdocsService.getDocsAndTopicsData().then(function(response){
 
                     vm.tree=archdocsService.getTreeJson(response);
 
                });
-            }
-
-          });
+        //    }
+        //  });
 
     }
+    
 })();

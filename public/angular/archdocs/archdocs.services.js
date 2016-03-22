@@ -66,15 +66,15 @@
                   id = id || "";
                   return  $q.all({
                    documents:$http({
-                    method: 'GET',
-                    url: '/rest/v2/requirements/archdocs/?&perpage=all'
-//                    url: 'json/get-rest.requirements.archdocs.json'
-                    }),
+	                    method: 'GET',
+		                    //url: '/rest/v2/requirements/archdocs/?&perpage=all'
+		                    url: 'json/get-rest.v2.requirements.archdocs.json'
+	                    }),
                    topics:$http({
-                    method: 'GET',
-                    url: '/rest/v2/requirements/archdocs/'+ id + '/topics',
-//                    url: 'json/get-rest.requirements.archdocsnew.1.topics.json'
-                    })
+	                    method: 'GET',
+		                    //url: '/rest/v2/requirements/archdocs/'+ id + '/topics',
+		                    url: 'json/get-rest.v2.requirements.archdocs.1.topics.json'
+	                    })
                     });
 
 
@@ -100,23 +100,22 @@
             }
 
            var documentsData = arg.documents.data;
-           var topicsData = arg.topics.data.data;
+           var topicsData = arg.topics.data;
 
-
-           for (var i=0; i<documentsData.length;i++)
+           for (var i=0; i < documentsData.length; i++)
            {
-               var rootNode = new nodeJson(documentsData[i].ID,documentsData[i].DocDescription,documentsData[i].icon);
-               var firstLevelChild = new nodeJson(documentsData[i].DocumentID,documentsData[i].DocTitle,documentsData[i].icon);
-               rootNode.children.push(firstLevelChild);
+               var rootNode = new nodeJson(documentsData[i].id, documentsData[i].doc_title, documentsData[i].icon);
+               treeJson.push(rootNode);
 
-            for(var j =0; j<topicsData.length; j++)
-            {
-             var secondLevelChildNode = new nodeJson(topicsData[j].topic_id,topicsData[j].topic_name,topicsData[j].icon);
-
-               rootNode.children[0].children.push(secondLevelChildNode);
-            }
-
-            treeJson.push(rootNode);
+               // lazy load should be implemented here
+	
+	           for(var j =0; j < topicsData.length; j++)
+	           {
+	             var secondLevelChildNode = new nodeJson(topicsData[j].id, topicsData[j].topic_name, topicsData[j].icon);
+	
+	             rootNode.children.push(secondLevelChildNode);
+	           }
+            
            }
 
            return treeJson;

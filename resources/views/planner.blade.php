@@ -105,7 +105,7 @@
         <!-- End of Loading Rally modules -->
 
         <!-- Start of Loading ArchDocs modules -->
-        <script type="text/javascript" src="{{ asset('angular/archdocs/archdocs.service.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('angular/archdocs/archdocs.services.js') }}"></script>
         <script type="text/javascript" src="{{ asset('angular/archdocs/archdocs.controller.js') }}"></script>
         <!-- End of Loading ArchDocs modules -->
 
