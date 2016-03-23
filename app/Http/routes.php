@@ -1,5 +1,7 @@
 <?php
 
+use \Spark\Utils\Elmo;
+
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -31,8 +33,26 @@ Route::post('ldapAuth', 'LdapAuthController@ldapAuth');
 Route::get('ldapCheck', 'LdapAuthController@ldapCheck');
 Route::post('ldapLogout', 'LdapAuthController@ldapLogout');
 
+//Route Filters
+
+ /* ELMO Logging */
+Route::filter('elmolog', function()
+{
+
+    $sparkUser = "unknown_spark_user";
+    if (Session::has('laravelUser')) {
+        $sparkUser = Session::get('laravelUser')->Username;
+    }
+
+    $elmo = new Elmo();
+    $data = $elmo -> getRestApiTrackingData($sparkUser);
+    $content = json_encode($data);
+
+    $elmo -> postToElmo($content);
+});
+
 // Define all /rest/* routes, which should all be for REST resources
-Route::group(array('prefix' => 'rest'), function() {
+Route::group(array('prefix' => 'rest', 'before' => 'elmolog'), function() {
 
     Route::resource('boxcarScopes','BoxcarScopesController',
                     ['only' => ['index', 'show', 'store']]);
@@ -42,7 +62,15 @@ Route::group(array('prefix' => 'rest'), function() {
                         ['only' => ['index']]);
         Route::resource('databases.testCases','TestCasesController',
                         ['only' => ['index', 'show']]);
-        Route::resource('databases.folder','ALMFolderController',
+        Route::resource('databases.folder','FolderController',
+                        ['only' => ['index', 'show']]);
+        Route::resource('databases.testsets','TestSetController',
+                        ['only' => ['index', 'show']]);
+        Route::resource('databases.testcaseinstances','TestCaseInstancesController',
+                        ['only' => ['index', 'show']]);
+        Route::resource('databases.testcasefolders','TestCaseFoldersController',
+                        ['only' => ['index', 'show']]);
+        Route::resource('databases.testcasesbyfolder','TestCasesByFolderController',
                         ['only' => ['index', 'show']]);
         Route::get('testCases', 'PolyTestCasesController@index');
     });
@@ -76,8 +104,32 @@ Route::group(array('prefix' => 'rest'), function() {
                         ['only' => ['index', 'show']]);
         Route::resource('boxcars.enhreqs','EnhReqsController',
                         ['only' => ['index', 'show']]);
+        Route::resource('boxcars.reqxs','ReqxsController',
+                        ['only' => ['index', 'show']]);
+        Route::resource('boxcars.devrequests','DevRequestsController',
+                        ['only' => ['index', 'show']]);
+
+        Route::resource('devrequests','DevRequestsController',
+                        ['only' => ['index', 'show']]);
+        Route::resource('devrequests.implrequests','ImplRequestsController',
+                        ['only' => ['index', 'show']]);
+
+        Route::resource('prs','PRsController',
+                        ['only' => ['index', 'show']]);
+        Route::resource('enhreqs','EnhReqsController',
+                        ['only' => ['index', 'show']]);
+        Route::resource('reqxs','ReqxsController',
+                        ['only' => ['index', 'show']]);
+        Route::resource('implrequests','ImplRequestsController',
+                        ['only' => ['index', 'show']]);
+
         Route::resource('releases','ReleasesController',
                         ['only' => ['index', 'show']]);
+        Route::resource('defects','DefectsController',
+                        ['only' => ['index', 'show']]);
+        Route::resource('rccas','RCCAsController',
+                        ['only' => ['index', 'show']]);
+
     });
 
     Route::post('strategies/{strategyId}/rev', 'TestStrategysController@revision')->name('rest.strategies.rev');
@@ -103,6 +155,7 @@ Route::group(array('prefix' => 'rest'), function() {
 
         Route::resource('archdocs','ArchdocsController',
                 ['only' => ['index', 'show']]);
+
     });
 
     Route::resource('scopes','ScopesController',
@@ -131,6 +184,20 @@ Route::group(array('prefix' => 'rest'), function() {
         Route::resource('tasks', 'TaskController',
                         ['only' => ['index', 'show', 'destroy', 'create', 'edit']]);
     });
+
+
+    //Version-2 APIs
+    Route::group(array('prefix' => 'v2', 'namespace' => 'v2'), function() {
+
+        Route::group(array('prefix' => 'requirements'), function() {
+            Route::resource('archdocs','ArchDocsController',
+                            ['only'=>['index', 'show']]);
+            Route::resource('archdocs.topics','ArchDocsTopicsController',
+                            ['only'=>['index', 'show']]);
+        });
+
+    });
+
 });
 
 Route::group(array('prefix' => 'api'), function() {

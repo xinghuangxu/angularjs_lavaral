@@ -3,24 +3,14 @@
  * @author ng-epg-qa-spark-developers
  * @modifier Maneesh Abraham
  * @copyright 2015 NetApp, Inc.
- * @date 2016-01-04
+ * @date 2016-03-11
  */
 
 namespace Spark\Models\Rally\Models;
 
 use Spark\Models\Rally\Spark;
 
-/**
- * @abstract A representation of Test Run Data Row in Test Run Table
- * @author Leonx
- * @copyright 2014 NetApp, Inc.
- * @version 1.0.0
- *
- */
-
 class Release extends GenericModel {
-
-
 
     /**
      * <constructor>
@@ -31,13 +21,13 @@ class Release extends GenericModel {
     public function __construct($arData = null) {
         parent::__construct($arData);
     }
-    
+
     /**
      * Returns list of all Releases for a particular project
      *
      * @param string $Project
      *   The ProjectName in Rally
-     * @return [array] that contains list of all Releases 
+     * @return [array] that contains list of all Releases
      */
     public static function ListReleases($Project){
         $Result = array();
@@ -52,9 +42,9 @@ class Release extends GenericModel {
         array_multisort($Result);
         return $Result;
     }
-    
+
     /**
-     * Returns  Release with objects when name of Release name is given as input 
+     * Returns  Release with objects when name of Release name is given as input
      *
      * @param string $Project
      *   The ProjectName in Rally

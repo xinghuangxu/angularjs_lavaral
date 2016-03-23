@@ -28,14 +28,7 @@ class TestStrategysController extends Controller {
      * @return Response
      */
     public function index(Request $request) {
-        
-        /**
-         * The Following two lines is for integrations work only 
-         */
-        
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.strategies.json");
-        return $data;
-        
+
         // Return subset of fields or all details
         $fieldsParam = $request->input('fields');
         $getFilter = "*";
@@ -243,12 +236,6 @@ class TestStrategysController extends Controller {
      * @return Ambigous <\Illuminate\Database\Eloquent\Model, \Illuminate\Database\Eloquent\Collection>
      */
     public function show($id) {
-        
-        /**
-         * The Following two lines is for integrations work only 
-         */
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.strategies_details.json");
-        return $data;
 
         $testStrategy = TestStrategy::with('tagsQualArea', 'tagsImpactArea', 'tagsTestApproach')
                             ->with(TestStrategy::strategyRequirements())

@@ -1,12 +1,10 @@
 <?php
-
 /**
  * @author ng-epg-qa-spark-developers
  * @modifier Randall Crock
  * @copyright 2016 NetApp, Inc.
  * @date 2016-01-05
  */
-
 namespace Spark\Http\Controllers;
 
 use Spark\Http\Requests;
@@ -35,12 +33,6 @@ class TagsController extends Controller {
      * @return Response
      */
     public function getQualAreas(Request $request) {
-        /**
-         * The Following two lines is for integrations work only 
-         */
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.qual-areas.json");
-        return $data;
-        
         $tagType = "Root\Default\Qualification Areas%";
 
         $query = $this->getTags($request, $tagType);
@@ -55,12 +47,6 @@ class TagsController extends Controller {
      * @return Response
      */
     public function getImpactAreas(Request $request) {
-        /**
-         * The Following two lines is for integrations work only 
-         */
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/json/get-rest.tags.impact-areas.json");
-        return $data;
-
         $tagType = "Root\Feature%";
 
         $query = $this->getTags($request, $tagType);
@@ -118,5 +104,4 @@ class TagsController extends Controller {
 
         return $query;
     }
-
 }

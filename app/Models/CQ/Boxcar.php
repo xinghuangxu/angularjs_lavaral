@@ -2,24 +2,37 @@
 /**
  * @author ng-epg-qa-spark-developers
  * @modifier Maneesh Abraham
- * @copyright 2015 NetApp, Inc.
- * @date 2016-01-04
+ * @copyright 2016 NetApp, Inc.
+ * @date 2016-03-10
  */
 
 namespace Spark\Models\CQ;
 
 use Spark\Models\Model;
 
-class Boxcar extends Model {
+class Boxcar extends CQ {
     public $timestamps = false;
-    protected $connection = 'cq_mirror';
     protected $table = 'CR_LSIP2_Boxcar';
+    public $primaryKey = 'id'; // Though [dbid] is the actual primary key, we will use [id] as the primary key
+
+    public function __construct() {
+        $this->table = env('CQ_MIRROR_DATABASE').".dbo.".$this->table;
+    }
 
     public function EnhReqs() {
-        return $this->hasMany('Spark\Models\CQ\EnhReq', 'Boxcar');
+        return $this->belongsToMany('Spark\Models\CQ\EnhReq', 'View_LSIP2_Requirements_AssocBoxcar', 'Boxcar_ID', 'Req_ID')->where('ReqxType', '=', 'EnhReq');
     }
 
     public function PRs() {
-        return $this->hasMany('Spark\Models\CQ\PR', 'Boxcar');
+        return $this->belongsToMany('Spark\Models\CQ\PR', 'View_LSIP2_Requirements_AssocBoxcar', 'Boxcar_ID', 'Req_ID')->where('ReqxType', '=', 'PR');
     }
+
+    public function Reqxs() {
+        return $this->belongsToMany('Spark\Models\CQ\Reqx', 'View_LSIP2_Requirements_AssocBoxcar', 'Boxcar_ID', 'Req_ID');
+    }
+
+    public function DevRequests() {
+        return $this->belongsToMany('Spark\Models\CQ\DevRequest', 'View_LSIP2_Boxcar_AssocDevRequest', 'Boxcar_ID', 'DevRequest_ID');
+    }
+
 }

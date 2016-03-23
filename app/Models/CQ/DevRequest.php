@@ -3,15 +3,15 @@
  * @author ng-epg-qa-spark-developers
  * @modifier Maneesh Abraham
  * @copyright 2016 NetApp, Inc.
- * @date 2016-03-05
+ * @date 2016-03-10
  */
 
 namespace Spark\Models\CQ;
 
 use Spark\Models\CQ\CQ;
 
-class ImplRequest extends CQ {
-    protected $table = 'View_LSIP2_ImplRequest';
+class DevRequest extends CQ {
+    protected $table = 'View_LSIP2_DevelopmentRequest';
     public $primaryKey = 'id'; // Though [dbid] is the actual primary key, we will use [id] as the primary key
 
     protected $appends = array('icon');
@@ -22,6 +22,10 @@ class ImplRequest extends CQ {
 
     public function getIconAttribute()
     {
-        return "glyphicon glyphicon-wrench";
+        return "glyphicon glyphicon-briefcase";
+    }
+
+    public function ImplRequests() {
+        return $this->belongsToMany('Spark\Models\CQ\ImplRequest', 'View_LSIP2_DevRequest_AssocImplRequest', 'DevRequest_ID', 'ImplRequest_ID');
     }
 }

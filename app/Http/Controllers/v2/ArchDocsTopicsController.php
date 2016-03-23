@@ -3,23 +3,33 @@
  * @author ng-epg-qa-spark-developers
  * @modifier Maneesh Abraham
  * @copyright 2016 NetApp, Inc.
- * @date 2016-03-05
+ * @date 2016-03-15
  */
-namespace Spark\Http\Controllers\CQ;
+
+namespace Spark\Http\Controllers\v2;
 
 use Spark\Http\Requests;
 use Spark\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Spark\Models\CQ\Boxcar;
+use Spark\Models\v2\ArchDoc;
+use Spark\Models\v2\ArchDocTopic;
 
-class BoxcarsController extends Controller {
+class ArchDocsTopicsController extends Controller {
 
     /**
-     * Display a listing of the resource.
+     * Provide a list of Archdocs Topics
      *
+     * @param $request
      * @return Response
      */
-    public function index(Request $request) {
+    public function index(Request $request, $archdocId) {
+
+         // If this is called as a child resource of a archdoc, return only topics for that archdoc
+        if ($archdocId) {
+            $query = ArchDoc::findOrFail($archdocId)->Topics();
+        } else {
+            $query = ArchDocTopic::query();
+        }
 
         // Fields parameter
         $fieldsParam = $request->input('fields');
@@ -40,17 +50,13 @@ class BoxcarsController extends Controller {
         // Search parameter
         $searchParam = $request->input('search');
 
-        $query = Boxcar::query();
-
         if (strlen($searchParam) > 0) { // Search parameter
             $match = "%$searchParam%";
-            $query = $query->where('id', 'like', $match)
-                            ->orWhere('Name', 'like', $match)
-                            ->orWhere('State', 'like', $match)
-                            ->orWhere('Forecasted_Release', 'like', $match);
+            $query = $query->where('topic_id', 'like', $match)
+                           ->orWhere('topic_name', 'like', $match);
         }
 
-        $query = $query->orderBy('id', 'ASC')->select($getFilter);
+        $query = $query->orderBy('topic_name', 'ASC')->select($getFilter);
 
         if ($perPage != "all") {
             $query = $query->paginate($perPage);
@@ -59,16 +65,9 @@ class BoxcarsController extends Controller {
         }
 
         return $query;
-
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param String $id
-     * @return JSON for the boxcar, or a ModelNotFoundException
-     */
     public function show($id) {
-        return Boxcar::findOrFail($id);
+        return ArchDocTopic::query()->findOrFail($id);
     }
 }
