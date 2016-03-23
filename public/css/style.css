@@ -269,3 +269,7 @@ span.label.label-default.similar-item-link>a {
 .color_gray1{
     color: #686868;
 }
+
+.panel-select-background{
+	background-color: #e6e6e6;
+}
