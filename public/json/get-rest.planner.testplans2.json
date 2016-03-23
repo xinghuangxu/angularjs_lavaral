@@ -4,7 +4,7 @@
         "release_id": "XYZRelease1",
         "testplan_stack_id": "10",
         "testplan_substack_id": null,
-        "testplan_boxcar_id": "XYIP200505354",
+        "testplan_boxcar_id": "LSIP200505354",
         "alm_db_name": "test_db",
         "alm_folder_node_id": "19",
         "alm_testset_prefix": "Lorem_P",
@@ -28,7 +28,7 @@
         },
         "substack": null,
         "boxcar": {
-            "id": "XYIP200505354",
+            "id": "LSIP200505354",
             "Name": "XYZ Boxcar"
         }
     }

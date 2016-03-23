@@ -37,9 +37,9 @@
             "RequirementID": "308",
             "prscope": {
                 "ScopePRID": "308",
-                "PRID": "XYIP200602540",
+                "PRID": "LSIP200602540",
                 "cq_pr": {
-                    "id": "XYIP200602540",
+                    "id": "LSIP200602540",
                     "Headline": "Bracket for XYZ"
                 }
             }
@@ -50,9 +50,9 @@
             "RequirementID": "80",
             "prscope": {
                 "ScopePRID": "80",
-                "PRID": "XYIP200402024",
+                "PRID": "LSIP200402024",
                 "cq_pr": {
-                    "id": "XYIP200402024",
+                    "id": "LSIP200402024",
                     "Headline": "Nemo enim ipsam voluptatem"
                 }
             }
@@ -63,9 +63,9 @@
             "RequirementID": "72",
             "prscope": {
                 "ScopePRID": "72",
-                "PRID": "XYIP200405678",
+                "PRID": "LSIP200405678",
                 "cq_pr": {
-                    "id": "XYIP200405678",
+                    "id": "LSIP200405678",
                     "Headline": "Nemo enim ipsam voluptatem"
                 }
             }
@@ -76,9 +76,9 @@
             "RequirementID": "87",
             "prscope": {
                 "ScopePRID": "87",
-                "PRID": "XYIP200403685",
+                "PRID": "LSIP200403685",
                 "cq_pr": {
-                    "id": "XYIP200403685",
+                    "id": "LSIP200403685",
                     "Headline": "Nemo enim ipsam voluptatem"
                 }
             }
