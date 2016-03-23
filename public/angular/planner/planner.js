@@ -221,6 +221,13 @@
                 group: 'where'
             },
             {
+                label: "Test Strategy",
+                template: "angular/planner/testStrategy/testStrategy.tpl.html",
+                order: 6,
+                active: true,
+                group: 'what'
+            },
+            {
                 label: "Test Cases",
                 template: "angular/testcasep/testcase.tpl.html",
                 order: 6,
