@@ -1,9 +1,10 @@
 /**
  * Core styles for Spark
- *
- * @author Randall Crock
+ * 
+ * @author ng-epg-qa-spark-developers
+ * @modifier Maneesh Abraham
  * @copyright 2016 NetApp, Inc.
- * @date 2016-01-04
+ * @date 2016-03-15
  */
 
 #footer {
@@ -16,13 +17,10 @@
 
 #main-view .alert,
 .modal-body .alert {
-    position: fixed;
+    position: absolute;
     left: 1em;
     right: 1em;
     top: 1em;
-    z-index:10000;
-    width: 800px;
-    margin: auto;
 }
 
 .scroll {
@@ -91,9 +89,11 @@ label.required-label::after {
     text-align: center;
 }
 
+
 label.control-label.error {
-text-align:left;
+    text-align:left;
 }
+
 .box {
     position: relative;
     border-radius: 3px;
@@ -252,4 +252,20 @@ span.label.label-default.similar-item-link>a {
 .panel-heading-height{
     height: 45px;
     padding-top: 1px;
+}
+
+.color_blue1{
+    color: #2a82d7;
+}
+
+.color_green1{
+    color: #3aa03a;
+}
+
+.color_red1{
+    color: #fc6a6c;
+}
+
+.color_gray1{
+    color: #686868;
 }
