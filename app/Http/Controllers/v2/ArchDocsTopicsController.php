@@ -24,6 +24,15 @@ class ArchDocsTopicsController extends Controller {
      */
     public function index(Request $request, $archdocId) {
 
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.v2.requirements.archdocs.1.topics.json");
+        return $data;
+
          // If this is called as a child resource of a archdoc, return only topics for that archdoc
         if ($archdocId) {
             $query = ArchDoc::findOrFail($archdocId)->Topics();

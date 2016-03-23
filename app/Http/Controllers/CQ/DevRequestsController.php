@@ -24,6 +24,15 @@ class DevRequestsController extends Controller {
      */
     public function index(Request $request, $boxcarId = null) {
 
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.cq.boxcars.LSIP200XXXXXX.devrequests.json");
+        return $data;
+
         // If this is called as a child resource of a boxcar, return only DevRequests for that boxcar
         if ($boxcarId) {
             $query = Boxcar::findOrFail($boxcarId)->DevRequests();

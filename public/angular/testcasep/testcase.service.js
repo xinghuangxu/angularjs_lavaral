@@ -56,45 +56,18 @@
              }
         }
 
-
-        this.getFoldersAndServiceData = function(id){
-            // in production you should comment the lines that has "json"
-            // and use only the ones the has rest and uncomment params line too if any
-                id = id || "";
-                  return  $q.all({
-                   folders:$http({
-	                    method: 'GET',
-		                    // 0 is hard coded because to fetch the root folders
-		                    //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcasefolders/0',
-		                    url: 'json/get-rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
-	                    }),
-                   Service:$http({
-	                    method: 'GET',
-	                    	//url: '/rest/alm/databases/'+ planSettings.data.alm_db_name + '/testcasesbyfolder/' + id,
-	                    	url: 'json/get-rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json'                    
-	                    })
-                    });
-
-
-        };
-
         this.getFolders = function(){
-            // in production you should comment the lines that has "json"
-            // and use only the ones the has rest and uncomment params line too if any
             return $http({
                 method: 'GET',
-                //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcasefolders/0',
-                url: 'json/get-rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json'
+                // Maneesh, to vaildate that the index method is forced to be zero so no need to add it here
+                url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcasefolders/'
             });
         };
 
         this.getTestCases = function(id){
-            // in production you should comment the lines that has "json"
-            // and use only the ones the has rest and uncomment params line too if any
             return $http({
                 method: 'GET',
-                //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name + '/testcasesbyfolder/' + id
-                url: 'json/get-rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json'
+                url: '/rest/alm/databases/'+ id + '/testcasesbyfolder/' + id
             });
         };
 

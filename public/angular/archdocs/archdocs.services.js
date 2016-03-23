@@ -61,20 +61,16 @@
         }
 
         this.getDocsAndTopicsData = function(id){
-            // in production you should comment the lines that has "json"
-            // and use only the ones the has rest and uncomment params line too if any
                   id = id || "";
                   return  $q.all({
                    documents:$http({
-	                    method: 'GET',
-		                    //url: '/rest/v2/requirements/archdocs/?&perpage=all'
-		                    url: 'json/get-rest.v2.requirements.archdocs.json'
-	                    }),
+                        method: 'GET',
+                            url: '/rest/v2/requirements/archdocs/?&perpage=all'
+                        }),
                    topics:$http({
-	                    method: 'GET',
-		                    //url: '/rest/v2/requirements/archdocs/'+ id + '/topics',
-		                    url: 'json/get-rest.v2.requirements.archdocs.1.topics.json'
-	                    })
+                        method: 'GET',
+                            url: '/rest/v2/requirements/archdocs/'+ id + '/topics',
+                        })
                     });
 
 
@@ -108,14 +104,14 @@
                treeJson.push(rootNode);
 
                // lazy load should be implemented here
-	
-	           for(var j =0; j < topicsData.length; j++)
-	           {
-	             var secondLevelChildNode = new nodeJson(topicsData[j].id, topicsData[j].topic_name, topicsData[j].icon);
-	
-	             rootNode.children.push(secondLevelChildNode);
-	           }
-            
+
+               for(var j =0; j < topicsData.length; j++)
+               {
+                 var secondLevelChildNode = new nodeJson(topicsData[j].id, topicsData[j].topic_name, topicsData[j].icon);
+
+                 rootNode.children.push(secondLevelChildNode);
+               }
+
            }
 
            return treeJson;

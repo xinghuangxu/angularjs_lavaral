@@ -100,6 +100,16 @@ class TestCaseInstancesController extends Controller {
      * @return ALM TestCaseInstances List
      */
     public function show($almDatabase, $testSetId) {
+
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testcaseinstances.51097.json");
+        return $data;
+
         return $this->getALMTestCaseInstancesJson($almDatabase, $testSetId);
     }
 

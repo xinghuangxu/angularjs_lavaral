@@ -26,6 +26,15 @@ class TestCaseFoldersController extends Controller {
      */
     public function index(Request $request, $almDatabase) {
 
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json");
+        return $data;
+
         // FolderId parameter
         $folderIdParam = 0;
 
@@ -110,6 +119,16 @@ class TestCaseFoldersController extends Controller {
      * @return ALM TestCaseFolder Children
      */
     public function show($almDatabase, $folderIdParam) {
+
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json");
+        return $data;
+
         return $this->getALMTestCaseFolderChildren($almDatabase, $folderIdParam);
     }
 
