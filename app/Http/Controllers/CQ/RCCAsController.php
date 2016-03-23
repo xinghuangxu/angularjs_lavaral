@@ -10,9 +10,9 @@ namespace Spark\Http\Controllers\CQ;
 use Spark\Http\Requests;
 use Spark\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Spark\Models\CQ\Boxcar;
+use Spark\Models\CQ\RCCA;
 
-class BoxcarsController extends Controller {
+class RCCAsController extends Controller {
 
     /**
      * Display a listing of the resource.
@@ -20,6 +20,9 @@ class BoxcarsController extends Controller {
      * @return Response
      */
     public function index(Request $request) {
+
+        // Id parameter
+        $idParam = $request->input('id');
 
         // Fields parameter
         $fieldsParam = $request->input('fields');
@@ -40,35 +43,38 @@ class BoxcarsController extends Controller {
         // Search parameter
         $searchParam = $request->input('search');
 
-        $query = Boxcar::query();
+        $query = RCCA::query();
 
         if (strlen($searchParam) > 0) { // Search parameter
             $match = "%$searchParam%";
             $query = $query->where('id', 'like', $match)
-                            ->orWhere('Name', 'like', $match)
-                            ->orWhere('State', 'like', $match)
-                            ->orWhere('Forecasted_Release', 'like', $match);
+                            ->orWhere('Headline', 'like', $match)
+                            ->orWhere('Product_Name', 'like', $match)
+                            ->orWhere('Description', 'like', $match);
         }
 
-        $query = $query->orderBy('id', 'ASC')->select($getFilter);
+        if (strlen($idParam) > 0) { // Search parameter
+            $query = $query->where('id', '=', $idParam);
+        }
+
+        $query = $query->orderBy('dbid', 'ASC')->select($getFilter);
 
         if ($perPage != "all") {
-            $query = $query->paginate($perPage);
+            $result = $query->paginate($perPage);
         } else {
-            $query = $query->get();
+            $result = $query->get();
         }
 
-        return $query;
-
+        return $result;
     }
 
     /**
      * Display the specified resource.
      *
      * @param String $id
-     * @return JSON for the boxcar, or a ModelNotFoundException
+     * @return JSON for the ImplRequest, or a ModelNotFoundException
      */
     public function show($id) {
-        return Boxcar::findOrFail($id);
+        return RCCA::findOrFail($id);
     }
 }

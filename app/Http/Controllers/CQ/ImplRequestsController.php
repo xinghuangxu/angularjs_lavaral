@@ -10,31 +10,25 @@ namespace Spark\Http\Controllers\CQ;
 use Spark\Http\Requests;
 use Spark\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Spark\Models\CQ\PR;
-use Spark\Models\CQ\Boxcar;
+use Spark\Models\CQ\ImplRequest;
+use Spark\Models\CQ\DevRequest;
 
-class PRsController extends Controller {
+class ImplRequestsController extends Controller {
 
     /**
      * Display a listing of the resource.
      *
      * @param Request $request
-     * @param String $boxcarId
+     * @param String $devRequestId
      * @return Response
      */
-    public function index(Request $request, $boxcarId = null) {
+    public function index(Request $request, $devRequestId = null) {
 
-        // If this is called as a child resource of a boxcar, return only PRs for that boxcar
-        if ($boxcarId) {
-            $query = Boxcar::findOrFail($boxcarId)->PRs();
+        // If this is called as a child resource of a DevRequest, return only ImplRequests for that DevRequest
+        if ($devRequestId) {
+            $query = DevRequest::findOrFail($devRequestId)->ImplRequests();
         } else {
-            $query = PR::query();
-        }
-
-        // Only get EnhReqs with POR_Approved if the query param is provided
-        $porApproved = $request->input('por_approved');
-        if ($porApproved) {
-            $query = $query->where('POR_Approved', '=', $porApproved);
+            $query = ImplRequest::query();
         }
 
         // Fields parameter
@@ -60,24 +54,22 @@ class PRsController extends Controller {
             $match = "%$searchParam%";
             $query = $query->where('id', 'like', $match)
                             ->orWhere('Headline', 'like', $match)
-                            ->orWhere('Boxcar', 'like', $match)
-                            ->orWhere('Requested_Release', 'like', $match)
-                            ->orWhere('Target_Release', 'like', $match);
+                            ->orWhere('Product_Name', 'like', $match)
+                            ->orWhere('Description', 'like', $match);
         }
 
-        $PRModel = new PR();
-        $PRModelTableName = $PRModel->getTable();
+        $implRequestModel = new ImplRequest();
+        $implRequestModelTableName = $implRequestModel->getTable();
 
-        $query = $query->orderBy($PRModelTableName.'.id', 'ASC')->select($getFilter);
+        $query = $query->orderBy($implRequestModelTableName.'.id', 'ASC')->select($getFilter);
 
         if ($perPage != "all") {
-            $query = $query->paginate($perPage);
+            $result = $query->paginate($perPage);
         } else {
-            $query = $query->get();
+            $result = $query->get();
         }
 
-        return $query;
-
+        return $result;
     }
 
     /**
@@ -85,18 +77,18 @@ class PRsController extends Controller {
      *
      * @param String $id1
      * @param String $id2
-     * @return JSON for the PR, or a ModelNotFoundException
+     * @return JSON for the ImplRequest, or a ModelNotFoundException
      */
     public function show($id1, $id2 = null) {
 
         if(strlen($id2) > 0){
             $id = $id2;
-            $boxcarId = $id1;
+            $devRequestId = $id1;
         }else{
             $id = $id1;
-            $boxcarId = "";
+            $devRequestId = "";
         }
 
-        return PR::findOrFail($id);
+        return ImplRequest::findOrFail($id);
     }
 }

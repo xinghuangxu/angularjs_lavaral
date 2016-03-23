@@ -61,8 +61,8 @@
             // and use only the ones the has rest and uncomment params line too if any
             return $http({
                 method: 'GET',
-                url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/folder/'+ id
-//                url: 'json/rest.alm.databases.apg_qa_producttest_db.folder.510.json'
+                //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/folder/'+ id
+                url: 'json/get-rest.alm.databases.apg_qa_producttest_db.folder.510.json'
             });
         };
         
@@ -71,8 +71,8 @@
             // and use only the ones the has rest and uncomment params line too if any
             return $http({
                 method: 'GET',
-                url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testsets/' + id
-//                url: 'json/rest.alm.databases.apg_qa_producttest_db.testsets.532.json'
+                //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testsets/' + id
+                url: 'json/get-rest.alm.databases.apg_qa_producttest_db.testsets.532.json'
             });
         };
         
@@ -81,8 +81,8 @@
             // and use only the ones the has rest and uncomment params line too if any
             return $http({
                 method: 'GET',
-                url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcaseinstances/' + id
-//                url: 'json/rest.alm.databases.apg_qa_producttest_db.testcaseinstances.51097.json'
+                //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcaseinstances/' + id
+                url: 'json/get-rest.alm.databases.apg_qa_producttest_db.testcaseinstances.51097.json'
             });
         };
 

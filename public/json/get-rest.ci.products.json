@@ -1,0 +1,52 @@
+{
+    "total": 20,
+    "per_page": "50",
+    "current_page": 1,
+    "last_page": 1,
+    "next_page_url": null,
+    "prev_page_url": null,
+    "from": 1,
+    "to": 20,
+    "data": [
+        {
+            "product_id": "1",
+            "product_name": "xyzdev_y10_625_2701"
+        },
+        {
+            "product_id": "2",
+            "product_name": "xyzdev_y10_825_5501"
+        },
+        {
+            "product_id": "3",
+            "product_name": "xyzdev_y10_825_5600"
+        },
+        {
+            "product_id": "4",
+            "product_name": "xyzdev_y10_830_2701"
+        },
+        {
+            "product_id": "5",
+            "product_name": "xyzdev_y10_830_5501"
+        },
+        {
+            "product_id": "6",
+            "product_name": "xyzdev_y10_830_5600"
+        },
+        {
+            "product_id": "7",
+            "product_name": "xyzdev_y10_cov_825_5501"
+        },
+        {
+            "product_id": "8",
+            "product_name": "xyzdev_y10_cov_825_5600"
+        },
+        {
+            "product_id": "9",
+            "product_name": "xyzdev_y10_cov_830_5501"
+        },
+        {
+            "product_id": "10",
+            "product_name": "xyzdev_y10_cov_830_5600"
+        }
+    ]
+}

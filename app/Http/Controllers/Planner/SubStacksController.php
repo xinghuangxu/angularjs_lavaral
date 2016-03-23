@@ -21,14 +21,6 @@ class SubStacksController extends Controller {
      * @return Response
      */
     public function index(Request $request, $stack) {
-        
-        /**
-         * The Following two lines is for integrations work only 
-         */
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.stacks2.json");
-        return $data;
-        
-        
         $fields = $request->input('fields');
         $getFilter = explode(',', $fields);
 

@@ -40,12 +40,6 @@ class TestplanScopesController extends Controller {
      * @return Response
      */
     public function index(Request $request, $testplan_id) {
-        
-        /**
-         * The Following two lines is for integrations work only 
-         */
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.testplans.id.teststrategies.json");
-        return $data;
 
         $plan = TestPlan::findOrFail($testplan_id);
 

@@ -187,7 +187,6 @@
             },
             {
                 label: "SOW",
-                //template: "planner/sow/sow.tpl.html",
                 template: "angular/planner/comingSoon.tpl.html",
                 order: 1,
                 active: false,
@@ -195,16 +194,13 @@
             },
             {
                 label: "Architecture Documents",
-                //template: "planner/sow/archDocs.tpl.html",
-                //template: "angular/planner/empty.tpl.html",
-                template: "angular/archdocs/archDocs.tpl.html",
+                template: "angular/archdocs/archdocs.tpl.html",
                 order: 2,
                 active: false,
                 group: 'what'
             },
             {
                 label: "Rally",
-                //template: "planner/rally/rally.tpl.html",
                 template: "angular/rally/rallyModal.tpl.html",
                 order: 3,
                 active: false,
@@ -219,7 +215,6 @@
             },
             {
                 label: "Configuration Plan",
-                //template: "planner/configPlan/configPlan.tpl.html",
                 template: "angular/planner/comingSoon.tpl.html",
                 order: 5,
                 active: false,
@@ -227,16 +222,13 @@
             },
             {
                 label: "Test Cases",
-                //template: "planner/alm/alm.tpl.html",
-                //template: "angular/testcase/testcaseModal.tpl.html",
-                template: "angular/testcase/testcase.tpl.html",
+                template: "angular/testcasep/testcase.tpl.html",
                 order: 6,
                 active: false,
                 group: 'what'
             },
             {
                 label: "WebLab",
-                //template: "planner/weblab/weblab.tpl.html",
                 template: "angular/planner/comingSoon.tpl.html",
                 order: 7,
                 active: false,
@@ -244,7 +236,6 @@
             },
             {
                 label: "Test Case Instances",
-                //template: "planner/weblab/weblab.tpl.html",
                 template: "angular/testcaseinstance/testcaseinstance.tpl.html",
                 order: 8,
                 active: false,
@@ -252,7 +243,6 @@
             },
             {
                 label: "RCCA",
-                //template: "planner/weblab/weblab.tpl.html",
                 template: "angular/planner/comingSoon.tpl.html",
                 order: 9,
                 active: false,
@@ -260,15 +250,13 @@
             },
             {
                 label: "Implementation Requests",
-                //template: "planner/weblab/weblab.tpl.html",
-                template: "angular/implementreq/implementReq.tpl.html",
+                template: "angular/implreq/implreq.tpl.html",
                 order: 10,
                 active: true,
                 group: 'what'
             },
             {
                 label: "Continuous integration",
-                //template: "planner/weblab/weblab.tpl.html",
                 template: "angular/continuousintegration/ci.tpl.html",
                 order: 11,
                 active: false,

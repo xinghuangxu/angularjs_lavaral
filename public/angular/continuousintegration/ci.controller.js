@@ -41,7 +41,8 @@
                 vm.FeatureRegressionTestTree=ContinuousIntegrationService.getTreeJson(response);
                 vm.ExecuteTestTree=ContinuousIntegrationService.getTreeJson(response);
             });
-            // the following lines have been added because We don't need to fetch the data based on the selection for now
+        
+          // the following lines have been added because We don't need to fetch the data based on the selection for now
 //        $scope.$on('planSettingChanged', function(event,settings) {
 //            var testplan_boxcar_id = settings.data.testplan_boxcar_id;
 //            ImplementationRequestsService.getImplementationRequestsData().then(function(response){

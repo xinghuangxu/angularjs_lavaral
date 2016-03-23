@@ -63,10 +63,10 @@
         REQUIREMENT: {
             value: 5,
             name: 'Requirement',
-            icon: iconBasePath + 'puzzle-black.svg',
+            icon: '',
             format: function(item) {
                 item.data.text = item.data.ReqxType + ': ' + item.data.ReqxID + ': ' + item.data.ReqxTitle;
-
+                this.icon = item.data.icon;	
                 return item;
             }
         }

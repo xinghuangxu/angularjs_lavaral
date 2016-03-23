@@ -52,7 +52,7 @@ class UserStoryController extends Controller {
     }
 
     /**
-     * This function creates a user story, all data will be vaildated 
+     * This function creates a user story, all data will be vaildated
      *
      * @return [array] that contains data of newly created user story
      */
@@ -77,7 +77,7 @@ class UserStoryController extends Controller {
     }
 
     /**
-     * this function will return the results for EQI service 
+     * this function will return the results for EQI service
      * @param unknown $id
      */
     public function show($id) {
@@ -86,7 +86,7 @@ class UserStoryController extends Controller {
     }
 
     /**
-     * This function validates the parameters passed to edit the user story 
+     * This function validates the parameters passed to edit the user story
      * @param [string] $id
      *   The $id is unique objectID of an user story  that has to be edited
      * @return [array] that contains data of edited task
@@ -118,7 +118,7 @@ class UserStoryController extends Controller {
     }
 
     /**
-     * This function Delete the user story 
+     * This function Delete the user story
      *
      * @param [string] #id
      *   The $id is unique objectID of an user story that has to be deleted
@@ -126,19 +126,18 @@ class UserStoryController extends Controller {
      */
     public function destroy($id) {
         $Result = UserStory::DeleteUserStory($id);
-        echo "here";
         return $this->_ToJson($Result);
     }
 
     /**
      * Returns the data along with the status code( -1,1)
-     * if status code is 1 that means there is a set of a results included 
-     * if status code is -1 that means either there is no results or 
-     * there is an error 
+     * if status code is 1 that means there is a set of a results included
+     * if status code is -1 that means either there is no results or
+     * there is an error
      * @param array $Result
      *   The Result contains data
-     * @param string $Message as the error message 
-     * @return [array] that contains data along with the status code( -1,1) 
+     * @param string $Message as the error message
+     * @return [array] that contains data along with the status code( -1,1)
      */
     private function _ToJson($Result, $Message = '') {
         if (isset($Message) && $Message != "") {

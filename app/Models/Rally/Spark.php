@@ -47,8 +47,8 @@ class Spark extends Rally{
                 self::$instance = new Spark($username, $password);
             } else {
                 // Create new instance from envrionment with read-only user
-//                self::$instance = new Spark(env('RALLY_API_USERNAME'), env('RALLY_API_PASSWORD'));
-                self::$instance = new Spark("aaali@wichita.edu", "4ym4n4hm4d");
+                self::$instance = new Spark(env('RALLY_API_USERNAME'), env('RALLY_API_PASSWORD'));
+
             }
         }
         return self::$instance;

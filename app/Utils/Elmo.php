@@ -4,6 +4,7 @@ require __DIR__ . "/../../vendor/autoload.php";
 use Monolog\Logger;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\StreamHandler;
+use Request;
 
 class Elmo {
     /**
@@ -25,32 +26,70 @@ class Elmo {
      * Take as input the username and put together the array data that needs to be
      * sent to ELMO.  Return the array data back from the function.
      *
-     * @param  string  $spark_user
+     * @param  string  $sparkUser
      * @return array $data
      */
-    public static function getPageTrackingData($spark_user) {
+    public static function getPageTrackingData($sparkUser) {
         $date = date(DATE_ATOM);
-        $page_accessed = $_SERVER['PHP_SELF'];
-        $origin_hostname = $_SERVER['SERVER_NAME'];
-        $query_string = "No query string specified";
+        $pageAccessed = $_SERVER['PHP_SELF'];
+        $originHostname = $_SERVER['SERVER_NAME'];
+        $queryString = "No query string specified";
 
         if (isset($_SERVER['QUERY_STRING'])) {
-            $query_string = $_SERVER['QUERY_STRING'];
+            $queryString = $_SERVER['QUERY_STRING'];
         }
 
         $data = array (
             'event' => array (
                 'application' => 'spark',
                 'interface' => 'UI',
-                'action' => $page_accessed,
-                'username' => $spark_user,
+                'action' => $pageAccessed,
+                'username' => $sparkUser,
                 'start' => $date,
                 'duration' => '0',
-                'hostname' => $origin_hostname,
+                'hostname' => $originHostname,
                 'detail' => array (
                     array (
                         'name' => 'Query String',
-                        'value' => $query_string
+                        'value' => $queryString
+                    )
+                )
+            )
+        );
+        return $data;
+    }
+
+
+    /**
+     * Take as input the username and put together the array data that needs to be
+     * sent to ELMO.  Return the array data back from the function.
+     *
+     * @param  string  $sparkUser
+     * @return array $data
+     */
+    public static function getRestApiTrackingData($sparkUser) {
+        $date = date(DATE_ATOM);
+        $pageAccessed = Request::path();
+        $originHostname = $_SERVER['SERVER_NAME'];
+        $queryString = "No query string specified";
+
+        if (isset($_SERVER['QUERY_STRING'])) {
+            $queryString = $_SERVER['QUERY_STRING'];
+        }
+
+        $data = array (
+            'event' => array (
+                'application' => 'spark',
+                'interface' => 'REST-API',
+                'action' => $pageAccessed,
+                'username' => $sparkUser,
+                'start' => $date,
+                'duration' => '0',
+                'hostname' => $originHostname,
+                'detail' => array (
+                    array (
+                        'name' => 'Query String',
+                        'value' => $queryString
                     )
                 )
             )

@@ -10,10 +10,10 @@ namespace Spark\Http\Controllers\CQ;
 use Spark\Http\Requests;
 use Spark\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Spark\Models\CQ\PR;
 use Spark\Models\CQ\Boxcar;
+use Spark\Models\CQ\DevRequest;
 
-class PRsController extends Controller {
+class DevRequestsController extends Controller {
 
     /**
      * Display a listing of the resource.
@@ -24,17 +24,11 @@ class PRsController extends Controller {
      */
     public function index(Request $request, $boxcarId = null) {
 
-        // If this is called as a child resource of a boxcar, return only PRs for that boxcar
+        // If this is called as a child resource of a boxcar, return only DevRequests for that boxcar
         if ($boxcarId) {
-            $query = Boxcar::findOrFail($boxcarId)->PRs();
+            $query = Boxcar::findOrFail($boxcarId)->DevRequests();
         } else {
-            $query = PR::query();
-        }
-
-        // Only get EnhReqs with POR_Approved if the query param is provided
-        $porApproved = $request->input('por_approved');
-        if ($porApproved) {
-            $query = $query->where('POR_Approved', '=', $porApproved);
+            $query = DevRequest::query();
         }
 
         // Fields parameter
@@ -60,24 +54,22 @@ class PRsController extends Controller {
             $match = "%$searchParam%";
             $query = $query->where('id', 'like', $match)
                             ->orWhere('Headline', 'like', $match)
-                            ->orWhere('Boxcar', 'like', $match)
-                            ->orWhere('Requested_Release', 'like', $match)
-                            ->orWhere('Target_Release', 'like', $match);
+                            ->orWhere('Product_Name', 'like', $match)
+                            ->orWhere('Description', 'like', $match);
         }
 
-        $PRModel = new PR();
-        $PRModelTableName = $PRModel->getTable();
+        $devRequestModel = new DevRequest();
+        $devRequestModelTableName = $devRequestModel->getTable();
 
-        $query = $query->orderBy($PRModelTableName.'.id', 'ASC')->select($getFilter);
+        $query = $query->orderBy($devRequestModelTableName.'.id', 'ASC')->select($getFilter);
 
         if ($perPage != "all") {
-            $query = $query->paginate($perPage);
+            $result = $query->paginate($perPage);
         } else {
-            $query = $query->get();
+            $result = $query->get();
         }
 
-        return $query;
-
+        return $result;
     }
 
     /**
@@ -85,7 +77,7 @@ class PRsController extends Controller {
      *
      * @param String $id1
      * @param String $id2
-     * @return JSON for the PR, or a ModelNotFoundException
+     * @return JSON for the DevRequest, or a ModelNotFoundException
      */
     public function show($id1, $id2 = null) {
 
@@ -97,6 +89,6 @@ class PRsController extends Controller {
             $boxcarId = "";
         }
 
-        return PR::findOrFail($id);
+        return DevRequest::findOrFail($id);
     }
 }
