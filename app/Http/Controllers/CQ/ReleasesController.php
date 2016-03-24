@@ -22,6 +22,15 @@ class ReleasesController extends Controller {
      * @return Response
      */
     public function index(Request $request) {
+    	
+    	/*
+    	 *
+    	 * the following line should be disabled in production to hit the right service
+    	 *
+    	 */
+    	$data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.cq.releases.json");
+    	return $data;
+    	
         if ($request->input('optionsList'))
             return Release::lists('name', 'name');
 
