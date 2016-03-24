@@ -25,6 +25,15 @@ class ArchDocsController extends Controller {
      */
     public function index(Request $request) {
 
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.v2.requirements.archdocs.json");
+        return $data;
+
         // Boxcar parameter
         $boxcarIdParam = $request->input('boxcar_id');
 

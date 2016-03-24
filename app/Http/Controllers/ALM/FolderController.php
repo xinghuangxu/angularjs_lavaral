@@ -110,6 +110,15 @@ class FolderController extends Controller {
      * @return ALM Folders Children
      */
     public function show($almDatabase, $folderIdParam) {
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.folder.510.json");
+        return $data;
+
         return $this->getALMFolderChildren($almDatabase, $folderIdParam);
     }
 

@@ -64,16 +64,14 @@
         vm.getDevRequests = function(id){
             return $http({
                 method: 'GET',
-                //url: '/rest/cq/boxcars/'+ id +'/devrequests/'
-                url: '/json/get-rest.cq.boxcars.LSIP200XXXXXX.devrequests.json'
+                url: '/rest/cq/boxcars/'+ id +'/devrequests/'
             });
         };
 
         vm.getImplRequests = function(id){
             return $http({
                 method: 'GET',
-                //url: '/rest/cq/boxcars/'+ id +'/devrequests/'
-                url: '/json/get-rest.cq.devrequests.LSIP200XXXXXX.implrequests.json'
+                url: '/rest/cq/devrequests/'+ id +'/implrequests/'
             });
         };
 
