@@ -21,7 +21,7 @@
       * @return {object} Directive instance for Angular to work with
       */
      jstree.$inject = ['$popover', '$templateCache', '$compile', 'rallyDataSet'];
-     
+
      function jstree($popover, $templateCache, $compile, rallyDataSet){
         return {
             restrict: "EA",
@@ -120,7 +120,7 @@
                     }
 
                 }, true);
-                
+
                 $scope.$on('UniversalSearchEvent',function(event,data){
                     $scope.treeSearch=data;
                 });
@@ -145,7 +145,7 @@
 
                     //Destroys last instance of jstree so a new one can be created. Ideally jstree refresh should be used, but functionality of refresh has not worked
                     element.jstree("destroy");
-                    
+
                     //Event that fires when a node is moved
                     element.bind('move_node.jstree', function (e, data) {
                         console.log('Move Data: ', data);
@@ -170,7 +170,7 @@
 
 
 
-                    
+
                     element.bind("select_node.jstree", function (element, data) {
 //                        var target = $($(element.currentTarget).find('.jstree-clicked')[0]);
 //                        console.log(data);
@@ -245,13 +245,13 @@
 
         };
      }
-     
-     
+
+
      function rally(){
          return {
                 restrict: 'E',
                 controller: "rallyController",
-                templateUrl: 'angular/rally/_rally.html',
+                templateUrl: 'angular/rally/modals/rally.html',
                 link: function ($scope, element, attrs) {
                 }
             };

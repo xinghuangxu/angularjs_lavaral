@@ -14,11 +14,48 @@
         .controller('rallyTreeCtrl', rallyTreeCtrl);
 
 
-    rallyTreeCtrl.$inject = ['$scope', 'rallyDataService', '$alert', '$log', 'errorService', 'rallyDataSet']; // $scope, rallyDataService, rallyDataSet, $alert, $log
+    rallyTreeCtrl.$inject = ['$scope', 'rallyDataService', '$alert', '$log', 'errorService']; // $scope, rallyDataService, rallyDataSet, $alert, $log
 
-    function rallyTreeCtrl($scope, rallyDataService, rallyDataSet, $alert, $log, settings){
+    function rallyTreeCtrl($scope, rallyDataService, $alert, $log, settings){
 
         var vm = this;
+
+        vm.views= {
+             STATUS: {
+                 // the following lines have been commented because we are going to use them later
+//                 value: 'tags_qual_area',
+//                 type: 'object',
+//                 index: 'CategoryID',
+//                 label: 'CategoryName',
+                 text: 'Status'
+             },
+             OWNER: {
+                 // the following lines have been commented because we are going to use them later
+//                 value: 'tags_impact_area',
+//                 type: 'object',
+//                 index: 'CategoryID',
+//                 label: 'CategoryName',
+                 text: 'owner'
+             },
+             PLANSTATUS: {
+                 value: null,
+                 text: 'Plan Status'
+             },
+             ITERATION: {
+                 value: null,
+                 text: 'Iteration'
+             },
+             NONE: {
+                 value: null,
+                 text: 'None'
+             }
+        }
+
+        vm.config = {
+                groupBy: vm.views,
+                activeGroup: vm.views.NONE,
+            };
+
 
         $scope.data = {};
         $scope.undoArray = [];

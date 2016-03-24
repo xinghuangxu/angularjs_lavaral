@@ -1,8 +1,7 @@
-<!-- Data Field -->	
+<!-- Data Field -->
 <div class="navbar-form navbar-left rally" ng-controller="rallyController">
 
-    <div ng-controller="rallyTreeCtrl">
-
+    <div ng-controller="rallyTreeCtrl as rt">
         <form>
             <label class=" control-label input-sm">Iteration:</label>
             <div class="form-group">
@@ -16,7 +15,13 @@
             <div class="form-group">
                 <input type="text"  ng-model="treeSearch"  class="form-control input-sm" placeholder="Filter">
             </div>
-            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+
+            <label class="control-label input-sm">Arrange By:</label>
+            <div class="form-group">
+                <select disabled class="form-control input-sm" ng-model="rt.config.activeGroup" ng-options="item.text for item in rt.views">
+                </select>
+            </div>
+
         </form>
         <div jstree ng-model="tree" delete-node="storeNode.deleteNode()" move-flag="rallyDataSet.editRelease" delete-flag="rallyDataSet.deleteSuccess" add-flag="rallyDataSet.addNode.nodeID" edit-flag="rallyDataSet.editInfo.nodeID"  undo="rallyTree.data.undoData" move-node="rallyTree.moveNode(nodeInfo)" store-node="rallyTree.storeNode(selectInfo)"></div>
 
