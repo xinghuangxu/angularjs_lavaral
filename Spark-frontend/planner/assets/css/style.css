@@ -346,11 +346,12 @@ a:focus {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 12px;
-  padding: 7px 5px;
+  padding: 7px 21px;
   position: absolute;
   top: 15px;
   right: 10px;
   border-radius: 2px;
+  text-align: end;
 }
 .content-header > .menu-items  > li  {
   display: inline-block;
