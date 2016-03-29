@@ -1,0 +1,19 @@
+<div ng-controller="Boxcar as boxcar">
+    <div class="clearfix">
+        <div class="navbar-form navbar-left">
+            <label class="control-label input-sm">Arrange By:</label>
+            <div class="form-group">
+                <div>
+                    <select class="form-control input-sm" ng-model="boxcar.config.activeGroup" ng-options="item.text for item in boxcar.config.groupBy">
+                    </select>
+                </div>
+            </div>
+            <label for="Search" class=" control-label input-sm">Filter:</label>
+            <div class="form-group">
+                <input type="text" ng-model="boxcar.filter.text" class="form-control input-sm" placeholder="Filter">
+            </div>
+        </div>
+    </div>
+    <wave-spinner ng-show="boxcar.loading"></wave-spinner>
+    <spark-jstree ng-model="boxcar.tree" data-filter="boxcar.filter.text"></spark-jstree>
+</div>

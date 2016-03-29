@@ -1,0 +1,24 @@
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" data-keyboard="false">
+    <div class="modal-dialog" ng-class="tags.classes">
+        <div class="modal-content">
+            <div class="modal-header" ng-show="title">
+                <button type="button" class="close" aria-label="Close"
+                    ng-click="$hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" ng-bind="title"></h4>
+            </div>
+            <div class="modal-body md-frame scroll">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="tags.filter" ng-model-options="{debounce: 250}" placeholder="Search"></input>
+                </div>
+                <spark-jstree ng-model="tags.tags" data-config="tags.treeConfig" data-filter="tags.filter" data-api="tags.jstree" data-on-select="selectTag(data)"></spark-jstree>
+            </div>
+            <div class="modal-footer">
+                <span class="text-success" ng-show="message">{{message}}</span>
+                <button type="button" class="btn btn-success" ng-click="add(tags.jstree.get_selected(true), dest)">Add selected</button>
+                <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

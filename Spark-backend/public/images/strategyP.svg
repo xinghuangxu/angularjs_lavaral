@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="256px" height="256px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
+<rect width="256" height="256"/>
+<radialGradient id="SVGID_1_" cx="127.667" cy="6" r="247.6672" gradientTransform="matrix(0.96 0 0 0.96 5.1195 5.1195)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#B3B3B3"/>
+	<stop  offset="0.2606" style="stop-color:#191919"/>
+	<stop  offset="0.8727" style="stop-color:#080808"/>
+	<stop  offset="1" style="stop-color:#171717"/>
+</radialGradient>
+<rect x="8" y="8" fill="url(#SVGID_1_)" width="240" height="240"/>
+<rect x="16" y="16" width="224" height="224"/>
+<defs>
+	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="256" height="125">
+		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="125" id="SVGID_2_">
+	<g filter="url(#Adobe_OpacityMaskFilter)">
+		
+			<radialGradient id="SVGID_3_" cx="127" cy="5.5146" r="172.2499" fx="78.9419" fy="5.2028" gradientTransform="matrix(1 0 0 1.0386 0 -4.191399e-004)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#878787"/>
+			<stop  offset="0.2003" style="stop-color:#848484"/>
+			<stop  offset="0.3363" style="stop-color:#7B7B7B"/>
+			<stop  offset="0.4533" style="stop-color:#6C6C6C"/>
+			<stop  offset="0.5596" style="stop-color:#575757"/>
+			<stop  offset="0.6576" style="stop-color:#3B3B3B"/>
+			<stop  offset="0.6667" style="stop-color:#383838"/>
+			<stop  offset="1" style="stop-color:#000000"/>
+		</radialGradient>
+		<rect fill="url(#SVGID_3_)" width="256" height="126"/>
+	</g>
+</mask>
+<rect mask="url(#SVGID_2_)" fill="#E6E6E6" width="256" height="125"/>
+<g>
+	<path fill="#FFFFFF" d="M81.767,197.236V65.757h42.601c16.144,0,26.666,0.659,31.569,1.973c7.534,1.973,13.841,6.264,18.924,12.87
+		c5.081,6.607,7.623,15.143,7.623,25.605c0,8.072-1.466,14.858-4.395,20.358c-2.93,5.502-6.652,9.821-11.166,12.96
+		c-4.515,3.139-9.103,5.217-13.767,6.233c-6.338,1.256-15.516,1.883-27.533,1.883h-17.31v49.597H81.767z M108.313,87.999v37.31
+		h14.529c10.462,0,17.458-0.687,20.986-2.063c3.527-1.374,6.292-3.526,8.296-6.457c2.003-2.929,3.005-6.337,3.005-10.224
+		c0-4.783-1.406-8.729-4.216-11.838c-2.811-3.108-6.367-5.052-10.673-5.83c-3.17-0.597-9.537-0.897-19.103-0.897H108.313z"/>
+</g>
+</svg>

@@ -1,0 +1,2585 @@
+[
+    {
+        "CategoryID": "596",
+        "CategoryName": "",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "657",
+        "CategoryName": "",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "707",
+        "CategoryName": "",
+        "CategoryPath": "Root\\Feature\\Features\\Virtualization",
+        "CategoryFatherID": "624",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "715",
+        "CategoryName": "",
+        "CategoryPath": "Root\\Feature\\Hardware",
+        "CategoryFatherID": "36",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "100",
+        "CategoryName": "1 port",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Drive Channel Port Count",
+        "CategoryFatherID": "99",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "41",
+        "CategoryName": "100 Drive",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Base Enclosure Type",
+        "CategoryFatherID": "40",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "42",
+        "CategoryName": "12 Drive",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Base Enclosure Type",
+        "CategoryFatherID": "40",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "101",
+        "CategoryName": "2 port",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Drive Channel Port Count",
+        "CategoryFatherID": "99",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "43",
+        "CategoryName": "24 Drive",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Base Enclosure Type",
+        "CategoryFatherID": "40",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "140",
+        "CategoryName": "4K",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive\\Sector size",
+        "CategoryFatherID": "139",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "189",
+        "CategoryName": "508",
+        "CategoryPath": "Root\\Feature\\Management SW\\Compliant",
+        "CategoryFatherID": "188",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "671",
+        "CategoryName": "508 Compliance",
+        "CategoryPath": "Root\\Feature\\Features\\Usability",
+        "CategoryFatherID": "668",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "141",
+        "CategoryName": "512b",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive\\Sector size",
+        "CategoryFatherID": "139",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "142",
+        "CategoryName": "512e",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive\\Sector size",
+        "CategoryFatherID": "139",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "143",
+        "CategoryName": "520b",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive\\Sector size",
+        "CategoryFatherID": "139",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "44",
+        "CategoryName": "60 Drive",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Base Enclosure Type",
+        "CategoryFatherID": "40",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "38",
+        "CategoryName": "7seg disp",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "613",
+        "CategoryName": "ACS",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "722",
+        "CategoryName": "ALUA",
+        "CategoryPath": "Root\\Feature\\Multipath driver\\Type",
+        "CategoryFatherID": "200",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "18",
+        "CategoryName": "API",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "94",
+        "CategoryName": "Architecture",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\CPU",
+        "CategoryFatherID": "93",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "694",
+        "CategoryName": "Array network configuration",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "28",
+        "CategoryName": "ARVM",
+        "CategoryPath": "Root\\Feature\\CFW\\Copy services",
+        "CategoryFatherID": "27",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "762",
+        "CategoryName": "Assign Hot Spare",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Drive Operations",
+        "CategoryFatherID": "759",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "627",
+        "CategoryName": "Asynchronous Remote Mirroring - ARVM",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "39",
+        "CategoryName": "Audiable alarm",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "758",
+        "CategoryName": "Authentication",
+        "CategoryPath": "Root\\Feature\\Features\\Security",
+        "CategoryFatherID": "620",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "643",
+        "CategoryName": "Auto Code Synchronization - ACS",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "712",
+        "CategoryName": "Auto Load Balancing - ALB",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "88",
+        "CategoryName": "Auto MDIX",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Mgmt. port",
+        "CategoryFatherID": "85",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "696",
+        "CategoryName": "Auto-Support - ASUP",
+        "CategoryPath": "Root\\Feature\\Features\\Supportability and Debuggability",
+        "CategoryFatherID": "622",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "625",
+        "CategoryName": "Availability",
+        "CategoryPath": "Root\\Feature\\Features",
+        "CategoryFatherID": "616",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "51",
+        "CategoryName": "Backup",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache",
+        "CategoryFatherID": "50",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "40",
+        "CategoryName": "Base Enclosure Type",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "48",
+        "CategoryName": "Battery",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "726",
+        "CategoryName": "Battery Age",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "628",
+        "CategoryName": "Battery Backup - BBU",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "673",
+        "CategoryName": "Battery pull and-or replacement",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "675",
+        "CategoryName": "Brown out",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "716",
+        "CategoryName": "Cable",
+        "CategoryPath": "Root\\Feature\\Hardware",
+        "CategoryFatherID": "36",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "676",
+        "CategoryName": "Cable pull and-or replacement",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "610",
+        "CategoryName": "Cache",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "50",
+        "CategoryName": "Cache",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "111",
+        "CategoryName": "Cache Active",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\LEDs",
+        "CategoryFatherID": "110",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "697",
+        "CategoryName": "Cache Core Dump",
+        "CategoryPath": "Root\\Feature\\Features\\Supportability and Debuggability",
+        "CategoryFatherID": "622",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "718",
+        "CategoryName": "Cache Replacement",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "720",
+        "CategoryName": "Cache Settings",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "24",
+        "CategoryName": "CFW",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "678",
+        "CategoryName": "CFW upgrade and-or downgrade",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "186",
+        "CategoryName": "CLI",
+        "CategoryPath": "Root\\Feature\\Management SW",
+        "CategoryFatherID": "185",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "187",
+        "CategoryName": "Client",
+        "CategoryPath": "Root\\Feature\\Management SW",
+        "CategoryFatherID": "185",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "605",
+        "CategoryName": "Cloud",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "644",
+        "CategoryName": "Cloud Mirroring",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "606",
+        "CategoryName": "Cloud Vault",
+        "CategoryPath": "Root\\Feature\\Cloud",
+        "CategoryFatherID": "605",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "194",
+        "CategoryName": "Cluster support",
+        "CategoryPath": "Root\\Feature\\Multipath driver",
+        "CategoryFatherID": "193",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "121",
+        "CategoryName": "Combined with FAN",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\P Supply",
+        "CategoryFatherID": "120",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "626",
+        "CategoryName": "Compatibility",
+        "CategoryPath": "Root\\Feature\\Features",
+        "CategoryFatherID": "616",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "188",
+        "CategoryName": "Compliant",
+        "CategoryPath": "Root\\Feature\\Management SW",
+        "CategoryFatherID": "185",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "25",
+        "CategoryName": "Compliant",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "69",
+        "CategoryName": "Connections",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "645",
+        "CategoryName": "Consistency Groups",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "680",
+        "CategoryName": "Controller head swap",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "37",
+        "CategoryName": "Controller platform",
+        "CategoryPath": "Root\\Feature\\Hardware",
+        "CategoryFatherID": "36",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "679",
+        "CategoryName": "Controller pull and-or replacement",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "27",
+        "CategoryName": "Copy services",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "698",
+        "CategoryName": "Core Dump",
+        "CategoryPath": "Root\\Feature\\Features\\Supportability and Debuggability",
+        "CategoryFatherID": "622",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "93",
+        "CategoryName": "CPU",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "699",
+        "CategoryName": "Customer Support Bundle - CSB",
+        "CategoryPath": "Root\\Feature\\Features\\Supportability and Debuggability",
+        "CategoryFatherID": "622",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "629",
+        "CategoryName": "Data Assurance - DA",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "91",
+        "CategoryName": "DB-9",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Serial port",
+        "CategoryFatherID": "90",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "161",
+        "CategoryName": "DCM Module",
+        "CategoryPath": "Root\\Feature\\Hardware\\Enclosure\\High Density Enclosure",
+        "CategoryFatherID": "160",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "32",
+        "CategoryName": "Debugability",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "646",
+        "CategoryName": "Defragmentation",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "665",
+        "CategoryName": "DELL",
+        "CategoryPath": "Root\\Feature\\Features\\OEM specific",
+        "CategoryFatherID": "619",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "721",
+        "CategoryName": "Diagnostics",
+        "CategoryPath": "Root\\Feature\\Features\\Supportability and Debuggability",
+        "CategoryFatherID": "622",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "63",
+        "CategoryName": "DIMM",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache",
+        "CategoryFatherID": "50",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "677",
+        "CategoryName": "DIMM replacement",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "225",
+        "CategoryName": "Disk Drive Response Time Utility - DDRT",
+        "CategoryPath": "Root\\Feature\\Utility",
+        "CategoryFatherID": "224",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "201",
+        "CategoryName": "DMMP",
+        "CategoryPath": "Root\\Feature\\Multipath driver\\Type",
+        "CategoryFatherID": "200",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "745",
+        "CategoryName": "DNS",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "724",
+        "CategoryName": "Drawer Loss Protection - DLP",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "683",
+        "CategoryName": "Drawer pull and-or replacement",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "133",
+        "CategoryName": "Drive",
+        "CategoryPath": "Root\\Feature\\Hardware",
+        "CategoryFatherID": "36",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "99",
+        "CategoryName": "Drive Channel Port Count",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "647",
+        "CategoryName": "Drive Evacuator",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "681",
+        "CategoryName": "Drive Firmware - DFW upgrade",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "153",
+        "CategoryName": "Drive interface",
+        "CategoryPath": "Root\\Feature\\Hardware\\Enclosure",
+        "CategoryFatherID": "152",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "70",
+        "CategoryName": "Drive interface",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections",
+        "CategoryFatherID": "69",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "149",
+        "CategoryName": "Drive Interposer",
+        "CategoryPath": "Root\\Feature\\Hardware",
+        "CategoryFatherID": "36",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "759",
+        "CategoryName": "Drive Operations",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "112",
+        "CategoryName": "Drive Port",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\LEDs",
+        "CategoryFatherID": "110",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "648",
+        "CategoryName": "Drive Power Cycle",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "686",
+        "CategoryName": "Drive pull and-or replacement",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "631",
+        "CategoryName": "Drive Reconstruction",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "687",
+        "CategoryName": "Drive Tray migration",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "684",
+        "CategoryName": "Drive Tray replacement",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "597",
+        "CategoryName": "Driver",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "19",
+        "CategoryName": "DSM",
+        "CategoryPath": "Root\\Feature\\API",
+        "CategoryFatherID": "18",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "170",
+        "CategoryName": "Dual Port",
+        "CategoryPath": "Root\\Feature\\Hardware\\ESM\\Topology",
+        "CategoryFatherID": "169",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "125",
+        "CategoryName": "Dual Simplex",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Redundancy Mode",
+        "CategoryFatherID": "124",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "126",
+        "CategoryName": "Duplex",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Redundancy Mode",
+        "CategoryFatherID": "124",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "649",
+        "CategoryName": "Dynamic Capacity Expansion - DCE",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "650",
+        "CategoryName": "Dynamic Capacity Reduction - DCR",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "630",
+        "CategoryName": "Dynamic Disk Pools - DDP",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "654",
+        "CategoryName": "Dynamic Operations",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "651",
+        "CategoryName": "Dynamic RAID Migration - DRM",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "652",
+        "CategoryName": "Dynamic Segment Sizing - DSS",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "653",
+        "CategoryName": "Dynamic Volume Expansion - DVE",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "119",
+        "CategoryName": "ECC",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Memory",
+        "CategoryFatherID": "118",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "617",
+        "CategoryName": "Efficiency",
+        "CategoryPath": "Root\\Feature\\Features",
+        "CategoryFatherID": "616",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "152",
+        "CategoryName": "Enclosure",
+        "CategoryPath": "Root\\Feature\\Hardware",
+        "CategoryFatherID": "36",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "163",
+        "CategoryName": "ESM",
+        "CategoryPath": "Root\\Feature\\Hardware",
+        "CategoryFatherID": "36",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "682",
+        "CategoryName": "ESM Firmware upgrade",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "157",
+        "CategoryName": "ESM interface",
+        "CategoryPath": "Root\\Feature\\Hardware\\Enclosure",
+        "CategoryFatherID": "152",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "685",
+        "CategoryName": "ESM replacement",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "113",
+        "CategoryName": "Ethernet",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\LEDs",
+        "CategoryFatherID": "110",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "106",
+        "CategoryName": "Expansion Tray",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\I2C SES",
+        "CategoryFatherID": "105",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "102",
+        "CategoryName": "FAN",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "158",
+        "CategoryName": "FC",
+        "CategoryPath": "Root\\Feature\\Hardware\\Enclosure\\ESM interface",
+        "CategoryFatherID": "157",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "165",
+        "CategoryName": "FC",
+        "CategoryPath": "Root\\Feature\\Hardware\\ESM\\Interface",
+        "CategoryFatherID": "164",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "135",
+        "CategoryName": "FC",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive\\Interface",
+        "CategoryFatherID": "134",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "45",
+        "CategoryName": "FC",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Base Enclosure Type",
+        "CategoryFatherID": "40",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "71",
+        "CategoryName": "FC",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Drive interface",
+        "CategoryFatherID": "70",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "80",
+        "CategoryName": "FC",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Host Base Port interface",
+        "CategoryFatherID": "79",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "179",
+        "CategoryName": "FC",
+        "CategoryPath": "Root\\Feature\\Hardware\\HIC\\Interface",
+        "CategoryFatherID": "178",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "180",
+        "CategoryName": "FCOE",
+        "CategoryPath": "Root\\Feature\\Hardware\\HIC\\Interface",
+        "CategoryFatherID": "178",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "81",
+        "CategoryName": "FCOE",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Host Base Port interface",
+        "CategoryFatherID": "79",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "145",
+        "CategoryName": "FDE",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive\\Technology",
+        "CategoryFatherID": "144",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "616",
+        "CategoryName": "Features",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "154",
+        "CategoryName": "Fibre",
+        "CategoryPath": "Root\\Feature\\Hardware\\Enclosure\\Drive interface",
+        "CategoryFatherID": "153",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "639",
+        "CategoryName": "Fibre Channel - FC",
+        "CategoryPath": "Root\\Feature\\Features\\Compatibility",
+        "CategoryFatherID": "626",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "52",
+        "CategoryName": "Field replaceable (FR)",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\Backup",
+        "CategoryFatherID": "51",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "173",
+        "CategoryName": "File Server",
+        "CategoryPath": "Root\\Feature\\Hardware\\HIC",
+        "CategoryFatherID": "172",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "774",
+        "CategoryName": "fileDownload",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability\\CFW upgrade and-or downgrade",
+        "CategoryFatherID": "678",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "670",
+        "CategoryName": "FIPS Drive Support",
+        "CategoryPath": "Root\\Feature\\Features\\Security",
+        "CategoryFatherID": "620",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "53",
+        "CategoryName": "Flash",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\Backup",
+        "CategoryFatherID": "51",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "104",
+        "CategoryName": "FPGA",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "175",
+        "CategoryName": "FR",
+        "CategoryPath": "Root\\Feature\\Hardware\\HIC",
+        "CategoryFatherID": "172",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "669",
+        "CategoryName": "Full Disk Encryption - FDE",
+        "CategoryPath": "Root\\Feature\\Features\\Security",
+        "CategoryFatherID": "620",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "174",
+        "CategoryName": "Genisis",
+        "CategoryPath": "Root\\Feature\\Hardware\\HIC\\File Server",
+        "CategoryFatherID": "173",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "226",
+        "CategoryName": "Global",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "655",
+        "CategoryName": "Global Hot Spare - GHS",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "216",
+        "CategoryName": "Hardware",
+        "CategoryPath": "Root\\Feature\\Provider",
+        "CategoryFatherID": "215",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "36",
+        "CategoryName": "Hardware",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "146",
+        "CategoryName": "HDD",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive\\Technology",
+        "CategoryFatherID": "144",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "172",
+        "CategoryName": "HIC",
+        "CategoryPath": "Root\\Feature\\Hardware",
+        "CategoryFatherID": "36",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "160",
+        "CategoryName": "High Density Enclosure",
+        "CategoryPath": "Root\\Feature\\Hardware\\Enclosure",
+        "CategoryFatherID": "152",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "78",
+        "CategoryName": "Host Base port count",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections",
+        "CategoryFatherID": "69",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "74",
+        "CategoryName": "Host Base Port Count",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections",
+        "CategoryFatherID": "69",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "79",
+        "CategoryName": "Host Base Port interface",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections",
+        "CategoryFatherID": "69",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "766",
+        "CategoryName": "Host creation",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Host Operations",
+        "CategoryFatherID": "765",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "767",
+        "CategoryName": "Host deletion",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Host Operations",
+        "CategoryFatherID": "765",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "688",
+        "CategoryName": "Host Interface Card - HIC pull and-or replacement",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "769",
+        "CategoryName": "Host LUN mapping",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Host Operations",
+        "CategoryFatherID": "765",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "770",
+        "CategoryName": "Host name change",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Host Operations",
+        "CategoryFatherID": "765",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "765",
+        "CategoryName": "Host Operations",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "768",
+        "CategoryName": "Host OS assignment",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Host Operations",
+        "CategoryFatherID": "765",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "114",
+        "CategoryName": "Host Port",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\LEDs",
+        "CategoryFatherID": "110",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "708",
+        "CategoryName": "Hypervisor",
+        "CategoryPath": "Root\\Feature\\Features\\Virtualization",
+        "CategoryFatherID": "624",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "190",
+        "CategoryName": "I18N",
+        "CategoryPath": "Root\\Feature\\Management SW",
+        "CategoryFatherID": "185",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "105",
+        "CategoryName": "I2C SES",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "82",
+        "CategoryName": "IB",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Host Base Port interface",
+        "CategoryFatherID": "79",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "181",
+        "CategoryName": "IB",
+        "CategoryPath": "Root\\Feature\\Hardware\\HIC\\Interface",
+        "CategoryFatherID": "178",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "667",
+        "CategoryName": "IBM",
+        "CategoryPath": "Root\\Feature\\Features\\OEM specific",
+        "CategoryFatherID": "619",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "656",
+        "CategoryName": "Immediate Availability Format - IAF",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "710",
+        "CategoryName": "Inband Management",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "640",
+        "CategoryName": "Infiniband - IB",
+        "CategoryPath": "Root\\Feature\\Features\\Compatibility",
+        "CategoryFatherID": "626",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "761",
+        "CategoryName": "Initialize Drive",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Drive Operations",
+        "CategoryFatherID": "759",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "599",
+        "CategoryName": "Initiator",
+        "CategoryPath": "Root\\Feature\\CFW\\Driver",
+        "CategoryFatherID": "597",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "689",
+        "CategoryName": "Input Output Module - IOM FW upgrade",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "690",
+        "CategoryName": "Input Output Module - IOM pull and-or replacement",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "191",
+        "CategoryName": "Installer",
+        "CategoryPath": "Root\\Feature\\Management SW",
+        "CategoryFatherID": "185",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "95",
+        "CategoryName": "Intel",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\CPU\\Architecture",
+        "CategoryFatherID": "94",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "164",
+        "CategoryName": "Interface",
+        "CategoryPath": "Root\\Feature\\Hardware\\ESM",
+        "CategoryFatherID": "163",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "150",
+        "CategoryName": "Interface",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive Interposer",
+        "CategoryFatherID": "149",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "134",
+        "CategoryName": "Interface",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive",
+        "CategoryFatherID": "133",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "178",
+        "CategoryName": "Interface",
+        "CategoryPath": "Root\\Feature\\Hardware\\HIC",
+        "CategoryFatherID": "172",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "107",
+        "CategoryName": "Internal Enclosure",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\I2C SES",
+        "CategoryFatherID": "105",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "672",
+        "CategoryName": "Internationalization - I18N",
+        "CategoryPath": "Root\\Feature\\Features\\Usability",
+        "CategoryFatherID": "668",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "167",
+        "CategoryName": "IOC ",
+        "CategoryPath": "Root\\Feature\\Hardware\\ESM",
+        "CategoryFatherID": "163",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "108",
+        "CategoryName": "IOC ",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "700",
+        "CategoryName": "IOC fault isolation",
+        "CategoryPath": "Root\\Feature\\Features\\Supportability and Debuggability",
+        "CategoryFatherID": "622",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "83",
+        "CategoryName": "iSCSI",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Host Base Port interface",
+        "CategoryFatherID": "79",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "182",
+        "CategoryName": "iSCSI",
+        "CategoryPath": "Root\\Feature\\Hardware\\HIC\\Interface",
+        "CategoryFatherID": "178",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "641",
+        "CategoryName": "iSCSI",
+        "CategoryPath": "Root\\Feature\\Features\\Compatibility",
+        "CategoryFatherID": "626",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "744",
+        "CategoryName": "iSER",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Host Base Port interface\\IB",
+        "CategoryFatherID": "82",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "717",
+        "CategoryName": "JRE",
+        "CategoryPath": "Root\\Feature\\Management SW",
+        "CategoryFatherID": "185",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "776",
+        "CategoryName": "JVM",
+        "CategoryPath": "Root\\Feature\\Management SW",
+        "CategoryFatherID": "185",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "110",
+        "CategoryName": "LEDs",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "632",
+        "CategoryName": "Legacy Snapshots",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "197",
+        "CategoryName": "Load balancing",
+        "CategoryPath": "Root\\Feature\\Multipath driver",
+        "CategoryFatherID": "193",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "764",
+        "CategoryName": "Locate Drive",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Drive Operations",
+        "CategoryFatherID": "759",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "763",
+        "CategoryName": "Logical Replacement",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Drive Operations",
+        "CategoryFatherID": "759",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "749",
+        "CategoryName": "Major Event Log - MEL",
+        "CategoryPath": "Root\\Feature\\Features\\Supportability and Debuggability",
+        "CategoryFatherID": "622",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "618",
+        "CategoryName": "Manageability",
+        "CategoryPath": "Root\\Feature\\Features",
+        "CategoryFatherID": "616",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "185",
+        "CategoryName": "Management SW",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "760",
+        "CategoryName": "Manually Fail Drive",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Drive Operations",
+        "CategoryFatherID": "759",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "701",
+        "CategoryName": "Media Scan",
+        "CategoryPath": "Root\\Feature\\Features\\Supportability and Debuggability",
+        "CategoryFatherID": "622",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "118",
+        "CategoryName": "Memory",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "85",
+        "CategoryName": "Mgmt. port",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections",
+        "CategoryFatherID": "69",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "209",
+        "CategoryName": "Microsoft",
+        "CategoryPath": "Root\\Feature\\Plug-in",
+        "CategoryFatherID": "208",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "92",
+        "CategoryName": "mini-usb",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Serial port",
+        "CategoryFatherID": "90",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "702",
+        "CategoryName": "Misbehaving Drives Recovery",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "202",
+        "CategoryName": "MPIO",
+        "CategoryPath": "Root\\Feature\\Multipath driver\\Type",
+        "CategoryFatherID": "200",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "203",
+        "CategoryName": "MPP",
+        "CategoryPath": "Root\\Feature\\Multipath driver\\Type",
+        "CategoryFatherID": "200",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "204",
+        "CategoryName": "MPxIO",
+        "CategoryPath": "Root\\Feature\\Multipath driver\\Type",
+        "CategoryFatherID": "200",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "56",
+        "CategoryName": "mSATA",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\Backup",
+        "CategoryFatherID": "51",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "662",
+        "CategoryName": "MSW CLI",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "663",
+        "CategoryName": "MSW GUI",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "691",
+        "CategoryName": "MSW installation",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "703",
+        "CategoryName": "MSW Online Help - OLH",
+        "CategoryPath": "Root\\Feature\\Features\\Supportability and Debuggability",
+        "CategoryFatherID": "622",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "692",
+        "CategoryName": "MSW removal",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "693",
+        "CategoryName": "MSW upgrade",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "97",
+        "CategoryName": "Multi Core",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\CPU",
+        "CategoryFatherID": "93",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "76",
+        "CategoryName": "Multi port",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Host Base Port Count",
+        "CategoryFatherID": "74",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "98",
+        "CategoryName": "Multi thread",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\CPU",
+        "CategoryFatherID": "93",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "595",
+        "CategoryName": "Multicore",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "659",
+        "CategoryName": "MultiCore CPU",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "193",
+        "CategoryName": "Multipath driver",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "55",
+        "CategoryName": "Multiple Device",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\Backup\\Flash",
+        "CategoryFatherID": "53",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "62",
+        "CategoryName": "Multiple Device",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\Backup\\SD",
+        "CategoryFatherID": "60",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "58",
+        "CategoryName": "Multiple Device",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\Backup\\mSATA",
+        "CategoryFatherID": "56",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "87",
+        "CategoryName": "Multiple port",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Mgmt. port",
+        "CategoryFatherID": "85",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "65",
+        "CategoryName": "New DIMM size",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\DIMM",
+        "CategoryFatherID": "63",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "117",
+        "CategoryName": "New Max drive count",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "162",
+        "CategoryName": "New Max Drive Count",
+        "CategoryPath": "Root\\Feature\\Hardware\\Enclosure",
+        "CategoryFatherID": "152",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "77",
+        "CategoryName": "New port count",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Host Base Port Count",
+        "CategoryFatherID": "74",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "184",
+        "CategoryName": "New Port Count",
+        "CategoryPath": "Root\\Feature\\Hardware\\HIC",
+        "CategoryFatherID": "172",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "64",
+        "CategoryName": "New slot count",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\DIMM",
+        "CategoryFatherID": "63",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "67",
+        "CategoryName": "No",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\pCache",
+        "CategoryFatherID": "66",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "176",
+        "CategoryName": "No",
+        "CategoryPath": "Root\\Feature\\Hardware\\HIC\\FR",
+        "CategoryFatherID": "175",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "198",
+        "CategoryName": "No",
+        "CategoryPath": "Root\\Feature\\Multipath driver\\Load balancing",
+        "CategoryFatherID": "197",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "195",
+        "CategoryName": "No",
+        "CategoryPath": "Root\\Feature\\Multipath driver\\Cluster support",
+        "CategoryFatherID": "194",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "59",
+        "CategoryName": "non-Field replaceable",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\Backup",
+        "CategoryFatherID": "51",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "746",
+        "CategoryName": "NTP",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "594",
+        "CategoryName": "NVSRAM",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "619",
+        "CategoryName": "OEM specific",
+        "CategoryPath": "Root\\Feature\\Features",
+        "CategoryFatherID": "616",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "26",
+        "CategoryName": "Offload Data Transfer - ODX",
+        "CategoryPath": "Root\\Feature\\CFW\\Compliant",
+        "CategoryFatherID": "25",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "658",
+        "CategoryName": "Offloaded Data Transfer - ODX",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "192",
+        "CategoryName": "OLH",
+        "CategoryPath": "Root\\Feature\\Management SW",
+        "CategoryFatherID": "185",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "211",
+        "CategoryName": "ORACLE",
+        "CategoryPath": "Root\\Feature\\Plug-in",
+        "CategoryFatherID": "208",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "212",
+        "CategoryName": "Oracle EM",
+        "CategoryPath": "Root\\Feature\\Plug-in\\ORACLE",
+        "CategoryFatherID": "211",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "711",
+        "CategoryName": "Out Of Band - OOB Management",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "120",
+        "CategoryName": "P Supply",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "122",
+        "CategoryName": "P supply",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "66",
+        "CategoryName": "pCache",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache",
+        "CategoryFatherID": "50",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "635",
+        "CategoryName": "Performance",
+        "CategoryPath": "Root\\Feature\\Features",
+        "CategoryFatherID": "616",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "725",
+        "CategoryName": "Performance Monitor",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "634",
+        "CategoryName": "Persistent Cache - pCache",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "147",
+        "CategoryName": "PI",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive\\Technology",
+        "CategoryFatherID": "144",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "208",
+        "CategoryName": "Plug-in",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "612",
+        "CategoryName": "Power Supply",
+        "CategoryPath": "Root\\Feature\\Hardware\\Enclosure",
+        "CategoryFatherID": "152",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "704",
+        "CategoryName": "Predictive Failure Analysis - PFA",
+        "CategoryPath": "Root\\Feature\\Features\\Supportability and Debuggability",
+        "CategoryFatherID": "622",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "215",
+        "CategoryName": "Provider",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "33",
+        "CategoryName": "RAID engine",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "600",
+        "CategoryName": "RAID Parity Assist - RPA",
+        "CategoryPath": "Root\\Feature\\CFW\\RAID engine",
+        "CategoryFatherID": "33",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "615",
+        "CategoryName": "Rapid Reconstruction - RR",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "660",
+        "CategoryName": "Rapid Reconstruction - RR",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "34",
+        "CategoryName": "RAS",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "205",
+        "CategoryName": "RDAC",
+        "CategoryPath": "Root\\Feature\\Multipath driver\\Type",
+        "CategoryFatherID": "200",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "750",
+        "CategoryName": "Recovery Guru",
+        "CategoryPath": "Root\\Feature\\Features\\Supportability and Debuggability",
+        "CategoryFatherID": "622",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "705",
+        "CategoryName": "Redundancy Check",
+        "CategoryPath": "Root\\Feature\\Features\\Supportability and Debuggability",
+        "CategoryFatherID": "622",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "124",
+        "CategoryName": "Redundancy Mode",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "771",
+        "CategoryName": "Remote login",
+        "CategoryPath": "Root\\Feature\\Features\\Security",
+        "CategoryFatherID": "620",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "661",
+        "CategoryName": "Remote Volume Mirroring - RVM",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "128",
+        "CategoryName": "Reset Button",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "20",
+        "CategoryName": "REST",
+        "CategoryPath": "Root\\Feature\\API",
+        "CategoryFatherID": "18",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "109",
+        "CategoryName": "Rev Change",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\IOC ",
+        "CategoryFatherID": "108",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "168",
+        "CategoryName": "Rev Change",
+        "CategoryPath": "Root\\Feature\\Hardware\\ESM\\IOC ",
+        "CategoryFatherID": "167",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "96",
+        "CategoryName": "Rock",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\CPU\\Architecture",
+        "CategoryFatherID": "94",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "593",
+        "CategoryName": "RPA",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "29",
+        "CategoryName": "RVM",
+        "CategoryPath": "Root\\Feature\\CFW\\Copy services",
+        "CategoryFatherID": "27",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "115",
+        "CategoryName": "Safe To Remove",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\LEDs",
+        "CategoryFatherID": "110",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "222",
+        "CategoryName": "SANtricity",
+        "CategoryPath": "Root\\Feature\\SDK",
+        "CategoryFatherID": "221",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "183",
+        "CategoryName": "SAS",
+        "CategoryPath": "Root\\Feature\\Hardware\\HIC\\Interface",
+        "CategoryFatherID": "178",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "642",
+        "CategoryName": "SAS",
+        "CategoryPath": "Root\\Feature\\Features\\Compatibility",
+        "CategoryFatherID": "626",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "136",
+        "CategoryName": "SAS",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive\\Interface",
+        "CategoryFatherID": "134",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "166",
+        "CategoryName": "SAS",
+        "CategoryPath": "Root\\Feature\\Hardware\\ESM\\Interface",
+        "CategoryFatherID": "164",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "159",
+        "CategoryName": "SAS",
+        "CategoryPath": "Root\\Feature\\Hardware\\Enclosure\\ESM interface",
+        "CategoryFatherID": "157",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "155",
+        "CategoryName": "SAS",
+        "CategoryPath": "Root\\Feature\\Hardware\\Enclosure\\Drive interface",
+        "CategoryFatherID": "153",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "46",
+        "CategoryName": "SAS",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Base Enclosure Type",
+        "CategoryFatherID": "40",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "72",
+        "CategoryName": "SAS",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Drive interface",
+        "CategoryFatherID": "70",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "84",
+        "CategoryName": "SAS",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Host Base Port interface",
+        "CategoryFatherID": "79",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "137",
+        "CategoryName": "SAS NL",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive\\Interface",
+        "CategoryFatherID": "134",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "151",
+        "CategoryName": "SAS to FC",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive Interposer\\Interface",
+        "CategoryFatherID": "150",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "156",
+        "CategoryName": "SATA",
+        "CategoryPath": "Root\\Feature\\Hardware\\Enclosure\\Drive interface",
+        "CategoryFatherID": "153",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "138",
+        "CategoryName": "SATA",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive\\Interface",
+        "CategoryFatherID": "134",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "73",
+        "CategoryName": "SATA",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Drive interface",
+        "CategoryFatherID": "70",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "47",
+        "CategoryName": "SATA",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Base Enclosure Type",
+        "CategoryFatherID": "40",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "664",
+        "CategoryName": "SCSI Commands",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "60",
+        "CategoryName": "SD",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\Backup",
+        "CategoryFatherID": "51",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "221",
+        "CategoryName": "SDK",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "139",
+        "CategoryName": "Sector size",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive",
+        "CategoryFatherID": "133",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "620",
+        "CategoryName": "Security",
+        "CategoryPath": "Root\\Feature\\Features",
+        "CategoryFatherID": "616",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "129",
+        "CategoryName": "Sensors",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "90",
+        "CategoryName": "Serial port",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections",
+        "CategoryFatherID": "69",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "131",
+        "CategoryName": "Servicability",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "621",
+        "CategoryName": "Serviceability",
+        "CategoryPath": "Root\\Feature\\Features",
+        "CategoryFatherID": "616",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "714",
+        "CategoryName": "SFP",
+        "CategoryPath": "Root\\Feature\\Hardware",
+        "CategoryFatherID": "36",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "127",
+        "CategoryName": "Simplex",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Redundancy Mode",
+        "CategoryFatherID": "124",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "602",
+        "CategoryName": "Simulator",
+        "CategoryPath": "Root\\Feature\\Management SW",
+        "CategoryFatherID": "185",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "57",
+        "CategoryName": "Single Device",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\Backup\\mSATA",
+        "CategoryFatherID": "56",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "61",
+        "CategoryName": "Single Device",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\Backup\\SD",
+        "CategoryFatherID": "60",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "54",
+        "CategoryName": "Single Device",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\Backup\\Flash",
+        "CategoryFatherID": "53",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "75",
+        "CategoryName": "Single port",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Host Base Port Count",
+        "CategoryFatherID": "74",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "86",
+        "CategoryName": "Single port",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Mgmt. port",
+        "CategoryFatherID": "85",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "171",
+        "CategoryName": "Single Port",
+        "CategoryPath": "Root\\Feature\\Hardware\\ESM\\Topology",
+        "CategoryFatherID": "169",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "49",
+        "CategoryName": "Smart",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Battery",
+        "CategoryFatherID": "48",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "220",
+        "CategoryName": "SMIS",
+        "CategoryPath": "Root\\Feature\\Provider\\Software",
+        "CategoryFatherID": "219",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "30",
+        "CategoryName": "Snapshot",
+        "CategoryPath": "Root\\Feature\\CFW\\Copy services",
+        "CategoryFatherID": "27",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "633",
+        "CategoryName": "Snapshots",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "719",
+        "CategoryName": "SNMP",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "219",
+        "CategoryName": "Software",
+        "CategoryPath": "Root\\Feature\\Provider",
+        "CategoryFatherID": "215",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "743",
+        "CategoryName": "SRP",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Host Base Port interface\\IB",
+        "CategoryFatherID": "82",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "206",
+        "CategoryName": "SSD",
+        "CategoryPath": "Root\\Feature\\Multipath driver\\Type",
+        "CategoryFatherID": "200",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "148",
+        "CategoryName": "SSD",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive\\Technology",
+        "CategoryFatherID": "144",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "611",
+        "CategoryName": "SSD Cache",
+        "CategoryPath": "Root\\Feature\\CFW\\Cache",
+        "CategoryFatherID": "610",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "636",
+        "CategoryName": "SSD Cache",
+        "CategoryPath": "Root\\Feature\\Features\\Performance",
+        "CategoryFatherID": "635",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "709",
+        "CategoryName": "SSD Cache",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "210",
+        "CategoryName": "SSMS",
+        "CategoryPath": "Root\\Feature\\Plug-in\\Microsoft",
+        "CategoryFatherID": "209",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "773",
+        "CategoryName": "Staged Online Firmware Download - SOFD",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability\\CFW upgrade and-or downgrade",
+        "CategoryFatherID": "678",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "123",
+        "CategoryName": "Stand Alone",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\P supply",
+        "CategoryFatherID": "122",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "103",
+        "CategoryName": "Stand Alone",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\FAN",
+        "CategoryFatherID": "102",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "674",
+        "CategoryName": "Standalone",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\P Supply",
+        "CategoryFatherID": "120",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "116",
+        "CategoryName": "Status",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\LEDs",
+        "CategoryFatherID": "110",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "622",
+        "CategoryName": "Supportability and Debuggability",
+        "CategoryPath": "Root\\Feature\\Features",
+        "CategoryFatherID": "616",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "21",
+        "CategoryName": "SVM",
+        "CategoryPath": "Root\\Feature\\API",
+        "CategoryFatherID": "18",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "22",
+        "CategoryName": "Symbol",
+        "CategoryPath": "Root\\Feature\\API",
+        "CategoryFatherID": "18",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "223",
+        "CategoryName": "Symbol",
+        "CategoryPath": "Root\\Feature\\SDK",
+        "CategoryFatherID": "221",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "614",
+        "CategoryName": "T10 PI",
+        "CategoryPath": "Root\\Feature\\CFW",
+        "CategoryFatherID": "24",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "598",
+        "CategoryName": "Target",
+        "CategoryPath": "Root\\Feature\\CFW\\Driver",
+        "CategoryFatherID": "597",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "144",
+        "CategoryName": "Technology",
+        "CategoryPath": "Root\\Feature\\Hardware\\Drive",
+        "CategoryFatherID": "133",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "130",
+        "CategoryName": "Temp",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Sensors",
+        "CategoryFatherID": "129",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "666",
+        "CategoryName": "Teradata",
+        "CategoryPath": "Root\\Feature\\Features\\OEM specific",
+        "CategoryFatherID": "619",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "637",
+        "CategoryName": "Thin Provisioning - TPV",
+        "CategoryPath": "Root\\Feature\\Features\\Efficiency",
+        "CategoryFatherID": "617",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "169",
+        "CategoryName": "Topology",
+        "CategoryPath": "Root\\Feature\\Hardware\\ESM",
+        "CategoryFatherID": "163",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "207",
+        "CategoryName": "TPGS",
+        "CategoryPath": "Root\\Feature\\Multipath driver\\Type",
+        "CategoryFatherID": "200",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "723",
+        "CategoryName": "Tray Loss Protection - TLP",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "200",
+        "CategoryName": "Type",
+        "CategoryPath": "Root\\Feature\\Multipath driver",
+        "CategoryFatherID": "193",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "706",
+        "CategoryName": "Unreadable Sector Management - USM",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "668",
+        "CategoryName": "Usability",
+        "CategoryPath": "Root\\Feature\\Features",
+        "CategoryFatherID": "616",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "713",
+        "CategoryName": "uSATA",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\Backup",
+        "CategoryFatherID": "51",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "132",
+        "CategoryName": "USB Recovery",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform",
+        "CategoryFatherID": "37",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "224",
+        "CategoryName": "Utility",
+        "CategoryPath": "Root\\Feature",
+        "CategoryFatherID": "17",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "623",
+        "CategoryName": "VAAI",
+        "CategoryPath": "Root\\Feature\\Features",
+        "CategoryFatherID": "616",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "23",
+        "CategoryName": "VAAI",
+        "CategoryPath": "Root\\Feature\\API",
+        "CategoryFatherID": "18",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "609",
+        "CategoryName": "VASA",
+        "CategoryPath": "Root\\Feature\\Provider\\Hardware",
+        "CategoryFatherID": "216",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "214",
+        "CategoryName": "vCenter",
+        "CategoryPath": "Root\\Feature\\Plug-in\\VMWARE",
+        "CategoryFatherID": "213",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "217",
+        "CategoryName": "Virtual Disk Service - VDS",
+        "CategoryPath": "Root\\Feature\\Provider\\Hardware",
+        "CategoryFatherID": "216",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "624",
+        "CategoryName": "Virtualization",
+        "CategoryPath": "Root\\Feature\\Features",
+        "CategoryFatherID": "616",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "213",
+        "CategoryName": "VMWARE",
+        "CategoryPath": "Root\\Feature\\Plug-in",
+        "CategoryFatherID": "208",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "638",
+        "CategoryName": "Volume Copy",
+        "CategoryPath": "Root\\Feature\\Features\\Availability",
+        "CategoryFatherID": "625",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "31",
+        "CategoryName": "Volume copy",
+        "CategoryPath": "Root\\Feature\\CFW\\Copy services",
+        "CategoryFatherID": "27",
+        "IsActive": "0"
+    },
+    {
+        "CategoryID": "752",
+        "CategoryName": "Volume creation",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Volume Operations",
+        "CategoryFatherID": "751",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "753",
+        "CategoryName": "Volume deletion",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Volume Operations",
+        "CategoryFatherID": "751",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "695",
+        "CategoryName": "Volume Group migration",
+        "CategoryPath": "Root\\Feature\\Features\\Serviceability",
+        "CategoryFatherID": "621",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "754",
+        "CategoryName": "Volume Initialization",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Volume Operations",
+        "CategoryFatherID": "751",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "756",
+        "CategoryName": "Volume name change",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Volume Operations",
+        "CategoryFatherID": "751",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "751",
+        "CategoryName": "Volume Operations",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability",
+        "CategoryFatherID": "618",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "757",
+        "CategoryName": "Volume ownership change",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Volume Operations",
+        "CategoryFatherID": "751",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "755",
+        "CategoryName": "Volume Redistribution",
+        "CategoryPath": "Root\\Feature\\Features\\Manageability\\Volume Operations",
+        "CategoryFatherID": "751",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "218",
+        "CategoryName": "Volume Shadow copy Service - VSS",
+        "CategoryPath": "Root\\Feature\\Provider\\Hardware",
+        "CategoryFatherID": "216",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "608",
+        "CategoryName": "vVol",
+        "CategoryPath": "Root\\Feature\\CFW\\Compliant",
+        "CategoryFatherID": "25",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "89",
+        "CategoryName": "WOL",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Connections\\Mgmt. port",
+        "CategoryFatherID": "85",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "742",
+        "CategoryName": "Work Load Capture Tool - WLC",
+        "CategoryPath": "Root\\Feature\\Utility",
+        "CategoryFatherID": "224",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "68",
+        "CategoryName": "Yes",
+        "CategoryPath": "Root\\Feature\\Hardware\\Controller platform\\Cache\\pCache",
+        "CategoryFatherID": "66",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "199",
+        "CategoryName": "Yes",
+        "CategoryPath": "Root\\Feature\\Multipath driver\\Load balancing",
+        "CategoryFatherID": "197",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "196",
+        "CategoryName": "Yes",
+        "CategoryPath": "Root\\Feature\\Multipath driver\\Cluster support",
+        "CategoryFatherID": "194",
+        "IsActive": "1"
+    },
+    {
+        "CategoryID": "177",
+        "CategoryName": "Yes",
+        "CategoryPath": "Root\\Feature\\Hardware\\HIC\\FR",
+        "CategoryFatherID": "175",
+        "IsActive": "1"
+    }
+]

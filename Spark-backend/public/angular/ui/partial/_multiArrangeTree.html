@@ -1,0 +1,29 @@
+<div class="multi-arragement-tree">
+    <form class="navbar-form navbar-left" role="search">
+        <label for="selectedClassifier" class=" control-label input-sm">Arrange By:</label>
+        <div class="form-group">
+            <div >
+                <select class="form-control input-sm" ng-model="selectedClassifier" ng-options="item.text for item in classifiers">
+                </select>
+            </div>
+        </div>
+        <label for="Search" class=" control-label input-sm">Filter:</label>
+        <div class="form-group">
+            <input type="text" ng-model="treeSearchKey" class="form-control input-sm" placeholder="Filter">
+        </div>
+        <span class="header-btn-container">
+<!--            <button ng-click="testStrategyManager()" type="button" class="btn btn-default btn-sm" aria-label="Left Align" data-toggle="tooltip" data-placement="top" title="Test Strategy Manager">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+            </button>-->
+        </span>
+        
+        <wave-spinner  ng-hide="!load"></wave-spinner>
+
+
+        <div multi-arrange-jtree></div>
+    </form>
+    <script type="text/ng-template" id="TreePopoverHtml">
+        <div class="tree-popover-content">
+        </div>
+    </script>
+</div>

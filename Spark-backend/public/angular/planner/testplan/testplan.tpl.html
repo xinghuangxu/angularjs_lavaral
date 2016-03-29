@@ -1,0 +1,23 @@
+<div ng-controller="TestPlan as testplan">
+    <div class="clearfix">
+        <div class="navbar-form navbar-left">
+            <label class="control-label input-sm">Arrange By:</label>
+            <div class="form-group">
+                <div>
+                    <select class="form-control input-sm" ng-model="testplan.config.activeGroup" ng-options="item.text for item in testplan.config.groupBy">
+                    </select>
+                </div>
+            </div>
+            <label for="Search" class=" control-label input-sm">Filter:</label>
+            <div class="form-group">
+                <input type="text" ng-model="testplan.filter.text" class="form-control input-sm" placeholder="Filter">
+            </div>
+            <button class="btn btn-default input-sm" ng-click="testplan.strategies.open()" bs-tooltip data-title="Add Strategies" data-trigger="hover" placement="bottom"><i class="glyphicon glyphicon-plus"></i></button>
+            <button class="btn btn-default input-sm" ng-click="testplan.comingSoonModal()" bs-tooltip data-title="Attachments" data-trigger="hover" placement="bottom"><i class="glyphicon glyphicon-paperclip"></i></button>
+            <button class="btn btn-default input-sm" ng-click="testplan.comingSoonModal()" bs-tooltip data-title="Grid View" data-trigger="hover" placement="bottom"><i class="glyphicon glyphicon-th"></i></button>
+            <button class="btn btn-default input-sm" ng-click="testplan.comingSoonModal()" bs-tooltip data-title="Configuration diagrams" data-trigger="hover" placement="bottom"><i class="glyphicon glyphicon-tasks"></i></button>
+        </div>
+    </div>
+    <wave-spinner ng-show="testplan.tree.loading"></wave-spinner>
+    <spark-jstree ng-model="testplan.tree.data" data-filter="testplan.filter.text" data-on-select="testplan.onSelect(data)"></spark-jstree>
+</div>
