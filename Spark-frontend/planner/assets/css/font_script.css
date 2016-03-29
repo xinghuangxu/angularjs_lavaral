@@ -1,0 +1,14 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Chiller';
+  font-style: normal;
+  font-weight: 600;
+  src: url(fonts/CHILLER.woff) format('woff');
+}
+/* latin */
+@font-face {
+  font-family: 'Chiller';
+  font-style: normal;
+  font-weight: 600;
+  src: url(fonts/CHILLER.woff) format('woff');
+}

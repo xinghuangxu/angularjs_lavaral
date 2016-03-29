@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="planner">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="app.less" type="text/css" rel="stylesheet/less">
+    <title>Spark | Planner</title>
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini" ui-view>
+
+
+
+
+
+<!-- JS from Bower Components -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/less.js/dist/less.min.js" data-concat="false"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-strap/dist/angular-strap.compat.min.js"></script>
+<script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="planner/assets/js/pace.min.js"></script>
+<script src="planner/assets/js/theme.js"></script>
+<!-- Add New Bower Component JS Above -->
+
+
+<!-- Main App JS -->
+<script src="common_components/common_components_module.js"></script>
+<script src="common_components/constants/plugin_names_constant.js"></script>
+<script src="common_components/values/active_plugins_value.js"></script>
+
+<script src="architecture_documents/architecture_documents_module.js"></script>
+<script src="architecture_documents/architecture_documents_controller.js"></script>
+<script src="architecture_documents/architecture_documents_service.js"></script>
+
+<script src="boxcar/boxcar_module.js"></script>
+<script src="boxcar/boxcar_controller.js"></script>
+<script src="boxcar/boxcar_service.js"></script>
+
+<script src="configuration_plan/configuration_plan_module.js"></script>
+<script src="configuration_plan/configuration_plan_controller.js"></script>
+<script src="configuration_plan/configuration_plan_service.js"></script>
+
+<script src="high_level_scope/high_level_scope_module.js"></script>
+<script src="high_level_scope/high_level_scope_controller.js"></script>
+<script src="high_level_scope/high_level_scope_service.js"></script>
+
+<script src="implementation_requests/implementation_requests_module.js"></script>
+<script src="implementation_requests/implementation_requests_controller.js"></script>
+<script src="implementation_requests/implementation_requests_service.js"></script>
+
+<script src="rally/rally_module.js"></script>
+<script src="rally/rally_controller.js"></script>
+<script src="rally/rally_service.js"></script>
+
+<script src="rcca/rcca_module.js"></script>
+<script src="rcca/rcca_controller.js"></script>
+<script src="rcca/rcca_service.js"></script>
+
+<script src="sow/sow_module.js"></script>
+<script src="sow/sow_controller.js"></script>
+<script src="sow/sow_service.js"></script>
+
+<script src="test_case_instances/test_case_instances_module.js"></script>
+<script src="test_case_instances/test_case_instances_controller.js"></script>
+<script src="test_case_instances/test_case_instances_service.js"></script>
+
+<script src="test_cases/test_cases_module.js"></script>
+<script src="test_cases/test_cases_controller.js"></script>
+<script src="test_cases/test_cases_service.js"></script>
+
+<script src="test_plan/test_plan_module.js"></script>
+<script src="test_plan/test_plan_controller.js"></script>
+<script src="test_plan/test_plan_service.js"></script>
+
+<script src="web_lab/web_lab_module.js"></script>
+<script src="web_lab/web_lab_controller.js"></script>
+<script src="web_lab/web_lab_service.js"></script>
+
+
+
+<script src="planner/planner_module.js"></script>
+<script src="planner/planner_controller.js"></script>
+<script src="planner/partials/left_side_bar/_left_side_bar_controller.js"></script>
+<script src="planner/config/routes.js"></script>
+<!-- Add New Component JS Above -->
+
+
+</body>
+</html>
