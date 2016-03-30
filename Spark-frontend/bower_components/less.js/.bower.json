@@ -30,6 +30,6 @@
     "commit": "d95e467733558d0dfea2bfb41e724cef585d64a2"
   },
   "_source": "git://github.com/less/less.js.git",
-  "_target": "*",
+  "_target": "2.6.1",
   "_originalSource": "less.js"
 }
