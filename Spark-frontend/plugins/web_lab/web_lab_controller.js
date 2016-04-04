@@ -3,9 +3,9 @@
  */
 (function(){
     'use strict';
-    angular.module('webLab').controller('webLabController',webLabController);
-    webLabController.$inject=[];
-    function webLabController(){
+    angular.module('webLab').controller('WLCtrl',WLCtrl);
+    WLCtrl.$inject=[];
+    function WLCtrl(){
 
 
 

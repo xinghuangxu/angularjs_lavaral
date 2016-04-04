@@ -3,9 +3,9 @@
  */
 (function(){
     'use strict';
-    angular.module('configurationPlan').controller('configurationPlanController',configurationPlanController);
-    configurationPlanController.$inject=[];
-    function configurationPlanController(){
+    angular.module('configurationPlan').controller('CPCtrl',CPCtrl);
+    CPCtrl.$inject=[];
+    function CPCtrl(){
 
 
 

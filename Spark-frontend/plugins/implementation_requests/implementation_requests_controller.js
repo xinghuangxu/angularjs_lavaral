@@ -3,9 +3,9 @@
  */
 (function(){
     'use strict';
-    angular.module('implementationRequests').controller('implementationRequestsController',implementationRequestsController);
-    implementationRequestsController.$inject=[];
-    function implementationRequestsController(){
+    angular.module('implementationRequests').controller('IRCtrl',IRCtrl);
+    IRCtrl.$inject=[];
+    function IRCtrl(){
 
 
 

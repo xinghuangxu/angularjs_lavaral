@@ -6,7 +6,7 @@
         'scope',
         'testPlanner',
         'commonComponents',
-        'architectureDocuments',
+        'referenceDocuments',
         'boxcar',
         'configurationPlan',
         'highLevelScope',
