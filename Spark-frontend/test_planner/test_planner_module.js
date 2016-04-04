@@ -3,7 +3,7 @@
         'mgcrea.ngStrap',
         'ngAnimate',
         'commonComponents',
-        'architectureDocuments',
+        'referenceDocuments',
         'boxcar',
         'configurationPlan',
         'highLevelScope',

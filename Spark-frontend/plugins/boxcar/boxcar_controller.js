@@ -3,9 +3,9 @@
  */
 (function(){
     'use strict';
-    angular.module('boxcar').controller('boxcarController',boxcarController);
-    boxcarController.$inject=[];
-    function boxcarController(){
+    angular.module('boxcar').controller('BCCtrl',BCCtrl);
+    BCCtrl.$inject=[];
+    function BCCtrl(){
 
 
         console.log('boxcar');

@@ -3,9 +3,9 @@
  */
 (function(){
     'use strict';
-    angular.module('testCaseInstances').controller('testCaseInstancesController',testCaseInstancesController);
-    testCaseInstancesController.$inject=[];
-    function testCaseInstancesController(){
+    angular.module('testCaseInstances').controller('TCICtrl',TCICtrl);
+    TCICtrl.$inject=[];
+    function TCICtrl(){
 
 
 

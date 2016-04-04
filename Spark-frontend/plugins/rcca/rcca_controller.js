@@ -3,9 +3,9 @@
  */
 (function(){
     'use strict';
-    angular.module('rcca').controller('rccaController',rccaController);
-    rccaController.$inject=[];
-    function rccaController(){
+    angular.module('rcca').controller('RCCACtrl',RCCACtrl);
+    RCCACtrl.$inject=[];
+    function RCCACtrl(){
 
 
 

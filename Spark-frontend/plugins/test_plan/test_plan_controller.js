@@ -3,9 +3,9 @@
  */
 (function(){
     'use strict';
-    angular.module('testPlan').controller('testPlanController',testPlanController);
-    testPlanController.$inject=[];
-    function testPlanController(){
+    angular.module('testPlan').controller('TPCtrl',TPCtrl);
+    TPCtrl.$inject=[];
+    function TPCtrl(){
 
 
 

@@ -3,11 +3,11 @@
  */
 (function(){
     'use strict';
-    angular.module('testCases').controller('testCasesController',testCasesController);
-    testCasesController.$inject=[];
-    function testCasesController(){
-        var testCasesController= this;
-        testCasesController.example_tree = [{
+    angular.module('testCases').controller('TCCtrl',TCCtrl);
+    TCCtrl.$inject=[];
+    function TCCtrl(){
+        var TCCtrl= this;
+        TCCtrl.example_tree = [{
             "id": 1,
             "parent": "#",
             "text": "Root 1"

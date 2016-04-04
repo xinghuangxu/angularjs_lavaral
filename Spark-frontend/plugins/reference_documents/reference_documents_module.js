@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    angular.module('architectureDocuments',[
+    angular.module('referenceDocuments',[
         'mgcrea.ngStrap',
         'ngAnimate'
     ]);
