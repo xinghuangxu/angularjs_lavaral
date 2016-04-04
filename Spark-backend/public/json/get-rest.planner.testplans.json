@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "release_id": "XYZRelease1",
+        "testplan_stack_id": null,
+        "testplan_substack_id": null,
+        "testplan_boxcar_id": null,
+        "alm_db_name": null,
+        "alm_folder_node_id": null,
+        "alm_testset_prefix": null,
+        "project_start_date": null,
+        "project_completion_date": null,
+        "created_by": "xyzuser",
+        "updated_by": "xyzuser",
+        "rally_project_id": null,
+        "rally_release_id": null,
+        "wiki_url": null,
+        "created_at": "2016-01-21 04:05:21.000",
+        "updated_at": "2016-01-21 04:05:21.000",
+        "alm_db_description": null,
+        "alm_folder_name": "Select an ALM folder for this Test Plan",
+        "release": {
+            "Name": "XYZRelease1"
+        },
+        "stack": null,
+        "substack": null,
+        "boxcar": null
+    }
+]

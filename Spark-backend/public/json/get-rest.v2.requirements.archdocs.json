@@ -1,0 +1,403 @@
+{
+    "total": 667,
+    "per_page": "50",
+    "current_page": 1,
+    "last_page": 14,
+    "next_page_url": "http://demo.spark.eng.netapp.com/rest/v2/requirements/archdocs?page=2",
+    "prev_page_url": null,
+    "from": 1,
+    "to": 50,
+    "data": [
+        {
+            "id": "466",
+            "type": "archdoc",
+            "doc_filename": "voluptas.xml",
+            "doc_type": "overview",
+            "doc_description": "",
+            "doc_number": "51153-00",
+            "doc_revision": "A.1",
+            "doc_save_date": "3/23/2011",
+            "doc_keyword": "xyz",
+            "doc_variation_logical_expr": "",
+            "doc_id": "2014-03-22T16:28:00Z-703-4013-IDA05N2B",
+            "doc_title": "Voluptas sit aspernatur",
+            "created_at": "2016-03-01 08:20:01.000",
+            "updated_at": "2016-03-01 08:20:01.000",
+            "icon": "glyphicon glyphicon-book",
+            "reqxs": [],
+            "boxcars": []
+        },
+        {
+            "id": "540",
+            "type": "archdoc",
+            "doc_filename": "Support.xml",
+            "doc_type": "overview",
+            "doc_description": "",
+            "doc_number": "50201-00",
+            "doc_revision": "A.1",
+            "doc_save_date": "2/09/2011",
+            "doc_keyword": "BasicSupport",
+            "doc_variation_logical_expr": "",
+            "doc_id": "2013-02-08T16:43:00Z-688-5927-IDAY5BUC",
+            "doc_title": "Unt in culpa qu",
+            "created_at": "2016-03-01 08:20:02.000",
+            "updated_at": "2016-03-01 08:20:02.000",
+            "icon": "glyphicon glyphicon-book",
+            "reqxs": [],
+            "boxcars": []
+        },
+        {
+            "id": "290",
+            "type": "archdoc",
+            "doc_filename": "Groups.xml",
+            "doc_type": "requirement",
+            "doc_description": "External Requirements",
+            "doc_number": "49075-00",
+            "doc_revision": "B.4",
+            "doc_save_date": "8/14/2015",
+            "doc_keyword": "Groups",
+            "doc_variation_logical_expr": "Groups",
+            "doc_id": "2010-10-28T21:55:00Z-86765-IDAHYR1D-2",
+            "doc_title": "Ullam corporis suscipit laboriosam",
+            "created_at": "2016-03-01 08:19:49.000",
+            "updated_at": "2016-03-01 08:19:49.000",
+            "icon": "glyphicon glyphicon-book",
+            "reqxs": [
+                {
+                    "reqx_id": "LSIP200084975",
+                    "reqx_title": "Ratione voluptatem sequi nesciunt",
+                    "reqx_type": "PR",
+                    "pivot": {
+                        "doc_db_id": "290",
+                        "reqx_id": "LSIP200084975"
+                    }
+                },
+                {
+                    "reqx_id": "LSIP200142256",
+                    "reqx_title": "Voluptatem accusantium doloremque laudantium",
+                    "reqx_type": "PR",
+                    "pivot": {
+                        "doc_db_id": "290",
+                        "reqx_id": "LSIP200142256"
+                    }
+                },
+                {
+                    "reqx_id": "LSIP200572900",
+                    "reqx_title": "Support for drives",
+                    "reqx_type": "PR",
+                    "pivot": {
+                        "doc_db_id": "290",
+                        "reqx_id": "LSIP200572900"
+                    }
+                }
+            ],
+            "boxcars": [
+                {
+                    "boxcar_id": "LSIP200191518",
+                    "boxcar_name": "Nemo enim ipsam voluptatem",
+                    "pivot": {
+                        "doc_db_id": "290",
+                        "boxcar_id": "LSIP200191518"
+                    }
+                },
+                {
+                    "boxcar_id": "LSIP200562103",
+                    "boxcar_name": "Corporis suscipit laboriosam",
+                    "pivot": {
+                        "doc_db_id": "290",
+                        "boxcar_id": "LSIP200562103"
+                    }
+                },
+                {
+                    "boxcar_id": "LSIP200573037",
+                    "boxcar_name": "Aliquip ex ea commodo consequat",
+                    "pivot": {
+                        "doc_db_id": "290",
+                        "boxcar_id": "LSIP200573037"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "207",
+            "type": "archdoc",
+            "doc_filename": "SCSI.xml",
+            "doc_type": "requirement",
+            "doc_description": "External Requirements",
+            "doc_number": "43356-00",
+            "doc_revision": "F.3",
+            "doc_save_date": "8/19/2013",
+            "doc_keyword": "abc",
+            "doc_variation_logical_expr": "abc",
+            "doc_id": "F-0d6d6df6-7080-11de-8461-00059a3c7800",
+            "doc_title": "Voluptatem sequi nesciunt",
+            "created_at": "2016-03-01 08:19:39.000",
+            "updated_at": "2016-03-01 08:19:39.000",
+            "icon": "glyphicon glyphicon-book",
+            "reqxs": [
+                {
+                    "reqx_id": "LSIP200000031",
+                    "reqx_title": "Dolor in reprehenderit in",
+                    "reqx_type": "PR",
+                    "pivot": {
+                        "doc_db_id": "207",
+                        "reqx_id": "LSIP200000031"
+                    }
+                },
+                {
+                    "reqx_id": "LSIP200004096",
+                    "reqx_title": "Qui dolorem ipsum",
+                    "reqx_type": "PR",
+                    "pivot": {
+                        "doc_db_id": "207",
+                        "reqx_id": "LSIP200004096"
+                    }
+                }
+            ],
+            "boxcars": [
+                {
+                    "boxcar_id": "LSIP200014549",
+                    "boxcar_name": "Incidunt ut labor",
+                    "pivot": {
+                        "doc_db_id": "207",
+                        "boxcar_id": "LSIP200014549"
+                    }
+                },
+                {
+                    "boxcar_id": "LSIP200035170",
+                    "boxcar_name": "Voluptatem sequi nesciunt",
+                    "pivot": {
+                        "doc_db_id": "207",
+                        "boxcar_id": "LSIP200035170"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "456",
+            "type": "archdoc",
+            "doc_filename": "Support.xml",
+            "doc_type": "architecture",
+            "doc_description": "Architecture",
+            "doc_number": "54875-00",
+            "doc_revision": "A.3",
+            "doc_save_date": "8/26/2013",
+            "doc_keyword": "aperiam",
+            "doc_variation_logical_expr": "aperiam",
+            "doc_id": "2012-06-07T14:48:00Z-3459-19720-IDAQWCBD",
+            "doc_title": "Drive Support",
+            "created_at": "2016-03-01 08:20:01.000",
+            "updated_at": "2016-03-01 08:20:01.000",
+            "icon": "glyphicon glyphicon-book",
+            "reqxs": [],
+            "boxcars": []
+        },
+        {
+            "id": "157",
+            "type": "archdoc",
+            "doc_filename": "magna.xml",
+            "doc_type": "requirement",
+            "doc_description": "External Requirements",
+            "doc_number": "349-1049610",
+            "doc_revision": "A",
+            "doc_save_date": "",
+            "doc_keyword": "magna",
+            "doc_variation_logical_expr": "magna",
+            "doc_id": "F-46f836b1-9f41-11da-9845-00028aa6234c",
+            "doc_title": "Beatae vitae dicta sunt explicab",
+            "created_at": "2016-03-01 08:19:35.000",
+            "updated_at": "2016-03-01 08:19:35.000",
+            "icon": "glyphicon glyphicon-book",
+            "reqxs": [],
+            "boxcars": []
+        },
+        {
+            "id": "402",
+            "type": "archdoc",
+            "doc_filename": "Management.xml",
+            "doc_type": "overview",
+            "doc_description": "",
+            "doc_number": "46011-00",
+            "doc_revision": "A.4",
+            "doc_save_date": "4/25/2010",
+            "doc_keyword": "incididunt",
+            "doc_variation_logical_expr": "incididunt",
+            "doc_id": "",
+            "doc_title": "Eaque ipsa quae ab",
+            "created_at": "2016-03-01 08:20:00.000",
+            "updated_at": "2016-03-01 08:20:00.000",
+            "icon": "glyphicon glyphicon-book",
+            "reqxs": [],
+            "boxcars": []
+        },
+        {
+            "id": "586",
+            "type": "archdoc",
+            "doc_filename": "OD.xml",
+            "doc_type": "architecture",
+            "doc_description": "Architecture",
+            "doc_number": "14171",
+            "doc_revision": "A.3",
+            "doc_save_date": "2/12/2016",
+            "doc_keyword": "reprehenderit",
+            "doc_variation_logical_expr": "reprehenderit",
+            "doc_id": "2014-08-27T14:49:00Z-20975-IDAZQP4C",
+            "doc_title": "Occaecat cupidatat non proident",
+            "created_at": "2016-03-01 08:20:03.000",
+            "updated_at": "2016-03-01 08:20:03.000",
+            "icon": "glyphicon glyphicon-book",
+            "reqxs": [],
+            "boxcars": []
+        },
+        {
+            "id": "91",
+            "type": "archdoc",
+            "doc_filename": "Notification.xml",
+            "doc_type": "requirement",
+            "doc_description": "External Requirements",
+            "doc_number": "47083-00",
+            "doc_revision": "C.1",
+            "doc_save_date": "4/27/2012",
+            "doc_keyword": "Notification",
+            "doc_variation_logical_expr": "Notification",
+            "doc_id": "2010-03-22T20:45:00Z-1264-7207-IDAOPGID",
+            "doc_title": "Notification",
+            "created_at": "2016-03-01 08:19:27.000",
+            "updated_at": "2016-03-01 08:19:27.000",
+            "icon": "glyphicon glyphicon-book",
+            "reqxs": [
+                {
+                    "reqx_id": "LSIP200224377",
+                    "reqx_title": "Porro quisquam est",
+                    "reqx_type": "PR",
+                    "pivot": {
+                        "doc_db_id": "91",
+                        "reqx_id": "LSIP200224377"
+                    }
+                },
+                {
+                    "reqx_id": "LSIP200224379",
+                    "reqx_title": "Deserunt",
+                    "reqx_type": "PR",
+                    "pivot": {
+                        "doc_db_id": "91",
+                        "reqx_id": "LSIP200224379"
+                    }
+                }
+            ],
+            "boxcars": [
+                {
+                    "boxcar_id": "LSIP200074788",
+                    "boxcar_name": "Deserunt",
+                    "pivot": {
+                        "doc_db_id": "91",
+                        "boxcar_id": "LSIP200074788"
+                    }
+                },
+                {
+                    "boxcar_id": "LSIP200182807",
+                    "boxcar_name": "Dolorem",
+                    "pivot": {
+                        "doc_db_id": "91",
+                        "boxcar_id": "LSIP200182807"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "546",
+            "type": "archdoc",
+            "doc_filename": "dolorem.xml",
+            "doc_type": "overview",
+            "doc_description": "",
+            "doc_number": "50809-00",
+            "doc_revision": "A.1",
+            "doc_save_date": "2/28/2011",
+            "doc_keyword": "dolor ",
+            "doc_variation_logical_expr": "",
+            "doc_id": "2011-02-28T21:09:00Z-700-3993-IDAY5L0C",
+            "doc_title": "Neque porro quisquam est",
+            "created_at": "2016-03-01 08:20:02.000",
+            "updated_at": "2016-03-01 08:20:02.000",
+            "icon": "glyphicon glyphicon-book",
+            "reqxs": [],
+            "boxcars": []
+        },
+        {
+            "id": "218",
+            "type": "archdoc",
+            "doc_filename": "dolor.xml",
+            "doc_type": "requirement",
+            "doc_description": "External Requirements",
+            "doc_number": "43354-00",
+            "doc_revision": "B.3",
+            "doc_save_date": "12/07/2011",
+            "doc_keyword": "dolor",
+            "doc_variation_logical_expr": "dolor",
+            "doc_id": "F-ea42be76-707f-11de-8461-00059a3c7800",
+            "doc_title": "dolore magna aliqua",
+            "created_at": "2016-03-01 08:19:40.000",
+            "updated_at": "2016-03-01 08:19:40.000",
+            "icon": "glyphicon glyphicon-book",
+            "reqxs": [
+                {
+                    "reqx_id": "LSIP200010030",
+                    "reqx_title": "Dolore magna aliqua",
+                    "reqx_type": "PR",
+                    "pivot": {
+                        "doc_db_id": "218",
+                        "reqx_id": "LSIP200010030"
+                    }
+                }
+            ],
+            "boxcars": [
+                {
+                    "boxcar_id": "LSIP200001595",
+                    "boxcar_name": "Dolore magna aliqua",
+                    "pivot": {
+                        "doc_db_id": "218",
+                        "boxcar_id": "LSIP200001595"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "342",
+            "type": "archdoc",
+            "doc_filename": "abc.xml",
+            "doc_type": "architecture_requirement",
+            "doc_description": "Architecture Requirements",
+            "doc_number": "263-00985",
+            "doc_revision": "B.2",
+            "doc_save_date": "5/01/2014",
+            "doc_keyword": "abc",
+            "doc_variation_logical_expr": "",
+            "doc_id": "2010-12-01T21:22:00Z-5305-30245-IDA1JNSD",
+            "doc_title": "Architecture Requirement",
+            "created_at": "2016-03-01 08:19:58.000",
+            "updated_at": "2016-03-01 08:19:58.000",
+            "icon": "glyphicon glyphicon-book",
+            "reqxs": [
+                {
+                    "reqx_id": "LSIP200052464",
+                    "reqx_title": "Consectetur adipiscing elit",
+                    "reqx_type": "PR",
+                    "pivot": {
+                        "doc_db_id": "342",
+                        "reqx_id": "LSIP200052464"
+                    }
+                }
+            ],
+            "boxcars": [
+                {
+                    "boxcar_id": "LSIP200482017",
+                    "boxcar_name": "Dolore magnam",
+                    "pivot": {
+                        "doc_db_id": "342",
+                        "boxcar_id": "LSIP200482017"
+                    }
+                }
+            ]
+        }
+    ]
+}

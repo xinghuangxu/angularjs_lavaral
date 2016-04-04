@@ -29,6 +29,19 @@ class TestStrategysController extends Controller {
      */
     public function index(Request $request) {
 
+        /*
+         *
+         * the following 6 lines should be disabled in production to hit the right service
+         *
+         */
+        if ($request->input('type') == 'c'){
+            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.strategies2.json");
+        }else{
+            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.strategies.json");
+        }
+        return $data;
+
+
         // Return subset of fields or all details
         $fieldsParam = $request->input('fields');
         $getFilter = "*";
@@ -236,6 +249,16 @@ class TestStrategysController extends Controller {
      * @return Ambigous <\Illuminate\Database\Eloquent\Model, \Illuminate\Database\Eloquent\Collection>
      */
     public function show($id) {
+
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.strategies_details.json");
+        return $data;
+        
 
         $testStrategy = TestStrategy::with('tagsQualArea', 'tagsImpactArea', 'tagsTestApproach')
                             ->with(TestStrategy::strategyRequirements())

@@ -30,6 +30,16 @@ class TestplanStrategyController extends Controller {
      * @return Response
      */
     public function index(Request $request, $testplan_id) {
+
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.testplans.id.teststrategies.json");
+        return $data;
+        
         $testplan = TestPlan::findOrFail($testplan_id);
         $result = $testplan->teststrategies()->with(
                 'tagsQualArea',
