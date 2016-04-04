@@ -3,9 +3,9 @@
  */
 (function(){
     'use strict';
-    angular.module('highLevelScope').controller('HLSCtrl',HLSCtrl);
-    HLSCtrl.$inject=[];
-    function HLSCtrl(){
+    angular.module('highLevelScope').controller('highLevelScopeController',highLevelScopeController);
+    highLevelScopeController.$inject=[];
+    function highLevelScopeController(){
 
 
 

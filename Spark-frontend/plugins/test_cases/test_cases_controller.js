@@ -3,9 +3,9 @@
  */
 (function(){
     'use strict';
-    angular.module('testCases').controller('TCCtrl',TCCtrl);
-    TCCtrl.$inject=[];
-    function TCCtrl(){
+    angular.module('testCases').controller('testCasesController',testCasesController);
+    testCasesController.$inject=[];
+    function testCasesController(){
         var TCCtrl= this;
         TCCtrl.example_tree = [{
             "id": 1,

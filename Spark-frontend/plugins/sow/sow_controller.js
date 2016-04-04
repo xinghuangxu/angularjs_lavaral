@@ -3,9 +3,9 @@
  */
 (function(){
     'use strict';
-    angular.module('sow').controller('SOWCtrl',SOWCtrl);
-    SOWCtrl.$inject=[];
-    function SOWCtrl(){
+    angular.module('sow').controller('sowController',sowController);
+    sowController.$inject=[];
+    function sowController(){
 
 
 

@@ -3,9 +3,9 @@
  */
 (function(){
     'use strict';
-    angular.module('rally').controller('RCtrl',RCtrl);
-    RCtrl.$inject=[];
-    function RCtrl(){
+    angular.module('rally').controller('rallyController',rallyController);
+    rallyController.$inject=[];
+    function rallyController(){
 
 
 
