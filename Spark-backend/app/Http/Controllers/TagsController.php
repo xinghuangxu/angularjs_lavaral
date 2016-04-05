@@ -33,6 +33,15 @@ class TagsController extends Controller {
      * @return Response
      */
     public function getQualAreas(Request $request) {
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.qual-areas.json");
+        return $data;
+
         $tagType = "Root\Default\Qualification Areas%";
 
         $query = $this->getTags($request, $tagType);
@@ -47,6 +56,15 @@ class TagsController extends Controller {
      * @return Response
      */
     public function getImpactAreas(Request $request) {
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.impact-areas.json");
+        return $data;
+
         $tagType = "Root\Feature%";
 
         $query = $this->getTags($request, $tagType);
@@ -61,6 +79,15 @@ class TagsController extends Controller {
      * @return Response
      */
     public function getTestStrategyApproaches(Request $request) {
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.test-approaches.json");
+        return $data;
+
         $tagType = "Root\Default\Test Strategy Approach%";
 
         $query = $this->getTags($request, $tagType);

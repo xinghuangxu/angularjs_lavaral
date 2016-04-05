@@ -1,0 +1,307 @@
+[
+    {
+        "StrategyID": "746",
+        "StrategyHeadline": "Sed do eiusmod tempor incididunt ut labor",
+        "State": "Approved",
+        "Owner": "xyzuser",
+        "ModifiedDate": "2013-10-18 11:06:50.000",
+        "tags_qual_area": [
+            {
+                "CategoryID": "7",
+                "CategoryName": "Error handling and recovery",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "746",
+                    "CategoryID": "7"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "226",
+                "CategoryName": "Global",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "746",
+                    "CategoryID": "226"
+                }
+            }
+        ],
+        "tags_test_approach": []
+    },
+    {
+        "StrategyID": "799",
+        "StrategyHeadline": "Fuzz testing aka. Fuzzing",
+        "State": "Approved",
+        "Owner": "xyzuser",
+        "ModifiedDate": "2013-11-20 03:15:15.000",
+        "tags_qual_area": [
+            {
+                "CategoryID": "601",
+                "CategoryName": "Security and Vulnerability",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "799",
+                    "CategoryID": "601"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "226",
+                "CategoryName": "Global",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "799",
+                    "CategoryID": "226"
+                }
+            }
+        ],
+        "tags_test_approach": []
+    },
+    {
+        "StrategyID": "800",
+        "StrategyHeadline": "Static Vulnerability Analysis",
+        "State": "Approved",
+        "Owner": "xyzuser",
+        "ModifiedDate": "2014-04-27 04:13:10.000",
+        "tags_qual_area": [
+            {
+                "CategoryID": "601",
+                "CategoryName": "Security and Vulnerability",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "800",
+                    "CategoryID": "601"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "226",
+                "CategoryName": "Global",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "800",
+                    "CategoryID": "226"
+                }
+            }
+        ],
+        "tags_test_approach": []
+    },
+    {
+        "StrategyID": "1543",
+        "StrategyHeadline": "Usability",
+        "State": "Approved",
+        "Owner": "xyzuser",
+        "ModifiedDate": "2014-04-25 02:28:50.000",
+        "tags_qual_area": [
+            {
+                "CategoryID": "11",
+                "CategoryName": "Usability",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "1543",
+                    "CategoryID": "11"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "191",
+                "CategoryName": "Installer",
+                "CategoryPath": "Root\\Feature\\Management SW",
+                "CategoryFatherID": "185",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "1543",
+                    "CategoryID": "191"
+                }
+            },
+            {
+                "CategoryID": "208",
+                "CategoryName": "Plug-in",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "1543",
+                    "CategoryID": "208"
+                }
+            }
+        ],
+        "tags_test_approach": []
+    },
+    {
+        "StrategyID": "1544",
+        "StrategyHeadline": "Regression: Firmware",
+        "State": "Approved",
+        "Owner": "abcuser",
+        "ModifiedDate": "2014-01-17 02:05:38.000",
+        "tags_qual_area": [
+            {
+                "CategoryID": "6",
+                "CategoryName": "Operational behavior",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "1544",
+                    "CategoryID": "6"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "214",
+                "CategoryName": "vCenter",
+                "CategoryPath": "Root\\Feature\\Plug-in\\VMWARE",
+                "CategoryFatherID": "213",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "1544",
+                    "CategoryID": "214"
+                }
+            },
+            {
+                "CategoryID": "226",
+                "CategoryName": "Global",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "1544",
+                    "CategoryID": "226"
+                }
+            }
+        ],
+        "tags_test_approach": []
+    },
+    {
+        "StrategyID": "1545",
+        "StrategyHeadline": "Regression: Platform",
+        "State": "Approved",
+        "Owner": "abcuser",
+        "ModifiedDate": "2014-01-15 08:38:03.000",
+        "tags_qual_area": [
+            {
+                "CategoryID": "6",
+                "CategoryName": "Operational behavior",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "1545",
+                    "CategoryID": "6"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "214",
+                "CategoryName": "vCenter",
+                "CategoryPath": "Root\\Feature\\Plug-in\\VMWARE",
+                "CategoryFatherID": "213",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "1545",
+                    "CategoryID": "214"
+                }
+            },
+            {
+                "CategoryID": "226",
+                "CategoryName": "Global",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "1545",
+                    "CategoryID": "226"
+                }
+            }
+        ],
+        "tags_test_approach": []
+    },
+    {
+        "StrategyID": "2335",
+        "StrategyHeadline": "considerations dolor in reprehender",
+        "State": "Approved",
+        "Owner": "abcuser",
+        "ModifiedDate": "2014-06-24 12:08:01.000",
+        "tags_qual_area": [
+            {
+                "CategoryID": "6",
+                "CategoryName": "Operational behavior",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "2335",
+                    "CategoryID": "6"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "24",
+                "CategoryName": "CFW",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "2335",
+                    "CategoryID": "24"
+                }
+            }
+        ],
+        "tags_test_approach": []
+    },
+    {
+        "StrategyID": "4028",
+        "StrategyHeadline": "Core Stress: L1-L3",
+        "State": "Approved",
+        "Owner": "bernardc",
+        "ModifiedDate": "2015-05-14 10:58:08.000",
+        "tags_qual_area": [
+            {
+                "CategoryID": "7",
+                "CategoryName": "Error handling and recovery",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "4028",
+                    "CategoryID": "7"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "24",
+                "CategoryName": "CFW",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "4028",
+                    "CategoryID": "24"
+                }
+            }
+        ],
+        "tags_test_approach": []
+    }
+]

@@ -75,6 +75,15 @@ class TestCasesByFolderController extends Controller {
      * @return ALM TestCasesByFolder List
      */
     public function show($almDatabase, $folderId) {
+        /*
+         *
+         * the following line should be diabled in production to hit the right service
+         *
+         */
+
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json");
+        return $data;
+
         return $this->getALMTestCasesByFolderJson($almDatabase, $folderId);
     }
 
