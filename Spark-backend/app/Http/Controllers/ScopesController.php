@@ -29,7 +29,7 @@ class ScopesController extends Controller {
 
         $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.scopes.json");
         return $data;
-        
+
         // Fields parameter
         $fieldsParam = $request->input('fields');
 

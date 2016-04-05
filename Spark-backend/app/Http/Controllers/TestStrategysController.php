@@ -258,7 +258,7 @@ class TestStrategysController extends Controller {
 
         $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.strategies_details.json");
         return $data;
-        
+
 
         $testStrategy = TestStrategy::with('tagsQualArea', 'tagsImpactArea', 'tagsTestApproach')
                             ->with(TestStrategy::strategyRequirements())

@@ -39,7 +39,7 @@ class TestplanStrategyController extends Controller {
 
         $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.testplans.id.teststrategies.json");
         return $data;
-        
+
         $testplan = TestPlan::findOrFail($testplan_id);
         $result = $testplan->teststrategies()->with(
                 'tagsQualArea',

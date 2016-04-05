@@ -29,7 +29,7 @@ class StacksController extends Controller {
 
         $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.stacks.json");
         return $data;
-        
+
         $fields = $request->input('fields');
         $release = $request->input('release');
 

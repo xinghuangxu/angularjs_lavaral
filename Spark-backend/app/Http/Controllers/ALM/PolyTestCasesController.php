@@ -33,7 +33,7 @@ class PolyTestCasesController extends Controller {
 
         $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-resget-rest.alm.testCases.json");
         return $data;
-        
+
         // Fields parameter
         $fieldsParam = $request->input('fields');
 
