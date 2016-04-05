@@ -18,4 +18,8 @@ if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
     return false;
 }
 
+if (strpos($uri, 'rest') === false){
 require_once __DIR__.'/public/index.html';
+} else {
+require_once __DIR__.'/index.php';
+}

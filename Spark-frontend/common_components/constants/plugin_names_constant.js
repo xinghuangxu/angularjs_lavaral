@@ -8,7 +8,7 @@
 
         "reference_documents": {
             templateUrl: 'plugins/reference_documents/reference_documents.html',
-            controller: 'referenceDocumentsController as RDCtrl'
+            controller: 'referenceDocumentsController as RDCtrl',
 
         },
         "boxcar": {
@@ -53,17 +53,18 @@
         },
         "test_cases": {
             templateUrl: 'plugins/test_cases/test_cases.html',
-            controller: 'testCasesController as TCCtrl'
+            controller: 'testCasesController as TCCtrl',
 
         },"test_plan": {
             templateUrl: 'plugins/test_plan/test_plan.html',
             controller: 'testPlanController as TPCtrl'
-
         },
         "web_lab": {
             templateUrl: 'plugins/web_lab/web_lab.html',
             controller: 'webLabController as WLCtrl'
-
+        },
+        "plugins_config": {
+            endpointServer: 'http://localhost:8000'
         }
 
 

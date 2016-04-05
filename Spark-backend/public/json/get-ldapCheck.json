@@ -1,0 +1,11 @@
+{
+    "Username": "xyzuser",
+    "Fullname": "XYZ User",
+    "IsActive": "1",
+    "CreatedBy": "system",
+    "CreatedDate": "2016-01-29 15:13:30",
+    "Roles": [
+        "QA_Eng",
+        "QA_Rev"
+    ]
+}

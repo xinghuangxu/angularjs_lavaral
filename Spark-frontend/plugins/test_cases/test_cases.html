@@ -11,10 +11,60 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
+        <!-- Starting Multi tab -->
 
-        <js-tree  tree-data="controllerAs"
-                  tree-controller-as="TCCtrl"
-                  tree-model="example_tree"></js-tree>
+
+        <div class="box box-default collapsed-box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Suggested Test Cases</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                Coming Soon!
+            </div>
+            <!-- /.box-body -->
+        </div>
+
+        <div class="box box-default collapsed-box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Browse Test Cases</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" ng-click="TCCtrl.loadTreeData()">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <spark-jstree ng-model="TCCtrl.tree"></spark-jstree>
+            </div>
+            <!-- /.box-body -->
+        </div>
+
+        <div class="box box-default collapsed-box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Search</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                Search Should be Implemented Here
+            </div>
+            <!-- /.box-body -->
+        </div>
     </div>
     <!-- /.box-body -->
     <div style="display:none;" class="overlay">

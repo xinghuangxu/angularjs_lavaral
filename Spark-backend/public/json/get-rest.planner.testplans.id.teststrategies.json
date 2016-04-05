@@ -1,0 +1,474 @@
+[
+    {
+        "StrategyID": "110",
+        "TopicID": "T-2013-07-26T09:26:11-2TLLPZAAAA",
+        "TopicRev": "0",
+        "TopicRevComments": "Initial\n Test Strategry",
+        "State": "Approved",
+        "CreatedBy": "abcuser",
+        "CreatedDate": "2013-07-26 10:41:36.000",
+        "ModifiedBy": "abcuser",
+        "ModifiedDate": "2013-07-30 04:46:10.000",
+        "StrategyHeadline": "Duis aute irure dolor in reprehenderit",
+        "TestStrategy": "Vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni.\n Dolores eos qui ratione voluptatem sequi nesciunt\n",
+        "Owner": "abcuser",
+        "Approach": "Functional",
+        "Goal": null,
+        "IsActive": "1",
+        "VariationPoint": "Original",
+        "VariationOf": "T-2013-07-26T09:26\n:11-2TLLPZAAAA",
+        "RevisionOf": null,
+        "Type": "G",
+        "pivot": {
+            "testplan_id": "2",
+            "StrategyID": "110",
+            "created_at": "2015-12-18 09:25:55.000",
+            "updated_at": "2015-12-18 09:25:55.000"
+        },
+        "tags_qual_area": [
+            {
+                "CategoryID": "6",
+                "CategoryName": "Operational behavior",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "110",
+                    "CategoryID": "6"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "24",
+                "CategoryName": "CFW",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "110",
+                    "CategoryID": "24"
+                }
+            }
+        ],
+        "tags_test_approach": [],
+        "adhocs": [],
+        "archdocs": [],
+        "defects": [],
+        "enhreqs": [],
+        "implrequests": [],
+        "prs": [],
+        "rccas": []
+    },
+    {
+        "StrategyID": "58",
+        "TopicID": "T-XXXX-XXXX-XXXX-XXXX-2013-05-13T08\n:37:49-VQI4AAAA",
+        "TopicRev": "0",
+        "TopicRevComments": null,
+        "State": "Assigned",
+        "CreatedBy": null,
+        "CreatedDate": "2013-06-13 08:37:49.000",
+        "ModifiedBy": "pqruser",
+        "ModifiedDate": "2016-01-14 11:48:48.000",
+        "StrategyHeadline": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "TestStrategy": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Owner": "pqruser",
+        "Approach": "Functional",
+        "Goal": "I\n have changed the Goal, again!",
+        "IsActive": "1",
+        "VariationPoint": "Original",
+        "VariationOf": "T-XXXX-XXXX-XXXX-XXXX-2013-05-13T08\n:37:49-VQI4FGVI",
+        "RevisionOf": null,
+        "Type": "G",
+        "pivot": {
+            "testplan_id": "2",
+            "StrategyID": "58",
+            "created_at": "2016-01-12 07:16:17.000",
+            "updated_at": "2016-01-12 07:16:17.000"
+        },
+        "tags_qual_area": [
+            {
+                "CategoryID": "6",
+                "CategoryName": "Operational behavior",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "58",
+                    "CategoryID": "6"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "26",
+                "CategoryName": "Offload Data Transfer - ODX",
+                "CategoryPath": "Root\\Feature\\CFW\\Compliant",
+                "CategoryFatherID": "25",
+                "IsActive": "0",
+                "pivot": {
+                    "StrategyID": "58",
+                    "CategoryID": "26"
+                }
+            },
+            {
+                "CategoryID": "605",
+                "CategoryName": "Cloud",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "0",
+                "pivot": {
+                    "StrategyID": "58",
+                    "CategoryID": "605"
+                }
+            }
+        ],
+        "tags_test_approach": [
+            {
+                "CategoryID": "779",
+                "CategoryName": "Functional",
+                "CategoryPath": "Root\\Default\\Test Strategy Approach",
+                "CategoryFatherID": "777",
+                "IsActive": null,
+                "pivot": {
+                    "StrategyID": "58",
+                    "CategoryID": "779"
+                }
+            }
+        ],
+        "adhocs": [],
+        "archdocs": [],
+        "defects": [],
+        "enhreqs": [],
+        "implrequests": [],
+        "prs": [],
+        "rccas": []
+    },
+    {
+        "StrategyID": "800",
+        "TopicID": "T-2013-10-22T09:21:41-P0GHZOAAAA",
+        "TopicRev": "0",
+        "TopicRevComments": "New Test Strategy created.",
+        "State": "Approved",
+        "CreatedBy": "abcuser",
+        "CreatedDate": "2013-10-22 09\n:24:12.000",
+        "ModifiedBy": "abcuser",
+        "ModifiedDate": "2014-04-27 04:13:10.000",
+        "StrategyHeadline": "Neque porro quisquam est",
+        "TestStrategy": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Owner": "abcuser",
+        "Approach": "Unit test",
+        "Goal": " Neque porro quisquam est during development phase",
+        "IsActive": "1",
+        "VariationPoint": "Original",
+        "VariationOf": "T-2013-10-22T09\n:21:41-P0GHZOAAAA",
+        "RevisionOf": "",
+        "Type": "C",
+        "pivot": {
+            "testplan_id": "2",
+            "StrategyID": "800",
+            "created_at": "2016-01-13 05:39:08.000",
+            "updated_at": "2016-01-13 05:39:08.000"
+        },
+        "tags_qual_area": [
+            {
+                "CategoryID": "601",
+                "CategoryName": "Security and Vulnerability",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "800",
+                    "CategoryID": "601"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "226",
+                "CategoryName": "Global",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "800",
+                    "CategoryID": "226"
+                }
+            }
+        ],
+        "tags_test_approach": [],
+        "adhocs": [],
+        "archdocs": [],
+        "defects": [],
+        "enhreqs": [],
+        "implrequests": [],
+        "prs": [],
+        "rccas": []
+    },
+    {
+        "StrategyID": "139",
+        "TopicID": "T-2013-07-30T10\n:47:44-VBVK1BAAAA",
+        "TopicRev": "0",
+        "TopicRevComments": "Initial Test Strategry",
+        "State": "Approved",
+        "CreatedBy": "abcuser",
+        "CreatedDate": "2013-07-30 10:48:05.000",
+        "ModifiedBy": "pqruseruser",
+        "ModifiedDate": "2013-12-02 04\n:27:55.000",
+        "StrategyHeadline": "Placeholder:Operational behavior",
+        "TestStrategy": " ",
+        "Owner": "abcuser",
+        "Approach": "Functional",
+        "Goal": " ",
+        "IsActive": "1",
+        "VariationPoint": "Original",
+        "VariationOf": "T-2013-07-30T10\n:47:44-VBVK1BAAAA",
+        "RevisionOf": null,
+        "Type": "P",
+        "pivot": {
+            "testplan_id": "2",
+            "StrategyID": "139",
+            "created_at": "2016-01-13 05:39:35.000",
+            "updated_at": "2016-01-13 05:39:35.000"
+        },
+        "tags_qual_area": [
+            {
+                "CategoryID": "6",
+                "CategoryName": "Operational behavior",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "139",
+                    "CategoryID": "6"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "226",
+                "CategoryName": "Global",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "139",
+                    "CategoryID": "226"
+                }
+            }
+        ],
+        "tags_test_approach": [],
+        "adhocs": [],
+        "archdocs": [],
+        "defects": [],
+        "enhreqs": [],
+        "implrequests": [],
+        "prs": [],
+        "rccas": []
+    },
+    {
+        "StrategyID": "4028",
+        "TopicID": "T-2015-05-14T09\n:26:57-C0X0USAAAA",
+        "TopicRev": "0",
+        "TopicRevComments": "New Test Strategy created.",
+        "State": "Approved",
+        "CreatedBy": "abcuser",
+        "CreatedDate": "2015-05-14 10:51:28.000",
+        "ModifiedBy": "abcuser",
+        "ModifiedDate": "2015-05-14 10:58:08.000",
+        "StrategyHeadline": "Dolore magna aliqua",
+        "TestStrategy": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+        "Owner": "abcuser",
+        "Approach": "Stress",
+        "Goal": "ensure it is working fine",
+        "IsActive": "1",
+        "VariationPoint": "Original",
+        "VariationOf": "T-2015-05-14T09\n:26:57-C0X0USAAAA",
+        "RevisionOf": "",
+        "Type": "C",
+        "pivot": {
+            "testplan_id": "2",
+            "StrategyID": "4028",
+            "created_at": "2016-01-13 05:41:27.000",
+            "updated_at": "2016-01-13 05:41:27.000"
+        },
+        "tags_qual_area": [
+            {
+                "CategoryID": "7",
+                "CategoryName": "Error handling and recovery",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "4028",
+                    "CategoryID": "7"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "24",
+                "CategoryName": "CFW",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "4028",
+                    "CategoryID": "24"
+                }
+            }
+        ],
+        "tags_test_approach": [],
+        "adhocs": [],
+        "archdocs": [],
+        "defects": [],
+        "enhreqs": [],
+        "implrequests": [],
+        "prs": [],
+        "rccas": []
+    },
+    {
+        "StrategyID": "4743",
+        "TopicID": "T-2016-01-14T16\n:00:54-VYZQFDAAAA",
+        "TopicRev": "0",
+        "TopicRevComments": "New Test Strategy created.",
+        "State": "Assigned",
+        "CreatedBy": "efguser",
+        "CreatedDate": "2016-01-14 04:00:54.000",
+        "ModifiedBy": "efguser",
+        "ModifiedDate": "2016-01-15 11:24:19.000",
+        "StrategyHeadline": "mollit anim id est laborum",
+        "TestStrategy": "Strategy description\n<div>Even more Description</div>",
+        "Owner": "efguser",
+        "Approach": null,
+        "Goal": "A goal?",
+        "IsActive": "1",
+        "VariationPoint": "Original",
+        "VariationOf": "T-2016-01-14T16:00:54-VYZQFDAAAA",
+        "RevisionOf": null,
+        "Type": "G",
+        "pivot": {
+            "testplan_id": "2",
+            "StrategyID": "4743",
+            "created_at": "2016-01-14 04:06:01.000",
+            "updated_at": "2016-01-14 04:06:01.000"
+        },
+        "tags_qual_area": [
+            {
+                "CategoryID": "11",
+                "CategoryName": "Usability",
+                "CategoryPath": "Root\\Default\\Qualification Areas",
+                "CategoryFatherID": "5",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "4743",
+                    "CategoryID": "11"
+                }
+            }
+        ],
+        "tags_impact_area": [
+            {
+                "CategoryID": "221",
+                "CategoryName": "SDK",
+                "CategoryPath": "Root\n\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "4743",
+                    "CategoryID": "221"
+                }
+            },
+            {
+                "CategoryID": "224",
+                "CategoryName": "Utility",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "1",
+                "pivot": {
+                    "StrategyID": "4743",
+                    "CategoryID": "224"
+                }
+            },
+            {
+                "CategoryID": "605",
+                "CategoryName": "Cloud",
+                "CategoryPath": "Root\\Feature",
+                "CategoryFatherID": "17",
+                "IsActive": "0",
+                "pivot": {
+                    "StrategyID": "4743",
+                    "CategoryID": "605"
+                }
+            }
+        ],
+        "tags_test_approach": [
+            {
+                "CategoryID": "779",
+                "CategoryName": "Functional",
+                "CategoryPath": "Root\\Default\n\\Test Strategy Approach",
+                "CategoryFatherID": "777",
+                "IsActive": null,
+                "pivot": {
+                    "StrategyID": "4743",
+                    "CategoryID": "779"
+                }
+            }
+        ],
+        "adhocs": [],
+        "archdocs": [
+            {
+                "ID": "9669",
+                "DocFilename": "AAAA.xml",
+                "DocType": "overview",
+                "DocDescription": "",
+                "DocNumber": "53640-00",
+                "DocRevision": "A.1",
+                "DocSaveDate": "11/08/2011",
+                "DocKeyword": "DUPPhase1",
+                "DocVariationLogicalExpr": "DUPPhase1",
+                "DocumentID": "2011-10-28T21:42:00Z-273-1560-IDAVAAAA",
+                "DocTitle": "Overview",
+                "TopicID": null,
+                "TopicName": null,
+                "TopicRevision": null,
+                "VariationType": null,
+                "LogicalExpr": null,
+                "pivot": {
+                    "StrategyID": "4743",
+                    "strategizable_id": "9669",
+                    "created_at": "2016-01-14 04:00:54.000",
+                    "updated_at": "2016-01-14 04:00:54.000"
+                }
+            },
+            {
+                "ID": "9700",
+                "DocFilename": "AAAA.xml",
+                "DocType": "overview",
+                "DocDescription": "",
+                "DocNumber": "50107-00",
+                "DocRevision": "A.1",
+                "DocSaveDate": "1/26/2011",
+                "DocKeyword": "YY Support",
+                "DocVariationLogicalExpr": "",
+                "DocumentID": "2010-12-20T20:07:00Z-693-3955-IDAG5AAA",
+                "DocTitle": "Native YY Support",
+                "TopicID": null,
+                "TopicName": null,
+                "TopicRevision": null,
+                "VariationType": null,
+                "LogicalExpr": null,
+                "pivot": {
+                    "StrategyID": "4743",
+                    "strategizable_id": "9700",
+                    "created_at": "2016-01-14\n 04:00:54.000",
+                    "updated_at": "2016-01-14 04:00:54.000"
+                }
+            }
+        ],
+        "defects": [],
+        "enhreqs": [],
+        "implrequests": [],
+        "prs": [],
+        "rccas": []
+    }
+]
