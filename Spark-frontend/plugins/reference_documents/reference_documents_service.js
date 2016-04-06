@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    
+
     angular
         .module('referenceDocuments')
         .service('referenceDocumentsService',referenceDocumentsService);
