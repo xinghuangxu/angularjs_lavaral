@@ -1,0 +1,81 @@
+<div class="box box-primary box-solid box-plugin">
+    <div class="box-header with-border">
+        <h3 class="box-title">Strategy Editor</h3>
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="remove" ng-click="TSMCtrl.editor_is_active=false"><i class="fa fa-times"></i></button>
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+    <form class="form-horizontal">
+        <div class="box-body">
+            <div class="form-group margin-b-8  text-sm">
+                <label for="headline" class="col-sm-4 control-label align-left align-left">Headline</label>
+
+                <div class="col-sm-8 pad-l-0">
+                    <input type="text"  class="form-control form-control-sm text-sm" id="headline" placeholder="Headline">
+                </div>
+            </div>
+            <div class="form-group  margin-b-8 text-sm">
+                <label for="impact_area" class="pad-r-0 col-sm-4 control-label align-left align-left">Impact Area</label>
+
+                <div class="col-sm-8 pad-l-0">
+                    <input type="text"  class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">
+                </div>
+            </div>
+            <div class="form-group margin-b-8 text-sm">
+                <label for="qual_area" class="pad-r-0 col-sm-4 control-label align-left">Qlt. Area</label>
+
+                <div class="col-sm-2 pad-l-0 pad-r-0">
+                    <input type="text"  class="form-control form-control-sm text-sm" id="qual_area" placeholder="Qlt. Area">
+                </div>
+
+                <label for="approach" class="col-sm-4 control-label align-left">Approach</label>
+
+                <div class="col-sm-2 pad-l-0">
+                    <input type="text"  class="form-control form-control-sm text-sm" id="approach" placeholder="Approach">
+                </div>
+            </div>
+            <div class="form-group margin-b-8 text-sm">
+                <label for="strategy_goal" class="col-sm-4 control-label align-left">Goal</label>
+
+                <div class="col-sm-8 pad-l-0">
+                    <input type="text"  class="form-control form-control-sm text-sm" id="strategy_goal" placeholder="Strategy Goal">
+                </div>
+            </div>
+            <div class="form-group margin-b-8">
+                <div class="col-md-12">
+                    <div class="nav-tabs-custom margin-b-8">
+                        <ul class="nav nav-tabs">
+
+                            <li ng-class="{active:strategyEditorCtlr.isTabActive('test_strategy')}"><a data-target="#desc" role="tab" data-toggle="tab" class="text-sm pad-l-r-6"
+                                                                                                       ng-click="strategyEditorCtlr.changeLeftPlugin('tsm_base_template.tsm_partials.tsm.test_strategy')"aria-expanded="false">Desc.</a></li>
+                            <li ng-class="{active: strategyEditorCtlr.isTabActive('reference_documents')}"><a href="" class="text-sm pad-l-r-6" data-target="#ref" role="tab" data-toggle="tab"
+                                                                                                              ng-click="strategyEditorCtlr.changeLeftPlugin('tsm_base_template.tsm_partials.tsm.reference_documents')" aria-expanded="false">Ref.</a></li>
+                            <li ng-class="{active: strategyEditorCtlr.isTabActive('test_cases')}"><a href="" class="text-sm pad-l-r-6" data-target="#test_cases" role="tab" data-toggle="tab"
+                                                                                                     ng-click="strategyEditorCtlr.changeLeftPlugin('tsm_base_template.tsm_partials.tsm.test_cases')" aria-expanded="true">Test Cases</a></li>
+                            <li class=""><a href="" class="text-sm pad-l-r-6" data-target="#assoc" role="tab"  data-toggle="tab" aria-expanded="true">Assoc.</a></li>
+                        </ul>
+                        <div class="tab-content fixed-height">
+                            <div ng-class="{active:strategyEditorCtlr.isTabActive('test_strategy')}" class="tab-pane description-tab" id="desc" ng-include="'test_strategy_manager/panels/editor/tabs/desc.html'">
+                            </div>
+                        </div>
+                        <!-- /.tab-content -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            <button type="submit"  class="btn btn-default btn-sm">Clear</button>
+            <button type="submit"  class="btn btn-primary pull-right btn-sm">Save
+                <i class="fa fa-floppy-o"></i></button>
+        </div>
+
+        <!-- /.box-footer -->
+    </form>
+</div>
+
+
+

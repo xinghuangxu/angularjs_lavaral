@@ -1,0 +1,73 @@
+<div class="box box-primary box-solid box-plugin">
+    <div class="box-header with-border">
+        <h3 class="box-title">Strategy Viewer</h3>
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="remove" ng-click="TSMCtrl.viewer_is_active=false"><i class="fa fa-times"></i></button>
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+    <form class="form-horizontal">
+        <div class="box-body">
+            <div class="form-group  text-sm margin-b-8">
+                <label for="headline" class="col-sm-4 control-label align-left align-left">Headline</label>
+
+                <div class="col-sm-8 pad-l-0">
+                    <input type="text" disabled class="form-control form-control-sm text-sm" id="headline" placeholder="Headline">
+                </div>
+            </div>
+            <div class="form-group text-sm margin-b-8">
+                <label for="impact_area" class="pad-r-0 col-sm-4 control-label align-left align-left">Impact Area</label>
+
+                <div class="col-sm-8 pad-l-0">
+                    <input type="text" disabled class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">
+                </div>
+            </div>
+            <div class="form-group text-sm margin-b-8">
+                <label for="qual_area" class="pad-r-0 col-sm-4 control-label align-left">Qlt. Area</label>
+
+                <div class="col-sm-2 pad-l-0 pad-r-0">
+                    <input type="text" disabled class="form-control form-control-sm text-sm" id="qual_area" placeholder="Qlt. Area">
+                </div>
+
+                <label for="approach" class="col-sm-4 control-label align-left">Approach</label>
+
+                <div class="col-sm-2 pad-l-0">
+                    <input type="text" disabled class="form-control form-control-sm text-sm" id="approach" placeholder="Approach">
+                </div>
+            </div>
+            <div class="form-group text-sm margin-b-8"">
+                <label for="strategy_goal" class="col-sm-4 control-label align-left">Goal</label>
+
+                <div class="col-sm-8 pad-l-0">
+                    <input type="text" disabled class="form-control form-control-sm text-sm" id="strategy_goal" placeholder="Strategy Goal">
+                </div>
+            </div>
+            <div class="form-group margin-b-8"">
+                <div class="col-md-12">
+                    <div class="nav-tabs-custom">
+                        <ul class="nav nav-tabs">
+                            <li ><a href="" data-toggle="tab" class="text-sm pad-l-r-6" aria-expanded="false">Desc.</a></li>
+                            <li><a href="" data-toggle="tab" class="text-sm pad-l-r-6" aria-expanded="false">Require.</a></li>
+                            <li><a href="" data-toggle="tab" class="text-sm pad-l-r-6" aria-expanded="true">Test Cases</a></li>
+                            <li class=""><a href="" data-toggle="tab" class="text-sm pad-l-r-6" aria-expanded="true">Assoc.</a></li>
+                        </ul>
+                        <div class="tab-content fixed-height">
+
+                        </div>
+                        <!-- /.tab-content -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            <button type="submit" disabled class="btn btn-default btn-sm">Clear</button>
+            <button type="submit" disabled class="btn btn-primary pull-right btn-sm">Save
+                <i class="fa fa-floppy-o"></i></button>
+        </div>
+
+        <!-- /.box-footer -->
+    </form>
+</div>
