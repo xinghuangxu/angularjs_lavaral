@@ -93,7 +93,9 @@ module.exports = function (grunt) {
     copy: {
         temp:{
             files: [
-                {src: ['planner/assets/css/**'], dest: 'temp/'},
+                {src: ['spark/assets/css/**'], dest: 'temp/'},
+                {src: ['spark/assets/js/js-tree/themes/default/**'], dest: 'temp/'},
+                {src: ['..Spark-backend/public/json/**'], dest: 'temp/'},
                 {src: ['bower_components/bootstrap/**'], dest: 'temp/'},
                 {src: ['bower_components/font-awesome/**'], dest: 'temp/'}
                 //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: '../Spark-backend/public/'},
@@ -104,8 +106,9 @@ module.exports = function (grunt) {
         },
       dist: {
         files: [
-          {src: ['planner/assets/css/images/**'], dest: '../Spark-backend/public/images',expand:true,flatten:true},
-          {src: ['bower_components/font-awesome/fonts/**','planner/assets/css/fonts/**'], dest: '../Spark-backend/public/fonts',expand:true,flatten:true}
+          {src: ['temp/json/**'], dest: '../Spark-backend/public/json'},
+          {src: ['planner/assets/css/images/**','spark/assets/js/js-tree/themes/default/images/**'], dest: '../Spark-backend/public/images',expand:true,flatten:true},
+          {src: ['bower_components/font-awesome/fonts/**','bower_components/bootstrap/fonts/**','planner/assets/css/fonts/**'], dest: '../Spark-backend/public/fonts',expand:true,flatten:true}
 
           //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: '../Spark-backend/public/'},
           //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'../Spark-backend/public/css/',flatten:true,expand:true},
