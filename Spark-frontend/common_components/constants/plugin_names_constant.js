@@ -58,7 +58,6 @@
         },"test_plan": {
             templateUrl: 'plugins/test_plan/test_plan.html',
             controller: 'testPlanController as TPCtrl'
-
         },
         "web_lab": {
             templateUrl: 'plugins/web_lab/web_lab.html',
@@ -67,6 +66,11 @@
         "test_strategy":{
             templateUrl: 'plugins/test_strategy/test_strategy.html',
             controller: 'testStrategyController as TSCtrl'
+        },
+        "plugins_config": {
+            // endpointServer: location.protocol+'//'+location.host
+            // Uncomment following line to get the data from your local server
+            endpointServer: 'http://localhost:8000'
         }
 
 
