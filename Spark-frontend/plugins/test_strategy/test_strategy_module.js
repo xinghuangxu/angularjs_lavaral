@@ -2,7 +2,8 @@
     'use strict';
     angular.module('testStrategy',[
         'mgcrea.ngStrap',
-        'ngAnimate'
+        'ngAnimate',
+        'jsTree.directive'
     ]);
 
 })();

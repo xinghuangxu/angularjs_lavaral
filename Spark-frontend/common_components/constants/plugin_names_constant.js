@@ -68,6 +68,10 @@
             templateUrl: 'plugins/web_lab/web_lab.html',
             controller: 'webLabController as WLCtrl'
         },
+        "test_strategy":{
+            templateUrl: 'plugins/test_strategy/test_strategy.html',
+            controller: 'testStrategyController as TSCtrl'
+        },
         "plugins_config": {
             // endpointServer: location.protocol+'//'+location.host
             // Uncomment following line to get the data from your local server

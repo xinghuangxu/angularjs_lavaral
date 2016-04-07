@@ -3,11 +3,15 @@
  */
 (function(){
     'use strict';
-    angular.module('testStrategy').controller('testStrategyController',testStrategyController);
-    testStrategyController.$inject=[];
+    angular
+        .module('testStrategy')
+        .controller('testStrategyController', testStrategyController);
+
+
+    testStrategyController.$inject=[ ];
+
+
     function testStrategyController(){
-
-
 
 
     }

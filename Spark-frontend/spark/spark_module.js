@@ -18,6 +18,7 @@
         'sow',
         'testCaseInstances',
         'testCases',
+        'testStrategy',
         'testPlan',
         'webLab'
 
