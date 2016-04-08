@@ -3,40 +3,24 @@
  * @author ng-epg-qa-spark-developers
  * @modifier Maneesh Abraham
  * @copyright 2016 NetApp, Inc.
- * @date 2016-03-15
+ * @date 2016-03-21
  */
-
-namespace Spark\Http\Controllers\v2;
+namespace Spark\Http\Controllers;
 
 use Spark\Http\Requests;
 use Spark\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Spark\Models\v2\ArchDoc;
-use Spark\Models\v2\ArchDocTopic;
+use Spark\Models\Product;
 
-class ArchDocsTopicsController extends Controller {
+class ProductsController extends Controller {
 
     /**
-     * Provide a list of Archdocs Topics
+     * Provide a list of Products
      *
      * @param $request
      * @return Response
      */
-    public function index(Request $request, $archdocId) {
-
-        if(env('APP_ENV') == "hq")
-        {
-            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.v2.requirements.archdocs.1.topics.json");
-            return response($data)->header('Content-Type', 'application/json');
-        }
-
-         // If this is called as a child resource of a archdoc, return only topics for that archdoc
-        if ($archdocId) {
-            $query = ArchDoc::findOrFail($archdocId)->Topics();
-        } else {
-            $query = ArchDocTopic::query();
-        }
-
+    public function index(Request $request) {
         // Fields parameter
         $fieldsParam = $request->input('fields');
 
@@ -56,13 +40,14 @@ class ArchDocsTopicsController extends Controller {
         // Search parameter
         $searchParam = $request->input('search');
 
+        $query = Product::query();
+
         if (strlen($searchParam) > 0) { // Search parameter
             $match = "%$searchParam%";
-            $query = $query->where('topic_id', 'like', $match)
-                           ->orWhere('topic_name', 'like', $match);
+            $query = $query->where('product_name', 'like', $match);
         }
 
-        $query = $query->orderBy('topic_name', 'ASC')->select($getFilter);
+        $query = $query->orderBy('product_id', 'ASC')->select($getFilter);
 
         if ($perPage != "all") {
             $query = $query->paginate($perPage);
@@ -74,6 +59,6 @@ class ArchDocsTopicsController extends Controller {
     }
 
     public function show($id) {
-        return ArchDocTopic::query()->findOrFail($id);
+        return Product::query()->findOrFail($id);
     }
 }

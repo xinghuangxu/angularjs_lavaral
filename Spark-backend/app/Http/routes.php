@@ -122,6 +122,8 @@ Route::group(array('prefix' => 'rest', 'before' => 'elmolog'), function() {
                         ['only' => ['index', 'show']]);
         Route::resource('implrequests','ImplRequestsController',
                         ['only' => ['index', 'show']]);
+        Route::resource('tasks','TasksController',
+                        ['only' => ['index', 'show']]);
 
         Route::resource('releases','ReleasesController',
                         ['only' => ['index', 'show']]);
@@ -156,6 +158,9 @@ Route::group(array('prefix' => 'rest', 'before' => 'elmolog'), function() {
         Route::resource('archdocs','ArchdocsController',
                 ['only' => ['index', 'show']]);
 
+        Route::resource('doctypes','DocTypesController',
+                ['only'=>['index']]);
+
     });
 
     Route::resource('scopes','ScopesController',
@@ -185,6 +190,15 @@ Route::group(array('prefix' => 'rest', 'before' => 'elmolog'), function() {
                         ['only' => ['index', 'show', 'destroy', 'create', 'edit']]);
     });
 
+    Route::group(array('prefix' => 'ci'), function() {
+        Route::resource('runchecktests', 'RunCheckTestsController',
+                ['only' => ['index', 'show']]);
+
+        Route::resource('products','ProductsController',
+                ['only' => ['index', 'show']]);
+
+    });
+
 
     //Version-2 APIs
     Route::group(array('prefix' => 'v2', 'namespace' => 'v2'), function() {
@@ -196,12 +210,17 @@ Route::group(array('prefix' => 'rest', 'before' => 'elmolog'), function() {
                             ['only'=>['index', 'show']]);
         });
 
+        Route::resource('tags/{tagGroupId}/{tagId?}','TagsController',
+                        ['only'=>['index']]);
+
     });
 
 });
 
 Route::group(array('prefix' => 'api'), function() {
     Route::resource('help', 'RoutesController',
+                    ['only' => ['index']]);
+    Route::resource('list', 'RoutesListController',
                     ['only' => ['index']]);
 });
 

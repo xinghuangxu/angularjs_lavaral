@@ -30,6 +30,7 @@ class Elmo {
      * @return array $data
      */
     public static function getPageTrackingData($sparkUser) {
+        date_default_timezone_set("America/Chicago");
         $date = date(DATE_ATOM);
         $pageAccessed = $_SERVER['PHP_SELF'];
         $originHostname = $_SERVER['SERVER_NAME'];
@@ -68,6 +69,7 @@ class Elmo {
      * @return array $data
      */
     public static function getRestApiTrackingData($sparkUser) {
+        date_default_timezone_set("America/Chicago");
         $date = date(DATE_ATOM);
         $pageAccessed = Request::path();
         $originHostname = $_SERVER['SERVER_NAME'];

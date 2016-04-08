@@ -33,14 +33,12 @@ class TagsController extends Controller {
      * @return Response
      */
     public function getQualAreas(Request $request) {
-        /*
-         *
-         * the following line should be diabled in production to hit the right service
-         *
-         */
 
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.qual-areas.json");
-        return $data;
+        if(env('APP_ENV') == "hq")
+        {
+            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.qual-areas.json");
+            return response($data)->header('Content-Type', 'application/json');
+        }
 
         $tagType = "Root\Default\Qualification Areas%";
 
@@ -56,14 +54,12 @@ class TagsController extends Controller {
      * @return Response
      */
     public function getImpactAreas(Request $request) {
-        /*
-         *
-         * the following line should be diabled in production to hit the right service
-         *
-         */
 
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.impact-areas.json");
-        return $data;
+        if(env('APP_ENV') == "hq")
+        {
+            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.impact-areas.json");
+            return response($data)->header('Content-Type', 'application/json');
+        }
 
         $tagType = "Root\Feature%";
 
@@ -79,14 +75,12 @@ class TagsController extends Controller {
      * @return Response
      */
     public function getTestStrategyApproaches(Request $request) {
-        /*
-         *
-         * the following line should be diabled in production to hit the right service
-         *
-         */
 
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.test-approaches.json");
-        return $data;
+        if(env('APP_ENV') == "hq")
+        {
+            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.test-approaches.json");
+            return response($data)->header('Content-Type', 'application/json');
+        }
 
         $tagType = "Root\Default\Test Strategy Approach%";
 

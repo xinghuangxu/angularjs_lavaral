@@ -3,7 +3,7 @@
  * @author ng-epg-qa-spark-developers
  * @modifier Maneesh Abraham
  * @copyright 2016 NetApp, Inc.
- * @date 2016-03-15
+ * @date 2016-03-16
  */
 
 namespace Spark\Models\v2;
@@ -15,14 +15,14 @@ class ArchDoc extends Model {
     protected $table = 'archdocs';
     public $primaryKey = 'id';
 
-    protected $appends = array('icon', 'type');
+    protected $appends = array('icon', 'obj_type');
 
     public function getIconAttribute()
     {
         return "glyphicon glyphicon-book";
     }
 
-    public function getTypeAttribute()
+    public function getObjTypeAttribute()
     {
         return "archdoc";
     }
