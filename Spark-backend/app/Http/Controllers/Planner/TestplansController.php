@@ -59,18 +59,17 @@ class TestplansController extends Controller {
      * @return Response
      */
     public function index(Request $request) {
-        /*
-         *
-         * the following 6 lines should be disabled in production to hit the right service
-         *
-         */
 
-        if ($request->input('stack') == ""){
-            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.testplans.json");
-        }else{
-            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.testplans2.json");
+        if(env('APP_ENV') == "hq")
+        {
+            if ($request->input('stack') == ""){
+                $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.testplans.json");
+            }else{
+                $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.testplans2.json");
+            }
+
+            return response($data)->header('Content-Type', 'application/json');
         }
-        return $data;
 
         $release = $request->input('release');
         $stack = $request->input('stack');

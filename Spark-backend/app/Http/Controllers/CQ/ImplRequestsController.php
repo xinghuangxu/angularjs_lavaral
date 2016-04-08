@@ -24,14 +24,11 @@ class ImplRequestsController extends Controller {
      */
     public function index(Request $request, $devRequestId = null) {
 
-        /*
-         *
-         * the following line should be diabled in production to hit the right service
-         *
-         */
-
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.cq.devrequests.LSIP200XXXXXX.implrequests.json");
-        return $data;
+        if(env('APP_ENV') == "hq")
+        {
+            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.cq.devrequests.LSIP200XXXXXX.implrequests.json");
+            return response($data)->header('Content-Type', 'application/json');
+        }
 
         // If this is called as a child resource of a DevRequest, return only ImplRequests for that DevRequest
         if ($devRequestId) {

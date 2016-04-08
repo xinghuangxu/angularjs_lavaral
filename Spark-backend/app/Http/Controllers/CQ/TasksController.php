@@ -3,7 +3,7 @@
  * @author ng-epg-qa-spark-developers
  * @modifier Maneesh Abraham
  * @copyright 2016 NetApp, Inc.
- * @date 2016-03-10
+ * @date 2016-03-20
  */
 namespace Spark\Http\Controllers\CQ;
 
@@ -11,9 +11,9 @@ use Spark\Http\Requests;
 use Spark\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Spark\Models\CQ\Boxcar;
-use Spark\Models\CQ\DevRequest;
+use Spark\Models\CQ\Task;
 
-class DevRequestsController extends Controller {
+class TasksController extends Controller {
 
     /**
      * Display a listing of the resource.
@@ -24,17 +24,11 @@ class DevRequestsController extends Controller {
      */
     public function index(Request $request, $boxcarId = null) {
 
-        if(env('APP_ENV') == "hq")
-        {
-            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.cq.boxcars.LSIP200XXXXXX.devrequests.json");
-            return response($data)->header('Content-Type', 'application/json');
-        }
-
         // If this is called as a child resource of a boxcar, return only DevRequests for that boxcar
         if ($boxcarId) {
-            $query = Boxcar::findOrFail($boxcarId)->DevRequests();
+            //$query = Boxcar::findOrFail($boxcarId)->Tasks();
         } else {
-            $query = DevRequest::query();
+            $query = Task::query();
         }
 
         // Fields parameter
@@ -64,10 +58,10 @@ class DevRequestsController extends Controller {
                             ->orWhere('Description', 'like', $match);
         }
 
-        $devRequestModel = new DevRequest();
-        $devRequestModelTableName = $devRequestModel->getTable();
+        $taskModel = new Task();
+        $taskModelTableName = $taskModel->getTable();
 
-        $query = $query->orderBy($devRequestModelTableName.'.id', 'ASC')->select($getFilter);
+        $query = $query->orderBy($taskModelTableName.'.id', 'ASC')->select($getFilter);
 
         if ($perPage != "all") {
             $result = $query->paginate($perPage);
@@ -83,7 +77,7 @@ class DevRequestsController extends Controller {
      *
      * @param String $id1
      * @param String $id2
-     * @return JSON for the DevRequest, or a ModelNotFoundException
+     * @return JSON for the Task, or a ModelNotFoundException
      */
     public function show($id1, $id2 = null) {
 
@@ -95,6 +89,6 @@ class DevRequestsController extends Controller {
             $boxcarId = "";
         }
 
-        return DevRequest::findOrFail($id);
+        return Task::findOrFail($id);
     }
 }

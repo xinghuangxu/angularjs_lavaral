@@ -49,7 +49,7 @@ class TestSetController extends Controller {
                                     "id" => $testSetResult[$k]["CY_CYCLE_ID"],
                                     "title" => $testSetResult[$k]["CY_CYCLE"],
                                     "icon" => "glyphicon glyphicon-tasks",
-                                    "type" => "testset"
+                                    "obj_type" => "testset"
                                 );
 
             array_push($listArr, $listArrEach);
@@ -67,14 +67,11 @@ class TestSetController extends Controller {
      */
     public function show($almDatabase, $folderId) {
 
-        /*
-         *
-         * the following line should be diabled in production to hit the right service
-         *
-         */
-
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testsets.532.json");
-        return $data;
+        if(env('APP_ENV') == "hq")
+        {
+            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testsets.532.json");
+            return response($data)->header('Content-Type', 'application/json');
+        }
 
         return $this->getALMTestSetJson($almDatabase, $folderId);
     }

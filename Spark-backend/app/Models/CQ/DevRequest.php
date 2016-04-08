@@ -3,7 +3,7 @@
  * @author ng-epg-qa-spark-developers
  * @modifier Maneesh Abraham
  * @copyright 2016 NetApp, Inc.
- * @date 2016-03-10
+ * @date 2016-03-16
  */
 
 namespace Spark\Models\CQ;
@@ -14,7 +14,7 @@ class DevRequest extends CQ {
     protected $table = 'View_LSIP2_DevelopmentRequest';
     public $primaryKey = 'id'; // Though [dbid] is the actual primary key, we will use [id] as the primary key
 
-    protected $appends = array('icon');
+    protected $appends = array('icon', 'obj_type');
 
     public function __construct() {
         $this->table = env('CQ_MIRROR_DATABASE').".dbo.".$this->table;
@@ -23,6 +23,11 @@ class DevRequest extends CQ {
     public function getIconAttribute()
     {
         return "glyphicon glyphicon-briefcase";
+    }
+
+    public function getObjTypeAttribute()
+    {
+        return "devrequest";
     }
 
     public function ImplRequests() {

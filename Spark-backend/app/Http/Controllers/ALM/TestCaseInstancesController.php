@@ -76,13 +76,13 @@ class TestCaseInstancesController extends Controller {
             }
 
             $listArrEach = array(
-                                "id" => $testCaseInstanceResult[$k]["TC_TEST_ID"],
+                                "id" => $testCaseInstanceResult[$k]["TC_TESTCYCL_ID"],
                                 "test_instance" => $testCaseInstanceResult[$k]["TC_TEST_INSTANCE"],
                                 "status" => $status,
                                 "test_case_name" => $testCaseInstanceResult[$k]["TS_NAME"],
                                 "test_case_path" => $testCaseInstanceResult[$k]["TS_PATH"],
                                 "icon" => $icon,
-                                "type" => "testcaseinstance"
+                                "obj_type" => "testcaseinstance"
                             );
 
             array_push($listArr, $listArrEach);
@@ -101,14 +101,11 @@ class TestCaseInstancesController extends Controller {
      */
     public function show($almDatabase, $testSetId) {
 
-        /*
-         *
-         * the following line should be diabled in production to hit the right service
-         *
-         */
-
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testcaseinstances.51097.json");
-        return $data;
+        if(env('APP_ENV') == "hq")
+        {
+            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testcaseinstances.51097.json");
+            return response($data)->header('Content-Type', 'application/json');
+        }
 
         return $this->getALMTestCaseInstancesJson($almDatabase, $testSetId);
     }

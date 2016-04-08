@@ -24,16 +24,6 @@ class PolyTestCasesController extends Controller {
      * @throws \Spark\ALM\InvalidAlmDatabaseException
      */
     public function index(Request $request) {
-
-        /*
-         *
-         * the following line should be diabled in production to hit the right service
-         *
-         */
-
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-resget-rest.alm.testCases.json");
-        return $data;
-
         // Fields parameter
         $fieldsParam = $request->input('fields');
 

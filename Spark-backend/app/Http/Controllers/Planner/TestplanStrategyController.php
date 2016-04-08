@@ -31,14 +31,11 @@ class TestplanStrategyController extends Controller {
      */
     public function index(Request $request, $testplan_id) {
 
-        /*
-         *
-         * the following line should be diabled in production to hit the right service
-         *
-         */
-
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.testplans.id.teststrategies.json");
-        return $data;
+        if(env('APP_ENV') == "hq")
+        {
+            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.testplans.id.teststrategies.json");
+            return response($data)->header('Content-Type', 'application/json');
+        }
 
         $testplan = TestPlan::findOrFail($testplan_id);
         $result = $testplan->teststrategies()->with(

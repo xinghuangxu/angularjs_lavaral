@@ -16,14 +16,6 @@ use InvalidArgumentException;
 
 class TestCaseFoldersController extends Controller {
 
-    public function __construct() {
-            header('Access-Control-Allow-Origin: *');
-            header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
-            header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
-            header('Access-Control-Allow-Credentials: true');
-            header('Content-Type: application/json');
-        }
-
     /**
      * Get the ALM TestCaseFolder Children for an ALM Database
      *
@@ -34,14 +26,11 @@ class TestCaseFoldersController extends Controller {
      */
     public function index(Request $request, $almDatabase) {
 
-        /*
-         *
-         * the following line should be diabled in production to hit the right service
-         *
-         */
-
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json");
-        return $data;
+        if(env('APP_ENV') == "hq")
+        {
+            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testcasefolders.16548.json");
+            return response($data)->header('Content-Type', 'application/json');
+        }
 
         // FolderId parameter
         $folderIdParam = 0;
@@ -77,7 +66,7 @@ class TestCaseFoldersController extends Controller {
                                     "text" => $folderResult[$k]["AL_DESCRIPTION"],
                                     "hasChildren" => $hasChildren,
                                     "icon" => $icon,
-                                    "type" => "testcasefolder"
+                                    "obj_type" => "testcasefolder"
                                 );
 
             array_push($childrenArr, $childrenArrEach);
@@ -128,14 +117,11 @@ class TestCaseFoldersController extends Controller {
      */
     public function show($almDatabase, $folderIdParam) {
 
-        /*
-         *
-         * the following line should be diabled in production to hit the right service
-         *
-         */
-
-        $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json");
-        return $data;
+        if(env('APP_ENV') == "hq")
+        {
+            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json");
+            return response($data)->header('Content-Type', 'application/json');
+        }
 
         return $this->getALMTestCaseFolderChildren($almDatabase, $folderIdParam);
     }
