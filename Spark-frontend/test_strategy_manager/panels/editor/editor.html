@@ -7,40 +7,60 @@
     </div>
     <!-- /.box-header -->
     <!-- form start -->
-    <form class="form-horizontal">
-        <div class="box-body">
+    <form class="form-horizontal box-plugin-body" ng-slimscroll>
+        <div class="box-body" >
             <div class="form-group margin-b-8  text-sm">
                 <label for="headline" class="col-sm-4 control-label align-left align-left">Headline</label>
 
                 <div class="col-sm-8 pad-l-0">
-                    <input type="text"  class="form-control form-control-sm text-sm" id="headline" placeholder="Headline">
+                    <input type="text"
+                           ng-model="strategyEditorCtlr.strategy.headline"
+                           ng-change="strategyEditorCtlr.editorValueChanged()"
+                           ng-model-options="{ updateOn: 'blur'}"
+                           class="form-control form-control-sm text-sm" id="headline" placeholder="Headline">
                 </div>
             </div>
             <div class="form-group  margin-b-8 text-sm">
                 <label for="impact_area" class="pad-r-0 col-sm-4 control-label align-left align-left">Impact Area</label>
 
                 <div class="col-sm-8 pad-l-0">
-                    <input type="text"  class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">
+                    <input type="text"
+                           ng-model="strategyEditorCtlr.strategy.impact_area"
+                           ng-change="strategyEditorCtlr.editorValueChanged()"
+                           ng-model-options="{ updateOn: 'blur'}"
+                           class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">
                 </div>
             </div>
             <div class="form-group margin-b-8 text-sm">
                 <label for="qual_area" class="pad-r-0 col-sm-4 control-label align-left">Qlt. Area</label>
 
                 <div class="col-sm-2 pad-l-0 pad-r-0">
-                    <input type="text"  class="form-control form-control-sm text-sm" id="qual_area" placeholder="Qlt. Area">
+                    <input type="text"
+                           ng-model="strategyEditorCtlr.strategy.qlt_area"
+                           ng-change="strategyEditorCtlr.editorValueChanged()"
+                           ng-model-options="{ updateOn: 'blur'}"
+                           class="form-control form-control-sm text-sm" id="qual_area" placeholder="Qlt. Area">
                 </div>
 
-                <label for="approach" class="col-sm-4 control-label align-left">Approach</label>
+                <label for="approach" class="col-sm-3 control-label align-left">Approach</label>
 
-                <div class="col-sm-2 pad-l-0">
-                    <input type="text"  class="form-control form-control-sm text-sm" id="approach" placeholder="Approach">
+                <div class="col-sm-3 pad-l-0">
+                    <input type="text"
+                           ng-model="strategyEditorCtlr.strategy.approach"
+                           ng-change="strategyEditorCtlr.editorValueChanged()"
+                           ng-model-options="{ updateOn: 'blur'}"
+                           class="form-control form-control-sm text-sm" id="approach" placeholder="Approach">
                 </div>
             </div>
             <div class="form-group margin-b-8 text-sm">
                 <label for="strategy_goal" class="col-sm-4 control-label align-left">Goal</label>
 
                 <div class="col-sm-8 pad-l-0">
-                    <input type="text"  class="form-control form-control-sm text-sm" id="strategy_goal" placeholder="Strategy Goal">
+                    <input type="text"
+                           ng-model="strategyEditorCtlr.strategy.goal"
+                           ng-change="strategyEditorCtlr.editorValueChanged()"
+                           ng-model-options="{ updateOn: 'blur'}"
+                           class="form-control form-control-sm text-sm" id="strategy_goal" placeholder="Strategy Goal">
                 </div>
             </div>
             <div class="form-group margin-b-8">
@@ -59,6 +79,12 @@
                         <div class="tab-content fixed-height">
                             <div ng-class="{active:strategyEditorCtlr.isTabActive('test_strategy')}" class="tab-pane description-tab" id="desc" ng-include="'test_strategy_manager/panels/editor/tabs/desc.html'">
                             </div>
+                            <div  class="tab-pane description-tab" id="ref" ng-include="'test_strategy_manager/panels/editor/tabs/ref.html'">
+                            </div>
+                            <div  class="tab-pane description-tab" id="test_cases" ng-include="'test_strategy_manager/panels/editor/tabs/test_cases.html'">
+                            </div>
+                            <div  class=" tab-pane description-tab" id="assoc" ng-include="'test_strategy_manager/panels/editor/tabs/assoc.html'">
+                                </div>
                         </div>
                         <!-- /.tab-content -->
                     </div>

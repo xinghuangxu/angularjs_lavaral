@@ -3,6 +3,6 @@
  */
 (function(){
 
-    angular.module('commonComponents').value('suggestedTestStrategiesValue',[]);
+    angular.module('commonComponents').value('SISSuggestionsValue',{test_strategies:[]});
 
 })();

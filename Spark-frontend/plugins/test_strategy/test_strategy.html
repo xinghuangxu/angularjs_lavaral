@@ -3,14 +3,13 @@
         <h3 class="box-title">Test Strategy</h3>
 
         <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 
             <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
         </div>
         <!-- /.box-tools -->
     </div>
     <!-- /.box-header -->
-    <div class="box-body">
+    <div id="test_strategy_box" class="box-body box-plugin-body" ng-slimscroll>
         <!-- Starting Multi tab -->
 
 
@@ -26,8 +25,27 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                Coming Soon!
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div ng-repeat="strategy in TSCtrl.SISSuggestionsValue.test_strategies" class="progress-group">
+                            <span class="progress-text text-sm">{{strategy.StrategyHeadline}}</span>
+                            <span class="progress-number text-sm">{{strategy.rel}}</span>
+
+                            <div class="progress sm">
+                                <div class="progress-bar progress-bar-green" style="width: {{strategy.rel*100}}%"></div>
+                            </div>
+                        </div>
+                        <h6 ng-if="TSCtrl.SISSuggestionsValue.test_strategies.length==0">Suggested Strategies not
+                            found</h6>
+                    </div>
+
+                </div>
+                <div class="overlay" ng-if="TSCtrl.SISSuggestionsValue.test_strategies==null">
+                    <i class="fa fa-refresh fa-spin"></i>
+                </div>
             </div>
+
             <!-- /.box-body -->
         </div>
 
@@ -36,7 +54,8 @@
                 <h3 class="box-title">Core Strategies</h3>
 
                 <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse" ng-click="TCCtrl.loadTreeData()">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"
+                            ng-click="TCCtrl.loadTreeData()">
                         <i class="fa fa-plus"></i>
                     </button>
                 </div>
@@ -54,7 +73,8 @@
                 <h3 class="box-title">Placeholder Strategies</h3>
 
                 <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse" ng-click="TCCtrl.loadTreeData()">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"
+                            ng-click="TCCtrl.loadTreeData()">
                         <i class="fa fa-plus"></i>
                     </button>
                 </div>
@@ -85,7 +105,5 @@
         </div>
     </div>
     <!-- /.box-body -->
-    <div style="display:none;" class="overlay">
-        <i class="fa fa-refresh fa-spin"></i>
-    </div>
+
 </div>
