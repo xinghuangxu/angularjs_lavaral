@@ -5,16 +5,16 @@
     'use strict';
     angular
         .module('testStrategy')
-        .controller('testStrategyController', testStrategyController,suggestedTestStrategiesValue);
+        .controller('testStrategyController', testStrategyController);
 
 
-    testStrategyController.$inject=[ ];
+    testStrategyController.$inject=['SISSuggestionsValue'];
 
 
-    function testStrategyController(){
+    function testStrategyController(SISSuggestionsValue){
 
         var TSCtrl = this;
-        TSCtrl.suggestedTestStrategies = getSuggestedTestStrategies;
+        TSCtrl.SISSuggestionsValue = SISSuggestionsValue;
 
 
     }

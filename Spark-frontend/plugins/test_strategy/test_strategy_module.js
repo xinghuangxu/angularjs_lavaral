@@ -3,7 +3,8 @@
     angular.module('testStrategy',[
         'mgcrea.ngStrap',
         'ngAnimate',
-        'jsTree.directive'
+        'jsTree.directive',
+        'commonComponents'
     ]);
 
 })();

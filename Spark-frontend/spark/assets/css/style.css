@@ -1345,6 +1345,9 @@ a:focus {
   border-radius: 2px;
   height: 22px;
 }
+.form-control.form-control-sm.text-sm{
+  padding-left: 2px;
+}
 .form-control:focus {
   border-color: #3c8dbc;
   box-shadow: none;
