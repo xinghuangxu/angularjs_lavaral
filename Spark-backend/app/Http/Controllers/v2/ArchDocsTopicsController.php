@@ -16,6 +16,13 @@ use Spark\Models\v2\ArchDocTopic;
 
 class ArchDocsTopicsController extends Controller {
 
+    public function __construct() {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+        header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
+        header('Access-Control-Allow-Credentials: true');
+    }
+
     /**
      * Provide a list of Archdocs Topics
      *
@@ -24,7 +31,7 @@ class ArchDocsTopicsController extends Controller {
      */
     public function index(Request $request, $archdocId) {
 
-        if(env('APP_ENV') == "hq")
+        if(env('APP_ENV') != "hq")
         {
             $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.v2.requirements.archdocs.1.topics.json");
             return response($data)->header('Content-Type', 'application/json');

@@ -64,9 +64,9 @@
             controller: 'webLabController as WLCtrl'
         },
         "plugins_config": {
-            endpointServer: location.protocol+'//'+location.host
+            // endpointServer: location.protocol+'//'+location.host
             // Uncomment following line to get the data from your local server
-            // endpointServer: 'http://localhost:8000/'
+            endpointServer: 'http://localhost:8000'
         }
 
 

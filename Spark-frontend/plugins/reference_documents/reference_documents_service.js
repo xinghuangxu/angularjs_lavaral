@@ -10,14 +10,25 @@
 
     function referenceDocumentsService($http, pluginNamesConstant){
 
+        this.getDocTypes = getDocTypes;
         this.getReferenceDocs = getReferenceDocs;
         this.getTopicsData = getTopicsData;
         this.getReferenceDocsTree = getReferenceDocsTree;
         this.getTopicsDataTree = getTopicsDataTree;
+        this.getDocTypesTree = getDocTypesTree;
         this.getArrangeBy = getArrangeBy;
 
 
-        function getReferenceDocs(){
+        function getDocTypes(){
+            return $http({
+                method: 'GET',
+                // should be activated after settings
+                //url: '/rest/v2/requirements/archdocs/?&perpage=all'
+                url: pluginNamesConstant.plugins_config.endpointServer + '/rest/requirements/doctypes'
+            }); 
+        }
+        
+        function getReferenceDocs(id){
             return $http({
                 method: 'GET',
                 // should be activated after settings
@@ -35,6 +46,34 @@
             });
         }
 
+        function getDocTypesTree(data){
+            var nodeJson = function(id, text, icon){
+                this.id= id,
+                    this.text=text,
+                    this.icon= icon||null,
+                    this.data = 'docType',
+                    this.state= {
+                        "opened": false,
+                        "disabled": false,
+                        "selected": false
+                    },
+                    this.children= true,
+                    this.liAttributes= null,
+                    this.aAttributes= null
+            };
+
+            var treeJson = [];
+            var treeData = data.data;
+            console.log(treeData);
+            for (var i=0; i < treeData.length; i++){
+                var node = new nodeJson(treeData[i].id,treeData[i].text,"glyphicon glyphicon-folder-open");
+
+                treeJson.push(node);
+            }
+            console.log(treeJson)
+            return treeJson;
+        }
+
         function getReferenceDocsTree(data){
             var nodeJson = function(id, text, icon){
                 this.id= id,
@@ -45,7 +84,7 @@
                         "disabled": false,
                         "selected": false
                     },
-                    this.children= [],
+                    this.children= true,
                     this.liAttributes= null,
                     this.aAttributes= null
             };
@@ -53,11 +92,7 @@
             var treeJson = [];
             var treeData = data.data.data;
             for (var i=0; i < treeData.length; i++){
-                var node = new nodeJson(treeData[i].id,treeData[i].doc_type,"glyphicon glyphicon-folder-open");
-                var firstChildNode = new nodeJson(treeData[i].doc_id,treeData[i].doc_title,treeData[i].icon);
-
-                node.children.push(firstChildNode);
-                node.children[0].children = true;
+                var node = new nodeJson(treeData[i].doc_id,treeData[i].doc_title,treeData[i].icon);
 
                 treeJson.push(node);
             }
