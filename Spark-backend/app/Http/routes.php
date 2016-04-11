@@ -169,6 +169,9 @@ Route::group(array('prefix' => 'rest', 'before' => 'elmolog'), function() {
     Route::resource('users','UsersController',
                     ['only' => ['index', 'show']]);
 
+    Route::resource('testrepositories','TestRepositoriesController',
+                    ['only' => ['index']]);
+
     Route::get('tags/qual-areas', 'TagsController@getQualAreas');
     Route::get('tags/impact-areas', 'TagsController@getImpactAreas');
     Route::get('tags/test-approaches', 'TagsController@getTestStrategyApproaches');

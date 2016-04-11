@@ -24,7 +24,7 @@ class ImplRequestsController extends Controller {
      */
     public function index(Request $request, $devRequestId = null) {
 
-        if(env('APP_ENV') != "hq")
+        if(env('APP_ENV') == "hq")
         {
             $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.cq.devrequests.LSIP200XXXXXX.implrequests.json");
             return response($data)->header('Content-Type', 'application/json');

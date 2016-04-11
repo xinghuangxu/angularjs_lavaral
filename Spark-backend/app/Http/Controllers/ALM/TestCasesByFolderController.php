@@ -16,13 +16,6 @@ use InvalidArgumentException;
 
 class TestCasesByFolderController extends Controller {
 
-    public function __construct() {
-        header('Access-Control-Allow-Origin: *');
-        header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
-        header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
-        header('Access-Control-Allow-Credentials: true');
-    }
-
     /**
      * Get the ALM TestCasesByFolder for an ALM Database
      *
@@ -83,7 +76,7 @@ class TestCasesByFolderController extends Controller {
      */
     public function show($almDatabase, $folderId) {
 
-        if(env('APP_ENV') != "hq")
+        if(env('APP_ENV') == "hq")
         {
             $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.testcasesbyfolder.16546.json");
             return response($data)->header('Content-Type', 'application/json');

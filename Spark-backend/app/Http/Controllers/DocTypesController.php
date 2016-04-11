@@ -3,7 +3,7 @@
  * @author ng-epg-qa-spark-developers
  * @modifier Maneesh Abraham
  * @copyright 2016 NetApp, Inc.
- * @date 2016-04-06
+ * @date 2016-04-11
  */
 
 namespace Spark\Http\Controllers;
@@ -14,13 +14,6 @@ use Illuminate\Http\Request;
 
 class DocTypesController extends Controller {
 
-    public function __construct() {
-        header('Access-Control-Allow-Origin: *');
-        header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
-        header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
-        header('Access-Control-Allow-Credentials: true');
-    }
-
     /**
      * Provide a list of ArchDocs Topics
      *
@@ -29,53 +22,66 @@ class DocTypesController extends Controller {
      */
     public function index(Request $request) {
 
-        $docTypesArr = array(
-                        0 => array(
-                            'id' => '1',
-                            'text' => 'Architecture Requirement',
-                            'abbrev' => 'AR'
-                        ),
-                        1 => array(
-                            'id' => '2',
-                            'text' => 'Concept Architectural Specification',
-                            'abbrev' => 'CAS'
-                        ),
-                        2 => array(
-                            'id' => '3',
-                            'text' => 'Detailed Architecture',
-                            'abbrev' => 'DA'
-                        ),
-                        3 => array(
-                            'id' => '4',
-                            'text' => 'External Requirements',
-                            'abbrev' => 'ER'
-                        ),
-                        4 => array(
-                            'id' => '5',
-                            'text' => 'Product Architectural Specification',
-                            'abbrev' => 'PAS'
-                        ),
-                        5 => array(
-                            'id' => '6',
-                            'text' => 'Regression Strategies',
-                            'abbrev' => 'RS'
-                        ),
-                        6 => array(
-                            'id' => '7',
-                            'text' => 'Software Interface Specification',
-                            'abbrev' => 'SIS'
-                        ),
-                        7 => array(
-                            'id' => '8',
-                            'text' => 'Statement of Work',
-                            'abbrev' => 'SOW'
-                        ),
-                        8 => array(
-                            'id' => '9',
-                            'text' => 'User Experience',
-                            'abbrev' => 'UX'
-                        )
+        $commonAttribsArr = array(
+            'icon' => 'glyphicon glyphicon-align-left',
+            'obj_type' => 'doctype'
         );
+
+        $docTypesArr = array();
+
+        $docTypesArr[] = array_merge(array(
+                                    'id' => '1',
+                                    'text' => 'Architecture Requirement',
+                                    'abbrev' => 'AR'
+                                ), $commonAttribsArr);
+
+        $docTypesArr[] = array_merge(array(
+                                    'id' => '2',
+                                    'text' => 'Concept Architectural Specification',
+                                    'abbrev' => 'CAS'
+                                ), $commonAttribsArr);
+
+        $docTypesArr[] = array_merge(array(
+                                    'id' => '3',
+                                    'text' => 'Detailed Architecture',
+                                    'abbrev' => 'DA'
+                                ), $commonAttribsArr);
+
+        $docTypesArr[] = array_merge(array(
+                                    'id' => '4',
+                                    'text' => 'External Requirements',
+                                    'abbrev' => 'ER'
+                                ), $commonAttribsArr);
+
+        $docTypesArr[] = array_merge(array(
+                                    'id' => '5',
+                                    'text' => 'Product Architectural Specification',
+                                    'abbrev' => 'PAS'
+                                ), $commonAttribsArr);
+
+        $docTypesArr[] = array_merge(array(
+                                    'id' => '6',
+                                    'text' => 'Regression Strategies',
+                                    'abbrev' => 'RS'
+                                ), $commonAttribsArr);
+
+        $docTypesArr[] = array_merge(array(
+                                    'id' => '7',
+                                    'text' => 'Software Interface Specification',
+                                    'abbrev' => 'SIS'
+                                ), $commonAttribsArr);
+
+        $docTypesArr[] = array_merge(array(
+                                    'id' => '8',
+                                    'text' => 'Statement of Work',
+                                    'abbrev' => 'SOW'
+                                ), $commonAttribsArr);
+
+        $docTypesArr[] = array_merge(array(
+                                    'id' => '9',
+                                    'text' => 'User Experience',
+                                    'abbrev' => 'UX'
+                                ), $commonAttribsArr);
 
         return response()->json($docTypesArr);
 
