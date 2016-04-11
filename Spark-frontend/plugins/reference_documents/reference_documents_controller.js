@@ -27,7 +27,13 @@
         function getTreeData(obj, cb){
             var node_id = obj.id;
             if (node_id == '#'){
-                referenceDocumentsService.getReferenceDocs().then(function(response){
+                referenceDocumentsService.getDocTypes().then(function(response){
+                    cb.call(this, referenceDocumentsService.getDocTypesTree(response));
+                });
+                return;
+            }
+            if (obj.data === 'docType'){
+                referenceDocumentsService.getReferenceDocs(node_id).then(function(response){
                     cb.call(this, referenceDocumentsService.getReferenceDocsTree(response));
                 });
                 return;

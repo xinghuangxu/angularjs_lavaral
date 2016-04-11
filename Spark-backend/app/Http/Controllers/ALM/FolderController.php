@@ -16,6 +16,13 @@ use InvalidArgumentException;
 
 class FolderController extends Controller {
 
+    public function __construct() {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+        header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
+        header('Access-Control-Allow-Credentials: true');
+    }
+
     /**
      * Get the ALM Folder Children for an ALM Database
      *
@@ -111,7 +118,7 @@ class FolderController extends Controller {
      */
     public function show($almDatabase, $folderIdParam) {
 
-        if(env('APP_ENV') == "hq")
+        if(env('APP_ENV') != "hq")
         {
             $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.alm.databases.apg_qa_producttest_db.folder.510.json");
             return response($data)->header('Content-Type', 'application/json');
