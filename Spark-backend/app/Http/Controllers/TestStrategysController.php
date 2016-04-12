@@ -29,7 +29,7 @@ class TestStrategysController extends Controller {
      */
     public function index(Request $request) {
 
-        if(env('APP_ENV') != "hq")
+        if(env('APP_ENV') == "hq")
         {
             if ($request->input('type') == 'c'){
                 $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.strategies2.json");
@@ -248,7 +248,7 @@ class TestStrategysController extends Controller {
      */
     public function show($id) {
 
-        if(env('APP_ENV') != "hq")
+        if(env('APP_ENV') == "hq")
         {
             $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.strategies_details.json");
             return response($data)->header('Content-Type', 'application/json');

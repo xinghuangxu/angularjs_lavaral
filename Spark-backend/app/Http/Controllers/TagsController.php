@@ -34,7 +34,7 @@ class TagsController extends Controller {
      */
     public function getQualAreas(Request $request) {
 
-        if(env('APP_ENV') != "hq")
+        if(env('APP_ENV') == "hq")
         {
             $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.qual-areas.json");
             return response($data)->header('Content-Type', 'application/json');
@@ -55,7 +55,7 @@ class TagsController extends Controller {
      */
     public function getImpactAreas(Request $request) {
 
-        if(env('APP_ENV') != "hq")
+        if(env('APP_ENV') == "hq")
         {
             $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.impact-areas.json");
             return response($data)->header('Content-Type', 'application/json');
@@ -76,7 +76,7 @@ class TagsController extends Controller {
      */
     public function getTestStrategyApproaches(Request $request) {
 
-        if(env('APP_ENV') != "hq")
+        if(env('APP_ENV') == "hq")
         {
             $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.tags.test-approaches.json");
             return response($data)->header('Content-Type', 'application/json');

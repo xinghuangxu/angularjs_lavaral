@@ -22,7 +22,7 @@ class StacksController extends Controller {
      */
     public function index(Request $request) {
 
-        if(env('APP_ENV') != "hq")
+        if(env('APP_ENV') == "hq")
         {
             $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.stacks.json");
             return response($data)->header('Content-Type', 'application/json');

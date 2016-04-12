@@ -22,7 +22,7 @@ class SubStacksController extends Controller {
      */
     public function index(Request $request, $stack) {
 
-        if(env('APP_ENV') != "hq")
+        if(env('APP_ENV') == "hq")
         {
             $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.stacks2.json");
             return response($data)->header('Content-Type', 'application/json');

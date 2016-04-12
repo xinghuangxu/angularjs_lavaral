@@ -60,7 +60,7 @@ class TestplansController extends Controller {
      */
     public function index(Request $request) {
 
-        if(env('APP_ENV') != "hq")
+        if(env('APP_ENV') == "hq")
         {
             if ($request->input('stack') == ""){
                 $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/get-rest.planner.testplans.json");
