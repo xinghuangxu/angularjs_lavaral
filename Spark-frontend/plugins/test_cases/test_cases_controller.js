@@ -23,13 +23,6 @@
         TSCtrl.tree = null;
         TSCtrl.loadTreeData = loadTreeData;
 
-
-        // $scope.$on('planSettingChanged', function (event, settings) {
-        //     if (settings.data.alm_db_name && settings.data.testplan_stack_id.match(/^LSIP2/)){
-        //         TSCtrl.tree = getTreeData;
-        //     }
-        // });
-
         function loadTreeData(){
             TSCtrl.tree = getTreeData;
         }
@@ -39,7 +32,13 @@
         function getTreeData(obj, cb){
             var node_id = obj.id;
             if (node_id == '#'){
-                testCasesService.getFolders().then(function(response){
+                testCasesService.getTestCasesRepositories().then(function(response){
+                    cb.call(this, testCasesService.getTestCasesRepositoriesTree(response));
+                });
+                return;
+            }
+            if (obj.data === 'testCaseRepo'){
+                testCasesService.getFolders(node_id).then(function(response){
                     cb.call(this, testCasesService.getTreeJson(response));
                 });
                 return;

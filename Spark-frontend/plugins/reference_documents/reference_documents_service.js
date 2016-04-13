@@ -64,13 +64,11 @@
 
             var treeJson = [];
             var treeData = data.data;
-            console.log(treeData);
             for (var i=0; i < treeData.length; i++){
-                var node = new nodeJson(treeData[i].id,treeData[i].text,"glyphicon glyphicon-folder-open");
+                var node = new nodeJson(treeData[i].id,treeData[i].text,treeData[i].icon);
 
                 treeJson.push(node);
             }
-            console.log(treeJson)
             return treeJson;
         }
 

@@ -69,6 +69,7 @@
             controller: 'testStrategyController as TSCtrl'
         },
         "plugins_config": {
+            // This one is not used any More
             endpointServer: location.protocol+'//'+location.host
         }
 
