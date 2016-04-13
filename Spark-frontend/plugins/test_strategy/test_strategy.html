@@ -55,7 +55,7 @@
 
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"
-                            ng-click="TSCtrl.getCoreTestStrategies()">
+                            ng-click="!TSCtrl.coreTestStrategies&&TSCtrl.getCoreTestStrategies()">
                         <i class="fa fa-plus"></i>
                     </button>
                 </div>
@@ -63,8 +63,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <!--<spark-jstree ng-model="TCCtrl.tree"></spark-jstree>-->
-                {{TSCtrl.coreTestStrategies}}
+                <spark-jstree ng-model="TSCtrl.coreTestStrategies"></spark-jstree>
             </div>
             <!-- /.box-body -->
         </div>
@@ -75,7 +74,7 @@
 
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"
-                            ng-click="TSCtrl.getPlaceHolderTestStrategies()">
+                            ng-click="!TSCtrl.placeHolderTestStrategies&&TSCtrl.getPlaceHolderTestStrategies()">
                         <i class="fa fa-plus"></i>
                     </button>
                 </div>
@@ -83,8 +82,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <!--<spark-jstree ng-model="TCCtrl.tree"></spark-jstree>-->
-                {{TSCtrl.placeHolderTestStrategies}}
+                <spark-jstree ng-model="TSCtrl.placeHolderTestStrategies"></spark-jstree>
             </div>
             <!-- /.box-body -->
         </div>
@@ -95,14 +93,14 @@
 
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool"
-                            ng-click="TSCtrl.getSearchTestStrategies('abcd')" data-widget="collapse"><i class="fa fa-plus"></i>
+                            ng-click="!TSCtrl.searchTestStrategies&&TSCtrl.getSearchTestStrategies('abcd')" data-widget="collapse"><i class="fa fa-plus"></i>
                     </button>
                 </div>
                 <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                {{TSCtrl.searchTestStrategies}}
+                <spark-jstree ng-model="TSCtrl.searchTestStrategies"></spark-jstree>
             </div>
             <!-- /.box-body -->
         </div>

@@ -21,25 +21,24 @@
         TSCtrl.getSearchTestStrategies = getSearchTestStrategies;
         
         function getCoreTestStrategies() {
+            testStrategyService.getTestStrategies('c').then(function(resp){
 
-            !TSCtrl.coreTestStrategies&&
-            testStrategyService.getTestStrategies('c').then(function(data){
-                TSCtrl.coreTestStrategies=data;
+                TSCtrl.coreTestStrategies=testStrategyService.getTreeJson(resp.data);
 
             })
         }
         function getPlaceHolderTestStrategies() {
-            TSCtrl.placeHolderTestStrategies&&
-            testStrategyService.getTestStrategies('pc').then(function(data){
-                TSCtrl.placeHolderTestStrategies=data;
+
+            testStrategyService.getTestStrategies('pc').then(function(resp){
+                TSCtrl.placeHolderTestStrategies=testStrategyService.getTreeJson(resp.data);
 
             })
 
         }
         function getSearchTestStrategies(search_text) {
-            TSCtrl.searchTestStrategies&&
-            testStrategyService.getTestStrategies(null,search_text).then(function(data){
-                TSCtrl.searchTestStrategies=data;
+
+            testStrategyService.getTestStrategies(null,search_text).then(function(resp){
+                TSCtrl.searchTestStrategies=testStrategyService.getTreeJson(resp.data);
 
             })
             
