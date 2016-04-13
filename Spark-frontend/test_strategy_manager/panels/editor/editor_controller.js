@@ -40,6 +40,7 @@
             };
             console.log(arg);
             SISSuggestionsValue.test_strategies=null;
+            //SiS service is not working remove these values when it starts working
             SISSuggestionsValue.test_strategies =[{
                 "StrategyID": 4239,
                 "StrategyHeadline": "SAM-EF Pool Management: Secure Erase Drives?",

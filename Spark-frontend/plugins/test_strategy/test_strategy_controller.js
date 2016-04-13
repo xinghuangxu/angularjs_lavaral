@@ -12,14 +12,12 @@
 
 
     function testStrategyController(SISSuggestionsValue,testStrategyService){
-
         var TSCtrl = this;
         TSCtrl.SISSuggestionsValue = SISSuggestionsValue;
 
         TSCtrl.getCoreTestStrategies = getCoreTestStrategies;
         TSCtrl.getPlaceHolderTestStrategies = getPlaceHolderTestStrategies;
         TSCtrl.getSearchTestStrategies = getSearchTestStrategies;
-        
         function getCoreTestStrategies() {
             testStrategyService.getTestStrategies('c').then(function(resp){
 
@@ -33,7 +31,6 @@
                 TSCtrl.placeHolderTestStrategies=testStrategyService.getTreeJson(resp.data);
 
             })
-
         }
         function getSearchTestStrategies(search_text) {
 
@@ -41,8 +38,6 @@
                 TSCtrl.searchTestStrategies=testStrategyService.getTreeJson(resp.data);
 
             })
-            
         }
-
     }
 })();

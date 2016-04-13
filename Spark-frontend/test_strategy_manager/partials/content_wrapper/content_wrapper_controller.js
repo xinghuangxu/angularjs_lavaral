@@ -6,10 +6,5 @@
     angular.module('testStrategyManager')
         .controller('testStrategyManagerContentWrapperController',
         testStrategyManagerContentWrapperController);
-    function testStrategyManagerContentWrapperController(){
-        
-        
-        
-        
-    }
+    function testStrategyManagerContentWrapperController(){}
 });
