@@ -55,7 +55,7 @@
 
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"
-                            ng-click="TCCtrl.loadTreeData()">
+                            ng-click="TSCtrl.getCoreTestStrategies()">
                         <i class="fa fa-plus"></i>
                     </button>
                 </div>
@@ -63,7 +63,8 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <spark-jstree ng-model="TCCtrl.tree"></spark-jstree>
+                <!--<spark-jstree ng-model="TCCtrl.tree"></spark-jstree>-->
+                {{TSCtrl.coreTestStrategies}}
             </div>
             <!-- /.box-body -->
         </div>
@@ -74,7 +75,7 @@
 
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"
-                            ng-click="TCCtrl.loadTreeData()">
+                            ng-click="TSCtrl.getPlaceHolderTestStrategies()">
                         <i class="fa fa-plus"></i>
                     </button>
                 </div>
@@ -82,7 +83,8 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <spark-jstree ng-model="TCCtrl.tree"></spark-jstree>
+                <!--<spark-jstree ng-model="TCCtrl.tree"></spark-jstree>-->
+                {{TSCtrl.placeHolderTestStrategies}}
             </div>
             <!-- /.box-body -->
         </div>
@@ -92,14 +94,15 @@
                 <h3 class="box-title">Search</h3>
 
                 <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                    <button type="button" class="btn btn-box-tool"
+                            ng-click="TSCtrl.getSearchTestStrategies('abcd')" data-widget="collapse"><i class="fa fa-plus"></i>
                     </button>
                 </div>
                 <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                Search Should be Implemented Here
+                {{TSCtrl.searchTestStrategies}}
             </div>
             <!-- /.box-body -->
         </div>

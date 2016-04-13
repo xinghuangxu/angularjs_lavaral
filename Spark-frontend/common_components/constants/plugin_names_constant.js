@@ -59,10 +59,6 @@
             templateUrl: 'plugins/test_plan/test_plan.html',
             controller: 'testPlanController as TPCtrl'
 
-        },"test_strategy": {
-            templateUrl: 'plugins/test_strategy/test_strategy.html',
-            controller: 'testStrategyController as testStrategyController'
-
         },
         "web_lab": {
             templateUrl: 'plugins/web_lab/web_lab.html',

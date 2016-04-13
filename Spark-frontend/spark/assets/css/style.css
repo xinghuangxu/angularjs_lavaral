@@ -1638,8 +1638,8 @@ a:focus {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 .box-plugin-body{
-    height: 56vh;
-    max-height: 56vh;
+    height: 65vh;
+    max-height: 65vh;
 }
 .box-plugin-form-body{
     height: 45.7vh;
