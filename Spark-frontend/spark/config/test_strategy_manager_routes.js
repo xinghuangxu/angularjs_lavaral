@@ -22,16 +22,16 @@
             abstract: true,
             views: {
                 header: {
-                    templateUrl: "test_strategy_manager/partials/header/_header.html"
+                    templateUrl: "test_strategy_manager/partials/header/header.html"
                 },
                 left_side_bar: {
-                    templateUrl: "test_strategy_manager/partials/left_side_bar/_left_side_bar.html"
+                    templateUrl: "test_strategy_manager/partials/left_side_bar/left_side_bar.html"
                 },
                 right_side_bar: {
-                    templateUrl: "test_strategy_manager/partials/right_side_bar/_right_side_bar.html"
+                    templateUrl: "test_strategy_manager/partials/right_side_bar/right_side_bar.html"
                 },
                 content_wrapper: {
-                    templateUrl: "test_strategy_manager/partials/content_wrapper/_content_wrapper.html"
+                    templateUrl: "test_strategy_manager/partials/content_wrapper/content_wrapper.html"
                 }
             }
         }).state('tsm_base_template.' +

@@ -21,21 +21,21 @@
             abstract:true,
             views: {
                 header: {
-                    templateUrl: "test_planner/partials/header/_header.html"
+                    templateUrl: "test_planner/partials/header/header.html"
                 },
                 right_side_bar: {
-                    templateUrl: "test_planner/partials/right_side_bar/_right_side_bar.html"
+                    templateUrl: "test_planner/partials/right_side_bar/right_side_bar.html"
                 },
                 content_wrapper: {
-                    templateUrl: "test_planner/partials/content_wrapper/_content_wrapper.html"
+                    templateUrl: "test_planner/partials/content_wrapper/content_wrapper.html"
                 },
                 left_side_bar: {
 
-                    templateUrl: "test_planner/partials/left_side_bar/_left_side_bar.html",
+                    templateUrl: "test_planner/partials/left_side_bar/left_side_bar.html",
                     controller:"leftSideBarController as leftSideBarController"
                 },
                 footer: {
-                    templateUrl: "test_planner/partials/footer/_footer.html"
+                    templateUrl: "test_planner/partials/footer/footer.html"
                 }
 
 

@@ -17,9 +17,7 @@ body {
 }
 /* Layout */
 .wrapper {
-  min-height: 100vh;
-  max-height: 100vh;
-  height:100vh;
+  min-height: 100%;
   position: static;
   overflow: hidden;
 }

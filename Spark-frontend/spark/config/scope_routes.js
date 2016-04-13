@@ -20,20 +20,20 @@
             abstract:true,
             views: {
                 header: {
-                    templateUrl: "scope/partials/header/_header.html"
+                    templateUrl: "scope/partials/header/header.html"
                 },
                 right_side_bar: {
-                    templateUrl: "scope/partials/right_side_bar/_right_side_bar.html"
+                    templateUrl: "scope/partials/right_side_bar/right_side_bar.html"
                 },
                 content_wrapper: {
-                    templateUrl: "scope/partials/content_wrapper/_content_wrapper.html"
+                    templateUrl: "scope/partials/content_wrapper/content_wrapper.html"
                 },
                 left_side_bar: {
 
-                    templateUrl: "scope/partials/left_side_bar/_left_side_bar.html"
+                    templateUrl: "scope/partials/left_side_bar/left_side_bar.html"
                 },
                 footer: {
-                    templateUrl: "scope/partials/footer/_footer.html"
+                    templateUrl: "scope/partials/footer/footer.html"
                 }
 
 
