@@ -1,6 +1,6 @@
 <?php
 
-namespace Spark\Http\Controllers\sis;
+namespace Spark\Http\Controllers\SIS;
 
 use Illuminate\Http\Request;
 
@@ -9,6 +9,14 @@ use Spark\Http\Controllers\Controller;
 
 class rccaController extends Controller
 {
+    public function __construct() {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+        header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
+        header('Access-Control-Allow-Credentials: true');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -16,9 +24,8 @@ class rccaController extends Controller
      */
     public function index(Request $request)
     {
-        $serviceURL = 'http://10.16.19.61/rcca_api/';
         $editorData = json_encode($request->all());
-        $handler = curl_init($serviceURL);
+        $handler = curl_init(env('SIS_ENDPOINT_RCCA'));
         curl_setopt($handler, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($handler, CURLOPT_POSTFIELDS, $editorData);
         curl_setopt($handler, CURLOPT_RETURNTRANSFER, true);

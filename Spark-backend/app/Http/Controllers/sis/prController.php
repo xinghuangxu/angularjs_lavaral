@@ -1,6 +1,6 @@
 <?php
 
-namespace Spark\Http\Controllers\sis;
+namespace Spark\Http\Controllers\SIS;
 
 use Illuminate\Http\Request;
 
@@ -9,6 +9,14 @@ use Spark\Http\Controllers\Controller;
 
 class prController extends Controller
 {
+    public function __construct() {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+        header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
+        header('Access-Control-Allow-Credentials: true');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -16,9 +24,8 @@ class prController extends Controller
      */
     public function index(Request $request)
     {
-        $serviceURL = 'http://10.16.19.61/pr_api/';
         $editorData = json_encode($request->all());
-        $handler = curl_init($serviceURL);
+        $handler = curl_init(env('SIS_ENDPOINT_PR'));
         curl_setopt($handler, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($handler, CURLOPT_POSTFIELDS, $editorData);
         curl_setopt($handler, CURLOPT_RETURNTRANSFER, true);
@@ -29,71 +36,5 @@ class prController extends Controller
         $result = curl_exec($handler);
 
         return $result;
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

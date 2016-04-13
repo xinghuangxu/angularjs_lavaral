@@ -218,7 +218,7 @@ Route::group(array('prefix' => 'rest', 'before' => 'elmolog'), function() {
 
     });
 
-    Route::group(array('prefix'=>'sis', 'namespace' => 'sis'), function(){
+    Route::group(array('prefix'=>'SIS', 'namespace' => 'SIS'), function(){
         Route::resource('test_strategy','tsController', ['only'=>['index']]);
         Route::resource('product_requirement','prController', ['only'=>['index']]);
         Route::resource('rcca','rccaController', ['only'=>['index']]);
