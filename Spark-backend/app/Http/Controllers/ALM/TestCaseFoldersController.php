@@ -16,6 +16,14 @@ use InvalidArgumentException;
 
 class TestCaseFoldersController extends Controller {
 
+    public function __construct() {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+        header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
+        header('Access-Control-Allow-Credentials: true');
+    }
+
+
     /**
      * Get the ALM TestCaseFolder Children for an ALM Database
      *

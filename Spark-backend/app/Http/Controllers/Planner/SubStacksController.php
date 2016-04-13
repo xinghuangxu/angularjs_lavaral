@@ -15,6 +15,14 @@ use Spark\Models\Planner\TestPlanSubStack;
 
 class SubStacksController extends Controller {
 
+    public function __construct() {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+        header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
+        header('Access-Control-Allow-Credentials: true');
+    }
+
+
     /**
      * Provide a list of substack layers based on the provided stack ID
      *
