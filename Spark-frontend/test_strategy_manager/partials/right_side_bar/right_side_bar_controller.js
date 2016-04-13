@@ -3,17 +3,7 @@
  */
 (function(){
     'use strict';
-    angular.module('testStrategyManager')
-            .controller('testStrategyManagerRightSideBarController',
-            testStrategyManagerRightSideBarController);
-    
+    angular.module('testStrategyManager').controller('testStrategyManagerRightSideBarController',testStrategyManagerRightSideBarController);
     testStrategyManagerRightSideBarController.$inject =[];
-    function testStrategyManagerRightSideBarController(){
-
-
-
-
-    }
-
-
+    function testStrategyManagerRightSideBarController(){}
 });

@@ -16,19 +16,19 @@
         this.getSuggestedTestStrategies= getSuggestedTestStrategies;
 
         function getSuggestedTestStrategies(arg){
-
-            return $http({
-                method: 'POST',
-                url: 'http://10.16.19.61/sis_api/',
-                data: {
-                    'adviser_type': 'ts_adviser',
-                    'StrategyHeadline': 'CLI Stuff',
-                    'TestStrategy': 'very long description of the contents of this particular test strategy.',
-                    'categories': [35, 168, 418, 111, 6752],
-                    'num_ts': 10,
-                    'Override_knob_values': 'false'
-                }
-            })
+            //comment it out when sis service backend is ready
+            // return $http({
+            //     method: 'POST',
+            //     url: '',
+            //     data: {
+            //         'adviser_type': 'ts_adviser',
+            //         'StrategyHeadline': 'CLI Stuff',
+            //         'TestStrategy': 'very long description of the contents of this particular test strategy.',
+            //         'categories': [35, 168, 418, 111, 6752],
+            //         'num_ts': 10,
+            //         'Override_knob_values': 'false'
+            //     }
+            // })
 
         }
 

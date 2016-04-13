@@ -4,16 +4,9 @@
 (function(){
     'use strict';
     angular.module('testStrategyManager')
-        .controller('testStrategyManagerHeaderController',
-                    testStrategyManagerHeaderController);
-    
+        .controller('testStrategyManagerHeaderController', testStrategyManagerHeaderController);
     testStrategyManagerHeaderController.$inject =[];
     function testStrategyManagerHeaderController(){
 
-
-
-
     }
-
-
 });
