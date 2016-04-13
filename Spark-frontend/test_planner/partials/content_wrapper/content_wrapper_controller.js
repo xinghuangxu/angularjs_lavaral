@@ -5,12 +5,5 @@
     'use strict';
     angular.module('testPlanner').controller('contentWrapperController',contentWrapperController);
     contentWrapperController.$inject =['$stateParams'];
-    function contentWrapperController(){
-        
-        
-        
-        
-    }
-    
-    
+    function contentWrapperController(){}
 });

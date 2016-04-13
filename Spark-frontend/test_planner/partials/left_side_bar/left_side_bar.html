@@ -94,6 +94,14 @@
                 <i class="checkbox pull-right"></i>
             </a>
         </li>
+        <li ng-class="{active:testPlannerController.active_plugins.indexOf('test_strategy')>-1,
+        disabled:testPlannerController.active_plugins.indexOf('test_strategy')==-1&&
+        testPlannerController.active_plugins.length ==3}">
+            <a href="" ng-click="leftSideBarController.togglePlugin('test_strategy')">
+                <i class="fa fa-leaf"></i> <span>Test Strategy</span>
+                <i class="checkbox pull-right"></i>
+            </a>
+        </li>
         <li ng-class="{active:testPlannerController.active_plugins.indexOf('implementation_requests')>-1,
         disabled:testPlannerController.active_plugins.indexOf('implementation_requests')==-1&&
         testPlannerController.active_plugins.length ==3}">

@@ -21,6 +21,16 @@ body {
   position: static;
   overflow: hidden;
 }
+@media (max-height: 400px) {
+  .wrapper{
+    overflow-y: scroll;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper{
+    overflow-y: scroll;
+  }
+}
 .wrapper:before,
 .wrapper:after {
   content: " ";
@@ -52,6 +62,13 @@ body {
   transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
   margin-left: 230px;
   z-index: 820;
+}
+.test-strategy-manager.content-wrapper {
+  margin-left: 0px;
+}
+.description-tab>.desc-textarea{
+  height: 290px ;
+
 }
 .layout-top-nav .content-wrapper,
 .layout-top-nav .right-side,
@@ -795,6 +812,9 @@ a:focus {
     margin-right: 230px;
   }
 }
+.tab-content.fixed-height{
+  min-height:200px;
+}
 .nav-tabs.control-sidebar-tabs > li:first-of-type > a,
 .nav-tabs.control-sidebar-tabs > li:first-of-type > a:hover,
 .nav-tabs.control-sidebar-tabs > li:first-of-type > a:focus {
@@ -1315,13 +1335,23 @@ a:focus {
  * ---------------
  */
 .form-control {
-  border-radius: 0;
-  box-shadow: none;
-  border-color: #d2d6de;
+   border-radius: 0;
+   box-shadow: none;
+   border-color: #d2d6de;
+ }
+.form-control.form-control-sm {
+  border-radius: 2px;
+  height: 22px;
+}
+.form-control.form-control-sm.text-sm{
+  padding-left: 2px;
 }
 .form-control:focus {
   border-color: #3c8dbc;
   box-shadow: none;
+}
+.form-group>.control-label.align-left{
+  text-align: left;
 }
 .form-control::-moz-placeholder,
 .form-control:-ms-input-placeholder,
@@ -1466,7 +1496,7 @@ a:focus {
 }
 .progress-bar-light-blue,
 .progress-bar-primary {
-  background-color: #3c8dbc;
+  background-color: #3c8dbc !important;
 }
 .progress-striped .progress-bar-light-blue,
 .progress-striped .progress-bar-primary {
@@ -1476,7 +1506,7 @@ a:focus {
 }
 .progress-bar-green,
 .progress-bar-success {
-  background-color: #00a65a;
+  background-color: #00a65a !important;
 }
 .progress-striped .progress-bar-green,
 .progress-striped .progress-bar-success {
@@ -1486,7 +1516,7 @@ a:focus {
 }
 .progress-bar-aqua,
 .progress-bar-info {
-  background-color: #00c0ef;
+  background-color: #00c0ef !important;
 }
 .progress-striped .progress-bar-aqua,
 .progress-striped .progress-bar-info {
@@ -1496,7 +1526,7 @@ a:focus {
 }
 .progress-bar-yellow,
 .progress-bar-warning {
-  background-color: #f39c12;
+  background-color: #f39c12 !important;
 }
 .progress-striped .progress-bar-yellow,
 .progress-striped .progress-bar-warning {
@@ -1506,7 +1536,7 @@ a:focus {
 }
 .progress-bar-red,
 .progress-bar-danger {
-  background-color: #dd4b39;
+  background-color: #dd4b39 !important;
 }
 .progress-striped .progress-bar-red,
 .progress-striped .progress-bar-danger {
@@ -1605,8 +1635,13 @@ a:focus {
   width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
-.box.box-plugin > .box-body{
-    min-height: 300px;
+.box-plugin-body{
+    height: 65vh;
+    max-height: 65vh;
+}
+.box-plugin-form-body{
+    height: 45.7vh;
+    max-height: 45.7vh;
 }
 .box.box-primary {
   border-top-color: #0067C5;
@@ -1773,6 +1808,36 @@ a:focus {
   font-size: 30px;
 }
 .box .overlay.dark,
+.overlay-wrapper .overlay.dark {
+  background: rgba(0, 0, 0, 0.5);
+}
+.box-body > .overlay,
+.overlay-wrapper > .overlay,
+.box-body > .loading-img,
+.overlay-wrapper > .loading-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.box-body .overlay,
+.overlay-wrapper .overlay {
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+}
+.box-body .overlay > .fa,
+.overlay-wrapper .overlay > .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+  color: #000;
+  font-size: 30px;
+}
+.box-body .overlay.dark,
 .overlay-wrapper .overlay.dark {
   background: rgba(0, 0, 0, 0.5);
 }
@@ -4477,7 +4542,25 @@ table.text-center th {
   border: 0 !important;
 }
 .no-padding {
-  padding: 0 !important;
+   padding: 0 !important;
+ }
+.pad-l-r-6 {
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+.pad-l-0{
+  padding-left: 0px !important;
+
+}
+.pad-r-0{
+  padding-right: 0px !important;
+
+}
+.margin-b-8{
+  margin-bottom: 8px !important;
+}
+.resize-none{
+  resize: none;
 }
 .no-margin {
   margin: 0 !important;
@@ -4510,7 +4593,7 @@ table.text-center th {
   font-weight: 700;
 }
 .text-sm {
-  font-size: 12px;
+  font-size: 9px !important;
 }
 .jqstooltip {
   padding: 5px!important;

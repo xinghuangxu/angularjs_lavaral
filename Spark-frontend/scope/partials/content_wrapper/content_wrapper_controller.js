@@ -4,12 +4,5 @@
 (function(){
     'use strict';
     angular.module('scope').controller('scopeContentWrapperController',scopeContentWrapperController);
-    function scopeContentWrapperController(){
-        
-        
-        
-        
-    }
-    
-    
+    function scopeContentWrapperController(){}
 });
