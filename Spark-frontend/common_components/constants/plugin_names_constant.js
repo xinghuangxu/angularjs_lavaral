@@ -68,9 +68,7 @@
             controller: 'testStrategyController as TSCtrl'
         },
         "plugins_config": {
-            // endpointServer: location.protocol+'//'+location.host
-            // Uncomment following line to get the data from your local server
-            endpointServer: 'http://localhost:8000'
+            endpointServer: location.protocol+'//'+location.host
         }
 
 
