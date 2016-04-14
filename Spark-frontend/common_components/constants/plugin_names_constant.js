@@ -67,10 +67,6 @@
         "test_strategy":{
             templateUrl: 'plugins/test_strategy/test_strategy.html',
             controller: 'testStrategyController as TSCtrl'
-        },
-        "plugins_config": {
-            // This one is not used any More
-            endpointServer: location.protocol+'//'+location.host
         }
 
 

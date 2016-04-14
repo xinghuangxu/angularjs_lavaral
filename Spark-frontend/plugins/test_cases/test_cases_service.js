@@ -56,7 +56,7 @@
                 url: ServerName + '/rest/alm/databases/database/testcasefolders/' + id
             });
         }
-        
+
         function getTestCasesRepositoriesTree(data){
             var nodeJson = function(id, text, icon){
                 this.id= id,
