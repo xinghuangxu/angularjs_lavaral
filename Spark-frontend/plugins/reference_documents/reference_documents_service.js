@@ -26,9 +26,9 @@
                 // should be activated after settings
                 //url: '/rest/v2/requirements/archdocs/?&perpage=all'
                 url: ServerName + '/rest/requirements/doctypes'
-            }); 
+            });
         }
-        
+
         function getReferenceDocs(id){
             var ServerName = (location.host === 'localhost:8080') ? 'http://localhost:8000' :'';
             return $http({
