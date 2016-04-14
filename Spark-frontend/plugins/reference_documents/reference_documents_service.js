@@ -20,29 +20,32 @@
 
 
         function getDocTypes(){
+            var ServerName = (location.host === 'localhost:8080') ? 'http://localhost:8000' :'';
             return $http({
                 method: 'GET',
                 // should be activated after settings
                 //url: '/rest/v2/requirements/archdocs/?&perpage=all'
-                url: pluginNamesConstant.plugins_config.endpointServer + '/rest/requirements/doctypes'
-            }); 
+                url: ServerName + '/rest/requirements/doctypes'
+            });
         }
-        
+
         function getReferenceDocs(id){
+            var ServerName = (location.host === 'localhost:8080') ? 'http://localhost:8000' :'';
             return $http({
                 method: 'GET',
                 // should be activated after settings
                 //url: '/rest/v2/requirements/archdocs/?&perpage=all'
-                url: pluginNamesConstant.plugins_config.endpointServer + '/rest/v2/requirements/archdocs/?&perpage=all'
+                url: ServerName + '/rest/v2/requirements/archdocs/?&perpage=all'
             });
         }
 
         function getTopicsData(id){
+            var ServerName = (location.host === 'localhost:8080') ? 'http://localhost:8000' :'';
             return $http({
                 method: 'GET',
                 // should be activated after settings
                 // url: '/rest/v2/requirements/archdocs/'+ id + '/topics'
-                url: pluginNamesConstant.plugins_config.endpointServer + '/rest/v2/requirements/archdocs/'+ id + '/topics'
+                url: ServerName + '/rest/v2/requirements/archdocs/'+ id + '/topics'
             });
         }
 
@@ -64,13 +67,11 @@
 
             var treeJson = [];
             var treeData = data.data;
-            console.log(treeData);
             for (var i=0; i < treeData.length; i++){
-                var node = new nodeJson(treeData[i].id,treeData[i].text,"glyphicon glyphicon-folder-open");
+                var node = new nodeJson(treeData[i].id,treeData[i].text,treeData[i].icon);
 
                 treeJson.push(node);
             }
-            console.log(treeJson)
             return treeJson;
         }
 
