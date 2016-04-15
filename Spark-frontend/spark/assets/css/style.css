@@ -21,11 +21,12 @@ body {
   position: static;
   overflow: hidden;
 }
-@media (max-height: 400px) {
-  .wrapper{
-    overflow-y: scroll;
-  }
-}
+/*scroll is not required*/
+/*@media (max-height: 400px) {*/
+  /*.wrapper{*/
+    /*overflow-y: scroll;*/
+  /*}*/
+/*}*/
 @media (max-width: 768px) {
   .wrapper{
     overflow-y: scroll;
@@ -154,6 +155,7 @@ body.hold-transition .main-header .logo {
 .content {
   min-height: 250px;
   padding: 15px;
+  padding-bottom: 0px;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -1635,14 +1637,12 @@ a:focus {
   width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
+.box-plugin{
+  margin-bottom: 0;
+}
 .box-plugin-body{
-    height: 65vh;
-    max-height: 65vh;
-}
-.box-plugin-form-body{
-    height: 45.7vh;
-    max-height: 45.7vh;
-}
+   height: 65vh;
+ }
 .box.box-primary {
   border-top-color: #0067C5;
 }
@@ -1697,8 +1697,8 @@ a:focus {
 }
 .box.box-solid.box-default > .box-header {
   color: #444444;
-  background: #d2d6de;
-  background-color: #d2d6de;
+  background: rgb(225, 225, 225);
+  background-color: rgb(225, 225, 225);
 }
 .box.box-solid.box-default > .box-header a,
 .box.box-solid.box-default > .box-header .btn {
@@ -1860,6 +1860,7 @@ a:focus {
   display: block;
   padding: 10px;
   position: relative;
+  cursor: pointer;
 }
 .box-header.with-border {
   border-bottom: 1px solid #f4f4f4;
@@ -1911,7 +1912,7 @@ a:focus {
   border-top-right-radius: 0;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
-  padding: 10px;
+  padding: 4px;
 }
 .no-header .box-body {
   border-top-right-radius: 3px;
@@ -2364,14 +2365,14 @@ a:focus {
 .btn-default.hover {
   background-color: #e7e7e7;
 }
-.btn-primary {
-  background-color: #3c8dbc;
+.btn.btn-primary {
+  background-color: #0067C5;
   border-color: #367fa9;
 }
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary.hover {
-  background-color: #367fa9;
+.btn.btn-primary:hover,
+.btn.btn-primary:active,
+.btn.btn-primary.hover {
+  background-color: #0077dc;
 }
 .btn-success {
   background-color: #00a65a;

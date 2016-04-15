@@ -2,26 +2,18 @@
     <div class="box-header ">
         <h3 class="box-title">Test Cases</h3>
 
-        <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-
-            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-        </div>
         <!-- /.box-tools -->
     </div>
     <!-- /.box-header -->
-    <div class="box-body box-plugin-body" ng-slimscroll>
+    <div class="box-body box-plugin-body" ng-slimscroll fixed-height-box>
         <!-- Starting Multi tab -->
 
 
-        <div class="box box-default collapsed-box">
-            <div class="box-header with-border">
+        <div class="box box-default box-solid collapsed-box">
+            <div class="box-header with-border" data-widget="collapse">
                 <h3 class="box-title">Suggested Test Cases</h3>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                    </button>
-                </div>
+
                 <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
@@ -31,15 +23,11 @@
             <!-- /.box-body -->
         </div>
 
-        <div class="box box-default collapsed-box">
-            <div class="box-header with-border">
+        <div class="box box-default box-solid collapsed-box">
+            <div class="box-header with-border" data-widget="collapse" ng-click="TCCtrl.loadTreeData()">
                 <h3 class="box-title">Browse Test Cases</h3>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse" ng-click="TCCtrl.loadTreeData()">
-                        <i class="fa fa-plus"></i>
-                    </button>
-                </div>
+
                 <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
@@ -49,14 +37,11 @@
             <!-- /.box-body -->
         </div>
 
-        <div class="box box-default collapsed-box">
-            <div class="box-header with-border">
+        <div class="box box-default box-solid collapsed-box">
+            <div class="box-header with-border" data-widget="collapse">
                 <h3 class="box-title">Search</h3>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                    </button>
-                </div>
+
                 <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->

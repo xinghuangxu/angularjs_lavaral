@@ -2,26 +2,16 @@
     <div class="box-header ">
         <h3 class="box-title">Test Strategy</h3>
 
-        <div class="box-tools pull-right">
-
-            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-        </div>
-        <!-- /.box-tools -->
     </div>
     <!-- /.box-header -->
-    <div id="test_strategy_box" class="box-body box-plugin-body" ng-slimscroll>
+    <div id="test_strategy_box" class="box-body box-plugin-body" ng-slimscroll fixed-height-box>
         <!-- Starting Multi tab -->
 
 
-        <div class="box box-default collapsed-box">
-            <div class="box-header with-border">
+        <div class="box box-solid box-default collapsed-box">
+            <div class="box-header with-border" data-widget="collapse">
                 <h3 class="box-title">Suggested Strategies</h3>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                    </button>
-                </div>
-                <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -49,17 +39,10 @@
             <!-- /.box-body -->
         </div>
 
-        <div class="box box-default collapsed-box">
-            <div class="box-header with-border">
+        <div class="box box-solid box-default collapsed-box">
+            <div class="box-header with-border" data-widget="collapse" ng-click="!TSCtrl.coreTestStrategies&&TSCtrl.getCoreTestStrategies()">
                 <h3 class="box-title">Core Strategies</h3>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"
-                            ng-click="!TSCtrl.coreTestStrategies&&TSCtrl.getCoreTestStrategies()">
-                        <i class="fa fa-plus"></i>
-                    </button>
-                </div>
-                <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -68,17 +51,10 @@
             <!-- /.box-body -->
         </div>
 
-        <div class="box box-default collapsed-box">
-            <div class="box-header with-border">
+        <div class="box box-solid box-default collapsed-box">
+            <div class="box-header with-border" data-widget="collapse" ng-click="!TSCtrl.placeHolderTestStrategies&&TSCtrl.getPlaceHolderTestStrategies()">
                 <h3 class="box-title">Placeholder Strategies</h3>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"
-                            ng-click="!TSCtrl.placeHolderTestStrategies&&TSCtrl.getPlaceHolderTestStrategies()">
-                        <i class="fa fa-plus"></i>
-                    </button>
-                </div>
-                <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -87,16 +63,10 @@
             <!-- /.box-body -->
         </div>
 
-        <div class="box box-default collapsed-box">
-            <div class="box-header with-border">
+        <div class="box box-solid box-default collapsed-box">
+            <div class="box-header with-border" ng-click="!TSCtrl.searchTestStrategies&&TSCtrl.getSearchTestStrategies('abcd')" data-widget="collapse">
                 <h3 class="box-title">Search</h3>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool"
-                            ng-click="!TSCtrl.searchTestStrategies&&TSCtrl.getSearchTestStrategies('abcd')" data-widget="collapse"><i class="fa fa-plus"></i>
-                    </button>
-                </div>
-                <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
             <div class="box-body">
