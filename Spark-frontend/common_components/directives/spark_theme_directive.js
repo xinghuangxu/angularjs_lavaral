@@ -232,10 +232,12 @@
                             //Set the min-height of the content and sidebar based on the
                             //the height of the document.
                             if ($("body").hasClass("fixed")) {
-                                $(".content-wrapper, .right-side").css('min-height', window_height - $('.main-footer').outerHeight());
-                                $(".content").css('height', window_height - $('.main-footer').outerHeight() - 200);
-                                $(".content").css('min-height', window_height - $('.main-footer').outerHeight() - 200);
-                                $(".box-plugin-body").css('height', window_height - $('.main-footer').outerHeight() - 180);
+                                setTimeout(function(){
+                                    $(".content-wrapper, .right-side").css('min-height', window_height - $('.main-footer').outerHeight());
+                                    $(".content").css('height', window_height - $('.main-footer').outerHeight() - 200);
+                                    $(".content").css('min-height', window_height - $('.main-footer').outerHeight() - 200);
+                                    $(".box-plugin-body").css('height', window_height - $('.main-footer').outerHeight() - 180);
+                                },400)
 
                             } else {
                                 var postSetWidth;
