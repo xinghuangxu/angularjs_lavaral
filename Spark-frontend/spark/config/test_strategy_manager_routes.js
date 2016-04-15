@@ -41,7 +41,7 @@
             views: {
                 strategy_viewer: {
                     templateUrl: "test_strategy_manager/panels/viewer/viewer.html",
-                    controller: "strategyViewerController as strategyViewerCtlr"
+                    controller: "strategyViewerController as TSSVCtrl"
                 },
                 strategy_editor: {
                     templateUrl: "test_strategy_manager/panels/editor/editor.html",
