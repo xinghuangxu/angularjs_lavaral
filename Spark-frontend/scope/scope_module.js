@@ -2,7 +2,9 @@
     angular.module('scope', [
         'mgcrea.ngStrap',
         'ngAnimate',
-        'commonComponents'
+        'commonComponents',
+        'scopingInfo',
+        'testRuns'
 
     ]);
 

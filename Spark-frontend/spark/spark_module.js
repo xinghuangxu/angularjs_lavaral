@@ -8,19 +8,11 @@
         'testPlanner',
         'commonComponents',
         'referenceDocuments',
-        'boxcar',
-        'configurationPlan',
-        'highLevelScope',
-        'testStrategy',
-        'implementationRequests',
-        'rally',
-        'rcca',
-        'sow',
-        'testCaseInstances',
+        'scopingInfo',
+        'testRuns',
         'testCases',
         'testStrategy',
         'testPlan',
-        'webLab'
 
     ]);
 
