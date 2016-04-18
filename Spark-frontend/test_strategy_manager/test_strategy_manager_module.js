@@ -11,7 +11,8 @@
         'testRuns',
         'testCases',
         'testPlan',
-        'testStrategy'
+        'testStrategy',
+        'textAngular'
 
     ]);
 
