@@ -1643,6 +1643,9 @@ a:focus {
 .box-plugin-body{
    height: 65vh;
  }
+.box-plugin-form-body{
+  height: 55vh;
+}
 .box.box-primary {
   border-top-color: #0067C5;
 }
@@ -2210,6 +2213,28 @@ a:focus {
 .progress-description {
   margin: 0;
 }
+ul.rankbar {
+  list-style: none;
+  width: 65px;
+  margin-left: -37px;
+}
+.ins .bar {
+  background-color: rgba(0, 0, 0, 0.79) !important;
+  width: 7px;
+  height: 17px;
+  -webkit-animation: fill .5s linear forwards;
+  -moz-animation: fill .5s linear forwards;
+}
+ul.rankbar li {
+  float: left;
+  width: 7px;
+  height: 17px;
+  margin-left: 1px;
+  border-right: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  background-color: #E5E5E5;
+}
+
 /*
  * Component: Timeline
  * -------------------

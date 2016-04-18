@@ -20,32 +20,29 @@
 
 
         function getDocTypes(){
-            var ServerName = (location.host === 'localhost:8080') ? 'http://localhost:8000' :'';
             return $http({
                 method: 'GET',
                 // should be activated after settings
                 //url: '/rest/v2/requirements/archdocs/?&perpage=all'
-                url: ServerName + '/rest/requirements/doctypes'
+                url: pluginNamesConstant.plugins_config.endpointServer +'/rest/requirements/doctypes'
             });
         }
 
         function getReferenceDocs(id){
-            var ServerName = (location.host === 'localhost:8080') ? 'http://localhost:8000' :'';
             return $http({
                 method: 'GET',
                 // should be activated after settings
                 //url: '/rest/v2/requirements/archdocs/?&perpage=all'
-                url: ServerName + '/rest/v2/requirements/archdocs/?&perpage=all'
+                url: pluginNamesConstant.plugins_config.endpointServer +'/rest/v2/requirements/archdocs/?&perpage=all'
             });
         }
 
         function getTopicsData(id){
-            var ServerName = (location.host === 'localhost:8080') ? 'http://localhost:8000' :'';
             return $http({
                 method: 'GET',
                 // should be activated after settings
                 // url: '/rest/v2/requirements/archdocs/'+ id + '/topics'
-                url: ServerName + '/rest/v2/requirements/archdocs/'+ id + '/topics'
+                url: pluginNamesConstant.plugins_config.endpointServer +'/rest/v2/requirements/archdocs/'+ id + '/topics'
             });
         }
 

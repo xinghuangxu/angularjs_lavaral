@@ -15,22 +15,26 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <div class="row">
-                    <div class="col-md-12">
 
-                        <div ng-repeat="strategy in TSCtrl.SISSuggestionsValue.test_strategies" class="progress-group">
-                            <span class="progress-text text-sm">{{strategy.StrategyHeadline}}</span>
-                            <span class="progress-number text-sm">{{strategy.rel}}</span>
 
-                            <div class="progress sm">
-                                <div class="progress-bar progress-bar-green" style="width: {{strategy.rel*100}}%"></div>
+
+                        <div ng-repeat="strategy in TSCtrl.SISSuggestionsValue.test_strategies" class="row">
+                           <div class="col-sm-1">
+                               <ul  class="rankbar ins" title="{{strategy.rel*100}}%">
+                                   <li><div ng-show="strategy.rel>0.6" class="bar"></div></li>
+                                   <li><div ng-show="strategy.rel>0.7" class="bar"></div></li>
+                                   <li><div ng-show="strategy.rel>0.8" class="bar"></div></li>
+                               </ul>
+                           </div>
+                            <div class="col-sm-11">
+                                <span>{{strategy.StrategyHeadline}} </span>
                             </div>
                         </div>
                         <h6 ng-if="TSCtrl.SISSuggestionsValue.test_strategies.length==0">Suggested Strategies not
                             found</h6>
-                    </div>
 
-                </div>
+
+
                 <div class="overlay" ng-if="TSCtrl.SISSuggestionsValue.test_strategies==null">
                     <i class="fa fa-refresh fa-spin"></i>
                 </div>
@@ -47,6 +51,11 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <spark-jstree ng-model="TSCtrl.coreTestStrategies"></spark-jstree>
+                <h6 ng-if="TSCtrl.SISSuggestionsValue.test_strategies.length==0">Suggested Strategies not
+                    found</h6>
+                <div class="overlay" ng-if="TSCtrl.SISSuggestionsValue.test_strategies==null">
+                    <i class="fa fa-refresh fa-spin"></i>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>
@@ -59,6 +68,11 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <spark-jstree ng-model="TSCtrl.placeHolderTestStrategies"></spark-jstree>
+                <h6 ng-if="TSCtrl.placeHolderTestStrategies==0">Place Holder Strategies not
+                    found</h6>
+                <div class="overlay" ng-if="TSCtrl.placeHolderTestStrategies==null">
+                    <i class="fa fa-refresh fa-spin"></i>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>
@@ -71,6 +85,11 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <spark-jstree ng-model="TSCtrl.searchTestStrategies"></spark-jstree>
+                <h6 ng-if="TSCtrl.searchTestStrategies.length==0">Test Strategies not
+                    found</h6>
+                <div class="overlay" ng-if="TSCtrl.searchTestStrategies==null">
+                    <i class="fa fa-refresh fa-spin"></i>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>

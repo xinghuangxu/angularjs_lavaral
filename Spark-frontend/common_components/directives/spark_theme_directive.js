@@ -1,8 +1,8 @@
 (function () {
     'use strict';
-    angular.module('commonComponents').directive('sparkTheme', fixedHeightBox);
-    fixedHeightBox.$inject = [];
-    function fixedHeightBox() {
+    angular.module('commonComponents').directive('sparkTheme', sparkTheme);
+    sparkTheme.$inject = [];
+    function sparkTheme() {
         return {
             link: function (scope, element, attrs) {
 
@@ -237,6 +237,7 @@
                                     $(".content").css('height', window_height - $('.main-footer').outerHeight() - 200);
                                     $(".content").css('min-height', window_height - $('.main-footer').outerHeight() - 200);
                                     $(".box-plugin-body").css('height', window_height - $('.main-footer').outerHeight() - 180);
+                                    $(".box-plugin-form-body").css('height', window_height - $('.main-footer').outerHeight() - 232);
                                 },400)
 
                             } else {

@@ -16,7 +16,6 @@
     //function testCasesService($q,$http, planSettings){
 
     function testCasesService($http, pluginNamesConstant){
-
         this.getTestCasesRepositories = getTestCasesRepositories;
         this.getFolders = getFolders;
         this.getTestCases= getTestCases;
@@ -28,32 +27,29 @@
         // Start of Implementation
 
         function getTestCasesRepositories(){
-            var ServerName = (location.host === 'localhost:8080') ? 'http://localhost:8000' :'';
             return $http({
                 method: 'GET',
                 // should be activated after settings
                 //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcasefolders/'
-                url: ServerName + '/rest/testrepositories'
+                url: pluginNamesConstant.plugins_config.endpointServer +'/rest/testrepositories'
             });
         }
 
         function getFolders(id){
-            var ServerName = (location.host === 'localhost:8080') ? 'http://localhost:8000' :'';
             return $http({
                 method: 'GET',
                 // should be activated after settings
                 //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcasefolders/'
-                url:  ServerName + '/rest/alm/databases/database/testcasefolders/'
+                url:  pluginNamesConstant.plugins_config.endpointServer +'/rest/alm/databases/database/testcasefolders/'
             });
         }
 
         function getTestCases(id){
-            var ServerName = (location.host === 'localhost:8080') ? 'http://localhost:8000' :'';
             return $http({
                 method: 'GET',
                 // should be activated after settings
                 // url: '/rest/alm/databases/'+ planSettings.data.alm_db_name + '/testcasesbyfolder/' + id
-                url: ServerName + '/rest/alm/databases/database/testcasefolders/' + id
+                url: pluginNamesConstant.plugins_config.endpointServer +'/rest/alm/databases/database/testcasefolders/' + id
             });
         }
 

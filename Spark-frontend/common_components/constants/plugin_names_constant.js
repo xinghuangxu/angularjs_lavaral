@@ -33,6 +33,9 @@
             templateUrl: 'plugins/scoping_info/scoping_info.html',
             controller: 'scopingInfoController as SICtrl'
 
+        },
+        "plugins_config": {
+            endpointServer: (location.host === 'localhost:8080') ? 'http://localhost:8000' :''
         }
     });
 

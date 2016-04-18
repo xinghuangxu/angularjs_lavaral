@@ -19,6 +19,7 @@
         TSCtrl.getPlaceHolderTestStrategies = getPlaceHolderTestStrategies;
         TSCtrl.getSearchTestStrategies = getSearchTestStrategies;
         function getCoreTestStrategies() {
+            TSCtrl.coreTestStrategies=null;
             testStrategyService.getTestStrategies('c').then(function(resp){
 
                 TSCtrl.coreTestStrategies=testStrategyService.getTreeJson(resp.data);
@@ -26,14 +27,14 @@
             })
         }
         function getPlaceHolderTestStrategies() {
-
+            TSCtrl.placeHolderTestStrategies=null;
             testStrategyService.getTestStrategies('pc').then(function(resp){
                 TSCtrl.placeHolderTestStrategies=testStrategyService.getTreeJson(resp.data);
 
             })
         }
         function getSearchTestStrategies(search_text) {
-
+            TSCtrl.searchTestStrategies=null;
             testStrategyService.getTestStrategies(null,search_text).then(function(resp){
                 TSCtrl.searchTestStrategies=testStrategyService.getTreeJson(resp.data);
 
