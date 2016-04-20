@@ -11,7 +11,7 @@
     function strategyEditorController($state,SISService,SISSuggestionsValue){
 
         var strategyEditorCtlr =this;
-        strategyEditorCtlr.strategy={headline:null,impact_area:null,qlt_area:null,approach:null,goal:null, };
+        strategyEditorCtlr.strategy={headline:null,impact_area:null,qlt_area:null,approach:null,goal:null };
 
 
         strategyEditorCtlr.changeLeftPlugin=changeLeftPlugin;
@@ -44,23 +44,23 @@
             SISSuggestionsValue.test_strategies =[{
                 "StrategyID": 4239,
                 "StrategyHeadline": "SAM-EF Pool Management: Secure Erase Drives?",
-                "rel": 0.4133198922545748
+                "rel": 0.7
             },{
                 "StrategyID": 4200,
                 "StrategyHeadline": "Storage System Failure",
-                "rel": 0.4133198922545748
+                "rel": 0.9
             },{
                 "StrategyID": 3135,
                 "StrategyHeadline": "ABC",
-                "rel": 0.4133198922545748
+                "rel": 0.8
             },{
                 "StrategyID": 4056,
                 "StrategyHeadline": "Error handling for missing/corrupted files in cloud storage account (metadata files and data objects)",
-                "rel": 0.4133198922545748
+                "rel": 0.7
             },{
                 "StrategyID": 4061,
                 "StrategyHeadline": "Error handling for cloud provider-specific errors",
-                "rel": 0.4133198922545748
+                "rel": 1
             }];
             //SiS service is not working
             // SISService.getSuggestedTestStrategies(arg).then(function(){

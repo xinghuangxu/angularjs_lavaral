@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    angular.module('highLevelScope',[
+    angular.module('scopingInfo',[
         'mgcrea.ngStrap',
         'ngAnimate'
     ]);

@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    angular.module('rcca',[
+    angular.module('testRuns',[
         'mgcrea.ngStrap',
         'ngAnimate'
     ]);

@@ -11,7 +11,7 @@
     <title>Spark | Planner</title>
 
 </head>
-<body class="hold-transition skin-blue sidebar-mini" ui-view>
+<body class="hold-transition skin-blue sidebar-mini fixed" ui-view>
 
 
 
@@ -26,10 +26,12 @@
 <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src='bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+<script src='bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
+<script src='bower_components/textAngular/dist/textAngular.min.js'></script>
 
 <!-- Add New Bower Component JS Above -->
 <script src="spark/assets/js/pace.min.js"></script>
-<script src="spark/assets/js/theme.js"></script>
 <script src="bower_components/ngSlimscroll/src/js/min/ngSlimscroll.js"></script>
 <script src="spark/assets/js/js-tree/jstree.min.js"></script>
 
@@ -40,43 +42,21 @@
 <script src="common_components/values/suggested_test_strategies_value.js"></script>
 <script src="common_components/services/SIS_service.js"></script>
 <script src="common_components/directives/jstree_directive.js"></script>
+<script src="common_components/directives/spark_theme_directive.js"></script>
+<script src="common_components/directives/fixed_height_box_directive.js"></script>
 
 
 <script src="plugins/reference_documents/reference_documents_module.js"></script>
 <script src="plugins/reference_documents/reference_documents_controller.js"></script>
 <script src="plugins/reference_documents/reference_documents_service.js"></script>
 
-<script src="plugins/boxcar/boxcar_module.js"></script>
-<script src="plugins/boxcar/boxcar_controller.js"></script>
-<script src="plugins/boxcar/boxcar_service.js"></script>
+<script src="plugins/scoping_info/scoping_info_module.js"></script>
+<script src="plugins/scoping_info/scoping_info_controller.js"></script>
+<script src="plugins/scoping_info/scoping_info_service.js"></script>
 
-<script src="plugins/configuration_plan/configuration_plan_module.js"></script>
-<script src="plugins/configuration_plan/configuration_plan_controller.js"></script>
-<script src="plugins/configuration_plan/configuration_plan_service.js"></script>
-
-<script src="plugins/high_level_scope/high_level_scope_module.js"></script>
-<script src="plugins/high_level_scope/high_level_scope_controller.js"></script>
-<script src="plugins/high_level_scope/high_level_scope_service.js"></script>
-
-<script src="plugins/implementation_requests/implementation_requests_module.js"></script>
-<script src="plugins/implementation_requests/implementation_requests_controller.js"></script>
-<script src="plugins/implementation_requests/implementation_requests_service.js"></script>
-
-<script src="plugins/rally/rally_module.js"></script>
-<script src="plugins/rally/rally_controller.js"></script>
-<script src="plugins/rally/rally_service.js"></script>
-
-<script src="plugins/rcca/rcca_module.js"></script>
-<script src="plugins/rcca/rcca_controller.js"></script>
-<script src="plugins/rcca/rcca_service.js"></script>
-
-<script src="plugins/sow/sow_module.js"></script>
-<script src="plugins/sow/sow_controller.js"></script>
-<script src="plugins/sow/sow_service.js"></script>
-
-<script src="plugins/test_case_instances/test_case_instances_module.js"></script>
-<script src="plugins/test_case_instances/test_case_instances_controller.js"></script>
-<script src="plugins/test_case_instances/test_case_instances_service.js"></script>
+<script src="plugins/test_runs/test_runs_module.js"></script>
+<script src="plugins/test_runs/test_runs_controller.js"></script>
+<script src="plugins/test_runs/test_runs_service.js"></script>
 
 <script src="plugins/test_cases/test_cases_module.js"></script>
 <script src="plugins/test_cases/test_cases_controller.js"></script>
@@ -86,13 +66,10 @@
 <script src="plugins/test_plan/test_plan_controller.js"></script>
 <script src="plugins/test_plan/test_plan_service.js"></script>
 
-<script src="plugins/web_lab/web_lab_module.js"></script>
-<script src="plugins/web_lab/web_lab_controller.js"></script>
-<script src="plugins/web_lab/web_lab_service.js"></script>
-
 <script src="plugins/test_strategy/test_strategy_module.js"></script>
 <script src="plugins/test_strategy/test_strategy_controller.js"></script>
 <script src="plugins/test_strategy/test_strategy_service.js"></script>
+
 
 <script src="plugins/test_strategy/test_strategy_module.js"></script>
 <script src="plugins/test_strategy/test_strategy_controller.js"></script>
@@ -110,12 +87,12 @@
 <script src="scope/partials/left_side_bar/left_side_bar_controller.js"></script>
 
 
-
 <script src="test_strategy_manager/test_strategy_manager_module.js"></script>
-<script src="test_strategy_manager/partials/right_side_bar/right_side_bar_controller.js"></script>
 <script src="test_strategy_manager/test_strategy_manager_controller.js"></script>
 <script src="test_strategy_manager/panels/editor/editor_controller.js"></script>
 <script src="test_strategy_manager/panels/viewer/viewer_controller.js"></script>
+<script src="test_strategy_manager/config/text_angular_decorator.js"></script>
+
 
 <script src="spark/spark_module.js"></script>
 <script src="spark/config/test_planner_routes.js"></script>

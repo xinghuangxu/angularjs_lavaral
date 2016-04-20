@@ -6,70 +6,37 @@
 
     angular.module('commonComponents').constant('pluginNamesConstant', {
 
+        "test_cases": {
+            templateUrl: 'plugins/test_cases/test_cases.html',
+            controller: 'testCasesController as TCCtrl',
+
+        },
+        "test_plan": {
+            templateUrl: 'plugins/test_plan/test_plan.html',
+            controller: 'testPlanController as TPCtrl'
+        },
+        "test_strategy":{
+            templateUrl: 'plugins/test_strategy/test_strategy.html',
+            controller: 'testStrategyController as TSCtrl'
+        },
+        "test_runs": {
+            templateUrl: 'plugins/test_runs/test_runs.html',
+            controller: 'testRunsController as TRCtrl'
+
+        },
         "reference_documents": {
             templateUrl: 'plugins/reference_documents/reference_documents.html',
             controller: 'referenceDocumentsController as RDCtrl',
 
         },
-        "boxcar": {
-            templateUrl: 'plugins/boxcar/boxcar.html',
-            controller: 'boxcarController as BCCtrl'
+        "scoping_info": {
+            templateUrl: 'plugins/scoping_info/scoping_info.html',
+            controller: 'scopingInfoController as SICtrl'
 
         },
-        "configuration_plan": {
-            templateUrl: 'plugins/configuration_plan/configuration_plan.html',
-            controller: 'configurationPlanController as CPCtrl'
-
-        },
-        "high_level_scope": {
-            templateUrl: 'plugins/high_level_scope/high_level_scope.html',
-            controller: 'highLevelScopeController as HLSCtrl'
-
-        },
-        "implementation_requests": {
-            templateUrl: 'plugins/implementation_requests/implementation_requests.html',
-            controller: 'implementationRequestsController as IRCtrl'
-
-
-        },
-        "rally": {
-            templateUrl: 'plugins/rally/rally.html',
-            controller: 'rallyController as RCtrl'
-
-        },
-        "rcca": {
-            templateUrl: 'plugins/rcca/rcca.html',
-            controller: 'rccaController as RCCACtrl'
-
-        },
-        "sow": {
-            templateUrl: 'plugins/sow/sow.html',
-            controller: 'sowController as SOWCtrl'
-        },
-        "test_case_instances": {
-            templateUrl: 'plugins/test_case_instances/test_case_instances.html',
-            controller: 'testCaseInstancesController as TCICtrl'
-
-        },
-        "test_cases": {
-            templateUrl: 'plugins/test_cases/test_cases.html',
-            controller: 'testCasesController as TCCtrl',
-
-        },"test_plan": {
-            templateUrl: 'plugins/test_plan/test_plan.html',
-            controller: 'testPlanController as TPCtrl'
-
-        },
-        "web_lab": {
-            templateUrl: 'plugins/web_lab/web_lab.html',
-            controller: 'webLabController as WLCtrl'
-        },
-        "test_strategy":{
-            templateUrl: 'plugins/test_strategy/test_strategy.html',
-            controller: 'testStrategyController as TSCtrl'
+        "plugins_config": {
+            endpointServer: (location.host === 'localhost:8080') ? 'http://localhost:8000' :''
         }
-
-
     });
 
 

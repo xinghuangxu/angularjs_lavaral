@@ -16,10 +16,9 @@
         this.getTreeJson = getTreeJson;
         // Start of Implementation
         function getTestStrategies(type,search){
-            var ServerName = (location.host === 'localhost:8080') ? 'http://localhost:8000' :'';
             return $http({
                 method: 'GET',
-                url: ServerName + '/rest/strategies/',
+                url: pluginNamesConstant.plugins_config.endpointServer + '/rest/strategies/',
                 params:{
                     fields:'StrategyID,StrategyHeadline,State,Owner,ModifiedDate',
                     perpage:'all',

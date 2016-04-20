@@ -4,17 +4,11 @@
         'ngAnimate',
         'commonComponents',
         'referenceDocuments',
-        'boxcar',
-        'configurationPlan',
-        'highLevelScope',
-        'implementationRequests',
-        'rally',
-        'rcca',
-        'sow',
-        'testCaseInstances',
+        'scopingInfo',
+        'testRuns',
         'testCases',
         'testPlan',
-        'webLab'
+        'testStrategy'
 
     ]);
 

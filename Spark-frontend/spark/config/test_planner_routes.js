@@ -70,7 +70,7 @@
                         var column_class = 'col-md-'+12/number_of_params;
                         for(var index =1;index<=number_of_params;index++)
                         {
-                            template+="<div class='"+column_class+"' ui-view='plugin_"+index+"'></div>"
+                            template+="<div class='pad-l-r-6 "+column_class+"' ui-view='plugin_"+index+"'></div>"
 
                         }
                         return "<div class='row'> " +template+"</div>";
