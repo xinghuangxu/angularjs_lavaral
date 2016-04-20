@@ -22,8 +22,6 @@
         function getDocTypes(){
             return $http({
                 method: 'GET',
-                // should be activated after settings
-                //url: '/rest/v2/requirements/archdocs/?&perpage=all'
                 url: pluginNamesConstant.plugins_config.endpointServer +'/rest/requirements/doctypes'
             });
         }
@@ -31,8 +29,6 @@
         function getReferenceDocs(id){
             return $http({
                 method: 'GET',
-                // should be activated after settings
-                //url: '/rest/v2/requirements/archdocs/?&perpage=all'
                 url: pluginNamesConstant.plugins_config.endpointServer +'/rest/v2/requirements/archdocs/?&perpage=all'
             });
         }
@@ -40,8 +36,6 @@
         function getTopicsData(id){
             return $http({
                 method: 'GET',
-                // should be activated after settings
-                // url: '/rest/v2/requirements/archdocs/'+ id + '/topics'
                 url: pluginNamesConstant.plugins_config.endpointServer +'/rest/v2/requirements/archdocs/'+ id + '/topics'
             });
         }

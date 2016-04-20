@@ -29,8 +29,6 @@
         function getTestCasesRepositories(){
             return $http({
                 method: 'GET',
-                // should be activated after settings
-                //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcasefolders/'
                 url: pluginNamesConstant.plugins_config.endpointServer +'/rest/testrepositories'
             });
         }
@@ -38,8 +36,6 @@
         function getFolders(id){
             return $http({
                 method: 'GET',
-                // should be activated after settings
-                //url: '/rest/alm/databases/'+ planSettings.data.alm_db_name +'/testcasefolders/'
                 url:  pluginNamesConstant.plugins_config.endpointServer +'/rest/alm/databases/database/testcasefolders/'
             });
         }
@@ -47,8 +43,6 @@
         function getTestCases(id){
             return $http({
                 method: 'GET',
-                // should be activated after settings
-                // url: '/rest/alm/databases/'+ planSettings.data.alm_db_name + '/testcasesbyfolder/' + id
                 url: pluginNamesConstant.plugins_config.endpointServer +'/rest/alm/databases/database/testcasefolders/' + id
             });
         }
