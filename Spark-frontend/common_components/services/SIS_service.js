@@ -8,27 +8,26 @@
         .module('commonComponents')
         .service('SISService',SISService);
 
-    SISService.$inject= ['$http'];
+    SISService.$inject= ['$http','pluginNamesConstant'];
 
 
-    function SISService($http){
+    function SISService($http,pluginNamesConstant){
 
         this.getSuggestedTestStrategies= getSuggestedTestStrategies;
 
         function getSuggestedTestStrategies(arg){
-            //comment it out when sis service backend is ready
-            // return $http({
-            //     method: 'POST',
-            //     url: '',
-            //     data: {
-            //         'adviser_type': 'ts_adviser',
-            //         'StrategyHeadline': 'CLI Stuff',
-            //         'TestStrategy': 'very long description of the contents of this particular test strategy.',
-            //         'categories': [35, 168, 418, 111, 6752],
-            //         'num_ts': 10,
-            //         'Override_knob_values': 'false'
-            //     }
-            // })
+            return $http({
+                method: 'GET',
+                url: pluginNamesConstant.plugins_config.endpointServer+'/rest/SIS/ts',
+                params: {
+                    'adviser_type': 'ts_adviser',
+                    'StrategyHeadline': arg.strategy_headline||'',
+                    'TestStrategy': arg.test_strategy||'',
+                    'categories': arg.categories||[],
+                    'num_ts': 10,
+                    'Override_knob_values': 'false'
+                }
+            });
 
         }
 
