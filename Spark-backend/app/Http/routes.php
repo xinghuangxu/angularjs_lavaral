@@ -218,6 +218,12 @@ Route::group(array('prefix' => 'rest', 'before' => 'elmolog'), function() {
 
     });
 
+    Route::group(array('prefix'=>'SIS', 'namespace' => 'SIS'), function(){
+        Route::resource('ts','tsController', ['only'=>['index']]);
+        Route::resource('pr','prController', ['only'=>['index']]);
+        Route::resource('rcca','rccaController', ['only'=>['index']]);
+    });
+
 });
 
 Route::group(array('prefix' => 'api'), function() {
