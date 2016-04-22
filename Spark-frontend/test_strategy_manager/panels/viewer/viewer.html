@@ -1,6 +1,9 @@
 <div class="box box-primary box-solid box-plugin">
     <div class="box-header with-border">
         <h3 class="box-title">Strategy Viewer</h3>
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="remove" ng-click="TSMCtrl.viewer_is_active=false"><i class="fa fa-times"></i></button>
+        </div>
     </div>
     <!-- /.box-header -->
     <!-- form start -->
@@ -57,10 +60,12 @@
                     <div class="nav-tabs-custom margin-b-8">
                         <ul class="nav nav-tabs">
 
-                            <li class="active"><a data-target="#desc" role="tab" data-toggle="tab" class="text-md pad-l-r-6" aria-expanded="false">Desc.</a></li>
-                            <li><a href="" class="text-md pad-l-r-6" data-target="#ref" role="tab" data-toggle="tab" aria-expanded="false">Ref.</a></li>
-                            <li><a href="" class="text-md pad-l-r-6" data-target="#test_cases" role="tab" data-toggle="tab" aria-expanded="true">Test Cases</a></li>
-                            <li><a href="" class="text-md pad-l-r-6" data-target="#assoc" role="tab"  data-toggle="tab" aria-expanded="true">Assoc.</a></li>
+                            <li class="active"><a data-target="#desc" role="tab" data-toggle="tab" class="text-md pad-l-r-6" aria-expanded="false"><i class="fa fa-file-text-o"></i></a></li>
+                            <li><a href="" class="text-md pad-l-r-6" data-target="#ref" role="tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-book"></i></a></li>
+                            <li><a href="" class="text-md pad-l-r-6" data-target="#test_cases" role="tab" data-toggle="tab" aria-expanded="true"><i class="fa fa-briefcase"></i></a></li>
+                            <li><a href="" class="text-md pad-l-r-6" data-target="#Attachment" role="tab"  data-toggle="tab" aria-expanded="true"><i class="fa fa-paperclip"></i></a></li>
+                            <li><a href="" class="text-md pad-l-r-6" data-target="#links" role="tab"  data-toggle="tab" aria-expanded="true"><i class="fa fa-link"></i></a></li>
+                            <li><a href="" class="text-md pad-l-r-6" data-target="#info" role="tab"  data-toggle="tab" aria-expanded="true"><i class="fa fa-info"></i></a></li>
                         </ul>
                         <div class="tab-content fixed-height">
                             <div  class="active tab-pane description-tab" id="desc" ng-include="'test_strategy_manager/panels/viewer/tabs/desc.html'">
@@ -69,7 +74,11 @@
                             </div>
                             <div  class="tab-pane description-tab" id="test_cases" ng-include="'test_strategy_manager/panels/viewer/tabs/test_cases.html'">
                             </div>
-                            <div  class=" tab-pane description-tab" id="assoc" ng-include="'test_strategy_manager/panels/viewer/tabs/assoc.html'">
+                            <div  class=" tab-pane description-tab" id="Attachment" ng-include="'test_strategy_manager/panels/viewer/tabs/Attachment.html'">
+                            </div>
+                            <div  class=" tab-pane description-tab" id="links" ng-include="'test_strategy_manager/panels/viewer/tabs/links.html'">
+                            </div>
+                            <div  class=" tab-pane description-tab" id="info" ng-include="'test_strategy_manager/panels/viewer/tabs/info.html'">
                             </div>
                         </div>
                         <!-- /.tab-content -->
