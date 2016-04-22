@@ -4,13 +4,13 @@
     </div>
     <!-- /.box-header -->
     <!-- form start -->
-    <form class="form-horizontal box-plugin-form-body" ng-slimscroll fixed-height-box>
+    <form class="form-horizontal box-plugin-body" ng-slimscroll fixed-height-box>
         <div class="box-body" >
             <div class="form-group text-md margin-b-8">
                 <label class="col-sm-3 control-label align-left align-left">Headline</label>
 
                 <div class="col-sm-8 pad-l-0">
-                    {{TSSVCtrl.StrategyHeadline}}
+                    {{TSSVCtrl.testStrategy.headLine}}
                     <!--<input type="text" disabled class="form-control form-control-sm text-sm" id="headline" placeholder="Headline">-->
                 </div>
             </div>
@@ -18,7 +18,7 @@
                 <label class="pad-r-0 col-sm-3 control-label align-left align-left">Impact Area</label>
 
                 <div class="col-sm-8 pad-l-0">
-                    <span ng-repeat="impactArea in TSSVCtrl.tags_impact_area">
+                    <span ng-repeat="impactArea in TSSVCtrl.testStrategy.impactArea">
                         {{impactArea.CategoryName}}{{$last? '': ', '}}
                     </span>
                     <!--<input type="text" disabled class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">-->
@@ -28,7 +28,7 @@
                 <label class="pad-r-0 col-sm-3 control-label align-left align-left">Qlt. Area</label>
 
                 <div class="col-sm-8 pad-l-0">
-                    <span ng-repeat="qualArea in TSSVCtrl.tags_qual_area">
+                    <span ng-repeat="qualArea in TSSVCtrl.testStrategy.qualArea">
                         {{qualArea.CategoryName}}{{$last? '': ', '}}
                     </span>
                     <!--<input type="text" disabled class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">-->
@@ -38,7 +38,7 @@
                 <label class="pad-r-0 col-sm-3 control-label align-left align-left">Approach</label>
 
                 <div class="col-sm-8 pad-l-0">
-                    <span ng-repeat="approach in TSSVCtrl.tags_test_approach">
+                    <span ng-repeat="approach in TSSVCtrl.testStrategy.approach">
                         {{approach.CategoryName}}{{$last? '': ', '}}
                     </span>
                     <!--<input type="text" disabled class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">-->
@@ -48,7 +48,7 @@
                 <label class="col-sm-3 control-label align-left">Goal</label>
 
                 <div class="col-sm-8 pad-l-0">
-                    {{TSSVCtrl.Goal}}
+                    {{TSSVCtrl.testStrategy.goal}}
                     <!--<input type="text" disabled class="form-control form-control-sm text-sm" id="strategy_goal" placeholder="Strategy Goal">-->
                 </div>
             </div>
@@ -80,11 +80,6 @@
         </div>
         <!-- /.box-body -->
     </form>
-    <div class="box-footer">
-        <button type="submit" disabled class="btn btn-default btn-sm">Clear</button>
-        <button type="submit" disabled class="btn btn-primary pull-right btn-sm">Save
-            <i class="fa fa-floppy-o"></i></button>
-    </div>
 
     <!-- /.box-footer -->
 </div>
