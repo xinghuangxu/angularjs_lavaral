@@ -13,6 +13,14 @@
         var TSSVCtrl =this;
 
         TSSVCtrl.getTestStrategyDetails = getTestStrategyDetails;
+        TSSVCtrl.promoteTestStrategy = promoteTestStrategy;
+        TSSVCtrl.demoteTestStrategy = demoteTestStrategy;
+        TSSVCtrl.obsoleteTestStrategy = obsoleteTestStrategy;
+        TSSVCtrl.approveTestStrategy = approveTestStrategy;
+        TSSVCtrl.varyTestStrategy = varyTestStrategy;
+        TSSVCtrl.reviewTestStrategy = reviewTestStrategy;
+
+
         TSSVCtrl.testStrategy = {
             impactArea: null,
             qualArea: null,
@@ -28,6 +36,42 @@
                 TSSVCtrl.testStrategy.impactArea = response.data.tags_impact_area;
                 TSSVCtrl.testStrategy.qualArea =  response.data.tags_qual_area;
                 TSSVCtrl.testStrategy.approach = response.data.tags_test_approach;
+            });
+        }
+
+        function promoteTestStrategy(id){
+            strategyViewerServices.promoteTestStrategy(id).then(function(response){
+                // we should use show an indicator here that the operation has been achieved
+            });
+        }
+
+        function demoteTestStrategy(id){
+            strategyViewerServices.demoteTestStrategy(id).then(function(response){
+                // we should use show an indicator here that the operation has been achieved
+            });
+        }
+
+        function obsoleteTestStrategy(id){
+            strategyViewerServices.obsoleteTestStrategy(id).then(function(response){
+                // we should use show an indicator here that the operation has been achieved
+            });
+        }
+
+        function approveTestStrategy(id){
+            strategyViewerServices.approveTestStrategy(id).then(function(response){
+                // we should use show an indicator here that the operation has been achieved
+            });
+        }
+
+        function varyTestStrategy(){
+            strategyViewerServices.varyTestStrategy().then(function(response){
+                // we should use show an indicator here that the operation has been achieved
+            });
+        }
+
+        function reviewTestStrategy(){
+            strategyViewerServices.reviewTestStrategy().then(function(response){
+                // we should use show an indicator here that the operation has been achieved
             });
         }
 
