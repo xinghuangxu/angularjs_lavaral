@@ -1,0 +1,19 @@
+<div class="well well-sm tag-well">
+    <button id="treeSelectPopOverButton" ng-click="togglePopover()" type="button" class="expand-btn btn btn-default btn-xs">
+        <i class="fa fa-plus"></i>
+    </button>
+    <ul class="tags-list">
+        <li ng-repeat="tag in selected_nodes">
+            <span class="tag label label-default">
+            <span>{{tag.name}}</span>
+            <a ng-click="deleteNode(tag.id)">
+                <i class="remove-tag glyphicon glyphicon-remove-sign glyphicon-white">
+                </i>
+            </a>
+            </span>
+        </li>
+    </ul>
+
+
+</div>
+

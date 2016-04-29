@@ -2835,6 +2835,27 @@ table.text-center th {
   background-color: #d2d6de;
   color: #444;
 }
+ul.tags-list{
+  padding-left: 0;
+  display: inline;
+  list-style-type: none;
+}
+ul.tags-list>li{
+  display: inline-block;
+  font-size: 13px;
+
+}
+.tag>a>.remove-tag{
+  cursor: pointer;
+  color: white;
+}
+.well.tag-well{
+  padding: 0px;
+  margin-bottom: 0px;
+}
+.tree-dropdown{
+  height: 35vh;
+}
 /*
  * Component: Direct Chat
  * ----------------------

@@ -24,11 +24,12 @@
                 <label for="impact_area" class="pad-r-0 col-sm-4 control-label align-left align-left">Impact Area</label>
 
                 <div class="col-sm-8 pad-l-0">
-                    <input type="text"
-                           ng-model="strategyEditorCtlr.strategy.impact_area"
-                           ng-change="strategyEditorCtlr.editorValueChanged()"
-                           ng-model-options="{ updateOn: 'blur'}"
-                           class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">
+                    <spark-tree-select tree-data="strategyEditorCtlr.impact_tree_data" tree-config="strategyEditorCtlr.tree_config" ></spark-tree-select>
+                    <!--<input type="text"-->
+                           <!--ng-model="strategyEditorCtlr.strategy.impact_area"-->
+                           <!--ng-change="strategyEditorCtlr.editorValueChanged()"-->
+                           <!--ng-model-options="{ updateOn: 'blur'}"-->
+                           <!--class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">-->
                 </div>
             </div>
             <div class="form-group margin-b-8 text-sm">

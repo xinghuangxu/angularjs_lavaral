@@ -47,13 +47,13 @@
                     keylist[data[i]['CategoryID']] = true;
                 }
             }
-            for (var i=0; i < data.length; i++){
-                if (data[i]['IsActive'] === "1"){
+            for (var j=0; j < data.length; j++){
+                if (data[j]['IsActive'] === "1"){
                     var node = {};
-                    node.id = data[i]['CategoryID'];
-                    node.text = data[i]['CategoryName'];
-                    if (keylist[data[i]['CategoryFatherID']]){
-                        node.parent = data[i]['CategoryFatherID'];
+                    node.id = data[j]['CategoryID'];
+                    node.text = data[j]['CategoryName'];
+                    if (keylist[data[j]['CategoryFatherID']]){
+                        node.parent = data[j]['CategoryFatherID'];
                     } else{
                         node.parent = "#";
                     }

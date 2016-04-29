@@ -10,7 +10,7 @@
 
         var TSMCtrl =this;
         console.log('testStrategyManager');
-        TSMCtrl.viewer_is_active=true;
+        TSMCtrl.viewer_is_active=false;
         TSMCtrl.editor_is_active=false;
 
         TSMCtrl.numberOfActiveTabs= function(){

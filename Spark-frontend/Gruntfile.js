@@ -98,7 +98,8 @@ module.exports = function (grunt) {
                 {src: ['..Spark-backend/public/json/**'], dest: 'temp/'},
                 {src: ['bower_components/bootstrap/**'], dest: 'temp/'},
                 {src: ['bower_components/font-awesome/**'], dest: 'temp/'},
-                {src: ['bower_components/textAngular/dist/textAngular.css'], dest: 'temp/'}
+                {src: ['bower_components/textAngular/dist/textAngular.css'], dest: 'temp/'},
+                {src: ['bower_components/ng-tags-input/ng-tags-input.css'], dest: 'temp/'}
                 //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: '../Spark-backend/public/'},
                 //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'../Spark-backend/public/css/',flatten:true,expand:true},
                 //{src: ['bower_components/angular-mocks/angular-mocks.js'], dest: '../Spark-backend/public/'}
