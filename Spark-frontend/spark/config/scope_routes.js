@@ -41,7 +41,6 @@
         }).state('scope_base_template.scope_partials.scope', {
             url: "/scope",
             template:'<h1> Scope</h1>'
-
         });
 
 

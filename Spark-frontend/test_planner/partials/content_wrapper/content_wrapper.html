@@ -9,33 +9,27 @@
 
     <div class="col-md-2 form-group">
 
-        <select class="form-control">
-            <option>option 1</option>
-            <option>option 2</option>
-            <option>option 3</option>
-            <option>option 4</option>
-            <option>option 5</option>
+        <select class="form-control input-sm"
+                ng-model="testPlannerController.release_id"
+                ng-options="item.name as item.name for item in testPlannerController.releases"
+                ng-change="testPlannerController.getStackLayers()">
+        </select>
+
+    </div>
+
+    <div class="col-md-2 form-group" ng-show="testPlannerController.release_id">
+        <select class="form-control input-sm"
+                ng-model="testPlannerController.stack_id"
+                ng-change="testPlannerController.getSubLayers()"
+                ng-options="key as val for (key, val) in testPlannerController.stack_layers">
         </select>
     </div>
     <div class="col-md-2 form-group">
 
-        <select class="form-control">
-            <option>option 1</option>
-            <option>option 2</option>
-            <option>option 3</option>
-            <option>option 4</option>
-            <option>option 5</option>
-        </select>
-    </div>
-    <div class="col-md-2 form-group">
-
-        <select class="form-control">
-            <option>option 1</option>
-            <option>option 2</option>
-            <option>option 3</option>
-            <option>option 4</option>
-            <option>option 5</option>
-        </select>
+        <select class="form-control input-sm" ng-show="testPlannerController.stack_id"
+                ng-model="testPlannerController.substack_id"
+                ng-change="testPlannerController.reloadCurrentState()"
+                ng-options="key as val for (key, val) in testPlannerController.sub_layers"></select>
     </div>
 
     <ul class="col-md-3 menu-items">

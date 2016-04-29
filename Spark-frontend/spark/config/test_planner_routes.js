@@ -16,6 +16,11 @@
             .state('test_planner_base_template', {
                 abstract:true,
                 templateUrl: "test_planner/test_planner.html",
+                resolve:{
+                    releases:function(testPlannerServices){
+                        return testPlannerServices.getReleases();
+                    }
+                },
                 controller: "testPlannerController as testPlannerController"
             }).state('test_planner_base_template.test_planner_partials', {
             abstract:true,
@@ -27,7 +32,8 @@
                     templateUrl: "test_planner/partials/right_side_bar/right_side_bar.html"
                 },
                 content_wrapper: {
-                    templateUrl: "test_planner/partials/content_wrapper/content_wrapper.html"
+                    templateUrl: "test_planner/partials/content_wrapper/content_wrapper.html",
+                    controller: "testPlannerController as testPlannerController"
                 },
                 left_side_bar: {
 
@@ -41,7 +47,7 @@
 
             }
         }).state('test_planner_base_template.test_planner_partials.test_planner', {
-            url: "/test_planner?plugin_1&plugin_2&plugin_3",
+            url: "/test_planner?plugin_1&plugin_2&plugin_3&release_id&stack_id&substack_id",
             resolve:{
                 setting_active_plugins:function($stateParams,activePluginsValue){
                     var params = $stateParams;
@@ -60,6 +66,11 @@
                     }
 
 
+                },
+                setting_plugin_config_value:function($stateParams,pluginsConfigValue){
+                    pluginsConfigValue.release_id= $stateParams.release_id;
+                    pluginsConfigValue.stack_id= $stateParams.stack_id;
+                    pluginsConfigValue.substack_id= $stateParams.substack_id;
                 }
             },
             views:{
