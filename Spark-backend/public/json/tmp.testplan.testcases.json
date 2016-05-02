@@ -1,0 +1,17 @@
+[
+  {
+    "id": "T1",
+    "title": "Test 1",
+    "icon": "glyphicon glyphicon-file"
+  },
+  {
+    "id": "T2",
+    "title": "Test 2",
+    "icon": "glyphicon glyphicon-file"
+  },
+  {
+    "id": "T3",
+    "title": "Test 3",
+    "icon": "glyphicon glyphicon-file"
+  }
+]

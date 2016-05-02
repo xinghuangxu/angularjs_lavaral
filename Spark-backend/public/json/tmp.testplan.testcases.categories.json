@@ -1,0 +1,17 @@
+[
+  {
+    "id": "TPC1",
+    "title": "Suggested Test Cases",
+    "icon": "glyphicon glyphicon-folder-open"
+  },
+  {
+    "id": "TPC2",
+    "title": "Planned Test Cases",
+    "icon": "glyphicon glyphicon-folder-open"
+  },
+  {
+    "id": "TPC3",
+    "title": "References",
+    "icon": "glyphicon glyphicon-folder-open"
+  }
+]

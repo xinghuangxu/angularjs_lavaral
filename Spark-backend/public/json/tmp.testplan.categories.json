@@ -1,0 +1,22 @@
+[
+  {
+    "id": "TP1",
+    "title": "Suggested Strategies",
+    "icon": "glyphicon glyphicon-book"
+  },
+  {
+    "id": "TP2",
+    "title": "Planned Strategies",
+    "icon": "glyphicon glyphicon-book"
+  },
+  {
+    "id": "TP3",
+    "title": "References",
+    "icon": "glyphicon glyphicon-book"
+  },
+  {
+    "id": "TP4",
+    "title": "Defects",
+    "icon": "glyphicon glyphicon-book"
+  }
+]
