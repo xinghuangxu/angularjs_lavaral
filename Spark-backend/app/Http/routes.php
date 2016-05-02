@@ -181,7 +181,7 @@ Route::group(array('prefix' => 'rest', 'before' => 'elmolog'), function() {
     Route::get('tags/test-approaches', 'TagsController@getTestStrategyApproaches');
     Route::resource('tags','TagsController',
                     ['only' => ['index']]);
-    
+
 
     Route::group(array('prefix' => 'rally', 'namespace' => 'Rally'), function(){
         Route::resource('projects', 'ProjectController',
