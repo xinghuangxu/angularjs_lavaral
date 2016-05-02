@@ -1,0 +1,12 @@
+[
+  {
+    "id": "TL1",
+    "title": "Module Test",
+    "icon": "glyphicon glyphicon-align-left"
+  },
+  {
+    "id": "TL2",
+    "title": "Functional",
+    "icon": "glyphicon glyphicon-align-left"
+  }
+]
