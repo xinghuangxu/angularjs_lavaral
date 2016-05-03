@@ -9,7 +9,7 @@ writeable_dirs[1]='bootstrap/cache'
 
 # Check if composer is installed and create the autoload files
 if command -v composer >/dev/null 2>&1 ; then
-    composer install
+    composer dump-autoload
 else
     echo "Composer is required for installing Spark. Please install it and re-run setup"
     exit 1
