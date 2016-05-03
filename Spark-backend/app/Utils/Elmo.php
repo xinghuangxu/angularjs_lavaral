@@ -16,7 +16,7 @@ class Elmo {
     private function logToMonolog($message)
     {
         $log = new Logger('ELMO_Post_Error');
-        $handler = new StreamHandler('../../../storage/logs/elmo.log');
+        $handler = new StreamHandler(__DIR__.'/../../storage/logs/elmo.log');
         $handler -> setFormatter(new LineFormatter(null, null, true, true));
         $log -> pushHandler($handler);
         $log -> addWarning($message);
@@ -108,37 +108,40 @@ class Elmo {
     */
     public static function postToElmo($content)
     {
-        if(getenv("APP_ENV") == "beta" || getenv("APP_ENV") == "live")
-            $url = 'http://elmo.eng.netapp.com/collector/';
-        else
-            $url = 'http://elmo-dev.eng.netapp.com/collector/';
-
-        $curl = curl_init($url);
-
-        curl_setopt($curl, CURLOPT_HEADER, false);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
-        curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $content);
-        curl_setopt($curl, CURLOPT_TIMEOUT, 2);
-
-        $json_response = curl_exec($curl);
-        if($json_response != false) {
-            $response = json_decode($json_response, true);
-            $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-
-            if ($status != 200) {
-                $message = "ELMO UPLOAD failed with STATUS: " . $status .
-                ", RESPONSE: " . $json_response . ", CURL_ERROR: " .curl_error($curl) .
-                ", CURL_ERRNO: " . curl_errno($curl . "\n");
+        if(getenv("APP_ENV") != "hq")
+        {
+            if(getenv("APP_ENV") == "beta" || getenv("APP_ENV") == "live")
+                $url = 'http://elmo.eng.netapp.com/collector/';
+            else
+                $url = 'http://elmo-dev.eng.netapp.com/collector/';
+    
+            $curl = curl_init($url);
+    
+            curl_setopt($curl, CURLOPT_HEADER, false);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
+            curl_setopt($curl, CURLOPT_POST, true);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $content);
+            curl_setopt($curl, CURLOPT_TIMEOUT, 2);
+    
+            $json_response = curl_exec($curl);
+            if($json_response != false) {
+                $response = json_decode($json_response, true);
+                $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+    
+                if ($status != 200) {
+                    $message = "ELMO UPLOAD failed with STATUS: " . $status .
+                    ", RESPONSE: " . $json_response . ", CURL_ERROR: " .curl_error($curl) .
+                    ", CURL_ERRNO: " . curl_errno($curl . "\n");
+                    (new Elmo) -> logToMonolog($message);
+                }
+            }
+            else {
+                $message = "Connection to ELMO timed out after 2 seconds.";
                 (new Elmo) -> logToMonolog($message);
             }
+    
+            curl_close($curl);
         }
-        else {
-            $message = "Connection to ELMO timed out after 2 seconds.";
-            (new Elmo) -> logToMonolog($message);
-        }
-
-        curl_close($curl);
     }
 }
