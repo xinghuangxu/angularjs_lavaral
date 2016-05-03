@@ -13,12 +13,18 @@
     function testPlanController(pluginsConfigValue, testPlanService){
         var TPCtrl = this;
 
+        TPCtrl.getArrangeBy = getArrangeBy;
+        TPCtrl.arrange_by = null;
+
         TPCtrl.release_id = pluginsConfigValue.release_id;
         TPCtrl.stack_id = pluginsConfigValue.stack_id;
         TPCtrl.substack_id = pluginsConfigValue.substack_id;
 
-        if (TPCtrl.release_id && TPCtrl.stack_id && TPCtrl.substack_id)
+
+        if (TPCtrl.release_id && TPCtrl.stack_id && TPCtrl.substack_id){
             TPCtrl.tree = loadTreeData;
+            getArrangeBy();
+        }
 
         function loadTreeData(obj, cb){
             var node_id = obj.id;
@@ -42,6 +48,12 @@
             }
             testPlanService.getTestcases(node_id).then(function(response){
                 cb.call(this, testPlanService.getTestcasesTree(response));
+            });
+        }
+
+        function getArrangeBy(){
+            testPlanService.getArrangeBy().then(function(response){
+                TPCtrl.arrange_by = response.data;
             });
         }
 

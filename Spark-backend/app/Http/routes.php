@@ -89,6 +89,7 @@ Route::group(array('prefix' => 'rest', 'before' => 'elmolog'), function() {
         Route::get('tmptestplan/toplist', 'TmpTestPlanController@ListTopServices');
         Route::get('tmptestplan/tscategories', 'TmpTestPlanController@ListTestPlanCategories');
         Route::get('tmptestplan/tstestcases', 'TmpTestPlanController@ListTestCases');
+        Route::get('tmptestplan/arrangeby', 'TmpTestPlanController@ListArrangeBy');
         Route::resource('tmptestplan', 'TmpTestPlanController', ['only' => ['index']]);
 
         //The scopestrategymappings end points will help facilitate the high level scoping currently being performed in Legacy

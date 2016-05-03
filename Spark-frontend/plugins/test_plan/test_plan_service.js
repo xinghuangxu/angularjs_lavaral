@@ -22,10 +22,14 @@
         this.getTestcasesTree = getTestcasesTree;
         this.getArrangeBy = getArrangeBy;
 
-        function getTopList(){
+        function getTopList(id){
+            var arrange_by = id || '';
             return $http({
                 method: 'GET',
-                url: pluginNamesConstant.plugins_config.endpointServer +'/rest/planner/tmptestplan/toplist'
+                url: pluginNamesConstant.plugins_config.endpointServer +'/rest/planner/tmptestplan/toplist?',
+                params: {
+                    arrange_by: id
+                }
             });
         }
 
@@ -153,7 +157,10 @@
         }
 
         function getArrangeBy(){
-
+            return $http({
+                method: 'GET',
+                url: pluginNamesConstant.plugins_config.endpointServer +'/rest/planner/tmptestplan/arrangeby'
+            });
         }
 
     }
