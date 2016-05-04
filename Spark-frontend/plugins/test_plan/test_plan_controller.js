@@ -19,6 +19,26 @@
         TPCtrl.release_id = pluginsConfigValue.release_id;
         TPCtrl.stack_id = pluginsConfigValue.stack_id;
         TPCtrl.substack_id = pluginsConfigValue.substack_id;
+        // TPCtrl.icons = [
+        //     {
+        //         "value":"1",
+        //         "label":"Gear"
+        //     },
+        //     {
+        //         "value":"2",
+        //         "label":"Globe"
+        //     },
+        //     {
+        //         "value":"3",
+        //         "label":"Heart"
+        //     },
+        //     {
+        //         "value":"4",
+        //         "label":"Camera"
+        //     }
+        // ];
+        //
+        // TPCtrl.selectedIcon = TPCtrl.icons[0].value;
 
 
         if (TPCtrl.release_id && TPCtrl.stack_id && TPCtrl.substack_id){
@@ -54,7 +74,15 @@
         function getArrangeBy(){
             testPlanService.getArrangeBy().then(function(response){
                 TPCtrl.arrange_by = response.data;
+                SetDefaultArrangeBy();
             });
+        }
+
+        function SetDefaultArrangeBy(){
+            for (var i=0; i<TPCtrl.arrange_by.length; i++){
+                if (TPCtrl.arrange_by[i].isDefault === true)
+                    TPCtrl.selectedIcon = TPCtrl.arrange_by[i].value;
+            }
         }
 
     }
