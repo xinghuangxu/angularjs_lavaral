@@ -1,17 +1,37 @@
 <div class="box box-primary box-solid box-plugin">
     <div class="box-header ">
         <h3 class="box-title">Test Plan</h3>
-
-        <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-
-            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-        </div>
         <!-- /.box-tools -->
     </div>
     <!-- /.box-header -->
     <div class="box-body box-plugin-body" ng-slimscroll fixed-height-box>
         <!-- post text -->
+        <div class="form-group" ng-show="TPCtrl.arrange_by">
+            <label for="arrange_by" class="col-sm-3 control-label align-left">Arrange By:</label>
+
+            <div class="col-sm-4">
+                <select id="arrange_by" class="form-control input-sm"
+                        ng-model="TPCtrl.selected_arrange_by"
+                        ng-options="key as val for (key, val) in TPCtrl.arrange_by">
+                </select>
+            </div>
+            <button class="btn btn-default input-sm"
+                    ng-click="" bs-tooltip data-title="Add Strategies"
+                    data-trigger="hover" placement="bottom">
+                <i class="glyphicon glyphicon-plus"></i></button>
+            <button class="btn btn-default input-sm"
+                    ng-click="" bs-tooltip data-title="Attachments"
+                    data-trigger="hover" placement="bottom">
+                <i class="glyphicon glyphicon-paperclip"></i></button>
+            <button class="btn btn-default input-sm"
+                    ng-click="" bs-tooltip data-title="Grid View"
+                    data-trigger="hover" placement="bottom">
+                <i class="glyphicon glyphicon-th"></i></button>
+            <button class="btn btn-default input-sm"
+                    ng-click="" bs-tooltip data-title="Configuration diagrams"
+                    data-trigger="hover" placement="bottom">
+                <i class="glyphicon glyphicon-tasks"></i></button>
+        </div>
         <spark-jstree ng-model="TPCtrl.tree"></spark-jstree>
 
     </div>

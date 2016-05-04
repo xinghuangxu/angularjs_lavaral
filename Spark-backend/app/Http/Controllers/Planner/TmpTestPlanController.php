@@ -27,10 +27,15 @@ class TmpTestPlanController extends Controller {
         header('Access-Control-Allow-Credentials: true');
     }
 
-    public function ListTopServices() {
+    public function ListTopServices(request $request) {
         if(env('APP_ENV') == "hq")
         {
-            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/tmp.testplan.top.list.json");
+            if ($request->input('arrange_by') == 1){
+                $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/tmp.testplan.top.list.json");
+            }
+            else{
+                $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/tmp.testplan.top.list2.json");
+            }
             return response($data)->header('Content-Type', 'application/json');
         }
     }
@@ -47,6 +52,14 @@ class TmpTestPlanController extends Controller {
         if(env('APP_ENV') == "hq")
         {
             $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/tmp.testplan.testcases.categories.json");
+            return response($data)->header('Content-Type', 'application/json');
+        }
+    }
+    
+    public function ListArrangeBy(){
+        if(env('APP_ENV') == "hq")
+        {
+            $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/json/tmp.testplan.arrange.by.json");
             return response($data)->header('Content-Type', 'application/json');
         }
     }
