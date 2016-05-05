@@ -1,12 +1,4 @@
-/*
- * Leon xu 
- * xinghuangxu@gmail.com
- * 
- * This tree select directive is currently being used in Test Strategy 'Impact Areas' and 'Test Variables' Field to select tags from a tree
- * TODO: replace this with the generic configuratble jstree: see multiArrangeJtree
- */
 //JStree directive
-
 (function () {
     'use strict';
 

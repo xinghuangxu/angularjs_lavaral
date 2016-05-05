@@ -4,11 +4,5 @@
     popOverMultiSelectTreeController.$inject=[];
     function popOverMultiSelectTreeController(){
         var multiSelectTreeCtrl = this;
-        
-
-
-
-
     }
-
 })();

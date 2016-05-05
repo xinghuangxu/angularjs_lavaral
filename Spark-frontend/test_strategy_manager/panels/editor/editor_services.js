@@ -41,7 +41,7 @@
 
         function buildTagTree(data){
             var treeData = [];
-            var keylist = {}; 
+            var keylist = {};
             for (var i=0; i < data.length; i++){
                 if (data[i]['IsActive'] === "1"){
                     keylist[data[i]['CategoryID']] = true;
