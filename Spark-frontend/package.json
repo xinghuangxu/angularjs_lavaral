@@ -24,5 +24,8 @@
     "karma-mocha-reporter": "^2.0.0",
     "karma-phantomjs-launcher": "^1.0.0",
     "load-grunt-tasks": "^3.4.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-cssmin": "^1.0.1"
   }
 }
