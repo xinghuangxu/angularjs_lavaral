@@ -1,6 +1,22 @@
-{
-  "1": "Qualification Area",
-  "2": "Impact Area",
-  "3": "Approach",
-  "4": "Strategy"
-}
+[
+  {
+    "value": "1",
+    "label": "Qualification Area",
+    "isDefault": false
+  },
+  {
+    "value": "2",
+    "label": "Impact Area",
+    "isDefault": true
+  },
+  {
+    "value": "3",
+    "label": "Approach",
+    "isDefault": false
+  },
+  {
+    "value": "4",
+    "label": "Strategy",
+    "isDefault": false
+  }
+]
