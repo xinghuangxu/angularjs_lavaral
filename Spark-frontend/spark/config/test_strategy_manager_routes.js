@@ -38,10 +38,19 @@
             'tsm_partials.' +
             'tsm', {
             abstract: true,
+            resolve:{
+                dropdown_values:function($q,strategyEditorServices){
+                    return $q.all([
+                        strategyEditorServices.getImpactArea(),
+                        strategyEditorServices.getQualifications(),
+                        strategyEditorServices.getApproach()
+                    ]);
+                }
+            },
             views: {
                 strategy_viewer: {
                     templateUrl: "test_strategy_manager/panels/viewer/viewer.html",
-                    controller: "strategyViewerController as strategyViewerCtlr"
+                    controller: "strategyViewerController as TSSVCtrl"
                 },
                 strategy_editor: {
                     templateUrl: "test_strategy_manager/panels/editor/editor.html",

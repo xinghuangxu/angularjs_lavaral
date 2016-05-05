@@ -238,7 +238,7 @@
                                     $(".content").css('min-height', window_height - $('.main-footer').outerHeight() - 200);
                                     $(".box-plugin-body").css('height', window_height - $('.main-footer').outerHeight() - 180);
                                     $(".box-plugin-form-body").css('height', window_height - $('.main-footer').outerHeight() - 232);
-                                },400)
+                                },200)
 
                             } else {
                                 var postSetWidth;

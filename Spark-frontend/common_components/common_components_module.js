@@ -5,6 +5,7 @@
     'use strict';
     angular.module('commonComponents',[
         'mgcrea.ngStrap',
-        'ngAnimate'
+        'ngAnimate',
+        'ngSanitize'
     ]);
 })();

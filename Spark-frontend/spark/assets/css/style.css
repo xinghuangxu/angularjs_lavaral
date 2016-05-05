@@ -2624,7 +2624,8 @@ ul.rankbar li {
 .nav-tabs-custom {
   margin-bottom: 20px;
   background: #fff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  /* box shadow has been removed based on Mohammad's request */
+  /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);*/
   border-radius: 3px;
 }
 .nav-tabs-custom > .nav-tabs {
@@ -2833,6 +2834,27 @@ table.text-center th {
 .label-default {
   background-color: #d2d6de;
   color: #444;
+}
+ul.tags-list{
+  padding-left: 0;
+  display: inline;
+  list-style-type: none;
+}
+ul.tags-list>li{
+  display: inline-block;
+  font-size: 13px;
+
+}
+.tag>a>.remove-tag{
+  cursor: pointer;
+  color: white;
+}
+.well.tag-well{
+  padding: 0px;
+  margin-bottom: 0px;
+}
+.tree-dropdown{
+  height: 35vh;
 }
 /*
  * Component: Direct Chat

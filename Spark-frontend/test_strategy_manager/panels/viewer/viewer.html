@@ -7,40 +7,52 @@
     </div>
     <!-- /.box-header -->
     <!-- form start -->
-    <form class="form-horizontal box-plugin-form-body" ng-slimscroll fixed-height-box>
+    <form class="form-horizontal box-plugin-body" ng-slimscroll fixed-height-box>
         <div class="box-body" >
-            <div class="form-group  text-sm margin-b-8">
-                <label for="headline" class="col-sm-4 control-label align-left align-left">Headline</label>
+            <div class="form-group text-md margin-b-8">
+                <label class="col-sm-3 control-label align-left align-left">Headline</label>
 
                 <div class="col-sm-8 pad-l-0">
-                    <input type="text" disabled class="form-control form-control-sm text-sm" id="headline" placeholder="Headline">
+                    {{TSSVCtrl.testStrategy.headLine}}
+                    <!--<input type="text" disabled class="form-control form-control-sm text-sm" id="headline" placeholder="Headline">-->
                 </div>
             </div>
-            <div class="form-group text-sm margin-b-8">
-                <label for="impact_area" class="pad-r-0 col-sm-4 control-label align-left align-left">Impact Area</label>
+            <div class="form-group text-md margin-b-8">
+                <label class="pad-r-0 col-sm-3 control-label align-left align-left">Impact Area</label>
 
                 <div class="col-sm-8 pad-l-0">
-                    <input type="text" disabled class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">
+                    <span ng-repeat="impactArea in TSSVCtrl.testStrategy.impactArea">
+                        {{impactArea.CategoryName}}{{$last? '': ', '}}
+                    </span>
+                    <!--<input type="text" disabled class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">-->
                 </div>
             </div>
-            <div class="form-group text-sm margin-b-8">
-                <label for="qual_area" class="pad-r-0 col-sm-4 control-label align-left">Qlt. Area</label>
-
-                <div class="col-sm-2 pad-l-0 pad-r-0">
-                    <input type="text" disabled class="form-control form-control-sm text-sm" id="qual_area" placeholder="Qlt. Area">
-                </div>
-
-                <label for="approach" class="col-sm-3 control-label align-left">Approach</label>
-
-                <div class="col-sm-3 pad-l-0">
-                    <input type="text" disabled class="form-control form-control-sm text-sm" id="approach" placeholder="Approach">
-                </div>
-            </div>
-            <div class="form-group text-sm margin-b-8">
-                <label for="strategy_goal" class="col-sm-4 control-label align-left">Goal</label>
+            <div class="form-group text-md margin-b-8">
+                <label class="pad-r-0 col-sm-3 control-label align-left align-left">Qlt. Area</label>
 
                 <div class="col-sm-8 pad-l-0">
-                    <input type="text" disabled class="form-control form-control-sm text-sm" id="strategy_goal" placeholder="Strategy Goal">
+                    <span ng-repeat="qualArea in TSSVCtrl.testStrategy.qualArea">
+                        {{qualArea.CategoryName}}{{$last? '': ', '}}
+                    </span>
+                    <!--<input type="text" disabled class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">-->
+                </div>
+            </div>
+            <div class="form-group text-md margin-b-8">
+                <label class="pad-r-0 col-sm-3 control-label align-left align-left">Approach</label>
+
+                <div class="col-sm-8 pad-l-0">
+                    <span ng-repeat="approach in TSSVCtrl.testStrategy.approach">
+                        {{approach.CategoryName}}{{$last? '': ', '}}
+                    </span>
+                    <!--<input type="text" disabled class="form-control form-control-sm text-sm" id="impact_area" placeholder="Impact Area">-->
+                </div>
+            </div>
+            <div class="form-group text-md margin-b-8">
+                <label class="col-sm-3 control-label align-left">Goal</label>
+
+                <div class="col-sm-8 pad-l-0">
+                    {{TSSVCtrl.testStrategy.goal}}
+                    <!--<input type="text" disabled class="form-control form-control-sm text-sm" id="strategy_goal" placeholder="Strategy Goal">-->
                 </div>
             </div>
             <div class="form-group margin-b-8">
@@ -48,10 +60,12 @@
                     <div class="nav-tabs-custom margin-b-8">
                         <ul class="nav nav-tabs">
 
-                            <li class="active"><a data-target="#desc" role="tab" data-toggle="tab" class="text-sm pad-l-r-6" aria-expanded="false">Desc.</a></li>
-                            <li><a href="" class="text-sm pad-l-r-6" data-target="#ref" role="tab" data-toggle="tab" aria-expanded="false">Ref.</a></li>
-                            <li><a href="" class="text-sm pad-l-r-6" data-target="#test_cases" role="tab" data-toggle="tab" aria-expanded="true">Test Cases</a></li>
-                            <li><a href="" class="text-sm pad-l-r-6" data-target="#assoc" role="tab"  data-toggle="tab" aria-expanded="true">Assoc.</a></li>
+                            <li class="active"><a data-target="#desc" role="tab" data-toggle="tab" class="text-md pad-l-r-6" aria-expanded="false"><i class="fa fa-file-text-o"></i></a></li>
+                            <li><a href="" class="text-md pad-l-r-6" data-target="#ref" role="tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-book"></i></a></li>
+                            <li><a href="" class="text-md pad-l-r-6" data-target="#test_cases" role="tab" data-toggle="tab" aria-expanded="true"><i class="fa fa-briefcase"></i></a></li>
+                            <li><a href="" class="text-md pad-l-r-6" data-target="#Attachment" role="tab"  data-toggle="tab" aria-expanded="true"><i class="fa fa-paperclip"></i></a></li>
+                            <li><a href="" class="text-md pad-l-r-6" data-target="#links" role="tab"  data-toggle="tab" aria-expanded="true"><i class="fa fa-link"></i></a></li>
+                            <li><a href="" class="text-md pad-l-r-6" data-target="#info" role="tab"  data-toggle="tab" aria-expanded="true"><i class="fa fa-info"></i></a></li>
                         </ul>
                         <div class="tab-content fixed-height">
                             <div  class="active tab-pane description-tab" id="desc" ng-include="'test_strategy_manager/panels/viewer/tabs/desc.html'">
@@ -60,7 +74,11 @@
                             </div>
                             <div  class="tab-pane description-tab" id="test_cases" ng-include="'test_strategy_manager/panels/viewer/tabs/test_cases.html'">
                             </div>
-                            <div  class=" tab-pane description-tab" id="assoc" ng-include="'test_strategy_manager/panels/viewer/tabs/assoc.html'">
+                            <div  class=" tab-pane description-tab" id="Attachment" ng-include="'test_strategy_manager/panels/viewer/tabs/Attachment.html'">
+                            </div>
+                            <div  class=" tab-pane description-tab" id="links" ng-include="'test_strategy_manager/panels/viewer/tabs/links.html'">
+                            </div>
+                            <div  class=" tab-pane description-tab" id="info" ng-include="'test_strategy_manager/panels/viewer/tabs/info.html'">
                             </div>
                         </div>
                         <!-- /.tab-content -->
@@ -71,11 +89,6 @@
         </div>
         <!-- /.box-body -->
     </form>
-    <div class="box-footer">
-        <button type="submit" disabled class="btn btn-default btn-sm">Clear</button>
-        <button type="submit" disabled class="btn btn-primary pull-right btn-sm">Save
-            <i class="fa fa-floppy-o"></i></button>
-    </div>
 
     <!-- /.box-footer -->
 </div>

@@ -16,6 +16,8 @@
     "angular-strap": "#2.3.7",
     "less.js": "#2.6.1",
     "font-awesome": "#4.5.0",
-    "textAngular": "^1.5.0"
+    "textAngular": "^1.5.0",
+    "ng-tags-input": "^3.0.0",
+    "angular-motion": "^0.4.4"
   }
 }

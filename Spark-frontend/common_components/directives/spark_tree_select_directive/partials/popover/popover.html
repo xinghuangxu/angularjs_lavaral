@@ -1,0 +1,20 @@
+<div class="popover" tabindex="-1">
+    <div class="popover-content">
+        <div class="row">
+            <div class="col-md-12">
+                    <input type="text" ng-model="filter" class="ng-tree-search form-control form-control-sm" placeholder="search">
+            </div>
+        </div>
+        <div class="row tree-dropdown" ng-slimscroll >
+            <div class="col-md-12 " >
+                <spark-jstree
+                        data-config="content.treeConfig"
+                        ng-model="content.treeData"
+                        data-select-callback="content.selectCallback"
+                        data-deselect-callback="content.deselectCallback">
+
+                </spark-jstree>
+            </div>
+        </div>
+    </div>
+</div>

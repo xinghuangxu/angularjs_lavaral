@@ -49,7 +49,8 @@
             scope: {
                 filter: '=?filter',
                 config: '=?config',
-                selectCallback: '&onSelect',
+                selectCallback: '=?selectCallback',
+                deselectCallback:'=?deselectCallback',
                 api: '=?',
                 data: '=ngModel'
             },
@@ -61,8 +62,19 @@
                 if(typeof jstree.selectCallback === 'function') {
                     $(element).on('select_node.jstree',
                         function(e, data) {
-                            jstree.selectCallback({data: data});
+                            scope.$apply(function(){
+                                jstree.selectCallback({data: data});
+                            });
                             $(element).jstree(true).open_node(data.node.id);
+                        });
+                }
+                // Setup the unselection callback, if it is defined
+                if(typeof jstree.deselectCallback === 'function') {
+                    $(element).on('deselect_node.jstree',
+                        function(e, data) {
+                            scope.$apply(function() {
+                                jstree.deselectCallback({data: data});
+                            });
                         });
                 }
 
