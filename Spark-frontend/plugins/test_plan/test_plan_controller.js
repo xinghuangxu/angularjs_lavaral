@@ -54,7 +54,15 @@
         function getArrangeBy(){
             testPlanService.getArrangeBy().then(function(response){
                 TPCtrl.arrange_by = response.data;
+                setDefaultArrangeBy();
             });
+        }
+
+        function setDefaultArrangeBy(){
+            for (var i=0; i<TPCtrl.arrange_by.length; i++){
+                if (TPCtrl.arrange_by[i].isDefault === true)
+                    TPCtrl.selectedIcon = TPCtrl.arrange_by[i].value;
+            }
         }
 
     }
