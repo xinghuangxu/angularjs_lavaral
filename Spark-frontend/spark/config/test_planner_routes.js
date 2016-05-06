@@ -18,7 +18,7 @@
                 templateUrl: "test_planner/test_planner.html",
                 resolve:{
                     releases:function(testPlannerServices){
-                        return testPlannerServices.getReleases();
+                        return 1;
                     }
                 },
                 controller: "testPlannerController as testPlannerController"

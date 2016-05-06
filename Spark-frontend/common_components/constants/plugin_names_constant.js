@@ -20,7 +20,7 @@
             controller: 'testStrategyController as TSCtrl'
         },
         "test_runs": {
-            templateUrl: 'plugins/test_runs/test_runs.html',
+            templateUrl: 'plugins/test_runs/test_runs.html?v=2',
             controller: 'testRunsController as TRCtrl'
 
         },
